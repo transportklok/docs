@@ -36,100 +36,22 @@
         "groups": [
           {
             "group": "Aan de slag",
-            "pages": [
-              "introduction",
-              "getting-started/account-setup",
-              "getting-started/quickstart",
-              "getting-started/navigation"
-            ]
-          },
-          {
-            "group": "Kernconcepten",
-            "pages": [
-              "concepts/platform-overview",
-              "concepts/transport-orders",
-              "concepts/planning",
-              "concepts/drivers-vehicles"
-            ]
-          },
-          {
-            "group": "Handleidingen",
-            "pages": [
-              "guides/create-transport-order",
-              "guides/planning-route",
-              "guides/track-shipment",
-              "guides/invoicing",
-              "guides/reporting"
-            ]
-          },
-          {
-            "group": "Instellingen",
-            "pages": [
-              "settings/company-settings",
-              "settings/users-permissions",
-              "settings/integrations",
-              "settings/notifications"
-            ]
-          },
-          {
-            "group": "Ondersteuning",
-            "pages": [
-              "support/faq",
-              "support/troubleshooting"
-            ]
+            "pages": []
           }
         ],
         "icon": "user-chef"
       },
       {
-        "tab": "Medewerkers Documentatie"
-      },
-      {
-        "tab": "API",
+        "tab": "Medewerkers Documentatie",
         "groups": [
           {
-            "group": "Overzicht",
-            "pages": [
-              "api-reference/introduction",
-              "api-reference/authentication",
-              "api-reference/rate-limits"
-            ]
-          },
-          {
-            "group": "Transportopdrachten",
-            "pages": [
-              "api-reference/orders/list",
-              "api-reference/orders/create",
-              "api-reference/orders/get",
-              "api-reference/orders/update",
-              "api-reference/orders/delete"
-            ]
-          },
-          {
-            "group": "Planning",
-            "pages": [
-              "api-reference/planning/list",
-              "api-reference/planning/create",
-              "api-reference/planning/update"
-            ]
-          },
-          {
-            "group": "Chauffeurs & Voertuigen",
-            "pages": [
-              "api-reference/drivers/list",
-              "api-reference/drivers/get",
-              "api-reference/vehicles/list",
-              "api-reference/vehicles/get"
-            ]
-          },
-          {
-            "group": "Webhooks",
-            "pages": [
-              "api-reference/webhooks/overview",
-              "api-reference/webhooks/events"
-            ]
+            "group": "Aan de slag",
+            "pages": []
           }
         ]
+      },
+      {
+        "tab": "API"
       }
     ]
   },

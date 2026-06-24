@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#1860D8",
     "light": "#00DD9D",
-    "dark": "#1860D8"
+    "dark": "#1E3A8A"
   },
   "favicon": {
     "light": "/images/main.png",
@@ -38,45 +38,93 @@
             "group": "Start",
             "pages": [
               "index",
-              "beheerders/overzicht"
+              "beheerders/start"
             ]
           },
           {
             "group": "Wagenparkbeheer",
             "pages": [
               "beheerders/wagenparkbeheer/dashboard",
-              "beheerders/wagenparkbeheer/kaart",
-              "beheerders/wagenparkbeheer/voertuigen",
-              "beheerders/wagenparkbeheer/trailers",
-              "beheerders/wagenparkbeheer/locaties",
-              "beheerders/wagenparkbeheer/onderhoud-en-reparaties",
-              "beheerders/wagenparkbeheer/telematica",
-              "beheerders/wagenparkbeheer/tachograaf"
+              "beheerders/wagenparkbeheer/kaart"
+            ]
+          },
+          {
+            "group": "Wagenparkbeheer: voertuigen",
+            "pages": [
+              "beheerders/wagenparkbeheer/voertuigen/overzicht",
+              "beheerders/wagenparkbeheer/voertuigen/aanmaken",
+              "beheerders/wagenparkbeheer/voertuigen/bewerken"
+            ]
+          },
+          {
+            "group": "Wagenparkbeheer: trailers",
+            "pages": [
+              "beheerders/wagenparkbeheer/trailers/overzicht",
+              "beheerders/wagenparkbeheer/trailers/aanmaken",
+              "beheerders/wagenparkbeheer/trailers/bewerken"
+            ]
+          },
+          {
+            "group": "Wagenparkbeheer: locaties",
+            "pages": [
+              "beheerders/wagenparkbeheer/locaties/overzicht",
+              "beheerders/wagenparkbeheer/locaties/aanmaken"
+            ]
+          },
+          {
+            "group": "Wagenparkbeheer: onderhoud en reparaties",
+            "pages": [
+              "beheerders/wagenparkbeheer/onderhoud-en-reparaties/overzicht"
+            ]
+          },
+          {
+            "group": "Wagenparkbeheer: telematica",
+            "pages": [
+              "beheerders/wagenparkbeheer/telematica/overzicht",
+              "beheerders/wagenparkbeheer/telematica/trackers/overzicht",
+              "beheerders/wagenparkbeheer/telematica/trackers/aanmaken",
+              "beheerders/wagenparkbeheer/telematica/druppels/overzicht",
+              "beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
+              "beheerders/wagenparkbeheer/telematica/druppels/koppelen"
+            ]
+          },
+          {
+            "group": "Wagenparkbeheer: tachograaf",
+            "pages": [
+              "beheerders/wagenparkbeheer/tachograaf/voertuigen",
+              "beheerders/wagenparkbeheer/tachograaf/bestuurders",
+              "beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten"
             ]
           },
           {
             "group": "Personeelszaken",
             "pages": [
               "beheerders/personeelszaken/dashboard",
-              "beheerders/personeelszaken/personeel",
-              "beheerders/personeelszaken/verantwoording"
+              "beheerders/personeelszaken/personeel/overzicht",
+              "beheerders/personeelszaken/verantwoording/overzicht"
             ]
           },
           {
             "group": "Urenbeheer",
             "pages": [
               "beheerders/urenbeheer/dashboard",
-              "beheerders/urenbeheer/tijdregistratie",
-              "beheerders/urenbeheer/verlof"
+              "beheerders/urenbeheer/tijdregistratie/overzicht",
+              "beheerders/urenbeheer/tijdregistratie/aanmaken",
+              "beheerders/urenbeheer/tijdregistratie/details",
+              "beheerders/urenbeheer/tijdregistratie/tijdlijn",
+              "beheerders/urenbeheer/tijdregistratie/bewerken",
+              "beheerders/urenbeheer/verlof/overzicht"
             ]
           },
           {
             "group": "Klantenbeheer",
             "pages": [
               "beheerders/klantenbeheer/dashboard",
-              "beheerders/klantenbeheer/opdrachtgevers",
-              "beheerders/klantenbeheer/opdrachten",
-              "beheerders/klantenbeheer/facturen"
+              "beheerders/klantenbeheer/opdrachtgevers/overzicht",
+              "beheerders/klantenbeheer/opdrachtgevers/aanmaken",
+              "beheerders/klantenbeheer/opdrachtgevers/bewerken",
+              "beheerders/klantenbeheer/opdrachten/overzicht",
+              "beheerders/klantenbeheer/facturen/overzicht"
             ]
           }
         ]
@@ -87,17 +135,17 @@
           {
             "group": "Start",
             "pages": [
-              "medewerkers/overzicht"
+              "medewerkers/start"
             ]
           },
           {
-            "group": "Werk",
+            "group": "Werk: tijdregistratie",
             "pages": [
-              "medewerkers/werk/tijdregistratie",
-              "medewerkers/werk/tijdregistratie-aanmaken",
-              "medewerkers/werk/tijdregistratie-details",
-              "medewerkers/werk/tijdregistratie-tijdlijn",
-              "medewerkers/werk/tijdregistratie-bewerken"
+              "medewerkers/werk/tijdregistratie/overzicht",
+              "medewerkers/werk/tijdregistratie/aanmaken",
+              "medewerkers/werk/tijdregistratie/details",
+              "medewerkers/werk/tijdregistratie/tijdlijn",
+              "medewerkers/werk/tijdregistratie/bewerken"
             ]
           }
         ]

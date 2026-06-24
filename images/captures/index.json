@@ -1,0 +1,303 @@
+[
+  {
+    "slug": "management-start",
+    "route": "/management/front-office/customers",
+    "finalUrl": "http://localhost:8000/management/front-office/customers",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nOpdrachtgevers\nNieuwe opdrachtgever\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nOpdrachtgevers\nOpdrachten\nFacturen\nOpdrachtgevers\n\nBeheer de opdrachtgevers waarvoor jullie werken. Koppel werkzaamheden en tijdregistraties aan opdrachtgevers.\n\nNieuwe opdrachtgever\nOPDRACHTGEVERS\n\t\nREFERENTIE\n\t\nNAAM\n\t\nCONTACTPERSOON\n\t\nE-MAILADRES\n\t\nTELEFOONNUMMER\n\t\n\n\nEr zijn nog geen opdrachtgevers geregistreerd.\n\n\nGeen opdrachtgevers aanwezig in organisatie.\nlocal"
+  },
+  {
+    "slug": "management-wagenpark-dashboard",
+    "route": "/management/fleet/dashboard",
+    "finalUrl": "http://localhost:8000/management/fleet/dashboard",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nDashboard\n\nTOTAL USERS\n\n72,540\n\nfrom 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfrom 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfrom 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfrom 94,012\n\n0.1%\nInvoices\n\nCreate invoices, edit, download and more.\n\nView all\nCreate\nInsights\nINVOICE NUMBER\n\t\nAMOUNT\n\t\nSTATUS\n\t\nDUE\n\t\nCREATED\n\t\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\nUS $200.00\n\t\nPaid\n\t\n06 Jan 2023\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ218F94-0061\n\t\nUS $994.00\n\t\nDeclined\n\t\n01 Jan 2023\n\t\n14 Dec, 09:45\n\t\nView\n\n\n#ADUQ2138D4-0038\n\t\nUS $4,150.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2138R2-0012\n\t\nUS $2,489.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2131GS-0010\n\t\nUS $47.00\n\t\nPaid\n\t\n28 Dec\n\t\n28 Nov, 11:00\n\t\nView\n\n\n#ADUQ288UUE-3892\n\t\nUS $2,220.00\n\t\nPaid\n\t\n24 Dec\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ2189C7-3822\n\t\nUS $80.00\n\t\nDeclined\n\t\n29 Nov\n\t\n28 Nov, 12:04\n\t\nView\n\n\n#ADUQ2138F2-0099\n\t\nUS $1"
+  },
+  {
+    "slug": "management-wagenpark-kaart",
+    "route": "/management/fleet/map",
+    "finalUrl": "http://localhost:8000/management/fleet/map",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\n\nVOLKSWAGEN Crafter\n\nNL\nVSL-14-S\n\nOPEL Movano\n\nNL\nVDX-94-X\n\nFORD Transit\n\nNL\nVXN-03-X\n\nMERCEDES-BENZ Actros 1844 ls\n\nNL\nBZ-SF-37\n\nMERCEDES-BENZ Sprinter\n\nNL\nV-390-VX\n\nFIAT Fiat doblo'\n\nNL\nV-228-HR\n\nRENAULT D wide\n\nNL\n83-BTR-3\n\nONBEKEND\n\nNL\nV-627-KZ\n\nDAF Xf 480 ft\n\nNL\n26-BNG-9\n\nFORD Transit\n\nNL\nV-93-HRK\n\nDAF Lf 180 fa\n\nNL\n64-BRH-6\n\nDAF Xf 480 ft\n\nNL\n46-BXL-9\n\nOPEL Movano\n\nNL\nVHH-95-D\n\nFORD Transit\n\nNL\nV-81-FNB\n\nIVECO 35s16\n\nNL\nVHF-23-V\n\nRENAULT Master\n\nNL\nVKN-46-G\n\nRENAULT Trafic\n\nNL\nV-03-FHX\n\nVOLKSWAGEN Caddy\n\nNL\nVR-396-H\n\nONBEKEND\n\nNL\n9-VJH-65\n\nRENAULT Master\n\nNL\nVNJ-19-H\n© Mapbox © OpenStreetMap Improve this map\nlocal"
+  },
+  {
+    "slug": "management-voertuigen-overzicht",
+    "route": "/management/fleet/vehicles",
+    "finalUrl": "http://localhost:8000/management/fleet/vehicles",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nVoertuigen\nNieuwe voertuig\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nVoertuigen\nNieuwe voertuig\nMERK\n\t\nKENTEKEN\n\t\nBESTUURDER\n\t\nPASSAGIERS\n\t\nTRAILERS\n\t\nAPK VERVALDATUM\n\t\nTACHOGRAAF VERVALDATUM\n\t\n\n\n-\n-\n\t\n26-BNG-9\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\n46-BXL-9\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\n64-BRH-6\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\n83-BTR-3\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\n9-VJH-65\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nBZ-SF-37\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nV-03-FHX\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nV-228-HR\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nV-390-VX\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nV-627-KZ\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nV-81-FNB\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nV-93-HRK\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nVDX-94-X\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\nWijzig\nVerwijder\n\n\n-\n-\n\t\nVHF-23-V\n\t\n-\n\t\n-\n\t\n-\n\t\n-\n\t\n"
+  },
+  {
+    "slug": "management-voertuigen-aanmaken",
+    "route": "/management/fleet/vehicles/create",
+    "finalUrl": "http://localhost:8000/management/fleet/vehicles/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nVoertuig aanmaken\n  Algemeen\n  Koppelingen\nLand van registratie\nSelecteer het land waarin het voertuig officieel geregistreerd staat.\nSelecteer een optie\nVoertuig identificatie nummer (VIN)\nVoer het unieke voertuigidentificatienummer (VIN) in. Dit nummer is meestal te vinden op het chassis of kentekenbewijs.\nAANMAKEN\nlocal"
+  },
+  {
+    "slug": "management-voertuigen-bewerken",
+    "route": "/management/fleet/vehicles/019ef960-330b-7043-b233-107203758d2f/edit",
+    "finalUrl": "http://localhost:8000/management/fleet/vehicles/019ef960-330b-7043-b233-107203758d2f/edit",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nVoertuig wijzigen\n  Algemeen\n  Koppelingen\nLand van registratie\nSelecteer het land waarin het voertuig officieel geregistreerd staat.\nNederland\nKenteken\nVoer het officiële kenteken van het voertuig in zoals vermeld op het registratiebewijs.\nVoertuig identificatie nummer (VIN)\nVoer het unieke voertuigidentificatienummer (VIN) in. Dit nummer is meestal te vinden op het chassis of kentekenbewijs.\nOPSLAAN\nlocal"
+  },
+  {
+    "slug": "management-trailers-overzicht",
+    "route": "/management/fleet/trailers",
+    "finalUrl": "http://localhost:8000/management/fleet/trailers",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nTrailers\nNieuwe voertuig\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTrailers\nNieuwe voertuig\nMERK\n\t\nKENTEKEN\n\t\nLAND\n\t\nAPK VERVALDATUM\n\t\n\n\n-\n-\n\t\n10-WX-TD\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\n61-WKK-7\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\n79-WKJ-1\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\n80-WD-VF\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\nHU-UR-01\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\nOJ-40-PV\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\nOL-57-PK\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\nOP-29-RP\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\nOP-43-FN\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n-\n-\n\t\nOT-97-BG\n\t\nNL\n\t\n-\n\t\nVerwijder\n\n\n10 trailers aanwezig in organisatie.\nlocal"
+  },
+  {
+    "slug": "management-trailers-aanmaken",
+    "route": "/management/fleet/trailers/create",
+    "finalUrl": "http://localhost:8000/management/fleet/trailers/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTrailer aanmaken\nLand van registratie\nSelecteer het land waarin het voertuig officieel geregistreerd staat.\nSelecteer een optie\nAANMAKEN\nlocal"
+  },
+  {
+    "slug": "management-trailers-bewerken",
+    "route": "/management/fleet/trailers/019ef960-34ec-73f4-8971-489c76647699/edit",
+    "finalUrl": "http://localhost:8000/management/fleet/trailers/019ef960-34ec-73f4-8971-489c76647699/edit",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTrailer wijzigen\nLand van registratie\nSelecteer het land waarin het voertuig officieel geregistreerd staat.\nNederland\nKenteken\nVoer het officiële kenteken van het voertuig in zoals vermeld op het registratiebewijs.\nOPSLAAN\nlocal"
+  },
+  {
+    "slug": "management-locaties-overzicht",
+    "route": "/management/fleet/locations",
+    "finalUrl": "http://localhost:8000/management/fleet/locations",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nLocaties\nNieuwe locatie\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nLocaties\n\nBeheer de TrackMijn locaties die binnen het wagenpark gebruikt worden.\n\nNieuwe locatie\nNAAM\n\t\nTYPE\n\t\nADRES\n\t\n\nGeen locaties gevonden.\n\n\nTotaal 0 locaties\nlocal"
+  },
+  {
+    "slug": "management-locaties-aanmaken",
+    "route": "/management/fleet/locations/create",
+    "finalUrl": "http://localhost:8000/management/fleet/locations/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nLocatie aanmaken\nNaam\nGeef de locatie een herkenbare naam.\nLocatietype\nSelecteer het type locatie.\nStandplaats\nGebied\nKies hoe het bewaakte gebied eruitziet en stel het op de kaart nauwkeurig af.\nServer size\nCirkel\nPolygon\nGeen waarde geselecteerd\nStraal (meter)\n1000 m\n250 m\n50 m\nLOCATIE OPSLAAN\nlocal"
+  },
+  {
+    "slug": "management-onderhoud-overzicht",
+    "route": "/management/fleet/services",
+    "finalUrl": "http://localhost:8000/management/fleet/services",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nlocal\n⚠\n2"
+  },
+  {
+    "slug": "management-telematica-overzicht",
+    "route": "/management/fleet/telematics",
+    "finalUrl": "http://localhost:8000/management/fleet/telematics",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nTelematica\nTrackers\nDruppels\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTelematica\n\nTELEMATICA\n\nTrackers\n\nBekijk alle trackers en de actuele status.\n\nTELEMATICA\n\nDruppels\n\nBeheer alle druppels en toegewezen objecten.\n\nlocal"
+  },
+  {
+    "slug": "management-trackers-overzicht",
+    "route": "/management/fleet/telematics/devices",
+    "finalUrl": "http://localhost:8000/management/fleet/telematics/devices",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nTrackers\nTracker toevoegen\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTrackers\n\nOverzicht van alle trackers, gekoppelde voertuigen en live status.\n\nTracker toevoegen\nID\n\t\nSTATUS\n\t\nVERBONDEN VOERTUIG\n\t\nLAATSTE POSITIONERING\n\t\nACTIEF SINDS\n\n\nMSD88JSLEQI\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD47M60GKN\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD20UO5OGC\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD14QUD43V\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD55IXQCGK\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD65AWTAW7\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD71OS5AVF\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD15QT6EC7\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD460RYDMX\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD47LZU70G\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD21MZFVK2\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD65SEF0L6\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\n\nMSD99PV29C1\n\t\nOffline\n\t\n-\n\t\n-\n\t\nwo"
+  },
+  {
+    "slug": "management-trackers-aanmaken",
+    "route": "/management/fleet/telematics/devices/create",
+    "finalUrl": "http://localhost:8000/management/fleet/telematics/devices/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nVoeg een nieuwe tracker toe\nCode tracker\nSelecteer een optie\nAANMAKEN\nlocal"
+  },
+  {
+    "slug": "management-druppels-overzicht",
+    "route": "/management/fleet/telematics/beacons",
+    "finalUrl": "http://localhost:8000/management/fleet/telematics/beacons",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nDruppels\nDruppel toevoegen\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nDruppels\n\nBeheer alle druppels en zie direct aan welk object ze zijn gekoppeld.\n\nDruppel toevoegen\nID\n\t\nSTATUS\n\t\nTOEGEWEZEN AAN\n\t\nLAATSTE POSITIONERING\n\t\nACTIEF SINDS\n\t\n\nMSB73IPZ94I\n\t\nOffline\n\t\nBrianne jenkins Heaney\nkassulke.sierra@yahoo.com\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\t\nOntkoppelen\n\n\nMSB20VBDX8M\n\t\nOffline\n\t\nSylvester heller Nienow\npat.barrows@gmail.com\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\t\nOntkoppelen\n\n\nMSB35VA1TG0\n\t\nOffline\n\t\nJalon swaniawski Mann\ndonnelly.nora@bartoletti.org\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\t\nOntkoppelen\n\n\nMSB81GKWDK9\n\t\nOffline\n\t\nLilian lind Lehner\nwisozk.effie@marquardt.org\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\t\nOntkoppelen\n\n\nMSB86HYB8YU\n\t\nOffline\n\t\nJayson ortiz Marquardt\ngarry.grimes@kris.com\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\t\nOntkoppelen\n\n\nMSB87U48I0G\n\t\nOffline\n\t\nRodger lubowitz Hane\nvpredovic@hegmann.com\n\t\n-\n\t\nwoensdag, 24 juni 2026\n\t\nOntkoppelen\n\n\nMSB0188EDJ5\n\t\nOffline\n\t\n"
+  },
+  {
+    "slug": "management-druppels-aanmaken",
+    "route": "/management/fleet/telematics/beacons/create",
+    "finalUrl": "http://localhost:8000/management/fleet/telematics/beacons/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nVoeg een nieuwe druppel toe\nCode druppel\nSelecteer een optie\nAANMAKEN\nlocal"
+  },
+  {
+    "slug": "management-druppels-koppelen",
+    "route": "/management/fleet/telematics/beacons/1/connect",
+    "finalUrl": "http://localhost:8000/management/fleet/telematics/beacons/1/connect",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nVerbind een druppel met een persoon of trailer\nType\nServer size\nMedewerker\nTrailer\nVERBINDEN\nlocal"
+  },
+  {
+    "slug": "management-tachograaf-voertuigen",
+    "route": "/management/fleet/tachographs/vehicles",
+    "finalUrl": "http://localhost:8000/management/fleet/tachographs/vehicles",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nTachograaf voertuigen\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTachograaf voertuigen\n\nOverzicht van voertuigen met tachograaf en hun downloadmomenten.\n\nVOERTUIG\n\t\nKENTEKEN\n\t\nSTATUS\n\t\nLAATSTE POGING\n\t\nLAATSTE DOWNLOAD\n\t\nTACHOGRAAF VERVALDATUM\n\t\n\nGeen tachograaf voertuigen gevonden.\n\n\n0 tachograaf voertuigen aanwezig in organisatie.\nlocal"
+  },
+  {
+    "slug": "management-tachograaf-bestuurders",
+    "route": "/management/fleet/tachographs/drivers",
+    "finalUrl": "http://localhost:8000/management/fleet/tachographs/drivers",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nBestuurders met chauffeurskaart\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nBestuurders met chauffeurskaart\n\nBekijk bestuurders met chauffeurskaart en hun laatste downloads.\n\nBESTUURDER\n\t\nKAARTNUMMER\n\t\nSTATUS\n\t\nLAATSTE POGING\n\t\nLAATSTE DOWNLOAD\n\t\n\nGeen tachograaf bestuurders gevonden.\n\n\n0 bestuurders met chauffeurskaart aanwezig in organisatie.\nlocal"
+  },
+  {
+    "slug": "management-tachograaf-bedrijfskaarten",
+    "route": "/management/fleet/tachographs/company-cards",
+    "finalUrl": "http://localhost:8000/management/fleet/tachographs/company-cards",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nTachograaf bedrijfskaarten\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nKaart\nVoertuigen\nTrailers\nLocaties\nOnderhoud en reparaties\nTelematica\nTachograaf\nTachograaf bedrijfskaarten\n\nInzicht in alle beschikbare bedrijfskaarten en kaartnummers.\n\nNAAM\n\t\nNUMMER\n\t\nSTUTUS\n\t\nIN GEBRUIK\n\t\nLAATSTE ONLINE\n\n\nGeen bedrijfskaarten gevonden.\n\n\n0 bedrijfskaarten aanwezig in organisatie.\nlocal"
+  },
+  {
+    "slug": "management-personeelszaken-dashboard",
+    "route": "/management/human-resources/dashboard",
+    "finalUrl": "http://localhost:8000/management/human-resources/dashboard",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nPersoneel\nVerantwoording\nContracten\nAanvullingen & Inhoudingen\nSalarisrondes\nDashboard\n\nTOTAL USERS\n\n72,540\n\nfrom 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfrom 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfrom 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfrom 94,012\n\n0.1%\nlocal"
+  },
+  {
+    "slug": "management-personeel-overzicht",
+    "route": "/management/human-resources/employments",
+    "finalUrl": "http://localhost:8000/management/human-resources/employments",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nPersoneel\nNieuwe medewerker\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nPersoneel\nVerantwoording\nContracten\nAanvullingen & Inhoudingen\nSalarisrondes\nPersoneel\nNieuwe medewerker\n\t\n\t\n#\n\t\n\t\nNAAM\n\t\nTYPE\n\t\nCONTRACT UREN\n\t\nCONTRACT EINDE\n\t\n\n\t\n\t\n23\n\t\n\t\nJ. Bahringer roberts, Kyler\nkirlin.justyn@yahoo.com\n\t\nZZP'er\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n93\n\t\n\t\nI. Blanda goldner, Adam\npedro.moore@hotmail.com\n\t\nMedewerker\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n35\n\t\n\t\nT. Boehm greenfelder, Kayli\nmschultz@yahoo.com\n\t\nZZP'er\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n36\n\t\n\t\nU. Braun bergstrom, Lela\nnarciso.huels@yahoo.com\n\t\nMedewerker\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n98\n\t\n\t\nJ. Brekke tillman, Aleen\ndante.hirthe@reinger.biz\n\t\nCharter\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n64\n\t\n\t\nC. Cormier stracke, Dameon\nboyer.theresa@tremblay.com\n\t\nZZP'er\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n63\n\t\n\t\nB. Cummings gusikowski, Whitney\nkara.boyle@nikolaus.com\n\t\nMedewerker\n\t\n-\n\t\n-\n\t\nWijzig\nActies\nVerwijder\n\n\n\t\n\t\n58\n\t\n\t\nD. Effertz mraz, Gardner\nimccullo"
+  },
+  {
+    "slug": "management-verantwoording-overzicht",
+    "route": "/management/human-resources/accountability",
+    "finalUrl": "http://localhost:8000/management/human-resources/accountability",
+    "title": "Method MyTimeFlow\\App\\Http\\Requests\\RequestState::request does not exist.",
+    "text": "STACK\nCONTEXT\nDEBUG\nFLARE\nSHARE\nShare with Flare\nDocs\nSTACK\nCONTEXT\nDEBUG\nCREATE SHARE\nDOCS\nIgnition Settings\nDocs\nEDITOR\nClipboard\nSublime\nTextMate\nEmacs\nMacVim\nPhpStorm\nPHPStorm Remote\nIdea\nVS Code\nVS Code Insiders\nVS Code Remote\nVS Code Insiders Remote\nVS Codium\nCursor\nAtom\nNova\nNetBeans\nZed\nWindsurf\nXdebug\nTHEME\nAuto\nSAVE SETTINGS\n\nSettings will be saved locally in ~/.ignition.json.\n\nMethod MyTimeFlow\\App\\Http\\Requests\\RequestState::request does not exist.\nBadMethodCallException\nPHP 8.4.22\n12.62.0\nMethod MyTimeFlow\\App\\Http\\Requests\\RequestState::request does not exist.\nBad Method Call\n\nDid you mean MyTimeFlow\\App\\Http\\Requests\\RequestState::getRequestUri() ?\n\nExpand vendor frames\n1 vendor frame\nMyTimeFlow\n \\ \nApp\n \\ \nHttp\n \\ \nComponents\n \\ \nManagement\n \\ \nHumanResources\n \\ \nAccountability\n \\ \nOverview\n \n: 47\nhandle\n7 vendor frames\nMyTimeFlow\n \\ \nApp\n \\ \nHttp\n \\ \nMiddleware\n \\ \nHasOrganizationRole\n \n: 50\nhandle\n1 vendor frame\nMyTimeFlow\n \\ \nApp\n \\ \nHttp\n \\ \nMiddleware\n \\ \nHasSubscription\n \n: 33\nhandle\n2 vendor frames\nMyTimeFlow\n \\ \nApp\n \\ \nHttp\n \\ \nMiddleware\n \\ \nEnsureEmailIsVerified\n \n: 34\nhandle\n1 vendor frame\nMyTimeFlow\n \\ \nApp\n \\ \nHttp\n \\ \nMiddleware\n \\ \nEnsureCompletesOrg"
+  },
+  {
+    "slug": "management-urenbeheer-dashboard",
+    "route": "/management/hour/dashboard",
+    "finalUrl": "http://localhost:8000/management/hour/dashboard",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nTijdregistratie\nVerlof\nWerk Dashboard\nOverzicht van actieve voertuigen\n\nTOTAL USERS\n\n72,540\n\nfeatures.dashboard.stat-card_comparison.from 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfeatures.dashboard.stat-card_comparison.from 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfeatures.dashboard.stat-card_comparison.from 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfeatures.dashboard.stat-card_comparison.from 94,012\n\n1.2%\nNumber of Vehicles in Time\nVehicle table\nNieuwe GPS-Tracker\nVIN\n\t\nMERK\n\t\nKENTEKEN\n\t\nLAND\n\t\nTYPE\n\t\nAPK VERVALDATUM\n\t\nSTATUS\n\n\n-\n\t\nGS\nAIC-2000 N\n\t\n10-WX-TD\n\t\nNL\n\t\ntrailer\n\t\n2025-10-12T00:00:00.000\n\t\nIn beweging\n\n\n-\n\t\nDAF\nXF 480 FT\n\t\n26-BNG-9\n\t\nNL\n\t\nmotor\n\t\n2026-05-02T00:00:00.000\n\t\nIn beweging\n\n\n-\n\t\nDAF\nXF 480 FT\n\t\n46-BXL-9\n\t\nNL\n\t\nmotor\n\t\n2026-04-10T00:00:00.000\n\t\nIn beweging\n\n\n-\n\t\nGS\nAIC-2000 N\n\t\n61-WKK-7\n\t\nNL\n\t\ntrailer\n\t\n2026-02-20T00:00:00.000\n\t\nIn beweging\n\n\n-\n\t\nDAF\nLF 180 FA\n\t\n64-BRH-6\n\t\nNL\n\t\nmotor\n\t\n2026-02-17T00:00:00.000\n\t\nIn beweging\n\nPagina:\n\n1\n\nvan de 1\n\nEmployees Table\nNieuwe GPS-Tracker\nVIN\n"
+  },
+  {
+    "slug": "management-tijdregistratie-overzicht",
+    "route": "/management/hour/time-registrations",
+    "finalUrl": "http://localhost:8000/management/hour/time-registrations",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\n22-06-2026 - 28-06-2026\nNieuwe registratie\nExporteren\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nTijdregistratie\nVerlof\nTijdlijn\nAlles\nNieuwe registratie\nExporteren\n22-06-2026 - 28-06-2026\nMedewerkers\nWerkzaamheid\nVoertuigen\nTrailers\nVertreklocatie\nAankomstlocatie\nOpdrachtgevers\nlocal"
+  },
+  {
+    "slug": "management-tijdregistratie-aanmaken",
+    "route": "/management/hour/time-registrations/create",
+    "finalUrl": "http://localhost:8000/management/hour/time-registrations/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nTijdregistratie\nVerlof\nMedewerker\nWerkdag / patroon\nWerkzaamheden\nMedewerker\nSelecteer de medewerker waarvoor u een registratie wilt doen.\nGeen waarde geselecteerd\nType\nWat voor type registratie wilt u doen?\nServer size\nProductief (werk)\nImproductief (verlof, overstaan of rusttijd)\nDatum\nDe datum waarvoor u een registratie wilt maken.\nVOLGENDE\nlocal"
+  },
+  {
+    "slug": "management-tijdregistratie-details",
+    "route": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+    "finalUrl": "http://localhost:8000/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  },
+  {
+    "slug": "management-tijdregistratie-tijdlijn",
+    "route": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+    "finalUrl": "http://localhost:8000/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  },
+  {
+    "slug": "management-tijdregistratie-bewerken",
+    "route": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+    "finalUrl": "http://localhost:8000/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  },
+  {
+    "slug": "management-verlof-overzicht",
+    "route": "/management/hour/leave",
+    "finalUrl": "http://localhost:8000/management/hour/leave",
+    "title": "Verlofaanvragen",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nTijdregistratie\nVerlof\n22-06-2026 - 28-06-2026\nAlle statussen\nAangevraagd: 0\nGoedgekeurd: 0\nAfgekeurd: 0\n\t\nDATUM\n\t\nVERLOF REGELS\n\t\nSTATUS\n\n\nEr zijn geen verlofaanvragen in de gekozen periode.\nlocal"
+  },
+  {
+    "slug": "management-klantenbeheer-dashboard",
+    "route": "/management/front-office/dashboard",
+    "finalUrl": "http://localhost:8000/management/front-office/dashboard",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nDashboard\n\nTOTAL USERS\n\n72,540\n\nfrom 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfrom 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfrom 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfrom 94,012\n\n0.1%\nInvoices\n\nCreate invoices, edit, download and more.\n\nView all\nCreate\nInsights\nINVOICE NUMBER\n\t\nAMOUNT\n\t\nSTATUS\n\t\nDUE\n\t\nCREATED\n\t\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\nUS $200.00\n\t\nPaid\n\t\n06 Jan 2023\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ218F94-0061\n\t\nUS $994.00\n\t\nDeclined\n\t\n01 Jan 2023\n\t\n14 Dec, 09:45\n\t\nView\n\n\n#ADUQ2138D4-0038\n\t\nUS $4,150.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2138R2-0012\n\t\nUS $2,489.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2131GS-0010\n\t\nUS $47.00\n\t\nPaid\n\t\n28 Dec\n\t\n28 Nov, 11:00\n\t\nView\n\n\n#ADUQ288UUE-3892\n\t\nUS $2,220.00\n\t\nPaid\n\t\n24 Dec\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ2189C7-3822\n\t\nUS $80.00\n\t\nDeclined\n\t\n29 Nov\n\t\n28 Nov, 12:04\n\t\nView\n\n\n#ADUQ2138F2-0099\n\t\nUS $1,249.00\n\t\nPaid\n\t\n29 Nov\n\t\n01 Nov, 14:32\n\t\nView\n\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\n"
+  },
+  {
+    "slug": "management-opdrachtgevers-overzicht",
+    "route": "/management/front-office/customers",
+    "finalUrl": "http://localhost:8000/management/front-office/customers",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nOpdrachtgevers\nNieuwe opdrachtgever\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nOpdrachtgevers\nOpdrachten\nFacturen\nOpdrachtgevers\n\nBeheer de opdrachtgevers waarvoor jullie werken. Koppel werkzaamheden en tijdregistraties aan opdrachtgevers.\n\nNieuwe opdrachtgever\nOPDRACHTGEVERS\n\t\nREFERENTIE\n\t\nNAAM\n\t\nCONTACTPERSOON\n\t\nE-MAILADRES\n\t\nTELEFOONNUMMER\n\t\n\n\nEr zijn nog geen opdrachtgevers geregistreerd.\n\n\nGeen opdrachtgevers aanwezig in organisatie.\nlocal"
+  },
+  {
+    "slug": "management-opdrachtgevers-aanmaken",
+    "route": "/management/front-office/customers/create",
+    "finalUrl": "http://localhost:8000/management/front-office/customers/create",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nOpdrachtgevers\nOpdrachten\nFacturen\nOpdrachtgever aanmaken\nNaam\nDe officiële naam van de opdrachtgever.\nReferentie\nEen interne referentie of klantcode.\nContactpersoon\nDe primaire contactpersoon bij de opdrachtgever.\nE-mailadres\nHet e-mailadres van de contactpersoon.\nTelefoonnummer\nHet algemene telefoonnummer van de opdrachtgever.\nUnited States (+1)\nNotities\nInterne notities over de samenwerking.\nAddress\nHet adres van de klant.\nGeen waarde geselecteerd\nOPSLAAN\nlocal"
+  },
+  {
+    "slug": "management-opdrachtgevers-bewerken",
+    "route": "/management/front-office/customers/019ef9d2-f812-7344-ac58-1284ec047dce/edit",
+    "finalUrl": "http://localhost:8000/management/front-office/customers/019ef9d2-f812-7344-ac58-1284ec047dce/edit",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  },
+  {
+    "slug": "management-opdrachten-overzicht",
+    "route": "/management/front-office/orders",
+    "finalUrl": "http://localhost:8000/management/front-office/orders",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nOpdrachten\n\nTOTAAL OPDRACHTEN\n\n72,540\n\nfrom 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfrom 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfrom 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfrom 94,012\n\n0.1%\nFilters\nINVOICE NUMBER\n\t\nAMOUNT\n\t\nSTATUS\n\t\nDUE\n\t\nCREATED\n\t\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\nUS $200.00\n\t\nPaid\n\t\n06 Jan 2023\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ218F94-0061\n\t\nUS $994.00\n\t\nDeclined\n\t\n01 Jan 2023\n\t\n14 Dec, 09:45\n\t\nView\n\n\n#ADUQ2138D4-0038\n\t\nUS $4,150.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2138R2-0012\n\t\nUS $2,489.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2131GS-0010\n\t\nUS $47.00\n\t\nPaid\n\t\n28 Dec\n\t\n28 Nov, 11:00\n\t\nView\n\n\n#ADUQ288UUE-3892\n\t\nUS $2,220.00\n\t\nPaid\n\t\n24 Dec\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ2189C7-3822\n\t\nUS $80.00\n\t\nDeclined\n\t\n29 Nov\n\t\n28 Nov, 12:04\n\t\nView\n\n\n#ADUQ2138F2-0099\n\t\nUS $1,249.00\n\t\nPaid\n\t\n29 Nov\n\t\n01 Nov, 14:32\n\t\nView\n\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\n"
+  },
+  {
+    "slug": "management-facturen-overzicht",
+    "route": "/management/front-office/invoicing",
+    "finalUrl": "http://localhost:8000/management/front-office/invoicing",
+    "title": "",
+    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nOffertes en facturen\nNieuwe offerte\n\nTOTAAL OFFERTES\n\n72,540\n\nfrom 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfrom 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfrom 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfrom 94,012\n\n0.1%\nFilters\nINVOICE NUMBER\n\t\nAMOUNT\n\t\nSTATUS\n\t\nDUE\n\t\nCREATED\n\t\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\nUS $200.00\n\t\nPaid\n\t\n06 Jan 2023\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ218F94-0061\n\t\nUS $994.00\n\t\nDeclined\n\t\n01 Jan 2023\n\t\n14 Dec, 09:45\n\t\nView\n\n\n#ADUQ2138D4-0038\n\t\nUS $4,150.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2138R2-0012\n\t\nUS $2,489.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2131GS-0010\n\t\nUS $47.00\n\t\nPaid\n\t\n28 Dec\n\t\n28 Nov, 11:00\n\t\nView\n\n\n#ADUQ288UUE-3892\n\t\nUS $2,220.00\n\t\nPaid\n\t\n24 Dec\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ2189C7-3822\n\t\nUS $80.00\n\t\nDeclined\n\t\n29 Nov\n\t\n28 Nov, 12:04\n\t\nView\n\n\n#ADUQ2138F2-0099\n\t\nUS $1,249.00\n\t\nPaid\n\t\n29 Nov\n\t\n01 Nov, 14:32\n\t\nView\n\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nVie"
+  },
+  {
+    "slug": "workforce-start",
+    "route": "/workforce/hour/time-registrations",
+    "finalUrl": "http://localhost:8000/workforce/hour/time-registrations",
+    "title": "Registraties",
+    "text": "Tijd registraties\n0\nTest B.V.\nNieuwe registratie\nExporteren\n22-06-2026 - 28-06-2026\ntotaal 0 minuten gewerkt met 0 minuten pauze en 0 minuten afwezig\nlocal"
+  },
+  {
+    "slug": "workforce-tijdregistratie-overzicht",
+    "route": "/workforce/hour/time-registrations",
+    "finalUrl": "http://localhost:8000/workforce/hour/time-registrations",
+    "title": "Registraties",
+    "text": "Tijd registraties\n0\nTest B.V.\nNieuwe registratie\nExporteren\n22-06-2026 - 28-06-2026\ntotaal 0 minuten gewerkt met 0 minuten pauze en 0 minuten afwezig\nlocal"
+  },
+  {
+    "slug": "workforce-tijdregistratie-aanmaken",
+    "route": "/workforce/hour/time-registrations/create",
+    "finalUrl": "http://localhost:8000/workforce/hour/time-registrations/create",
+    "title": "",
+    "text": "Tijd registraties\n0\nTest B.V.\nDatum\nWerkdag / patroon\nWerkzaamheden\nType\nWat voor type registratie wilt u doen?\nServer size\nProductief (werk)\nImproductief (verlof, overstaan of rusttijd)\nDatum\nDe datum waarvoor u een registratie wilt maken.\nVOLGENDE\nlocal"
+  },
+  {
+    "slug": "workforce-tijdregistratie-details",
+    "route": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+    "finalUrl": "http://localhost:8000/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  },
+  {
+    "slug": "workforce-tijdregistratie-tijdlijn",
+    "route": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+    "finalUrl": "http://localhost:8000/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  },
+  {
+    "slug": "workforce-tijdregistratie-bewerken",
+    "route": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+    "finalUrl": "http://localhost:8000/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+    "title": "Niet gevonden",
+    "text": "404\nNIET GEVONDEN"
+  }
+]

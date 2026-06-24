@@ -44,7 +44,6 @@
           {
             "group": "Wagenparkbeheer",
             "pages": [
-              "beheerders/wagenparkbeheer/dashboard",
               "beheerders/wagenparkbeheer/kaart"
             ]
           },
@@ -72,12 +71,6 @@
             ]
           },
           {
-            "group": "Wagenparkbeheer: onderhoud en reparaties",
-            "pages": [
-              "beheerders/wagenparkbeheer/onderhoud-en-reparaties/overzicht"
-            ]
-          },
-          {
             "group": "Wagenparkbeheer: telematica",
             "pages": [
               "beheerders/wagenparkbeheer/telematica/overzicht",
@@ -99,32 +92,25 @@
           {
             "group": "Personeelszaken",
             "pages": [
-              "beheerders/personeelszaken/dashboard",
-              "beheerders/personeelszaken/personeel/overzicht",
-              "beheerders/personeelszaken/verantwoording/overzicht"
+              "beheerders/personeelszaken/personeel/overzicht"
             ]
           },
           {
             "group": "Urenbeheer",
             "pages": [
-              "beheerders/urenbeheer/dashboard",
               "beheerders/urenbeheer/tijdregistratie/overzicht",
               "beheerders/urenbeheer/tijdregistratie/aanmaken",
               "beheerders/urenbeheer/tijdregistratie/details",
               "beheerders/urenbeheer/tijdregistratie/tijdlijn",
-              "beheerders/urenbeheer/tijdregistratie/bewerken",
-              "beheerders/urenbeheer/verlof/overzicht"
+              "beheerders/urenbeheer/tijdregistratie/bewerken"
             ]
           },
           {
             "group": "Klantenbeheer",
             "pages": [
-              "beheerders/klantenbeheer/dashboard",
               "beheerders/klantenbeheer/opdrachtgevers/overzicht",
               "beheerders/klantenbeheer/opdrachtgevers/aanmaken",
-              "beheerders/klantenbeheer/opdrachtgevers/bewerken",
-              "beheerders/klantenbeheer/opdrachten/overzicht",
-              "beheerders/klantenbeheer/facturen/overzicht"
+              "beheerders/klantenbeheer/opdrachtgevers/bewerken"
             ]
           }
         ]

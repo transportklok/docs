@@ -1,22 +1,26 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "luma",
+  "theme": "mint",
   "name": "Transportklok",
   "colors": {
-    "primary": "#1D4ED8",
-    "light": "#3B82F6",
+    "primary": "#1860D8",
+    "light": "#00DD9D",
     "dark": "#1E3A8A"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/main.png",
+    "dark": "/images/alternative.png"
+  },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/1.png",
+    "dark": "/images/2.png",
+    "href": "https://transportklok.nl"
   },
   "navbar": {
     "links": [
       {
         "label": "Ondersteuning",
-        "href": "mailto:support@transportklok.nl"
+        "href": "mailto:info@transportklok.nl"
       }
     ],
     "primary": {
@@ -133,5 +137,8 @@
     "socials": {
       "linkedin": "https://linkedin.com/company/transportklok"
     }
+  },
+  "icons": {
+    "library": "fontawesome"
   }
 }

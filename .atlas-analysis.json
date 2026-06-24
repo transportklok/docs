@@ -1,8 +1,8 @@
 {
   "projectType": "saas",
   "projectName": "Transportklok",
-  "projectDescription": "Transportklok is a Dutch SaaS platform for transport and logistics management, providing tools for planning, tracking, and administration of transport operations, along with a REST API for third-party integrations.",
-  "theme": "luma",
+  "projectDescription": "Transportklok is a Dutch SaaS platform for transport and logistics management, providing tools for administration and tracking transport operations, along with a REST API for third-party integrations.",
+  "theme": "mint",
   "primaryColor": "#1D4ED8",
   "lightColor": "#3B82F6",
   "darkColor": "#1E3A8A",

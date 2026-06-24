@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#1860D8",
     "light": "#00DD9D",
-    "dark": "#1E3A8A"
+    "dark": "#1860D8"
   },
   "favicon": {
     "light": "/images/main.png",
@@ -32,26 +32,98 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Management Documentatie",
+        "tab": "Beheerders",
         "groups": [
           {
-            "group": "Aan de slag",
-            "pages": []
-          }
-        ],
-        "icon": "user-chef"
-      },
-      {
-        "tab": "Medewerkers Documentatie",
-        "groups": [
+            "group": "Start",
+            "pages": [
+              "index",
+              "beheerders/overzicht"
+            ]
+          },
           {
-            "group": "Aan de slag",
-            "pages": []
+            "group": "Wagenparkbeheer",
+            "pages": [
+              "beheerders/wagenparkbeheer/dashboard",
+              "beheerders/wagenparkbeheer/kaart",
+              "beheerders/wagenparkbeheer/voertuigen",
+              "beheerders/wagenparkbeheer/trailers",
+              "beheerders/wagenparkbeheer/locaties",
+              "beheerders/wagenparkbeheer/onderhoud-en-reparaties",
+              "beheerders/wagenparkbeheer/telematica",
+              "beheerders/wagenparkbeheer/tachograaf"
+            ]
+          },
+          {
+            "group": "Personeelszaken",
+            "pages": [
+              "beheerders/personeelszaken/dashboard",
+              "beheerders/personeelszaken/personeel",
+              "beheerders/personeelszaken/verantwoording"
+            ]
+          },
+          {
+            "group": "Urenbeheer",
+            "pages": [
+              "beheerders/urenbeheer/dashboard",
+              "beheerders/urenbeheer/tijdregistratie",
+              "beheerders/urenbeheer/verlof"
+            ]
+          },
+          {
+            "group": "Klantenbeheer",
+            "pages": [
+              "beheerders/klantenbeheer/dashboard",
+              "beheerders/klantenbeheer/opdrachtgevers",
+              "beheerders/klantenbeheer/opdrachten",
+              "beheerders/klantenbeheer/facturen"
+            ]
           }
         ]
       },
       {
-        "tab": "API"
+        "tab": "Medewerkers",
+        "groups": [
+          {
+            "group": "Start",
+            "pages": [
+              "medewerkers/overzicht"
+            ]
+          },
+          {
+            "group": "Werk",
+            "pages": [
+              "medewerkers/werk/tijdregistratie",
+              "medewerkers/werk/tijdregistratie-aanmaken",
+              "medewerkers/werk/tijdregistratie-details",
+              "medewerkers/werk/tijdregistratie-tijdlijn",
+              "medewerkers/werk/tijdregistratie-bewerken"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API",
+        "groups": [
+          {
+            "group": "Aan de slag",
+            "pages": [
+              "api/introductie",
+              "api/authenticatie",
+              "api/rate-limits"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "api/orders",
+              "api/planning",
+              "api/voertuigen",
+              "api/chauffeurs",
+              "api/webhooks"
+            ]
+          }
+        ]
       }
     ]
   },

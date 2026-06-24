@@ -1,0 +1,157 @@
+---
+title: "Veelvoorkomende problemen oplossen in Transportklok"
+sidebarTitle: "Problemen oplossen"
+description: "Veelvoorkomende problemen in Transportklok en hoe u ze oplost: inlogproblemen, synchronisatiefouten, planningsmeldingen en API-fouten."
+---
+
+In deze gids vindt u oplossingen voor veelvoorkomende problemen in Transportklok. De problemen zijn gegroepeerd per functioneel gebied. Doorloopt u de stappen in de betreffende sectie en lost het probleem zich niet op, neem dan contact op met ons supportteam — zie onderaan deze pagina voor de contactgegevens.
+
+## Inloggen & Toegang
+
+<AccordionGroup>
+  <Accordion title="Ik kan niet inloggen">
+    Controleer de volgende punten stapsgewijs:
+
+    **Wachtwoord vergeten:**
+    Ga naar [app.transportklok.nl](https://app.transportklok.nl) en klik op **Wachtwoord vergeten**. Voer uw e-mailadres in en volg de instructies in de reset-e-mail. De link is 24 uur geldig. Controleer ook uw spammap als de e-mail niet binnen enkele minuten aankomt.
+
+    **Account geblokkeerd:**
+    Na vijf opeenvolgende mislukte inlogpogingen wordt uw account tijdelijk geblokkeerd voor 15 minuten. Na deze periode kunt u het opnieuw proberen. Als het account permanent is geblokkeerd, is dit mogelijk gedaan door uw beheerder. Neem contact op met de beheerder van uw Transportklok-account om het account te laten heractiveren via **Instellingen → Gebruikers**.
+
+    **Twee-factor authenticatie (2FA):**
+    Als 2FA is ingeschakeld en u geen toegang heeft tot uw authenticator-app, neem dan contact op met uw beheerder voor een herstelcode, of stuur een verzoek naar **support@transportklok.nl** met een kopie van een geldig identiteitsdocument.
+
+    **Technische fout bij inloggen:**
+    Wis de browsercache en cookies, of probeer in te loggen in een incognitovenster of een andere browser. Als het probleem aanhoudt, controleer dan de [statuspagina](https://status.transportklok.nl) voor eventuele storingen.
+  </Accordion>
+
+  <Accordion title="Ik zie bepaalde menu-items niet">
+    De zichtbaarheid van menu-items in Transportklok is gebaseerd op de rol die aan uw gebruikersaccount is toegewezen. Dit is bedoeld gedrag:
+
+    | Rol | Zichtbare modules |
+    |---|---|
+    | **Beheerder** | Alle modules, inclusief Instellingen en Facturatie |
+    | **Planner** | Opdrachten, Planning, Relaties, Rapportages |
+    | **Chauffeur** | Alleen de mobiele app (geen webportaal) |
+    | **Alleen-lezen** | Opdrachten en Rapportages (alleen inzage) |
+
+    Als u verwacht toegang te moeten hebben tot een bepaalde module maar het menu-item niet ziet, vraag dan uw beheerder om uw rol te controleren en indien nodig aan te passen via **Instellingen → Gebruikers**. Zie ook de pagina [Gebruikers & Rechten](/settings/users-permissions) voor een volledig overzicht van de rechten per rol.
+  </Accordion>
+</AccordionGroup>
+
+## Transportopdrachten
+
+<AccordionGroup>
+  <Accordion title="Een opdracht kan niet worden opgeslagen">
+    Als het opslaan van een transportopdracht mislukt, controleer dan of alle verplichte velden correct zijn ingevuld. Transportklok markeert ontbrekende of ongeldige velden met een rode rand en een foutmelding.
+
+    **Verplichte velden checklist:**
+    - Opdrachtdatum en gewenste leverdatum
+    - Ophaaladres (straat, huisnummer, postcode, plaats)
+    - Afleveradres (straat, huisnummer, postcode, plaats)
+    - Klant (gekoppeld aan een bestaande relatie)
+    - Minimaal één lading- of goederenregel
+
+    Controleer daarnaast:
+    - Of het ophaaladres en afleveradres volledig zijn ingevuld en door het systeem zijn herkend
+    - Of de geselecteerde klant een actieve status heeft in **Relaties → Klanten**
+    - Of u voldoende rechten heeft om opdrachten aan te maken (rol **Planner** of **Beheerder** vereist)
+
+    Als alle velden correct zijn ingevuld en opslaan nog steeds mislukt, noteer dan de foutmelding en neem contact op via **support@transportklok.nl**.
+  </Accordion>
+
+  <Accordion title="De status van een opdracht wordt niet bijgewerkt">
+    Als de status van een opdracht niet verandert na een update door de chauffeur of een handmatige wijziging, probeer dan het volgende:
+
+    1. **Ververs de pagina** — Druk op F5 of klik op het vernieuwpictogram in de browser. Statusupdates van de mobiele app worden doorgaans binnen 30 seconden verwerkt.
+    2. **Controleer de internetverbinding van de chauffeur** — De mobiele app slaat statusupdates lokaal op als er geen verbinding is, en synchroniseert zodra er weer verbinding is.
+    3. **Controleer de app-versie** — Zorg dat de chauffeur de meest recente versie van de Transportklok-app gebruikt. Verouderde versies kunnen synchronisatieproblemen veroorzaken.
+    4. **Handmatige statuswijziging** — Een planner of beheerder kan de status handmatig bijwerken via de opdrachtdetails → **Status wijzigen**.
+
+    Als het probleem structureel is bij meerdere opdrachten of chauffeurs, controleer dan de [statuspagina](https://status.transportklok.nl) en neem indien nodig contact op met support.
+  </Accordion>
+</AccordionGroup>
+
+## Planning
+
+<AccordionGroup>
+  <Accordion title="Er verschijnt een capaciteitswaarschuwing">
+    Een capaciteitswaarschuwing betekent dat Transportklok een mogelijke overbelasting of conflict heeft gedetecteerd in uw planning. Dit kan de volgende oorzaken hebben:
+
+    - **Voertuigcapaciteit overschreden** — het totale gewicht of volume van de toegewezen opdrachten overschrijdt de maximale capaciteit van het voertuig. Controleer de voertuigspecificaties via **Beheer → Voertuigen** en pas de toewijzing aan.
+    - **Chauffeur dubbel ingepland** — de chauffeur is in dezelfde tijdslot aan meerdere opdrachten toegewezen. Open de planningsweergave via **Planning → Agenda** om conflicten visueel te identificeren en op te lossen.
+    - **Rijdende tijden overschreden** — de geplande rijtijd overschrijdt de maximale werktijd of rusttijden op basis van de rij- en rusttijdenregelgeving. Pas de planning aan of wijs een andere chauffeur toe.
+
+    Capaciteitswaarschuwingen zijn indicatief — u kunt de opdracht ook opslaan ondanks de waarschuwing, mits u bewust kiest voor de desbetreffende planning.
+  </Accordion>
+
+  <Accordion title="Chauffeur staat niet in de beschikbare lijst">
+    Als een chauffeur niet verschijnt in de lijst met beschikbare chauffeurs bij het inplannen van een opdracht, controleer dan het volgende:
+
+    1. **Accountstatus** — Het gebruikersaccount van de chauffeur moet de status **Actief** hebben. Controleer dit via **Instellingen → Gebruikers**.
+    2. **Rol** — De gebruiker moet de rol **Chauffeur** hebben toegewezen gekregen. Andere rollen verschijnen niet in de chauffeursselectie.
+    3. **Beschikbaarheid** — Controleer of de chauffeur niet als **Niet beschikbaar** is gemarkeerd in de periode van de geplande opdracht (bijv. vakantie of ziekte). Dit is in te zien en te wijzigen via **Planning → Beschikbaarheid**.
+    4. **Koppeling aan voertuig** — Voor sommige planningsregels is een actieve koppeling tussen de chauffeur en een voertuig vereist. Controleer dit via **Beheer → Chauffeurs → Voertuigkoppeling**.
+  </Accordion>
+</AccordionGroup>
+
+## API & Integraties
+
+<AccordionGroup>
+  <Accordion title="401 Unauthorized — API-sleutel ongeldig of verlopen">
+    Een `401 Unauthorized`-fout betekent dat de API-sleutel die u meestuurt niet wordt herkend of niet langer geldig is. Controleer het volgende:
+
+    1. **Sleutel correct meesturen** — Zorg dat u de API-sleutel meestuurt als Bearer token in de `Authorization`-header: `Authorization: Bearer UW_API_SLEUTEL`.
+    2. **Sleutel actief** — Controleer via **Instellingen → Integraties → API-sleutels** of de betreffende sleutel de status **Actief** heeft. Gerevoceerde sleutels zijn niet meer bruikbaar.
+    3. **Juiste omgeving** — Controleer of u de API-baseURL van de productieomgeving of de sandboxomgeving gebruikt, en of uw sleutel bij de bijbehorende omgeving hoort.
+    4. **Geen extra spaties of aanhalingstekens** — Kopieer de sleutel zorgvuldig; extra spaties of tekens aan het begin of einde veroorzaken authenticatiefouten.
+
+    Maak indien nodig een nieuwe API-sleutel aan via **Instellingen → Integraties → API-sleutels → Nieuwe sleutel aanmaken**. Zie ook de [authenticatiedocumentatie](/api-reference/authentication).
+  </Accordion>
+
+  <Accordion title="429 Too Many Requests — rate limit bereikt">
+    Een `429 Too Many Requests`-fout betekent dat uw applicatie het toegestane aantal API-verzoeken per tijdseenheid heeft overschreden.
+
+    **Standaard rate limits:**
+    - 300 verzoeken per minuut per API-sleutel
+    - 5.000 verzoeken per uur per account
+
+    **Aanbevolen aanpak:**
+    - Implementeer exponential backoff: wacht na een `429`-fout een korte periode (bijv. 1 seconde) en verdubbel de wachttijd bij elke opeenvolgende fout.
+    - Gebruik de `Retry-After`-header in de foutrespons — hierin staat het aantal seconden dat u moet wachten voordat u een nieuw verzoek kunt doen.
+    - Optimaliseer het aantal API-aanroepen door gebruik te maken van bulkendpoints en webhooks in plaats van herhaaldelijk te pollen.
+
+    Raadpleeg de [rate limit documentatie](/api-reference/rate-limits) voor een volledig overzicht van de geldende limieten en best practices.
+  </Accordion>
+
+  <Accordion title="Webhook events worden niet ontvangen">
+    Als uw endpoint geen webhook-events ontvangt, controleer dan stapsgewijs het volgende:
+
+    1. **Webhook actief** — Ga naar **Instellingen → Integraties → Webhooks** en controleer of de webhook de status **Actief** heeft.
+    2. **Juiste endpoint-URL** — Controleer of de ingestelde URL correct is en bereikbaar is via het internet (geen localhost of intern netwerk).
+    3. **HTTPS vereist** — Transportklok verstuurt uitsluitend webhook-events naar HTTPS-endpoints. HTTP-URLs worden niet geaccepteerd.
+    4. **Correct SSL-certificaat** — Het SSL-certificaat van uw endpoint moet geldig zijn en worden uitgegeven door een erkende certificaatautoriteit. Zelfondertekende certificaten worden niet geaccepteerd.
+    5. **HTTP-statuscode** — Uw endpoint moet binnen 5 seconden een `2xx`-statuscode retourneren. Geeft uw server een andere statuscode terug, dan markeert Transportklok de bezorging als mislukt en wordt een herpoging gedaan.
+    6. **Testverzoek versturen** — Gebruik de knop **Testverzoek versturen** in de webhookinstellingen om te controleren of uw endpoint bereikbaar is en correct reageert.
+
+    Controleer ook de bezorgingsgeschiedenis via **Instellingen → Integraties → Webhooks → [webhook naam] → Geschiedenis** voor een overzicht van recente pogingen en foutmeldingen. Zie de [webhook-documentatie](/api-reference/webhooks/overview) voor meer informatie.
+  </Accordion>
+</AccordionGroup>
+
+## Contact & Escalatie
+
+<Note>
+Komt u er niet uit met de bovenstaande stappen? Ons supportteam staat voor u klaar. Voor urgente problemen kunt u ons direct bereiken via **support@transportklok.nl**. Vermeld altijd uw bedrijfsnaam en een duidelijke omschrijving van het probleem zodat wij u zo snel mogelijk kunnen helpen.
+</Note>
+
+<Info>
+Voeg bij uw supportverzoek altijd de volgende informatie toe om de behandeltijd te verkorten:
+
+- **Ordernummer** — het nummer van de betreffende transportopdracht (indien van toepassing)
+- **API Request ID** — de unieke identificator van het mislukte API-verzoek, terug te vinden in de `X-Request-ID`-header van de foutrespons
+- **Tijdstip** — datum en tijdstip waarop het probleem zich voordeed (inclusief tijdzone)
+- **Foutmelding** — de exacte foutmelding of HTTP-statuscode die u heeft ontvangen
+- **Browser / OS** — bij portaalproblemen: uw browser, versie en besturingssysteem
+
+U kunt ook de [veelgestelde vragen](/support/faq) raadplegen voor antwoorden op veelvoorkomende vragen.
+</Info>

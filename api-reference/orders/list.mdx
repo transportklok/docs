@@ -1,0 +1,228 @@
+---
+title: "GET /orders — Transportopdrachten ophalen"
+sidebarTitle: "GET /orders"
+description: "Haal een gepagineerde lijst van transportopdrachten op. Filter op status, datum, chauffeur of voertuig en navigeer door de resultaten met paginering."
+---
+
+Met dit eindpunt haalt u een gepagineerde lijst op van alle transportopdrachten binnen uw organisatie. U kunt de resultaten verfijnen door gebruik te maken van de beschikbare filterparameters, zoals status, datum of gekoppelde chauffeur en voertuig. De resultaten worden gesorteerd op aanmaakdatum, met de meest recente opdrachten eerst.
+
+## Eindpunt
+
+```
+GET https://api.transportklok.nl/v1/orders
+```
+
+## Authenticatie
+
+Voeg de volgende header toe aan elk verzoek:
+
+```
+Authorization: Bearer <api_key>
+```
+
+## Queryparameters
+
+<ParamField query="status" type="string" optional>
+  Filter opdrachten op status. Mogelijke waarden: `draft`, `scheduled`, `in_transit`, `delivered`, `invoiced`, `cancelled`.
+</ParamField>
+
+<ParamField query="page" type="integer" optional default="1">
+  Het paginanummer van de resultatenset. Begint bij `1`.
+</ParamField>
+
+<ParamField query="per_page" type="integer" optional default="25">
+  Het aantal resultaten per pagina. Maximaal `100`.
+</ParamField>
+
+<ParamField query="driver_id" type="string" optional>
+  Filter opdrachten op het unieke ID van de toegewezen chauffeur (bijv. `drv_01HX4K2QZ9P8V8`).
+</ParamField>
+
+<ParamField query="vehicle_id" type="string" optional>
+  Filter opdrachten op het unieke ID van het toegewezen voertuig (bijv. `veh_01HX4K2QZ9P8V9`).
+</ParamField>
+
+<ParamField query="date_from" type="string" optional>
+  Begindatum van het filter op ophaaltijdvenster, in ISO 8601-formaat (bijv. `2024-06-01T00:00:00Z`).
+</ParamField>
+
+<ParamField query="date_to" type="string" optional>
+  Einddatum van het filter op ophaaltijdvenster, in ISO 8601-formaat (bijv. `2024-06-30T23:59:59Z`).
+</ParamField>
+
+## Voorbeeldverzoek
+
+```bash
+curl -X GET "https://api.transportklok.nl/v1/orders?status=scheduled&page=1&per_page=25" \
+  -H "Authorization: Bearer tk_live_xxxxxxxxxxxxxxxx" \
+  -H "Content-Type: application/json"
+```
+
+## Voorbeeldrespons
+
+```json
+{
+  "data": [
+    {
+      "id": "ord_01HX4K2QZ9P8V7",
+      "reference": "REF-2024-001",
+      "status": "scheduled",
+      "pickup": {
+        "address": "Waalhaven 123, 3087 BM Rotterdam",
+        "contact_name": "Jan de Vries",
+        "contact_phone": "+31612345678",
+        "window_start": "2024-06-15T08:00:00Z",
+        "window_end": "2024-06-15T10:00:00Z"
+      },
+      "delivery": {
+        "address": "Keizersgracht 456, 1017 DW Amsterdam",
+        "contact_name": "Sophie Jansen",
+        "contact_phone": "+31687654321",
+        "window_start": "2024-06-15T13:00:00Z",
+        "window_end": "2024-06-15T15:00:00Z"
+      },
+      "cargo": {
+        "weight_kg": 500,
+        "volume_m3": 2.5,
+        "type": "pallets",
+        "quantity": 4,
+        "notes": "Fragile - handle with care"
+      },
+      "driver_id": "drv_01HX4K2QZ9P8V8",
+      "vehicle_id": "veh_01HX4K2QZ9P8V9",
+      "created_at": "2024-06-10T09:00:00Z",
+      "updated_at": "2024-06-12T14:30:00Z"
+    },
+    {
+      "id": "ord_01HX4K2QZ9P8V6",
+      "reference": "REF-2024-002",
+      "status": "scheduled",
+      "pickup": {
+        "address": "Botlekweg 5, 3197 KA Rotterdam",
+        "contact_name": "Pieter Bakker",
+        "contact_phone": "+31698765432",
+        "window_start": "2024-06-16T07:00:00Z",
+        "window_end": "2024-06-16T09:00:00Z"
+      },
+      "delivery": {
+        "address": "Herengracht 78, 1015 BS Amsterdam",
+        "contact_name": "Maria Smit",
+        "contact_phone": "+31611223344",
+        "window_start": "2024-06-16T12:00:00Z",
+        "window_end": "2024-06-16T14:00:00Z"
+      },
+      "cargo": {
+        "weight_kg": 320,
+        "volume_m3": 1.8,
+        "type": "dozen",
+        "quantity": 10,
+        "notes": null
+      },
+      "driver_id": "drv_01HX4K2QZ9P8V8",
+      "vehicle_id": "veh_01HX4K2QZ9P8V9",
+      "created_at": "2024-06-11T10:15:00Z",
+      "updated_at": "2024-06-13T08:00:00Z"
+    }
+  ],
+  "meta": {
+    "total": 42,
+    "page": 1,
+    "per_page": 25
+  }
+}
+```
+
+## Responsvelden
+
+<ResponseField name="data" type="array">
+  Een array van transportopdrachten die voldoen aan de opgegeven filtercriteria.
+
+  <Expandable title="Velden per opdracht">
+    <ResponseField name="data[].id" type="string">
+      Het unieke ID van de transportopdracht (bijv. `ord_01HX4K2QZ9P8V7`).
+    </ResponseField>
+
+    <ResponseField name="data[].reference" type="string">
+      Uw eigen referentienummer voor de opdracht.
+    </ResponseField>
+
+    <ResponseField name="data[].status" type="string">
+      De huidige status van de opdracht: `draft`, `scheduled`, `in_transit`, `delivered`, `invoiced` of `cancelled`.
+    </ResponseField>
+
+    <ResponseField name="data[].pickup" type="object">
+      Ophaalgegevens, inclusief adres, contactpersoon en tijdvenster.
+    </ResponseField>
+
+    <ResponseField name="data[].delivery" type="object">
+      Aflevergegevens, inclusief adres, contactpersoon en tijdvenster.
+    </ResponseField>
+
+    <ResponseField name="data[].cargo" type="object">
+      Ladingdetails: gewicht, volume, type, aantal en eventuele opmerkingen.
+    </ResponseField>
+
+    <ResponseField name="data[].driver_id" type="string | null">
+      Het ID van de toegewezen chauffeur, of `null` indien nog niet ingepland.
+    </ResponseField>
+
+    <ResponseField name="data[].vehicle_id" type="string | null">
+      Het ID van het toegewezen voertuig, of `null` indien nog niet ingepland.
+    </ResponseField>
+
+    <ResponseField name="data[].created_at" type="string">
+      Tijdstip van aanmaken in ISO 8601-formaat.
+    </ResponseField>
+
+    <ResponseField name="data[].updated_at" type="string">
+      Tijdstip van laatste wijziging in ISO 8601-formaat.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="meta" type="object">
+  Pagineringsinformatie over de volledige resultatenset.
+
+  <Expandable title="Velden">
+    <ResponseField name="meta.total" type="integer">
+      Het totale aantal opdrachten dat overeenkomt met de filtercriteria.
+    </ResponseField>
+
+    <ResponseField name="meta.page" type="integer">
+      Het huidige paginanummer.
+    </ResponseField>
+
+    <ResponseField name="meta.per_page" type="integer">
+      Het aantal resultaten per pagina.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+## Foutresponsen
+
+**`401 Unauthorized`** — De API-sleutel ontbreekt of is ongeldig. Controleer de `Authorization`-header.
+
+```json
+{
+  "error": "unauthorized",
+  "message": "De opgegeven API-sleutel is ongeldig of verlopen.",
+  "status": 401
+}
+```
+
+**`422 Unprocessable Entity`** — Een opgegeven filterwaarde is ongeldig, bijvoorbeeld een onbekende statuswaarde.
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The request contains invalid query parameters.",
+    "details": [
+      {
+        "field": "status",
+        "message": "Invalid status value. Allowed values: draft, scheduled, in_transit, delivered, invoiced, cancelled."
+      }
+    ]
+  }
+}
+```

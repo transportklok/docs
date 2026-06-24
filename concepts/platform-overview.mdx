@@ -1,0 +1,53 @@
+---
+title: "Zo werkt het Transportklok-platform: modules en stroom"
+sidebarTitle: "Platform Overzicht"
+description: "Ontdek de kernmodules van Transportklok: van het aanmaken van een transportopdracht tot automatische facturatie, en hoe alles naadloos samenhangt."
+---
+
+Transportklok is een volledig geïntegreerd SaaS-platform waarmee transportbedrijven hun dagelijkse operatie centraal beheren. Vanaf het aanmaken van een transportopdracht tot het versturen van de factuur aan de opdrachtgever — alle stappen verlopen via één platform, toegankelijk via [app.transportklok.nl](https://app.transportklok.nl). De modules zijn nauw met elkaar verweven: gegevens die u in de ene module invoert, zijn direct beschikbaar in de volgende stap van het proces, zodat dubbele invoer en fouten tot een minimum worden beperkt.
+
+## De platformstroom: van opdracht tot factuur
+
+Elke transportactiviteit in Transportklok volgt dezelfde logische levenscyclus. De vier stappen hieronder vormen de ruggengraat van het platform:
+
+<Steps>
+  <Step title="Opdracht aanmaken">
+    Voer de transportopdracht in met ophaal- en afleverlocatie, tijdvensters, ladinginformatie en eventuele speciale instructies. Opdrachten kunnen handmatig worden aangemaakt, via CSV-import of via de REST API.
+  </Step>
+  <Step title="Inplannen">
+    Wijs in de planningsmodule een chauffeur en voertuig toe aan de opdracht. Het systeem controleert automatisch beschikbaarheid, rijbewijsklasse en laadvermogen, en waarschuwt u bij conflicten.
+  </Step>
+  <Step title="Uitvoeren">
+    Zodra de rit onderweg is, ontvangt u real-time statusupdates via de trackingmodule. De chauffeur kan de status vanuit de mobiele app bijwerken; documenten zoals foto's en handtekeningen worden direct aan de opdracht gekoppeld.
+  </Step>
+  <Step title="Factureren">
+    Na aflevering genereert Transportklok automatisch een factuurvoorstel op basis van de afgesproken tarieven en de werkelijk uitgevoerde rit. U keurt de factuur goed en verzendt deze rechtstreeks vanuit het platform.
+  </Step>
+</Steps>
+
+## Kernmodules
+
+<CardGroup cols={2}>
+  <Card title="Transportopdrachten" icon="clipboard-list" href="/concepts/transport-orders">
+    Het hart van het platform. Beheer alle inkomende en uitgaande transportopdrachten, volg hun statusverloop en koppel relevante documenten zoals CMR's en vrachtbrieven.
+  </Card>
+  <Card title="Planning" icon="calendar-days" href="/concepts/planning">
+    Wijs chauffeurs en voertuigen toe aan opdrachten via het visuele planningsbord. Profiteer van ritoptimalisatie op basis van tijdvensters, capaciteit en beschikbaarheid.
+  </Card>
+  <Card title="Tracking" icon="location-dot" href="/guides/track-shipment">
+    Volg ritten in real-time op de kaart. Ontvang meldingen bij afwijkingen en geef opdrachtgevers inzicht in de actuele status van hun zendingen.
+  </Card>
+  <Card title="Facturatie" icon="file-invoice-dollar" href="/guides/invoicing">
+    Genereer facturen automatisch op basis van uitgevoerde ritten en contracttarieven. Exporteer naar uw boekhoudpakket of verstuur rechtstreeks vanuit Transportklok.
+  </Card>
+</CardGroup>
+
+## Gegevensbeheer en geschiedenis
+
+<Info>
+  Transportklok bewaart de volledige geschiedenis van al uw transportopdrachten, planningswijzigingen en facturen. Afgesloten opdrachten blijven raadpleegbaar en doorzoekbaar, zodat u altijd een volledig audittraject hebt. De standaard bewaartermijn is **zeven jaar**, in lijn met de wettelijke bewaarplicht voor zakelijke administratie in Nederland.
+</Info>
+
+## Integraties via de REST API
+
+Naast het gebruik van de webinterface op [app.transportklok.nl](https://app.transportklok.nl) biedt Transportklok een volledige REST API waarmee u het platform kunt integreren met uw eigen systemen — zoals een ERP, WMS, HR-systeem of boekhoudsoftware. Via de API kunt u onder andere opdrachten aanmaken, planningsdata ophalen, chauffeurs en voertuigen synchroniseren en factuurstatussen opvragen. Raadpleeg de [API-referentie](/api-reference/introduction) voor een volledig overzicht van de beschikbare endpoints.

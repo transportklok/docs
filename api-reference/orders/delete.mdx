@@ -1,0 +1,84 @@
+---
+title: "DELETE /orders/{id} — Transportopdracht verwijderen"
+sidebarTitle: "DELETE /orders/{id}"
+description: "Verwijder een transportopdracht permanent. Alleen opdrachten met status draft kunnen worden verwijderd; andere opdrachten dient u te annuleren via PUT /orders/{id}."
+---
+
+Met dit eindpunt verwijdert u een transportopdracht definitief uit het systeem. Verwijderen is uitsluitend mogelijk voor opdrachten met de status `draft`. Heeft een opdracht al een actieve status gekregen, zoals `scheduled` of `in_transit`, dan dient u de opdracht te annuleren door de status bij te werken naar `cancelled` via `PUT /orders/{id}`. Verwijderde opdrachten kunnen niet worden hersteld.
+
+## Eindpunt
+
+```
+DELETE https://api.transportklok.nl/v1/orders/{id}
+```
+
+## Authenticatie
+
+Voeg de volgende header toe aan elk verzoek:
+
+```
+Authorization: Bearer <api_key>
+```
+
+## Padparameter
+
+<ParamField path="id" type="string" required>
+  Het unieke ID van de transportopdracht die u wilt verwijderen (bijv. `ord_01HX4K2QZ9P8V7`). De opdracht moet de status `draft` hebben.
+</ParamField>
+
+## Voorbeeldverzoek
+
+```bash
+curl -X DELETE "https://api.transportklok.nl/v1/orders/ord_01HX4K2QZ9P8V7" \
+  -H "Authorization: Bearer tk_live_xxxxxxxxxxxxxxxx"
+```
+
+## Voorbeeldrespons (204 No Content)
+
+Bij een geslaagd verzoek retourneert de API HTTP-statuscode `204` zonder responsebody.
+
+```
+HTTP/1.1 204 No Content
+```
+
+<Warning>
+  Het verwijderen van een transportopdracht is **onomkeerbaar**. Alle gegevens van de opdracht worden permanent gewist. Wilt u de opdracht bewaren voor archief- of auditdoeleinden, overweeg dan om de status in te stellen op `cancelled` in plaats van de opdracht te verwijderen.
+</Warning>
+
+<Tip>
+  Gebruik `DELETE` uitsluitend voor foutief aangemaakte conceptopdrachten. Voor opdrachten die al zijn ingepland of uitgevoerd, is annulering via `PUT /orders/{id}` de aanbevolen werkwijze.
+</Tip>
+
+## Foutresponsen
+
+**`401 Unauthorized`** — De API-sleutel ontbreekt of is ongeldig. Controleer de `Authorization`-header.
+
+```json
+{
+  "error": "unauthorized",
+  "message": "De opgegeven API-sleutel is ongeldig of verlopen.",
+  "status": 401
+}
+```
+
+**`404 Not Found`** — Er bestaat geen opdracht met het opgegeven ID.
+
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "No order found with ID 'ord_01HX4K2QZ9P8V7'."
+  }
+}
+```
+
+**`422 Unprocessable Entity`** — Wanneer u probeert een opdracht te verwijderen die niet de status `draft` heeft.
+
+```json
+{
+  "error": {
+    "code": "UNPROCESSABLE_ENTITY",
+    "message": "Order 'ord_01HX4K2QZ9P8V7' cannot be deleted because its status is 'scheduled'. Only orders with status 'draft' can be permanently deleted. To cancel this order, use PUT /orders/{id} and set status to 'cancelled'."
+  }
+}
+```

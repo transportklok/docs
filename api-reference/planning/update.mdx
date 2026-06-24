@@ -1,0 +1,156 @@
+---
+title: "PUT /planning/{id} — Bestaande planningentry aanpassen"
+sidebarTitle: "Bijwerken"
+description: "Wijzig een bestaande planningentry: vervang de toegewezen chauffeur of het voertuig, of pas de geplande start- en eindtijd van de rit aan."
+---
+
+Met dit eindpunt wijzigt u een bestaande planningentry. U kunt de toegewezen chauffeur of het voertuig vervangen, of de geplande start- en eindtijd aanpassen. Stuur alleen de velden mee die u wilt wijzigen; overige velden blijven ongewijzigd. Het is niet mogelijk om planningsentries met de status `completed` aan te passen.
+
+## Eindpunt
+
+```
+PUT https://api.transportklok.nl/v1/planning/{id}
+```
+
+## Authenticatie
+
+Voeg de volgende header toe aan elk verzoek:
+
+```
+Authorization: Bearer <api_key>
+```
+
+## Padparameter
+
+<ParamField path="id" type="string" required>
+  Het unieke ID van de planningentry die u wilt bijwerken (bijv. `pln_01HX4K2QZ9P8W1`).
+</ParamField>
+
+## Verzoekbody
+
+Alle velden zijn optioneel. Stuur alleen de velden mee die u wilt wijzigen.
+
+<ParamField body="driver_id" type="string" optional>
+  Het ID van de nieuwe chauffeur aan wie de rit wordt toegewezen. Het systeem controleert of de chauffeur beschikbaar is op het geplande tijdstip.
+</ParamField>
+
+<ParamField body="vehicle_id" type="string" optional>
+  Het ID van het nieuwe voertuig dat voor de rit wordt ingezet. Het systeem controleert of het voertuig beschikbaar is op het geplande tijdstip.
+</ParamField>
+
+<ParamField body="planned_start" type="string" optional>
+  Bijgewerkte geplande starttijd van de rit in ISO 8601-formaat.
+</ParamField>
+
+<ParamField body="planned_end" type="string" optional>
+  Bijgewerkte geplande eindtijd van de rit in ISO 8601-formaat.
+</ParamField>
+
+## Voorbeeldverzoek
+
+In dit voorbeeld wordt de geplande starttijd van de rit een uur vervroegd en wordt een andere chauffeur toegewezen:
+
+```bash
+curl -X PUT "https://api.transportklok.nl/v1/planning/pln_01HX4K2QZ9P8W1" \
+  -H "Authorization: Bearer <api_key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "driver_id": "drv_01HX4K2QZ9P8VC",
+    "planned_start": "2024-06-15T06:30:00Z",
+    "planned_end": "2024-06-15T15:00:00Z"
+  }'
+```
+
+## Voorbeeldrespons (200 OK)
+
+```json
+{
+  "data": {
+    "id": "pln_01HX4K2QZ9P8W1",
+    "order_id": "ord_01HX4K2QZ9P8V7",
+    "driver_id": "drv_01HX4K2QZ9P8VC",
+    "vehicle_id": "veh_01HX4K2QZ9P8V9",
+    "planned_start": "2024-06-15T06:30:00Z",
+    "planned_end": "2024-06-15T15:00:00Z",
+    "route": {
+      "distance_km": 87.5,
+      "estimated_duration_min": 95
+    },
+    "status": "confirmed",
+    "created_at": "2024-06-12T14:30:00Z"
+  }
+}
+```
+
+## Responsvelden
+
+<ResponseField name="data" type="object">
+  Het bijgewerkte planningentry-object.
+
+  <Expandable title="Velden">
+    <ResponseField name="data.id" type="string">
+      Het unieke ID van de planningentry, voorafgegaan door `pln_`.
+    </ResponseField>
+
+    <ResponseField name="data.order_id" type="string">
+      Het ID van de gekoppelde transportopdracht.
+    </ResponseField>
+
+    <ResponseField name="data.driver_id" type="string">
+      Het ID van de (eventueel bijgewerkte) toegewezen chauffeur.
+    </ResponseField>
+
+    <ResponseField name="data.vehicle_id" type="string">
+      Het ID van het (eventueel bijgewerkte) toegewezen voertuig.
+    </ResponseField>
+
+    <ResponseField name="data.planned_start" type="string">
+      Geplande starttijd van de rit in ISO 8601-formaat.
+    </ResponseField>
+
+    <ResponseField name="data.planned_end" type="string">
+      Geplande eindtijd van de rit in ISO 8601-formaat.
+    </ResponseField>
+
+    <ResponseField name="data.route" type="object">
+      Routegegevens inclusief geschatte afstand en rijduur.
+    </ResponseField>
+
+    <ResponseField name="data.route.distance_km" type="number">
+      Geschatte routeafstand in kilometers.
+    </ResponseField>
+
+    <ResponseField name="data.route.estimated_duration_min" type="integer">
+      Geschatte rijtijd in minuten.
+    </ResponseField>
+
+    <ResponseField name="data.status" type="string">
+      De planningsstatus: `draft`, `confirmed` of `completed`.
+    </ResponseField>
+
+    <ResponseField name="data.created_at" type="string">
+      Tijdstip van aanmaken in ISO 8601-formaat.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<Note>
+  Wanneer u de `driver_id` of `vehicle_id` wijzigt, controleert het systeem automatisch of de nieuwe chauffeur of het nieuwe voertuig beschikbaar is op het geplande tijdstip. Bij een beschikbaarheidsconflict retourneert de API een `409 Conflict`-fout.
+</Note>
+
+<Warning>
+  Planningsentries met de status `completed` kunnen **niet** worden bijgewerkt. Pogingen daartoe resulteren in een `422 Unprocessable Entity`-fout. Neem contact op met de ondersteuning indien een afgeronde planningentry gecorrigeerd moet worden.
+</Warning>
+
+## Foutrespons (422 Unprocessable Entity)
+
+Wanneer u probeert een reeds voltooide planningentry bij te werken:
+
+```json
+{
+  "error": {
+    "code": "UNPROCESSABLE_ENTITY",
+    "message": "Planning entry 'pln_01HX4K2QZ9P8W1' cannot be updated because its status is 'completed'."
+  }
+}
+```

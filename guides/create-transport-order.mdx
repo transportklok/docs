@@ -1,0 +1,61 @@
+---
+title: "Maak een nieuwe transportopdracht aan in Transportklok"
+sidebarTitle: "Opdracht aanmaken"
+description: "Stapsgewijze handleiding voor het aanmaken van een nieuwe transportopdracht: ophaal- en aflevergegevens, lading, tijdvensters en documenten uploaden."
+---
+
+In Transportklok legt u alle informatie voor een transportopdracht op één centrale plek vast. Van ophaaladres en aflevervenster tot ladinggewicht en bijgevoegde documenten — het systeem begeleidt u stap voor stap door het aanmaakproces en genereert automatisch een uniek opdrachtnummer zodra u opslaat.
+
+<Steps>
+  <Step title="Open het formulier voor een nieuwe opdracht">
+    Navigeer via het hoofdmenu naar **Transportopdrachten** en klik rechtsboven op **Nieuwe opdracht**. Er wordt een leeg opdrachtformulier geopend.
+  </Step>
+  <Step title="Vul de ophaalgegevens in">
+    Voer het volledige ophaaladres in, inclusief postcode en plaatsnaam. Voeg de naam en het telefoonnummer van de contactpersoon op de ophaallocatie toe en stel het gewenste **tijdvenster** in (vroegste ophaaltijd – uiterste ophaaltijd).
+  </Step>
+  <Step title="Vul de aflevergegevens in">
+    Voer het afleveradres in met contactpersoon en gewenste aflevertijd. Indien de ontvanger een vaste klant is, kunt u het adres direct opzoeken vanuit uw klantenbestand.
+  </Step>
+  <Step title="Geef de ladinggegevens op">
+    Vul de volgende ladingdetails in:
+
+    | Veld | Omschrijving |
+    |---|---|
+    | Gewicht (kg) | Totaal brutogewicht van de lading |
+    | Volume (m³) | Totaal volume van de zending |
+    | Type goederen | Omschrijving van de goederen (bijv. palletgoederen, koelproducten) |
+    | Aantal colli | Totaal aantal stuks, pallets of colli |
+  </Step>
+  <Step title="Voeg een referentienummer en opmerkingen toe">
+    Vul uw eigen referentienummer in (bijvoorbeeld een inkoopordernummer van uw klant). Gebruik het veld **Opmerkingen** voor bijzondere instructies aan de chauffeur of ontvanger, zoals losvoorschriften of contactinstructies.
+  </Step>
+  <Step title="Upload optionele documenten">
+    Voeg indien beschikbaar relevante documenten toe via de knop **Document uploaden**. Ondersteunde bestandstypen zijn PDF, JPG en PNG. Veelgebruikte documenten zijn:
+    - CMR-vrachtbrief
+    - Paklijst / leveringsbon
+    - Gevaarlijke stoffen documentatie (ADR)
+  </Step>
+  <Step title="Sla de opdracht op">
+    Klik op **Opslaan** om de opdracht vast te leggen zonder deze direct in te plannen, of kies **Opslaan en inplannen** om meteen door te gaan naar het planbord. Na het opslaan genereert Transportklok automatisch een uniek opdrachtnummer.
+  </Step>
+</Steps>
+
+<Tip>
+  Maakt u regelmatig vergelijkbare opdrachten voor dezelfde klant of route? Open een bestaande opdracht en klik op **Dupliceren**. Alle velden worden vooringevuld en u past alleen de gewijzigde gegevens aan — dit bespaart aanzienlijk tijd.
+</Tip>
+
+<Info>
+  **Verplichte velden** zijn gemarkeerd met een asterisk (\*): ophaaladres, afleveradres, gewenste ophaaldatum en ladinggewicht. Alle overige velden zijn optioneel en kunnen later worden aangevuld zolang de opdracht nog niet de status **Onderweg** heeft.
+</Info>
+
+<Note>
+  Het automatisch gegenereerde **opdrachtnummer** (formaat `TK-JJJJ-XXXXXX`) wordt ook gebruikt als unieke sleutel in de Transportklok API. Externe systemen, zoals uw WMS of ERP, kunnen via dit nummer de status van een opdracht opvragen of bijwerken. Raadpleeg de [API-referentie](/api-reference/introduction) voor meer informatie over de beschikbare eindpunten.
+</Note>
+
+## Volgende stappen
+
+Na het aanmaken van een opdracht kunt u deze direct inplannen en aan een chauffeur toewijzen. Meer informatie vindt u in de volgende bronnen:
+
+- [Een rit inplannen en chauffeur toewijzen](/guides/planning-route) — plan uw opdracht in op het planbord en wijs een chauffeur toe
+- [Concepten: Transportopdrachten](/concepts/transport-orders) — lees meer over de opbouw en statusflow van een opdracht
+- [Zendingen volgen](/guides/track-shipment) — volg de voortgang van uw opdracht in real-time nadat deze is ingepland

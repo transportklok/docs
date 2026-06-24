@@ -1,0 +1,143 @@
+---
+title: "GET /orders/{id} — Transportopdracht ophalen op ID"
+sidebarTitle: "GET /orders/{id}"
+description: "Haal de volledige details op van één specifieke transportopdracht aan de hand van het unieke order-ID dat bij aanmaken is toegewezen door het systeem."
+---
+
+Met dit eindpunt haalt u alle gegevens op van één specifieke transportopdracht, aan de hand van het unieke order-ID dat bij aanmaken is toegewezen. De respons bevat alle velden inclusief ophaal- en aflevergegevens, ladingspecificaties, de huidige status en eventueel gekoppelde chauffeur- en voertuiggegevens.
+
+## Eindpunt
+
+```
+GET https://api.transportklok.nl/v1/orders/{id}
+```
+
+## Authenticatie
+
+Voeg de volgende header toe aan elk verzoek:
+
+```
+Authorization: Bearer <api_key>
+```
+
+## Padparameter
+
+<ParamField path="id" type="string" required>
+  Het unieke ID van de transportopdracht (bijv. `ord_01HX4K2QZ9P8V7`). Dit ID wordt teruggegeven bij het aanmaken van een opdracht en is tevens zichtbaar in de lijst-respons van `GET /orders`.
+</ParamField>
+
+## Voorbeeldverzoek
+
+```bash
+curl -X GET "https://api.transportklok.nl/v1/orders/ord_01HX4K2QZ9P8V7" \
+  -H "Authorization: Bearer tk_live_xxxxxxxxxxxxxxxx" \
+  -H "Content-Type: application/json"
+```
+
+## Voorbeeldrespons (200 OK)
+
+```json
+{
+  "data": {
+    "id": "ord_01HX4K2QZ9P8V7",
+    "reference": "REF-2024-001",
+    "status": "scheduled",
+    "pickup": {
+      "address": "Waalhaven 123, 3087 BM Rotterdam",
+      "contact_name": "Jan de Vries",
+      "contact_phone": "+31612345678",
+      "window_start": "2024-06-15T08:00:00Z",
+      "window_end": "2024-06-15T10:00:00Z"
+    },
+    "delivery": {
+      "address": "Keizersgracht 456, 1017 DW Amsterdam",
+      "contact_name": "Sophie Jansen",
+      "contact_phone": "+31687654321",
+      "window_start": "2024-06-15T13:00:00Z",
+      "window_end": "2024-06-15T15:00:00Z"
+    },
+    "cargo": {
+      "weight_kg": 500,
+      "volume_m3": 2.5,
+      "type": "pallets",
+      "quantity": 4,
+      "notes": "Fragile - handle with care"
+    },
+    "driver_id": "drv_01HX4K2QZ9P8V8",
+    "vehicle_id": "veh_01HX4K2QZ9P8V9",
+    "created_at": "2024-06-10T09:00:00Z",
+    "updated_at": "2024-06-12T14:30:00Z"
+  }
+}
+```
+
+## Responsvelden
+
+<ResponseField name="data" type="object">
+  Het volledige transportopdracht-object.
+
+  <Expandable title="Velden">
+    <ResponseField name="data.id" type="string">
+      Het unieke, door het systeem gegenereerde ID van de opdracht.
+    </ResponseField>
+
+    <ResponseField name="data.reference" type="string">
+      Uw eigen referentienummer voor de opdracht.
+    </ResponseField>
+
+    <ResponseField name="data.status" type="string">
+      De huidige status: `draft`, `scheduled`, `in_transit`, `delivered`, `invoiced` of `cancelled`.
+    </ResponseField>
+
+    <ResponseField name="data.pickup" type="object">
+      Ophaalgegevens inclusief adres, contactpersoon en tijdvenster.
+    </ResponseField>
+
+    <ResponseField name="data.delivery" type="object">
+      Aflevergegevens inclusief adres, contactpersoon en tijdvenster.
+    </ResponseField>
+
+    <ResponseField name="data.cargo" type="object">
+      Ladingdetails: gewicht, volume, type, aantal en eventuele opmerkingen.
+    </ResponseField>
+
+    <ResponseField name="data.driver_id" type="string | null">
+      Het ID van de toegewezen chauffeur, of `null` indien nog niet ingepland.
+    </ResponseField>
+
+    <ResponseField name="data.vehicle_id" type="string | null">
+      Het ID van het toegewezen voertuig, of `null` indien nog niet ingepland.
+    </ResponseField>
+
+    <ResponseField name="data.created_at" type="string">
+      Tijdstip van aanmaken in ISO 8601-formaat.
+    </ResponseField>
+
+    <ResponseField name="data.updated_at" type="string">
+      Tijdstip van laatste wijziging in ISO 8601-formaat.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+## Foutresponsen
+
+**`401 Unauthorized`** — De API-sleutel ontbreekt of is ongeldig. Controleer de `Authorization`-header.
+
+```json
+{
+  "error": "unauthorized",
+  "message": "De opgegeven API-sleutel is ongeldig of verlopen.",
+  "status": 401
+}
+```
+
+**`404 Not Found`** — Wanneer geen opdracht bestaat met het opgegeven ID.
+
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "No order found with ID 'ord_01HX4K2QZ9P8V7'."
+  }
+}
+```

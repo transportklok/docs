@@ -1,0 +1,81 @@
+---
+title: "Zendingen in real-time volgen en statusupdates beheren"
+sidebarTitle: "Zending volgen"
+description: "Volg actieve transportopdrachten in real-time via de kaart, bekijk GPS-locaties van chauffeurs en beheer statusupdates en notificaties."
+---
+
+Transportklok biedt een volledig real-time overzicht van alle actieve zendingen. Via het live kaartoverzicht ziet u de actuele GPS-positie van iedere chauffeur, de verwachte aankomsttijden en eventuele vertragingen — zonder dat u de chauffeur hoeft te bellen. Statusupdates worden automatisch verwerkt op basis van de acties van de chauffeur in de app, en u kunt zelf handmatige updates toevoegen wanneer dat nodig is.
+
+## Live kaartoverzicht
+
+Open het kaartoverzicht via **Tracking** in het hoofdmenu. Op de kaart ziet u de actuele positie van alle chauffeurs die momenteel onderweg zijn.
+
+<CardGroup cols={3}>
+  <Card title="Op tijd" icon="circle-check">
+    Een **groen** pictogram geeft aan dat de chauffeur op schema ligt en de verwachte aankomsttijd binnen het afgesproken tijdvenster valt.
+  </Card>
+  <Card title="Vertraging" icon="circle-exclamation">
+    Een **oranje** pictogram signaleert een verwachte vertraging. De geschatte aankomsttijd ligt buiten het afgesproken tijdvenster, maar de opdracht is nog niet als kritiek gemarkeerd.
+  </Card>
+  <Card title="Afgeleverd" icon="circle-check">
+    Een **blauw** pictogram toont opdrachten die succesvol zijn afgeleverd. De chauffeur heeft de aflevering bevestigd in de app.
+  </Card>
+</CardGroup>
+
+Klik op een pictogram op de kaart om de detailweergave van de betreffende opdracht te openen. U ziet dan de volledige routevoortgang, de geplande stops en eventuele opmerkingen van de chauffeur.
+
+## Statusupdates
+
+### Automatische statusupdates
+
+Wanneer een chauffeur de Transportklok Chauffeurs-app gebruikt, worden statussen automatisch bijgewerkt:
+
+- De chauffeur start de rit → status wijzigt naar **Onderweg**
+- De chauffeur arriveert op een ophaal- of afleverlocatie → status wijzigt naar **Op locatie**
+- De chauffeur bevestigt de aflevering (inclusief optionele handtekening of foto) → status wijzigt naar **Afgeleverd**
+
+### Handmatige statusupdates door de coördinator
+
+Als coördinator kunt u een status ook handmatig aanpassen. Open de opdracht via **Transportopdrachten** of vanuit het kaartoverzicht, klik op **Status wijzigen** en selecteer de gewenste status.
+
+De volledige statusflow van een opdracht is als volgt:
+
+```text
+Ingepland → Onderweg → Op locatie → Afgeleverd
+```
+
+<Note>
+  Een status kan alleen voorwaarts worden gewijzigd. Het is niet mogelijk een opdracht die al de status **Afgeleverd** heeft terug te zetten naar een eerdere status. Neem contact op met uw beheerder als een correctie noodzakelijk is.
+</Note>
+
+## Notificaties
+
+### Notificaties instellen
+
+U configureert notificaties per opdracht of per klant via **Instellingen** → **Notificaties**. U kiest per statusovergang welke ontvangers automatisch een bericht ontvangen.
+
+<CardGroup cols={2}>
+  <Card title="E-mailnotificaties" icon="envelope">
+    Verstuur automatisch een e-mail naar de klant of coördinator bij statuswijzigingen zoals **Onderweg** of **Afgeleverd**. De e-mail bevat een overzicht van de zending en een directe trackinglink.
+  </Card>
+  <Card title="SMS-notificaties" icon="message">
+    Stuur een kort SMS-bericht naar de contactpersoon op de afleverlocatie. Handig voor tijdgevoelige leveringen waarbij de ontvanger bereikbaar moet zijn.
+  </Card>
+</CardGroup>
+
+Ontvangers kunnen per klantprofiel worden ingesteld, zodat u voor terugkerende klanten niet bij iedere opdracht opnieuw hoeft te configureren wie welke melding ontvangt.
+
+<Tip>
+  Deel een **trackinglink** met de ontvanger zodat die zelf de zending kan volgen zonder in te hoeven loggen op Transportklok. Klik in de opdrachtdetails op **Trackinglink kopiëren** en stuur deze via e-mail of een ander communicatiekanaal. De link is actief zolang de opdracht de status **Afgeleverd** nog niet heeft bereikt.
+</Tip>
+
+<Info>
+  Historische trackingdata, inclusief GPS-sporen en statuslogboeken, worden standaard **12 maanden** bewaard. Na deze periode worden de GPS-sporen geanonimiseerd en zijn alleen de statustijdstempels nog beschikbaar. Indien uw organisatie een langere bewaarperiode vereist, kunt u dit aanpassen via **Instellingen** → **Gegevensbeheer** (beschikbaar in het Business-abonnement en hoger).
+</Info>
+
+## Verwante onderwerpen
+
+- [Een rit inplannen en chauffeur toewijzen](/guides/planning-route) — plan een opdracht in voordat u gaat volgen
+- [Concepten: Transportopdrachten](/concepts/transport-orders) — lees meer over de statusflow en opbouw van opdrachten
+- [Instellingen: Notificaties](/settings/notifications) — configureer e-mail- en SMS-meldingen voor alle klanten en opdrachten
+- [Facturatie](/guides/invoicing) — verwerk afgeronde opdrachten direct in uw facturatiestroom

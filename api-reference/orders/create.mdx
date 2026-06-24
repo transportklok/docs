@@ -1,0 +1,219 @@
+---
+title: "POST /orders — Nieuwe transportopdracht aanmaken"
+sidebarTitle: "POST /orders"
+description: "Maak een nieuwe transportopdracht aan via de API. Geef ophaal- en aflevergegevens, ladingdetails en optionele chauffeur- en voertuigkoppeling mee in het verzoek."
+---
+
+Met dit eindpunt maakt u een nieuwe transportopdracht aan in Transportklok. U dient ten minste de ophaal- en aflevergegevens en de ladingdetails mee te geven. De opdracht wordt aangemaakt met de status `draft`, tenzij u direct een chauffeur en voertuig koppelt via de planningsmodule. Het systeem genereert automatisch een uniek order-ID.
+
+## Eindpunt
+
+```
+POST https://api.transportklok.nl/v1/orders
+```
+
+## Authenticatie
+
+Voeg de volgende header toe aan elk verzoek:
+
+```
+Authorization: Bearer <api_key>
+```
+
+## Verzoekbody
+
+<ParamField body="reference" type="string" optional>
+  Uw eigen referentienummer voor de opdracht (bijv. `REF-2024-001`). Indien weggelaten, genereert het systeem automatisch een referentie.
+</ParamField>
+
+<ParamField body="pickup" type="object" required>
+  Ophaallocatie en bijbehorende gegevens.
+
+  <Expandable title="Velden">
+    <ParamField body="pickup.address" type="string" required>
+      Volledig ophaaladres inclusief postcode en stad (bijv. `Waalhaven 123, 3087 BM Rotterdam`).
+    </ParamField>
+
+    <ParamField body="pickup.contact_name" type="string" required>
+      Naam van de contactpersoon op de ophaallocatie.
+    </ParamField>
+
+    <ParamField body="pickup.contact_phone" type="string" required>
+      Telefoonnummer van de contactpersoon in internationaal formaat (bijv. `+31612345678`).
+    </ParamField>
+
+    <ParamField body="pickup.window_start" type="string" required>
+      Begintijd van het ophaaltijdvenster in ISO 8601-formaat.
+    </ParamField>
+
+    <ParamField body="pickup.window_end" type="string" required>
+      Eindtijd van het ophaaltijdvenster in ISO 8601-formaat.
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<ParamField body="delivery" type="object" required>
+  Afleverlocatie en bijbehorende gegevens.
+
+  <Expandable title="Velden">
+    <ParamField body="delivery.address" type="string" required>
+      Volledig afleveradres inclusief postcode en stad.
+    </ParamField>
+
+    <ParamField body="delivery.contact_name" type="string" required>
+      Naam van de contactpersoon op de afleverlocatie.
+    </ParamField>
+
+    <ParamField body="delivery.contact_phone" type="string" required>
+      Telefoonnummer van de contactpersoon in internationaal formaat.
+    </ParamField>
+
+    <ParamField body="delivery.window_start" type="string" required>
+      Begintijd van het aflevertijdvenster in ISO 8601-formaat.
+    </ParamField>
+
+    <ParamField body="delivery.window_end" type="string" required>
+      Eindtijd van het aflevertijdvenster in ISO 8601-formaat.
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<ParamField body="cargo" type="object" required>
+  Specificaties van de te vervoeren lading.
+
+  <Expandable title="Velden">
+    <ParamField body="cargo.weight_kg" type="number" required>
+      Totaalgewicht van de lading in kilogram.
+    </ParamField>
+
+    <ParamField body="cargo.volume_m3" type="number" required>
+      Totaalvolume van de lading in kubieke meter.
+    </ParamField>
+
+    <ParamField body="cargo.type" type="string" required>
+      Type lading (bijv. `pallets`, `dozen`, `bulk`).
+    </ParamField>
+
+    <ParamField body="cargo.quantity" type="integer" required>
+      Aantal stuks, pallets of colli.
+    </ParamField>
+
+    <ParamField body="cargo.notes" type="string" optional>
+      Aanvullende instructies of opmerkingen over de lading (bijv. `Fragile - handle with care`).
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<ParamField body="driver_id" type="string" optional>
+  Het ID van de toe te wijzen chauffeur. Indien opgegeven samen met `vehicle_id`, wordt de opdracht direct ingepland en krijgt de status `scheduled`.
+</ParamField>
+
+<ParamField body="vehicle_id" type="string" optional>
+  Het ID van het toe te wijzen voertuig. Zie opmerking bij `driver_id`.
+</ParamField>
+
+## Voorbeeldverzoek
+
+```bash
+curl -X POST "https://api.transportklok.nl/v1/orders" \
+  -H "Authorization: Bearer tk_live_xxxxxxxxxxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "reference": "REF-2024-001",
+    "pickup": {
+      "address": "Waalhaven 123, 3087 BM Rotterdam",
+      "contact_name": "Jan de Vries",
+      "contact_phone": "+31612345678",
+      "window_start": "2024-06-15T08:00:00Z",
+      "window_end": "2024-06-15T10:00:00Z"
+    },
+    "delivery": {
+      "address": "Keizersgracht 456, 1017 DW Amsterdam",
+      "contact_name": "Sophie Jansen",
+      "contact_phone": "+31687654321",
+      "window_start": "2024-06-15T13:00:00Z",
+      "window_end": "2024-06-15T15:00:00Z"
+    },
+    "cargo": {
+      "weight_kg": 500,
+      "volume_m3": 2.5,
+      "type": "pallets",
+      "quantity": 4,
+      "notes": "Fragile - handle with care"
+    }
+  }'
+```
+
+## Voorbeeldrespons (201 Created)
+
+```json
+{
+  "data": {
+    "id": "ord_01HX4K2QZ9P8V7",
+    "reference": "REF-2024-001",
+    "status": "draft",
+    "pickup": {
+      "address": "Waalhaven 123, 3087 BM Rotterdam",
+      "contact_name": "Jan de Vries",
+      "contact_phone": "+31612345678",
+      "window_start": "2024-06-15T08:00:00Z",
+      "window_end": "2024-06-15T10:00:00Z"
+    },
+    "delivery": {
+      "address": "Keizersgracht 456, 1017 DW Amsterdam",
+      "contact_name": "Sophie Jansen",
+      "contact_phone": "+31687654321",
+      "window_start": "2024-06-15T13:00:00Z",
+      "window_end": "2024-06-15T15:00:00Z"
+    },
+    "cargo": {
+      "weight_kg": 500,
+      "volume_m3": 2.5,
+      "type": "pallets",
+      "quantity": 4,
+      "notes": "Fragile - handle with care"
+    },
+    "driver_id": null,
+    "vehicle_id": null,
+    "created_at": "2024-06-10T09:00:00Z",
+    "updated_at": "2024-06-10T09:00:00Z"
+  }
+}
+```
+
+<Note>
+  Het systeem genereert automatisch een uniek order-ID (bijv. `ord_01HX4K2QZ9P8V7`) voor elke nieuwe opdracht. Sla dit ID op in uw eigen systeem om de opdracht later te raadplegen, bij te werken of te verwijderen.
+</Note>
+
+## Foutresponsen
+
+**`401 Unauthorized`** — De API-sleutel ontbreekt of is ongeldig. Controleer de `Authorization`-header.
+
+```json
+{
+  "error": "unauthorized",
+  "message": "De opgegeven API-sleutel is ongeldig of verlopen.",
+  "status": 401
+}
+```
+
+**`400 Bad Request`** — Wanneer verplichte velden ontbreken of ongeldige waarden bevatten, retourneert de API een validatiefout.
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The request body contains invalid or missing fields.",
+    "details": [
+      {
+        "field": "pickup.window_start",
+        "message": "This field is required and must be a valid ISO 8601 datetime."
+      },
+      {
+        "field": "cargo.weight_kg",
+        "message": "Must be a positive number."
+      }
+    ]
+  }
+}
+```

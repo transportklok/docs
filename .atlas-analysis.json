@@ -1,0 +1,136 @@
+{
+  "projectType": "saas",
+  "projectName": "Transportklok",
+  "projectDescription": "Transportklok is a Dutch SaaS platform for transport and logistics management, providing tools for planning, tracking, and administration of transport operations, along with a REST API for third-party integrations.",
+  "theme": "luma",
+  "primaryColor": "#1D4ED8",
+  "lightColor": "#3B82F6",
+  "darkColor": "#1E3A8A",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentatie",
+        "groups": [
+          {
+            "group": "Aan de slag",
+            "pages": [
+              "introduction",
+              "getting-started/account-setup",
+              "getting-started/quickstart",
+              "getting-started/navigation"
+            ]
+          },
+          {
+            "group": "Kernconcepten",
+            "pages": [
+              "concepts/platform-overview",
+              "concepts/transport-orders",
+              "concepts/planning",
+              "concepts/drivers-vehicles"
+            ]
+          },
+          {
+            "group": "Handleidingen",
+            "pages": [
+              "guides/create-transport-order",
+              "guides/planning-route",
+              "guides/track-shipment",
+              "guides/invoicing",
+              "guides/reporting"
+            ]
+          },
+          {
+            "group": "Instellingen",
+            "pages": [
+              "settings/company-settings",
+              "settings/users-permissions",
+              "settings/integrations",
+              "settings/notifications"
+            ]
+          },
+          {
+            "group": "Ondersteuning",
+            "pages": [
+              "support/faq",
+              "support/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Referentie",
+        "groups": [
+          {
+            "group": "Overzicht",
+            "pages": [
+              "api-reference/introduction",
+              "api-reference/authentication",
+              "api-reference/rate-limits"
+            ]
+          },
+          {
+            "group": "Transportopdrachten",
+            "pages": [
+              "api-reference/orders/list",
+              "api-reference/orders/create",
+              "api-reference/orders/get",
+              "api-reference/orders/update",
+              "api-reference/orders/delete"
+            ]
+          },
+          {
+            "group": "Planning",
+            "pages": [
+              "api-reference/planning/list",
+              "api-reference/planning/create",
+              "api-reference/planning/update"
+            ]
+          },
+          {
+            "group": "Chauffeurs & Voertuigen",
+            "pages": [
+              "api-reference/drivers/list",
+              "api-reference/drivers/get",
+              "api-reference/vehicles/list",
+              "api-reference/vehicles/get"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api-reference/webhooks/overview",
+              "api-reference/webhooks/events"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Transport order management (aanmaken, beheren en opvolgen van transportopdrachten)",
+    "Route planning and optimization",
+    "Real-time shipment tracking",
+    "Driver and vehicle management",
+    "Invoicing and financial reporting",
+    "REST API for third-party integrations",
+    "Webhook notifications for order status changes",
+    "Role-based user access and permissions",
+    "In-app documentation summaries via Mintlify API"
+  ],
+  "publicApiSurface": [
+    "GET /orders — list transport orders",
+    "POST /orders — create transport order",
+    "GET /orders/{id} — get order details",
+    "PUT /orders/{id} — update order",
+    "DELETE /orders/{id} — delete order",
+    "GET /planning — list planning entries",
+    "POST /planning — create planning entry",
+    "PUT /planning/{id} — update planning entry",
+    "GET /drivers — list drivers",
+    "GET /drivers/{id} — get driver details",
+    "GET /vehicles — list vehicles",
+    "GET /vehicles/{id} — get vehicle details",
+    "POST /webhooks — register webhook endpoint",
+    "GET /webhooks — list registered webhooks"
+  ]
+}

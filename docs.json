@@ -1,0 +1,137 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "Transportklok",
+  "colors": {
+    "primary": "#1D4ED8",
+    "light": "#3B82F6",
+    "dark": "#1E3A8A"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Ondersteuning",
+        "href": "mailto:support@transportklok.nl"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Inloggen",
+      "href": "https://app.transportklok.nl"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Management Documentatie",
+        "groups": [
+          {
+            "group": "Aan de slag",
+            "pages": [
+              "introduction",
+              "getting-started/account-setup",
+              "getting-started/quickstart",
+              "getting-started/navigation"
+            ]
+          },
+          {
+            "group": "Kernconcepten",
+            "pages": [
+              "concepts/platform-overview",
+              "concepts/transport-orders",
+              "concepts/planning",
+              "concepts/drivers-vehicles"
+            ]
+          },
+          {
+            "group": "Handleidingen",
+            "pages": [
+              "guides/create-transport-order",
+              "guides/planning-route",
+              "guides/track-shipment",
+              "guides/invoicing",
+              "guides/reporting"
+            ]
+          },
+          {
+            "group": "Instellingen",
+            "pages": [
+              "settings/company-settings",
+              "settings/users-permissions",
+              "settings/integrations",
+              "settings/notifications"
+            ]
+          },
+          {
+            "group": "Ondersteuning",
+            "pages": [
+              "support/faq",
+              "support/troubleshooting"
+            ]
+          }
+        ],
+        "icon": "user-chef"
+      },
+      {
+        "tab": "Medewerkers Documentatie"
+      },
+      {
+        "tab": "API",
+        "groups": [
+          {
+            "group": "Overzicht",
+            "pages": [
+              "api-reference/introduction",
+              "api-reference/authentication",
+              "api-reference/rate-limits"
+            ]
+          },
+          {
+            "group": "Transportopdrachten",
+            "pages": [
+              "api-reference/orders/list",
+              "api-reference/orders/create",
+              "api-reference/orders/get",
+              "api-reference/orders/update",
+              "api-reference/orders/delete"
+            ]
+          },
+          {
+            "group": "Planning",
+            "pages": [
+              "api-reference/planning/list",
+              "api-reference/planning/create",
+              "api-reference/planning/update"
+            ]
+          },
+          {
+            "group": "Chauffeurs & Voertuigen",
+            "pages": [
+              "api-reference/drivers/list",
+              "api-reference/drivers/get",
+              "api-reference/vehicles/list",
+              "api-reference/vehicles/get"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api-reference/webhooks/overview",
+              "api-reference/webhooks/events"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://linkedin.com/company/transportklok"
+    }
+  }
+}

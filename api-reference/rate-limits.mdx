@@ -1,0 +1,114 @@
+---
+title: "Rate limits en verzoeklimieten van de Transportklok API"
+sidebarTitle: "Rate limits"
+description: "Transportklok hanteert rate limits per API-sleutel. Leer hoe u binnen de limieten blijft, response headers uitleest en backoff-strategieën implementeert."
+---
+
+Om de stabiliteit en beschikbaarheid van de Transportklok API voor alle gebruikers te waarborgen, hanteert Transportklok rate limits per API-sleutel. Deze limieten bepalen hoeveel verzoeken u per uur mag versturen. Bij het overschrijden van de limiet wordt uw verzoek tijdelijk geweigerd totdat het venster opnieuw opent. Op deze pagina leest u welke limieten voor uw abonnement gelden, hoe u de bijbehorende response headers uitleest en hoe u uw integratie robuust maakt tegen tijdelijke beperkingen.
+
+## Limietoverzicht
+
+De limieten zijn afhankelijk van uw abonnementsplan. Naast het urenvenster geldt er ook een burst-limiet om kortstondige piekbelasting te begrenzen:
+
+| Plan | Verzoeken per uur | Burst |
+|---|---|---|
+| Starter | 500 | 50/min |
+| Professional | 1.000 | 100/min |
+| Enterprise | 5.000 | 500/min |
+
+Wilt u weten welk plan op uw account van toepassing is, of heeft u een hogere limiet nodig? Neem contact op via [support@transportklok.nl](mailto:support@transportklok.nl).
+
+## Rate limit headers
+
+Bij elk API-antwoord — ook bij succesvolle verzoeken — stuurt Transportklok drie headers mee die u inzicht geven in uw actuele verbruik:
+
+| Header | Omschrijving |
+|---|---|
+| `X-RateLimit-Limit` | Het maximale aantal verzoeken dat u per uur mag versturen. |
+| `X-RateLimit-Remaining` | Het aantal verzoeken dat u nog over heeft in het huidige venster. |
+| `X-RateLimit-Reset` | Unix-timestamp (seconden) van het moment waarop het venster opnieuw begint en de teller wordt gereset. |
+
+Een typische response met rate limit headers ziet er als volgt uit:
+
+```bash
+HTTP/2 200
+content-type: application/json
+x-ratelimit-limit: 1000
+x-ratelimit-remaining: 847
+x-ratelimit-reset: 1717934400
+
+{
+  "data": [ ... ],
+  "meta": { ... }
+}
+```
+
+Monitor de `X-RateLimit-Remaining`-header actief in uw integratie om te anticiperen op een naderende limiet, in plaats van te wachten op een `429`-fout.
+
+## Wat als de limiet bereikt is?
+
+Wanneer u de rate limit overschrijdt, retourneert de API een `429 Too Many Requests`-statuscode. Het verzoek wordt niet uitgevoerd. De response bevat een `Retry-After`-header met het aantal seconden dat u moet wachten voordat u opnieuw een verzoek mag versturen:
+
+```bash
+HTTP/2 429
+content-type: application/json
+retry-after: 60
+x-ratelimit-limit: 1000
+x-ratelimit-remaining: 0
+x-ratelimit-reset: 1717934400
+```
+
+De responsebody bevat aanvullende informatie over de fout:
+
+```json
+{
+  "error": "rate_limit_exceeded",
+  "message": "U heeft het maximale aantal verzoeken bereikt. Probeer opnieuw na 60 seconden.",
+  "status": 429,
+  "retry_after": 60
+}
+```
+
+Gebruik de waarde van `retry_after` (in seconden) of de `X-RateLimit-Reset`-timestamp om te bepalen wanneer u het verzoek opnieuw kunt proberen.
+
+## Best practices
+
+Volg de onderstaande aanbevelingen om uw integratie efficiënt te houden en rate limit-fouten te minimaliseren.
+
+**Exponential backoff strategie**
+
+Implementeer exponential backoff bij het afhandelen van `429`-fouten: wacht na de eerste fout de opgegeven `retry_after`-duur, en verdubbel de wachttijd bij opeenvolgende fouten (met een maximumgrens). Dit voorkomt dat uw systeem de API overspoelt met herhaalde verzoeken direct na een tijdelijke blokkade.
+
+```python
+import time
+import requests
+
+def request_with_backoff(url, headers, max_retries=5):
+    delay = 1
+    for attempt in range(max_retries):
+        response = requests.get(url, headers=headers)
+        if response.status_code == 429:
+            retry_after = int(response.headers.get("Retry-After", delay))
+            print(f"Rate limit bereikt. Wacht {retry_after} seconden...")
+            time.sleep(retry_after)
+            delay = min(delay * 2, 60)
+        else:
+            return response
+    raise Exception("Maximum aantal pogingen bereikt.")
+```
+
+**Gebruik webhooks in plaats van polling**
+
+Pollen — het herhaaldelijk opvragen van dezelfde resource om wijzigingen te detecteren — verbruikt snel een groot deel van uw beschikbare verzoeken. Gebruik in plaats daarvan [webhooks](/api-reference/webhooks/overview) om real-time notificaties te ontvangen zodra er iets verandert. Dit verlaagt uw verbruik aanzienlijk en maakt uw integratie responsiever.
+
+**Batch verzoeken waar mogelijk**
+
+Combineer meerdere bewerkingen in één API-aanroep wanneer het endpoint dit ondersteunt, in plaats van voor elk item een afzonderlijk verzoek te versturen. Raadpleeg de documentatie van elk endpoint voor beschikbare batch-opties.
+
+**Sla responses op waar passend**
+
+Cache API-antwoorden die niet frequent wijzigen — zoals voertuiglijsten of chauffeursinformatie — lokaal in uw applicatie. Bepaal een redelijke vervaltijd (TTL) op basis van hoe dynamisch de data is, en vernieuw de cache alleen wanneer nodig.
+
+<Tip>
+  Gebruik webhooks voor real-time statusupdates van transportopdrachten in plaats van de Orders API te pollen. Zo bespaart u verzoeken voor de acties die er echt toe doen en blijft u ruim binnen uw rate limit.
+</Tip>

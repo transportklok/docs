@@ -1,0 +1,151 @@
+---
+title: "Transportklok webhooks instellen en handtekening beveiligen"
+sidebarTitle: "Overzicht"
+description: "Configureer webhook-endpoints via het dashboard of de API om real-time meldingen te ontvangen van events en statuswijzigingen in Transportklok."
+---
+
+Webhooks stellen uw systemen in staat om automatisch op de hoogte te worden gesteld wanneer er iets verandert in Transportklok — zonder dat u de API voortdurend hoeft te pollen. Zodra een relevant event plaatsvindt, verstuurt Transportklok een HTTP POST-verzoek naar uw geconfigureerde endpoint met alle bijbehorende gegevens. Dit maakt webhooks ideaal voor het realtime synchroniseren van orderstatus, het triggeren van planningslogica of het verzenden van notificaties aan chauffeurs en klanten.
+
+## Webhook endpoint configureren via het dashboard
+
+Volg de onderstaande stappen om een webhook-endpoint in te stellen in uw Transportklok account:
+
+1. Navigeer in het dashboard naar **Instellingen**.
+2. Klik op het tabblad **Integraties**.
+3. Selecteer **Webhooks** in het linker zijmenu.
+4. Klik op **Nieuw webhook-endpoint**.
+5. Voer de volledige URL van uw endpoint in (inclusief `https://`).
+6. Selecteer de event-typen waarvoor u meldingen wilt ontvangen.
+7. Klik op **Opslaan** om het endpoint te activeren.
+
+Na het opslaan toont het dashboard uw webhook-geheim. Bewaar dit geheim veilig — u heeft het nodig voor handtekeningverificatie (zie [Beveiliging](#beveiliging-webhook-handtekening-verifiëren) hieronder).
+
+### Vereisten voor uw endpoint
+
+Uw webhook-endpoint moet voldoen aan de volgende technische vereisten:
+
+- Het endpoint moet bereikbaar zijn via het openbare internet over HTTPS.
+- Het endpoint moet een **HTTP 2xx-statuscode** terugsturen binnen **5 seconden** na ontvangst van het verzoek.
+- Vertraagde of ontbrekende responses worden door Transportklok beschouwd als een mislukte aflevering en leiden tot een herlevering (zie [Herlevering](#herlevering) hieronder).
+
+<Tip>
+  Verwerk de webhook-payload bij voorkeur asynchroon: sla de binnenkomende payload direct op en verwerk de inhoud in een achtergrondtaak. Zo beantwoordt u het verzoek altijd binnen de tijdslimiet van 5 seconden.
+</Tip>
+
+## Webhook endpoint configureren via de API
+
+U kunt webhook-endpoints ook programmatisch aanmaken en beheren via de REST API. Gebruik hiervoor de `Authorization: Bearer <api_key>`-header bij elk verzoek.
+
+### Webhook aanmaken
+
+```bash
+curl -X POST "https://api.transportklok.nl/v1/webhooks" \
+  -H "Authorization: Bearer <api_key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://mijn-systeem.nl/webhooks/transportklok",
+    "events": ["order.created", "order.status_changed", "planning.confirmed"],
+    "description": "Productie-integratie ordersysteem"
+  }'
+```
+
+Een succesvolle aanmaak retourneert een `201 Created`-respons met het aangemaakte endpoint-object, inclusief het `secret` dat u gebruikt voor handtekeningverificatie:
+
+```json
+{
+  "data": {
+    "id": "whk_01HX4K2QZ9P8W9",
+    "url": "https://mijn-systeem.nl/webhooks/transportklok",
+    "events": ["order.created", "order.status_changed", "planning.confirmed"],
+    "description": "Productie-integratie ordersysteem",
+    "secret": "whsec_Abc123XyZ...",
+    "created_at": "2024-06-15T10:00:00Z"
+  }
+}
+```
+
+### Bestaande webhooks ophalen
+
+```bash
+curl -X GET "https://api.transportklok.nl/v1/webhooks" \
+  -H "Authorization: Bearer <api_key>"
+```
+
+### Webhook verwijderen
+
+```bash
+curl -X DELETE "https://api.transportklok.nl/v1/webhooks/whk_01HX4K2QZ9P8W9" \
+  -H "Authorization: Bearer <api_key>"
+```
+
+<Note>
+  Het `secret`-veld wordt uitsluitend geretourneerd bij de aanmaakrequest (`POST /webhooks`). Sla dit geheim direct en veilig op — het is daarna niet meer opvraagbaar via de API.
+</Note>
+
+## Beveiliging: webhook handtekening verifiëren
+
+Transportklok ondertekent elk uitgaand webhook-verzoek met een HMAC-SHA256-handtekening op basis van uw persoonlijke webhook-geheim. De handtekening wordt meegestuurd in de HTTP-header `X-Transportklok-Signature` in het formaat `sha256=<hex_digest>`.
+
+U dient deze handtekening altijd te verifiëren voordat u de payload verwerkt. Zo weet u zeker dat het verzoek afkomstig is van Transportklok en onderweg niet is aangepast.
+
+<Warning>
+  Verifieer webhook-handtekeningen altijd in een productieomgeving. Het overslaan van handtekeningverificatie maakt uw endpoint kwetsbaar voor nep-verzoeken van kwaadwillenden.
+</Warning>
+
+De verificatie werkt als volgt: u berekent zelf de HMAC-SHA256-hash van de ruwe request body met uw webhook-geheim, en vergelijkt deze met de waarde in de `X-Transportklok-Signature`-header.
+
+<CodeGroup>
+
+```python Python
+import hmac
+import hashlib
+
+def verify_signature(payload_body: bytes, signature: str, secret: str) -> bool:
+    expected = hmac.new(
+        secret.encode(),
+        payload_body,
+        hashlib.sha256
+    ).hexdigest()
+    return hmac.compare_digest(f"sha256={expected}", signature)
+```
+
+```javascript JavaScript
+const crypto = require('crypto');
+
+function verifySignature(payloadBody, signature, secret) {
+  const expected = 'sha256=' + crypto
+    .createHmac('sha256', secret)
+    .update(payloadBody)
+    .digest('hex');
+  return crypto.timingSafeEqual(
+    Buffer.from(expected),
+    Buffer.from(signature)
+  );
+}
+```
+
+</CodeGroup>
+
+Gebruik altijd een timing-safe vergelijkingsfunctie (`hmac.compare_digest` in Python, `crypto.timingSafeEqual` in JavaScript) om timing-aanvallen te voorkomen.
+
+## Herlevering
+
+Wanneer uw endpoint niet reageert met een 2xx-statuscode binnen de tijdslimiet, of helemaal niet reageert, markeert Transportklok de aflevering als mislukt en probeert het de payload opnieuw te versturen. Er worden maximaal **vijf herleveringspogingen** gedaan volgens het volgende schema met exponentiële vertraging:
+
+| Poging | Vertraging na vorige poging |
+|--------|------------------------------|
+| 1      | 1 minuut                     |
+| 2      | 5 minuten                    |
+| 3      | 30 minuten                   |
+| 4      | 2 uur                        |
+| 5      | 12 uur                       |
+
+Na de vijfde mislukte poging wordt de aflevering definitief als mislukt gemarkeerd. U kunt mislukte afleveringen terugvinden en handmatig opnieuw versturen via **Instellingen → Integraties → Webhooks → Afleveringsgeschiedenis**.
+
+<Note>
+  Elk webhook-event heeft een uniek `id`-veld in de payload. Gebruik dit ID om dubbele verwerking bij herleveringen te voorkomen. Zie ook de documentatie over [event types](/api-reference/webhooks/events) voor meer informatie over de payload-structuur.
+</Note>
+
+<Tip>
+  Gebruik een tool als [webhook.site](https://webhook.site) om uw endpoint te testen voordat u het in productie neemt. U ontvangt daar een tijdelijke URL waarop u live webhook-verzoeken kunt inspecteren, inclusief headers en payload.
+</Tip>

@@ -1,0 +1,79 @@
+---
+title: "API-sleutels aanmaken en gebruiken bij Transportklok"
+sidebarTitle: "Authenticatie"
+description: "Genereer een API-sleutel in uw Transportklok-account en gebruik deze als Bearer token in de Authorization-header van elk API-verzoek."
+---
+
+De Transportklok API gebruikt API-sleutels als authenticatiemechanisme. Elke API-sleutel is gekoppeld aan uw account en bepaalt welke rechten en resources toegankelijk zijn. U stuurt de sleutel mee als Bearer token in de `Authorization`-header van elk HTTP-verzoek. Er is geen sessie of OAuth-flow vereist — elk verzoek is op zichzelf staand en volledig geauthenticeerd via de header.
+
+## API-sleutel aanmaken
+
+<Steps>
+  <Step title="Ga naar API-sleutelbeheer">
+    Log in op uw Transportklok-account en navigeer naar **Instellingen → Integraties → API-sleutels**.
+  </Step>
+  <Step title="Nieuwe sleutel aanmaken">
+    Klik op **Nieuwe sleutel aanmaken**. Geef de sleutel een herkenbare naam die aangeeft voor welke integratie of omgeving u deze gebruikt, bijvoorbeeld `Productie – WMS-koppeling` of `Test – ontwikkelomgeving`.
+  </Step>
+  <Step title="Sleutel kopiëren en opslaan">
+    Na het aanmaken wordt de volledige API-sleutel **eenmalig** getoond. Kopieer de sleutel direct en sla hem op een veilige plaats op, zoals een wachtwoordmanager of een secrets management systeem.
+  </Step>
+</Steps>
+
+<Warning>
+  De API-sleutel wordt slechts één keer getoond, direct na het aanmaken. Transportklok slaat de sleutel daarna niet leesbaar op. Bent u de sleutel kwijtgeraakt, dan moet u een nieuwe aanmaken en de oude intrekken.
+</Warning>
+
+## API-sleutel gebruiken
+
+Stuur de API-sleutel mee in de `Authorization`-header van elk verzoek, als Bearer token. Combineer dit altijd met de `Content-Type: application/json`-header:
+
+```bash
+curl -X GET https://api.transportklok.nl/v1/orders \
+  -H "Authorization: Bearer tk_live_xxxxxxxxxxxxxxxx" \
+  -H "Content-Type: application/json"
+```
+
+Het formaat van de `Authorization`-header is altijd:
+
+```
+Authorization: Bearer <uw-api-sleutel>
+```
+
+Vervang `<uw-api-sleutel>` door de sleutel die u in uw accountinstellingen heeft aangemaakt. Sleutels voor de productieomgeving beginnen met het prefix `tk_live_`; testsleutels beginnen met `tk_test_`.
+
+## API-sleutels beheren
+
+U kunt op elk moment een overzicht van uw actieve API-sleutels bekijken via **Instellingen → Integraties → API-sleutels**. Per sleutel ziet u de naam, de aanmaakdatum en het tijdstip van het laatste gebruik.
+
+**Sleutel intrekken of roteren**
+
+Om een sleutel in te trekken, klikt u op **Verwijderen** naast de betreffende sleutel. De sleutel is daarna onmiddellijk ongeldig en alle verzoeken die deze sleutel gebruiken, worden geweigerd met een `401`-foutmelding. Maak een nieuwe sleutel aan en werk uw integratie bij voordat u de oude sleutel intrekt.
+
+**Aanbevolen werkwijze: één sleutel per integratie**
+
+Gebruik afzonderlijke API-sleutels voor elke integratie en omgeving (productie, staging, ontwikkeling). Dit geeft u nauwkeurige controle over toegangsrechten en maakt het eenvoudig om één integratie uit te schakelen zonder andere te beïnvloeden.
+
+## Foutmeldingen
+
+De API geeft de volgende HTTP-statuscodes terug bij authenticatieproblemen:
+
+**`401 Unauthorized`** — De API-sleutel ontbreekt in het verzoek, is onjuist opgegeven of is verlopen.
+
+**`403 Forbidden`** — De API-sleutel is geldig, maar heeft onvoldoende rechten voor de gevraagde resource of actie.
+
+Bij beide fouten bevat de responsebody een JSON-object met aanvullende informatie:
+
+```json
+{
+  "error": "unauthorized",
+  "message": "De opgegeven API-sleutel is ongeldig of verlopen.",
+  "status": 401
+}
+```
+
+Controleer bij een `401`-fout of de `Authorization`-header correct is opgemaakt en de sleutel nog actief is in uw accountinstellingen. Neem bij een `403`-fout contact op met uw accountbeheerder om de rechten van de sleutel te controleren.
+
+<Warning>
+  Sla API-sleutels nooit op in client-side code, publieke broncode of versiebeheersystemen zoals Git. Gebruik omgevingsvariabelen of een dedicated secrets management oplossing om sleutels veilig te bewaren en te distribueren.
+</Warning>

@@ -1,0 +1,87 @@
+---
+title: "Rapportages en analyses genereren in Transportklok"
+sidebarTitle: "Rapportages"
+description: "Genereer operationele en financiële rapportages in Transportklok, exporteer ritgegevens naar PDF of Excel en analyseer de prestaties van uw bedrijf."
+---
+
+De rapportagemodule van Transportklok geeft u inzicht in zowel de operationele als de financiële prestaties van uw transportbedrijf. Genereer overzichten per periode, chauffeur, voertuig of klant, exporteer de gegevens naar PDF, Excel of CSV, en stel automatische rapportages in die wekelijks of maandelijks per e-mail worden afgeleverd.
+
+## Beschikbare rapportages
+
+Transportklok biedt vier categorieën standaardrapportages:
+
+<CardGroup cols={2}>
+  <Card title="Operationeel" icon="truck">
+    **Aantal ritten** per periode, totaal gereden **kilometers**, en een **tijdigheidsanalyse** met het percentage leveringen binnen het afgesproken tijdvenster. Ideaal voor het bewaken van de dagelijkse operationele kwaliteit.
+  </Card>
+  <Card title="Financieel" icon="chart-line">
+    **Omzet per klant**, per chauffeur en per periode. Inclusief een uitsplitsing van vaste en variabele tariefcomponenten en een overzicht van openstaande en betaalde facturen.
+  </Card>
+  <Card title="Chauffeursprestaties" icon="id-card">
+    **Ritten per chauffeur** met doorlooptijden, wachttijden en afwijkingen ten opzichte van de geplande route. Gebruik dit rapport voor functioneringsgesprekken of het bewaken van werkdruk.
+  </Card>
+  <Card title="Wagenparkgebruik" icon="car">
+    **Bezettingsgraad per voertuig** uitgedrukt in rijdende uren versus beschikbare uren, plus een overzicht van het brandstofverbruik en de gereden kilometers per voertuig in de geselecteerde periode.
+  </Card>
+</CardGroup>
+
+## Rapportage aanmaken
+
+<Steps>
+  <Step title="Selecteer het rapporttype">
+    Ga naar **Rapportages** in het hoofdmenu en klik op **Nieuwe rapportage**. Kies het gewenste rapporttype uit de lijst met beschikbare categorieën.
+  </Step>
+  <Step title="Kies de rapportageperiode">
+    Stel de begin- en einddatum in van de gewenste periode. U kunt ook kiezen uit de snelkeuzes **Deze week**, **Vorige maand** of **Dit kwartaal**.
+  </Step>
+  <Step title="Pas filters toe">
+    Verfijn de rapportage door te filteren op:
+    - **Klant** — beperk de rapportage tot één of meerdere klanten
+    - **Chauffeur** — analyseer de prestaties van een specifieke chauffeur
+    - **Voertuig** — bekijk het gebruik van een specifiek voertuig of voertuigtype
+    - **Regio of route** — filter op ophaal- of afleverregio (indien ingericht)
+  </Step>
+  <Step title="Genereer de rapportage">
+    Klik op **Genereer rapportage**. Het systeem verwerkt de gegevens en toont een voorvertoning op het scherm. Omvangrijke rapportages worden op de achtergrond samengesteld; u ontvangt een melding zodra de rapportage gereed is.
+  </Step>
+  <Step title="Exporteer de rapportage">
+    Kies het gewenste exportformaat en klik op **Exporteren**:
+
+    | Formaat | Gebruik |
+    |---|---|
+    | **PDF** | Presentatie aan management of klanten |
+    | **Excel (.xlsx)** | Verdere analyse in spreadsheets |
+    | **CSV** | Import in externe systemen of BI-tools |
+  </Step>
+</Steps>
+
+## Geplande rapportages
+
+Stel automatische rapportages in zodat de juiste personen periodiek de gewenste cijfers ontvangen zonder handmatige tussenkomst.
+
+<Steps>
+  <Step title="Maak een geplande rapportage aan">
+    Ga naar **Rapportages** → **Geplande rapportages** en klik op **Nieuwe planning**. Selecteer het rapporttype en stel de filters in zoals beschreven in de vorige sectie.
+  </Step>
+  <Step title="Stel de herhaalfrequentie in">
+    Kies de gewenste frequentie: **Wekelijks** (met keuze van de dag) of **Maandelijks** (met keuze van de dag van de maand). De rapportage wordt steeds automatisch gegenereerd over de voorafgaande periode.
+  </Step>
+  <Step title="Voeg e-mailontvangers toe">
+    Voer de e-mailadressen in van de ontvangers. Dit kunnen interne gebruikers zijn (coördinatoren, management) of externe ontvangers zoals klanten of accountants. Voeg voor iedere ontvanger optioneel een persoonlijk bericht toe.
+  </Step>
+</Steps>
+
+<Info>
+  Geplande rapportages worden elke week op de gekozen dag om **07:00 uur** gegenereerd en per e-mail verstuurd als PDF-bijlage. De CSV- of Excel-export is beschikbaar als aanvullende bijlage indien u dit bij de instellingen van de geplande rapportage heeft ingeschakeld.
+</Info>
+
+<Tip>
+  Gebruikt u een eigen **Business Intelligence-omgeving** zoals Power BI, Tableau of Looker? Via de Transportklok API kunt u rapportagedata rechtstreeks in uw BI-tool inladen. Raadpleeg de [API-referentie](/api-reference/introduction) voor de beschikbare eindpunten voor ritgegevens, chauffeursstatistieken en financiële overzichten. Met een API-koppeling beschikt u altijd over de meest actuele gegevens zonder handmatige exports.
+</Tip>
+
+## Verwante onderwerpen
+
+- [Facturatie](/guides/invoicing) — bekijk financiële rapportages in samenhang met uw factuuroverzicht en openstaande betalingen
+- [Zendingen volgen](/guides/track-shipment) — real-time inzicht in de operationele voortgang, als aanvulling op historische rapportages
+- [Instellingen: Notificaties](/settings/notifications) — configureer automatische rapportage-e-mails voor uzelf en uw team
+- [API-referentie](/api-reference/introduction) — integreer rapportagedata rechtstreeks in uw eigen BI-omgeving of externe systemen

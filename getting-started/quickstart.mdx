@@ -1,0 +1,75 @@
+---
+title: "Snelstart: uw eerste transportopdracht in vijf stappen"
+sidebarTitle: "Snel starten"
+description: "Doorloop de kernworkflow van Transportklok: maak in vijf stappen uw eerste opdracht aan, wijs een chauffeur toe en volg de zending live."
+---
+
+In deze snelstartgids doorloopt u de kernworkflow van Transportklok: van inloggen tot het live volgen van een zending. Na het voltooien van deze vijf stappen beschikt u over een volledig aangemaakte transportopdracht die is ingepland en toegewezen aan een chauffeur. Heeft u nog geen account, maak dan eerst een account aan via de [account-instellingengids](/getting-started/account-setup).
+
+## Uw eerste transportopdracht in vijf stappen
+
+<Steps>
+  <Step title="Inloggen op Transportklok">
+    Ga naar [app.transportklok.nl](https://app.transportklok.nl) en log in met uw e-mailadres en wachtwoord. Na het inloggen wordt u direct doorgestuurd naar het **Dashboard**, waar u een overzicht ziet van actieve opdrachten, geplande ritten en recente meldingen.
+
+    <Tip>
+      Gebruik de sneltoets **G + D** om vanuit elke pagina direct naar het Dashboard te navigeren. Andere handige sneltoetsen zijn **G + O** (Transportopdrachten), **G + P** (Planning) en **/** om de zoekbalk te openen.
+    </Tip>
+  </Step>
+  <Step title="Chauffeur en voertuig toevoegen">
+    Voordat u een transportopdracht kunt toewijzen, dient u minimaal één chauffeur en één voertuig in het systeem te registreren.
+
+    1. Navigeer via het linkermenu naar **Chauffeurs** en klik op **Nieuwe chauffeur**.
+    2. Vul de naam, het rijbewijsnummer en de contactgegevens in en sla de chauffeur op.
+    3. Navigeer vervolgens naar **Voertuigen** en klik op **Nieuw voertuig**.
+    4. Vul het kenteken, het voertuigtype en de laadcapaciteit in en sla het voertuig op.
+
+    Raadpleeg de pagina [Chauffeurs en voertuigen](/concepts/drivers-vehicles) voor een uitgebreide uitleg van alle beschikbare velden en instellingen.
+  </Step>
+  <Step title="Eerste transportopdracht aanmaken">
+    Navigeer via het linkermenu naar **Transportopdrachten** en klik op de knop **Nieuwe opdracht**. Vul de verplichte velden in:
+
+    | Veld | Omschrijving | Voorbeeld |
+    |---|---|---|
+    | Ophaaladres | Volledig adres van de ophaallocatie | Havenstraat 12, Rotterdam |
+    | Afleveradres | Volledig adres van de afleverlocatie | Industrieweg 45, Utrecht |
+    | Ophaaldatum | Geplande datum en tijd van ophalen | 15-08-2025 08:00 |
+    | Gewicht | Totaalgewicht van de lading in kg | 1.200 kg |
+    | Referentie | Uw eigen ordernummer of klantreferentie (optioneel) | ORD-2025-001 |
+
+    Klik op **Opdracht opslaan** om de transportopdracht aan te maken. De opdracht krijgt de status **Concept** en verschijnt in uw opdrachtenoverzicht.
+  </Step>
+  <Step title="Opdracht toewijzen aan chauffeur en inplannen">
+    Open de zojuist aangemaakte opdracht door erop te klikken in het overzicht. Klik rechtsboven op **Toewijzen** en selecteer de gewenste chauffeur en het voertuig uit de dropdownlijsten.
+
+    Stel vervolgens de geplande rijtijd en eventuele tussenstops in via de **Planningsmodule** door op **Inplannen** te klikken. Na het opslaan verandert de opdrachtstatus van **Concept** naar **Ingepland** en ontvangt de chauffeur automatisch een melding in de Transportklok Chauffeurs-app.
+
+    <Note>
+      Wilt u meerdere opdrachten tegelijk inplannen en optimaliseren? Gebruik dan de [Planningsmodule](/concepts/planning) voor een volledig rooster- en routeoverzicht.
+    </Note>
+  </Step>
+  <Step title="Status volgen via het dashboard">
+    Keer terug naar het **Dashboard** via het linkermenu of de sneltoets **G + D**. Uw ingeplande opdracht is nu zichtbaar in de widget **Actieve ritten**. Klik op de opdracht om de real-time statusupdates te bekijken:
+
+    - **Ingepland** — opdracht is toegewezen en bevestigd
+    - **Onderweg** — chauffeur is vertrokken naar de ophaallocatie
+    - **Opgehaald** — lading is opgehaald en onderweg naar bestemming
+    - **Afgeleverd** — zending is succesvol afgeleverd
+    - **Afgerond** — opdracht is administratief gesloten
+
+    Statuswijzigingen worden automatisch doorgevoerd vanuit de Transportklok Chauffeurs-app zodra de chauffeur de stap bevestigt.
+  </Step>
+</Steps>
+
+## Volgende stappen
+
+U heeft uw eerste transportopdracht succesvol aangemaakt en ingepland. Hieronder vindt u aanvullende documentatie om uw kennis van het platform verder uit te diepen.
+
+<CardGroup cols={2}>
+  <Card title="Transportopdrachten begrijpen" icon="truck" href="/concepts/transport-orders">
+    Leer meer over alle velden, statussen en opties die beschikbaar zijn voor transportopdrachten, inclusief herhalende opdrachten en bulkimport.
+  </Card>
+  <Card title="API integratie" icon="code" href="/api-reference/introduction">
+    Automatiseer het aanmaken van opdrachten en koppel Transportklok aan uw eigen systemen via de REST API. Bekijk de volledige API-documentatie met voorbeeldverzoeken.
+  </Card>
+</CardGroup>

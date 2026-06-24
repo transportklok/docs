@@ -4,8 +4,8 @@
   "name": "Transportklok",
   "colors": {
     "primary": "#1860D8",
-    "light": "#00DD9D",
-    "dark": "#1E3A8A"
+    "light": "#1860D8",
+    "dark": "#1860D8"
   },
   "favicon": {
     "light": "/images/main.png",
@@ -44,73 +44,98 @@
           {
             "group": "Wagenparkbeheer",
             "pages": [
-              "beheerders/wagenparkbeheer/kaart"
-            ]
-          },
-          {
-            "group": "Wagenparkbeheer: voertuigen",
-            "pages": [
-              "beheerders/wagenparkbeheer/voertuigen/overzicht",
-              "beheerders/wagenparkbeheer/voertuigen/aanmaken",
-              "beheerders/wagenparkbeheer/voertuigen/bewerken"
-            ]
-          },
-          {
-            "group": "Wagenparkbeheer: trailers",
-            "pages": [
-              "beheerders/wagenparkbeheer/trailers/overzicht",
-              "beheerders/wagenparkbeheer/trailers/aanmaken",
-              "beheerders/wagenparkbeheer/trailers/bewerken"
-            ]
-          },
-          {
-            "group": "Wagenparkbeheer: locaties",
-            "pages": [
-              "beheerders/wagenparkbeheer/locaties/overzicht",
-              "beheerders/wagenparkbeheer/locaties/aanmaken"
-            ]
-          },
-          {
-            "group": "Wagenparkbeheer: telematica",
-            "pages": [
-              "beheerders/wagenparkbeheer/telematica/overzicht",
-              "beheerders/wagenparkbeheer/telematica/trackers/overzicht",
-              "beheerders/wagenparkbeheer/telematica/trackers/aanmaken",
-              "beheerders/wagenparkbeheer/telematica/druppels/overzicht",
-              "beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
-              "beheerders/wagenparkbeheer/telematica/druppels/koppelen"
-            ]
-          },
-          {
-            "group": "Wagenparkbeheer: tachograaf",
-            "pages": [
-              "beheerders/wagenparkbeheer/tachograaf/voertuigen",
-              "beheerders/wagenparkbeheer/tachograaf/bestuurders",
-              "beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten"
+              "beheerders/wagenparkbeheer/kaart",
+              {
+                "group": "Voertuigen",
+                "pages": [
+                  "beheerders/wagenparkbeheer/voertuigen/overzicht",
+                  "beheerders/wagenparkbeheer/voertuigen/aanmaken",
+                  "beheerders/wagenparkbeheer/voertuigen/bewerken"
+                ]
+              },
+              {
+                "group": "Trailers",
+                "pages": [
+                  "beheerders/wagenparkbeheer/trailers/overzicht",
+                  "beheerders/wagenparkbeheer/trailers/aanmaken",
+                  "beheerders/wagenparkbeheer/trailers/bewerken"
+                ]
+              },
+              {
+                "group": "Locaties",
+                "pages": [
+                  "beheerders/wagenparkbeheer/locaties/overzicht",
+                  "beheerders/wagenparkbeheer/locaties/aanmaken"
+                ]
+              },
+              {
+                "group": "Telematica",
+                "pages": [
+                  "beheerders/wagenparkbeheer/telematica/overzicht",
+                  {
+                    "group": "Trackers",
+                    "pages": [
+                      "beheerders/wagenparkbeheer/telematica/trackers/overzicht",
+                      "beheerders/wagenparkbeheer/telematica/trackers/aanmaken"
+                    ]
+                  },
+                  {
+                    "group": "Druppels",
+                    "pages": [
+                      "beheerders/wagenparkbeheer/telematica/druppels/overzicht",
+                      "beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
+                      "beheerders/wagenparkbeheer/telematica/druppels/koppelen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Tachograaf",
+                "pages": [
+                  "beheerders/wagenparkbeheer/tachograaf/voertuigen",
+                  "beheerders/wagenparkbeheer/tachograaf/bestuurders",
+                  "beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten"
+                ]
+              }
             ]
           },
           {
             "group": "Personeelszaken",
             "pages": [
-              "beheerders/personeelszaken/personeel/overzicht"
+              {
+                "group": "Personeel",
+                "pages": [
+                  "beheerders/personeelszaken/personeel/overzicht"
+                ]
+              }
             ]
           },
           {
             "group": "Urenbeheer",
             "pages": [
-              "beheerders/urenbeheer/tijdregistratie/overzicht",
-              "beheerders/urenbeheer/tijdregistratie/aanmaken",
-              "beheerders/urenbeheer/tijdregistratie/details",
-              "beheerders/urenbeheer/tijdregistratie/tijdlijn",
-              "beheerders/urenbeheer/tijdregistratie/bewerken"
+              {
+                "group": "Tijdregistratie",
+                "pages": [
+                  "beheerders/urenbeheer/tijdregistratie/overzicht",
+                  "beheerders/urenbeheer/tijdregistratie/aanmaken",
+                  "beheerders/urenbeheer/tijdregistratie/details",
+                  "beheerders/urenbeheer/tijdregistratie/tijdlijn",
+                  "beheerders/urenbeheer/tijdregistratie/bewerken"
+                ]
+              }
             ]
           },
           {
             "group": "Klantenbeheer",
             "pages": [
-              "beheerders/klantenbeheer/opdrachtgevers/overzicht",
-              "beheerders/klantenbeheer/opdrachtgevers/aanmaken",
-              "beheerders/klantenbeheer/opdrachtgevers/bewerken"
+              {
+                "group": "Opdrachtgevers",
+                "pages": [
+                  "beheerders/klantenbeheer/opdrachtgevers/overzicht",
+                  "beheerders/klantenbeheer/opdrachtgevers/aanmaken",
+                  "beheerders/klantenbeheer/opdrachtgevers/bewerken"
+                ]
+              }
             ]
           }
         ]
@@ -125,13 +150,18 @@
             ]
           },
           {
-            "group": "Werk: tijdregistratie",
+            "group": "Werk",
             "pages": [
-              "medewerkers/werk/tijdregistratie/overzicht",
-              "medewerkers/werk/tijdregistratie/aanmaken",
-              "medewerkers/werk/tijdregistratie/details",
-              "medewerkers/werk/tijdregistratie/tijdlijn",
-              "medewerkers/werk/tijdregistratie/bewerken"
+              {
+                "group": "Tijdregistratie",
+                "pages": [
+                  "medewerkers/werk/tijdregistratie/overzicht",
+                  "medewerkers/werk/tijdregistratie/aanmaken",
+                  "medewerkers/werk/tijdregistratie/details",
+                  "medewerkers/werk/tijdregistratie/tijdlijn",
+                  "medewerkers/werk/tijdregistratie/bewerken"
+                ]
+              }
             ]
           }
         ]

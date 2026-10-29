@@ -10,7 +10,7 @@
       "email": "dev@transportklok.nl"
     },
     "worker": {
-      "email": null
+      "email": "medewerker@docs-demo.example"
     }
   },
   "masks": {
@@ -75,7 +75,7 @@
     },
     {
       "file": "management-voertuigen-bewerken.png",
-      "url": "/management/fleet/vehicles/019ef960-330b-7043-b233-107203758d2f/edit",
+      "url": "/management/fleet/vehicles/019f0000-0000-7000-8000-000000000001/edit",
       "role": "admin",
       "selector": null
     },
@@ -93,7 +93,7 @@
     },
     {
       "file": "management-trailers-bewerken.png",
-      "url": "/management/fleet/trailers/019ef960-34ec-73f4-8971-489c76647699/edit",
+      "url": "/management/fleet/trailers/019f0000-0000-7000-8000-000000000002/edit",
       "role": "admin",
       "selector": null
     },
@@ -207,19 +207,19 @@
     },
     {
       "file": "management-tijdregistratie-details.png",
-      "url": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+      "url": "/management/hour/time-registrations/019f0000-0000-7000-8000-000000000004/show",
       "role": "admin",
       "selector": null
     },
     {
       "file": "management-tijdregistratie-tijdlijn.png",
-      "url": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+      "url": "/management/hour/time-registrations/019f0000-0000-7000-8000-000000000004/timeline",
       "role": "admin",
       "selector": null
     },
     {
       "file": "management-tijdregistratie-bewerken.png",
-      "url": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+      "url": "/management/hour/time-registrations/019f0000-0000-7000-8000-000000000004/edit",
       "role": "admin",
       "selector": null
     },
@@ -249,7 +249,7 @@
     },
     {
       "file": "management-opdrachtgevers-bewerken.png",
-      "url": "/management/front-office/customers/019ef9d2-f812-7344-ac58-1284ec047dce/edit",
+      "url": "/management/front-office/customers/019f0000-0000-7000-8000-000000000003/edit",
       "role": "admin",
       "selector": null
     },
@@ -285,19 +285,19 @@
     },
     {
       "file": "workforce-tijdregistratie-details.png",
-      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+      "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/show",
       "role": "worker",
       "selector": null
     },
     {
       "file": "workforce-tijdregistratie-tijdlijn.png",
-      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+      "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/timeline",
       "role": "worker",
       "selector": null
     },
     {
       "file": "workforce-tijdregistratie-bewerken.png",
-      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+      "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/edit",
       "role": "worker",
       "selector": null
     }

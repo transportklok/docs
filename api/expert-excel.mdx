@@ -1,0 +1,210 @@
+---
+title: "Expert Excel-koppeling"
+description: "OAuth en REST API v1 voor de Expert Excel-integratie: organisaties, medewerkers en exports."
+---
+
+## Waar deze pagina voor is
+
+Deze pagina beschrijft hoe `expertexcel.nl` met Transportklok verbindt. De koppeling gebruikt OAuth 2.0 voor autorisatie en REST API v1 om organisaties en medewerkers te lezen en exports aan te maken, te volgen en te downloaden.
+
+## Wie dit mag gebruiken
+
+- De integratieontwikkelaar van Expert Excel, met de OAuth-client die Transportklok voor die omgeving heeft geregistreerd.
+- De gebruiker die autoriseert, kiest tijdens de autorisatie één organisatie. Het token werkt daarna alleen binnen die organisatie; een andere organisatie geeft `404`.
+- De koppeling krijgt deze scopes:
+
+| Scope | Gebruik |
+| --- | --- |
+| `organizations:read` | Organisaties lezen |
+| `workers:read` | Medewerkers lezen |
+| `exports:*` | Exports lezen (`exports:read`), starten (`exports:create`) en downloaden (`exports:download`) |
+
+De routes voor medewerkers en exports controleren hun scope bij elke aanvraag. De organisatieroutes controleren `organizations:read` niet; daar bepaalt alleen de organisatie die aan het token is toegekend wat u ziet. Vraag de scope toch aan, zodat de koppeling meegaat met een latere controle.
+
+## Gegevens die u nodig hebt
+
+| Waarde | Betekenis |
+| --- | --- |
+| `client_id` | Het geregistreerde OAuth-client-id |
+| `client_secret` | Geheim van een server-side client; nooit in frontendcode |
+| `redirect_uri` | De exacte callback-URL; wildcards zijn niet toegestaan |
+| `app_base_url` | De basis-URL van de Transportklok-applicatie; hier staan de OAuth-routes (`/oauth/authorize` en `/oauth/token`) |
+| `api_base_url` | De basis-URL van de API van dezelfde omgeving |
+
+De REST API-basisroute is `{api_base_url}/rest/v1` op een omgeving met een eigen API-domein (staging en productie). Zonder eigen API-domein is de basisroute `{api_base_url}/api/rest/v1`. Alle routes hieronder liggen onder die basisroute.
+
+## Zo gebruikt u deze pagina
+
+### 1. Autoriseren (OAuth 2.0, Authorization Code met PKCE)
+
+1. Maak server-side een willekeurige `code_verifier`, de Base64URL-gecodeerde SHA-256 `code_challenge` en een willekeurige `state`. Bewaar `code_verifier` en `state` tijdelijk en controleer de `state` bij de callback.
+2. Stuur de gebruiker naar Transportklok:
+
+```text
+GET {app_base_url}/oauth/authorize
+    ?client_id={client_id}
+    &redirect_uri={url_encoded_redirect_uri}
+    &response_type=code
+    &scope=organizations%3Aread%20workers%3Aread%20exports%3A%2A
+    &state={state}
+    &code_challenge={code_challenge}
+    &code_challenge_method=S256
+```
+
+3. De gebruiker logt in, kiest één organisatie en keurt de scopes goed. Bij weigering volgt een OAuth-fout naar de redirect-URL; verwerk `error`, `error_description` en `state` veilig.
+4. Wissel de ontvangen code server-side om voor tokens:
+
+```http
+POST {app_base_url}/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+```
+
+```text
+grant_type=authorization_code
+client_id={client_id}
+client_secret={client_secret}
+redirect_uri={redirect_uri}
+code={authorization_code}
+code_verifier={code_verifier}
+```
+
+Voor een public client laat u `client_secret` weg; de `code_verifier` blijft verplicht. De response bevat `token_type` (`Bearer`), `expires_in`, `access_token` en `refresh_token`. Sla beide tokens versleuteld op.
+
+5. Vernieuw het access-token met `grant_type=refresh_token`, `client_id`, `client_secret` en `refresh_token`. Gebruik een teruggestuurd nieuw refresh-token en behandel het oude als vervangen.
+
+### 2. Aanvragen doen
+
+Stuur bij elke aanvraag `Authorization: Bearer {access_token}` en `Accept: application/json`; bij een JSON-body ook `Content-Type: application/json`. Identifiers zijn UUID's. Een detailresponse heeft de vorm `{"data": {"id": "..."}}`; een lijstresponse bevat een `data`-array en paginator-metadata (`current_page`, `per_page`, `total`, `last_page`, `from`, `to` en links).
+
+### 3. Een export draaien
+
+1. Start de export met `POST /organizations/{organization_id}/exports`.
+2. Bewaar het teruggegeven export-id.
+3. Vraag de status op met `GET /organizations/{organization_id}/exports/{export_id}`, met oplopende wachttijd.
+4. Download het bestand met `GET .../exports/{export_id}/download` zodra `status` `success` is.
+5. Bewaar het export-id voor audit en deduplicatie.
+
+Aanbevolen volgorde voor een volledige synchronisatie: autoriseer en bewaar de organisatie-id, haal de organisatie op om de verbinding te controleren, synchroniseer medewerkers met `id` als stabiele sleutel, en start daarna alleen de benodigde exporttypes.
+
+## Velden
+
+### Endpoints
+
+| Onderdeel | Endpoint | Scope |
+| --- | --- | --- |
+| Organisaties | `GET /organizations` | `organizations:read` |
+| Organisatie | `GET /organizations/{organization_id}` | `organizations:read` |
+| Medewerkers | `GET /organizations/{organization_id}/workers` | `workers:read` |
+| Medewerker | `GET /organizations/{organization_id}/workers/{worker_id}` | `workers:read` |
+| Export starten | `POST /organizations/{organization_id}/exports` | `exports:create` |
+| Exports ophalen | `GET /organizations/{organization_id}/exports` | `exports:read` |
+| Exportstatus | `GET /organizations/{organization_id}/exports/{export_id}` | `exports:read` |
+| Exportbestand | `GET /organizations/{organization_id}/exports/{export_id}/download` | `exports:download` |
+
+De lijst met organisaties bevat normaal één record: de organisatie die aan het token is toegekend. Een organisatie of medewerker buiten de toegekende context geeft `404 Not Found`. Een organisatie bevat `id`, `name`, `collective_labour_agreement_id` en `on_beta_program`.
+
+### Lijstparameters
+
+Lijsten van organisaties, medewerkers en exports ondersteunen:
+
+| Parameter | Type | Standaard | Uitleg |
+| --- | --- | --- | --- |
+| `limit` | integer, 1–100 | `15` | Aantal records per pagina |
+| `page` | integer, vanaf 1 | `1` | Gevraagde pagina |
+| `order_identifier` | string, maximaal 255 tekens | `id` | Veld waarop wordt gesorteerd |
+| `order_direction` | `asc`, `desc`, `random` | `asc` | Sorteervolgorde |
+
+Er zijn geen domeinfilters op naam, status of datum. `order_identifier` sorteert alleen. De response gebruikt de vaste algemene gegevensset; relaties en publiciteitsniveau zijn niet via queryparameters aan te passen.
+
+### Medewerkergegevens
+
+Voorbeeld van een medewerker in de lijst:
+
+```json
+{
+  "id": "8b21...",
+  "user_id": null,
+  "name": "Jansen, Jan",
+  "formal_name": "J. Jan Jansen",
+  "employment_number": "W-1001",
+  "initials": "J.J.",
+  "first_name": "Jan",
+  "preposition": null,
+  "last_name": "Jansen",
+  "profile_photo_url": "https://..."
+}
+```
+
+Dit zijn alle velden die de API publiceert; andere medewerkergegevens zijn niet beschikbaar. Gebruik `id` als stabiele sleutel en `employment_number` als bedrijfsreferentie wanneer die is gevuld.
+
+### Export starten
+
+| Veld | Verplicht | Uitleg |
+| --- | --- | --- |
+| `name` | Ja | Interne naam van een geregistreerd exporttype, maximaal 255 tekens; geen bestandsnaam. Een onbekende naam geeft `422` op `name` |
+| `format` | Nee | `xlsx`, `csv` of `json`; zonder waarde geldt de organisatie-instelling. Een formaat dat het exporttype niet ondersteunt geeft `422` op `format` |
+| overige velden | Per exporttype | Bijvoorbeeld `filter` voor de productieve tijdregistratie-export |
+
+`format` overschrijft alleen voor deze REST-export de organisatie-instelling. In de applicatieconfiguratie blijven Excel en CSV de keuzes.
+
+```json
+{
+  "name": "productive-time-registrations-data",
+  "format": "json",
+  "filter": {
+    "period": ["2026-07-01", "2026-07-31"]
+  }
+}
+```
+
+De `period`-filter is inclusief en bevat twee datums. Zonder periode wordt de volledige beschikbare periode gebruikt; geef daarom altijd een periode mee.
+
+### Exportstatus
+
+| Veld | Betekenis |
+| --- | --- |
+| `id` | Export-id |
+| `name` | Geregistreerd exporttype |
+| `label`, `icon` | Weergavenaam en pictogram van het exporttype |
+| `status` | `created`, `running`, `success` of `failed` |
+| `progress` | Voortgangspercentage |
+| `message` | Fout- of statusmelding, indien aanwezig |
+| `downloaded` | `true` zodra het bestand is gedownload |
+| `created_at` | Aanmaaktijdstip |
+| `organization_id`, `user_id`, `user`, `task_id` | De organisatie, de gebruiker die de export startte en de bijbehorende taak |
+
+`storage_path` en de interne auto-delete-instelling zijn geen publieke velden.
+
+### Kolommen van `productive-time-registrations-data`
+
+De kolommen staan in deze volgorde: `organisatie`, `team`, `voornaam`, `tussenvoegsel`, `achternaam`, `referentie`, `datum`, `start`, `eind`, `totaal_uren`, `netto_uren`, daarna de dynamische kolommen, en tot slot `controleur`, `status`, `aangemaakt_op`, `gewijzigd_op`. De dynamische kolommen zijn eerst de productieve activiteiten, dan de tijdregistratie-attributen en dan de versie-attributen; welke dat zijn hangt af van de configuratie van de organisatie.
+
+Bij `format: "json"` is het bestand een JSON-array met per rij een object waarvan de keys de kolomnamen zijn.
+
+## Wat er daarna gebeurt
+
+- Een geslaagde `POST` maakt een exportjob aan en geeft de export terug in `data`. Lees het `id` en volg de status.
+- De download is pas mogelijk als de export is afgerond en het bestand bestaat. Bij een nog niet afgeronde of mislukte export volgt geen bestand maar `404`; controleer dan de status.
+- Een geslaagde download zet `downloaded` op `true`.
+
+## Beperkingen
+
+| HTTP-status | Betekenis |
+| --- | --- |
+| `400` | Ongeldige OAuth- of requestparameters |
+| `401` | Geen, verlopen of ongeldig access-token; vernieuw eerst met het refresh-token |
+| `403` | Het token heeft de benodigde scope niet |
+| `404` | Record bestaat niet, valt buiten de toegekende organisatie, of het exportbestand is nog niet beschikbaar |
+| `422` | Validatiefout in de body, bijvoorbeeld onbekende `name` of niet-ondersteund `format` |
+| `429` | Rate limit; probeer opnieuw met backoff |
+| `5xx` | Tijdelijke serverfout; probeer opnieuw met begrensde backoff |
+
+- De koppeling is single-organization; voor een tweede organisatie is een aparte autorisatie nodig.
+- Er is geen endpoint om de beschikbare exporttypes en hun parameters op te vragen. Stem exportnamen en parameters vooraf af met de Transportklok-beheerder.
+- Het geneste endpoint voor contracten van een medewerker (`/workers/{worker_id}/engagements`, scope `engagements:read`) bestaat, maar valt buiten de afgesproken rechten en moet niet worden gebruikt.
+- Gebruik aan de kant van de integratie deduplicatie bij het starten van exports: een timeout kan optreden nadat de export al is aangemaakt.
+
+## Laatst gecontroleerd tegen versie 1.3.16
+
+Gecontroleerd tegen de MyTimeFlow REST-routes, controllers, publicatievelden, exportkolommen en OAuth-scopes op tag 1.3.16.

@@ -174,7 +174,8 @@
             "pages": [
               "api/introductie",
               "api/authenticatie",
-              "api/rate-limits"
+              "api/rate-limits",
+              "api/expert-excel"
             ]
           },
           {

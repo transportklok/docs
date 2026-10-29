@@ -1,0 +1,305 @@
+{
+  "workspace": "docs-demo",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fixedTime": "2026-01-15T09:00:00+01:00",
+  "roles": {
+    "admin": {
+      "email": "dev@transportklok.nl"
+    },
+    "worker": {
+      "email": null
+    }
+  },
+  "masks": {
+    "text": [
+      {
+        "pattern": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+        "replace": "demo{n}@example.com"
+      },
+      {
+        "pattern": "€\\s?-?[0-9][0-9.,]*",
+        "replace": "€ 1.234,56"
+      }
+    ],
+    "selectors": [],
+    "columns": [
+      {
+        "header": "^(contactpersoon|medewerker|bestuurder|werknemer|chauffeur)$",
+        "replace": "Demo medewerker {n}"
+      },
+      {
+        "header": "^(naam|opdrachtgever)$",
+        "replace": "Demo naam {n}"
+      }
+    ],
+    "fields": [
+      {
+        "pattern": "naam|name",
+        "replace": "Demo naam {n}"
+      }
+    ]
+  },
+  "captures": [
+    {
+      "file": "management-start.png",
+      "url": "/management/front-office/customers",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-wagenpark-dashboard.png",
+      "url": "/management/fleet/dashboard",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-wagenpark-kaart.png",
+      "url": "/management/fleet/map",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-voertuigen-overzicht.png",
+      "url": "/management/fleet/vehicles",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-voertuigen-aanmaken.png",
+      "url": "/management/fleet/vehicles/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-voertuigen-bewerken.png",
+      "url": "/management/fleet/vehicles/019ef960-330b-7043-b233-107203758d2f/edit",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-trailers-overzicht.png",
+      "url": "/management/fleet/trailers",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-trailers-aanmaken.png",
+      "url": "/management/fleet/trailers/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-trailers-bewerken.png",
+      "url": "/management/fleet/trailers/019ef960-34ec-73f4-8971-489c76647699/edit",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-locaties-overzicht.png",
+      "url": "/management/fleet/locations",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-locaties-aanmaken.png",
+      "url": "/management/fleet/locations/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-onderhoud-overzicht.png",
+      "url": "/management/fleet/services",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-telematica-overzicht.png",
+      "url": "/management/fleet/telematics",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-trackers-overzicht.png",
+      "url": "/management/fleet/telematics/devices",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-trackers-aanmaken.png",
+      "url": "/management/fleet/telematics/devices/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-druppels-overzicht.png",
+      "url": "/management/fleet/telematics/beacons",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-druppels-aanmaken.png",
+      "url": "/management/fleet/telematics/beacons/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-druppels-koppelen.png",
+      "url": "/management/fleet/telematics/beacons/1/connect",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tachograaf-voertuigen.png",
+      "url": "/management/fleet/tachographs/vehicles",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tachograaf-bestuurders.png",
+      "url": "/management/fleet/tachographs/drivers",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tachograaf-bedrijfskaarten.png",
+      "url": "/management/fleet/tachographs/company-cards",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-personeelszaken-dashboard.png",
+      "url": "/management/human-resources/dashboard",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-personeel-overzicht.png",
+      "url": "/management/human-resources/employments",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-verantwoording-overzicht.png",
+      "url": "/management/human-resources/accountability",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-urenbeheer-dashboard.png",
+      "url": "/management/hour/dashboard",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tijdregistratie-overzicht.png",
+      "url": "/management/hour/time-registrations",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tijdregistratie-aanmaken.png",
+      "url": "/management/hour/time-registrations/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tijdregistratie-details.png",
+      "url": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tijdregistratie-tijdlijn.png",
+      "url": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-tijdregistratie-bewerken.png",
+      "url": "/management/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-verlof-overzicht.png",
+      "url": "/management/hour/leave",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-klantenbeheer-dashboard.png",
+      "url": "/management/front-office/dashboard",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-opdrachtgevers-overzicht.png",
+      "url": "/management/front-office/customers",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-opdrachtgevers-aanmaken.png",
+      "url": "/management/front-office/customers/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-opdrachtgevers-bewerken.png",
+      "url": "/management/front-office/customers/019ef9d2-f812-7344-ac58-1284ec047dce/edit",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-opdrachten-overzicht.png",
+      "url": "/management/front-office/orders",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-facturen-overzicht.png",
+      "url": "/management/front-office/invoicing",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "workforce-start.png",
+      "url": "/workforce/hour/time-registrations",
+      "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "workforce-tijdregistratie-overzicht.png",
+      "url": "/workforce/hour/time-registrations",
+      "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "workforce-tijdregistratie-aanmaken.png",
+      "url": "/workforce/hour/time-registrations/create",
+      "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "workforce-tijdregistratie-details.png",
+      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+      "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "workforce-tijdregistratie-tijdlijn.png",
+      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+      "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "workforce-tijdregistratie-bewerken.png",
+      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+      "role": "worker",
+      "selector": null
+    }
+  ]
+}

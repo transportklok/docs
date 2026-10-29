@@ -1,0 +1,2 @@
+# One customer name per line, matched case-insensitively as a whole word.
+# Lines starting with # and blank lines are ignored. Add every customer name here.

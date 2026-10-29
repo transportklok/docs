@@ -1,0 +1,24 @@
+name: docs-coverage
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: docs
+      - uses: actions/checkout@v4
+        with:
+          repository: transportklok/transportklok-workspace
+          token: ${{ secrets.WORKSPACE_READ_TOKEN }}
+          path: workspace
+      - name: Report feature-to-docs gaps as warnings
+        run: python3 workspace/scripts/docs-coverage/docs_coverage.py --workspace workspace --docs docs --github --json docs-coverage.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docs-coverage
+          path: docs-coverage.json

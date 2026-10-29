@@ -1,0 +1,7 @@
+# One database table name per line, matched case-insensitively as a whole word.
+# Only names that are not everyday words; plain words such as "trailers" would flag prose.
+# Lines starting with # and blank lines are ignored.
+time_registrations
+personal_access_tokens
+failed_jobs
+model_has_roles

@@ -1,0 +1,43 @@
+name: Docs PR checks
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  broken-links:
+    name: Broken links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check links with Mintlify
+        run: npx --yes mint@latest broken-links
+
+  leak-lint:
+    name: Leak lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove the lint fires on each leak kind
+        run: scripts/test-leak-lint.sh
+      - name: Lint the docs content
+        run: scripts/leak-lint.sh
+
+  coverage:
+    name: Coverage check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Slot for the coverage check of task 1641: add scripts/coverage-check.sh and it runs here.
+      - name: Run the coverage check
+        run: |
+          if [ -x scripts/coverage-check.sh ]; then
+            scripts/coverage-check.sh
+          else
+            echo "::notice::scripts/coverage-check.sh does not exist yet (task 1641); coverage check skipped."
+          fi

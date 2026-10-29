@@ -27,6 +27,8 @@ jobs:
         run: scripts/test-leak-lint.sh
       - name: Lint the docs content
         run: scripts/leak-lint.sh
+      - name: Lint the capture manifest ids
+        run: scripts/manifest-id-lint.sh
 
   coverage:
     name: Coverage check

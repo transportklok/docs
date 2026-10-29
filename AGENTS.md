@@ -65,7 +65,10 @@ Module names: Wagenparkbeheer, HR-beheer, Urenbeheer, Klantenbeheer, Werk. A med
 Every docs task checks its page against one workspace and one seed, so screenshots and steps stay reproducible:
 
 - Workspace: `docs-demo` — create it with `make workspace docs-demo` and start it with `make ws docs-demo up`.
-- Seed: the `docs-demo` seed, loaded into that workspace only. Nothing from production is copied into it.
+- Seed: `Database\Seeders\DocsDemoSeeder` (`platform/database/seeders/DocsDemoSeeder.php`), loaded into that workspace only with `php artisan db:seed --class='Database\Seeders\DocsDemoSeeder'`. Nothing from production is copied into it.
+- The seed is a fictional organisation (Mijn Transport Bedrijf) with an admin, a manager (`marieke.verhoef@docs-demo.example`) and workers, fleet data and payroll runs with a carried correction. All names and amounts are fictional.
+- The docs show three roles, each with a seeded login (password `password`): the beheerder (admin, the seeded dev account `dev@transportklok.nl`), the planner (manager, `marieke.verhoef@docs-demo.example`) and the medewerker or bestuurder (worker, `medewerker@docs-demo.example`, owner of the time registration the `workforce` captures open). Give the worker login to the capture with `--credentials-file`.
+- The vehicle, trailer, customer and time-registration ids in `images/captures/manifest.json` are the fixed ids the seeder sets; `scripts/manifest-id-lint.sh` checks them in docs CI.
 
 Check each page against that workspace on the release tag named in its last-verified line, and update that line only after the check.
 

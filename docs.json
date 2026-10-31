@@ -107,6 +107,16 @@
                 "pages": [
                   "beheerders/personeelszaken/personeel/overzicht"
                 ]
+              },
+              {
+                "group": "Salarisrondes",
+                "pages": [
+                  "beheerders/personeelszaken/salarisrondes/overzicht",
+                  "beheerders/personeelszaken/salarisrondes/aanmaken",
+                  "beheerders/personeelszaken/salarisrondes/verwerken",
+                  "beheerders/personeelszaken/salarisrondes/correcties",
+                  "beheerders/personeelszaken/salarisrondes/exports"
+                ]
               }
             ]
           },

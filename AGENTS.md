@@ -60,6 +60,13 @@ Module names: Wagenparkbeheer, HR-beheer, Urenbeheer, Klantenbeheer, Werk. A med
 - Do not document internal admin features, production data, or unreleased behaviour.
 - Use no real names, plates, e-mail addresses or phone numbers; use the demo seed's data.
 
+## Release lines
+
+- Docs keep a `release/X.Y` line for each Platform line from 0.4 on; a page on `release/X.Y` describes Platform X.Y.
+- A change to released behaviour goes into the docs line of that Platform version. New, unreleased behaviour goes to `main`, which becomes the next line.
+- A Platform hotfix `hotfix/X.Y.Z` takes its docs correction into docs `release/X.Y`.
+- Platform 0.2 and 0.3 have no docs line.
+
 ## Demo workspace and seed
 
 Every docs task checks its page against one workspace and one seed, so screenshots and steps stay reproducible:

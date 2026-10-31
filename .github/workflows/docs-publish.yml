@@ -1,0 +1,28 @@
+name: Docs publish
+
+# A push to the live release line publishes it; a Platform production deploy publishes a new line.
+on:
+  push:
+    branches:
+      - 'release/*'
+
+concurrency:
+  group: docs-live
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Publish a correction on the live line
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prove the publisher moves docs-live only forward
+        run: scripts/test-publish-live.sh
+      - name: Move docs-live forward when this line is live
+        run: scripts/publish-live.sh correction "${GITHUB_REF_NAME#release/}"

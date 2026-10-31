@@ -30,6 +30,40 @@ jobs:
       - name: Lint the capture manifest ids
         run: scripts/manifest-id-lint.sh
 
+  publisher:
+    name: Docs publisher
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove the publisher moves docs-live only forward
+        run: scripts/test-publish-live.sh
+
+  # Mintlify previews only pull requests into its deploy branch (docs-live) by itself; this previews the rest.
+  # Set the repository variable MINTLIFY_PROJECT_ID and the secret MINTLIFY_API_KEY when switching that branch.
+  preview:
+    name: Mintlify preview
+    if: vars.MINTLIFY_PROJECT_ID != '' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the Mintlify preview of this branch
+        env:
+          MINTLIFY_API_KEY: ${{ secrets.MINTLIFY_API_KEY }}
+          MINTLIFY_PROJECT_ID: ${{ vars.MINTLIFY_PROJECT_ID }}
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          test -n "$MINTLIFY_API_KEY" || { echo "::error::The MINTLIFY_API_KEY secret is not set."; exit 1; }
+          status="$(jq -n --arg branch "$BRANCH" '{branch: $branch}' | curl -sS -o response.json -w '%{http_code}' \
+            -X POST "https://api.mintlify.com/v1/project/preview/$MINTLIFY_PROJECT_ID" \
+            -H "Authorization: Bearer $MINTLIFY_API_KEY" -H 'Content-Type: application/json' --data @-)"
+          if [ "$status" != 202 ]; then
+            echo "::error::Mintlify refused the preview with HTTP $status: $(cat response.json)"
+            exit 1
+          fi
+          preview_url="$(jq -r .previewUrl response.json)"
+          echo "::notice::Mintlify preview: $preview_url"
+          echo "Mintlify preview: $preview_url" >> "$GITHUB_STEP_SUMMARY"
+
   coverage:
     name: Coverage check
     runs-on: ubuntu-latest

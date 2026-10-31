@@ -1,0 +1,73 @@
+---
+title: "Salarisrondes overzicht"
+description: "Overzicht van de salarisrondes per loonperiode in HR-beheer."
+---
+
+## Waar deze pagina voor is
+
+Hier ziet u alle salarisrondes van uw organisatie, met per ronde de loonperiode en de status. Vanuit dit overzicht maakt u een nieuwe ronde aan, verwerkt u een ronde en downloadt u de exports.
+
+## Wie dit mag gebruiken
+
+- Een beheerder met volledige rechten in de organisatie.
+- De organisatie heeft de module **Salarismutaties** nodig. Zonder die module staat **Salarisrondes** niet in het menu.
+
+## Zo gebruikt u deze pagina
+
+1. Open **HR-beheer** en kies **Salarisadministratie**.
+2. Klik op **Salarisrondes**.
+3. Zoek de ronde in het overzicht. De nieuwste ronde staat bovenaan.
+4. Open **Opties** of **Download** in de rij van de ronde voor de acties en exports van die ronde.
+5. Klik op **Nieuwe periode** om een ronde voor de volgende loonperiode aan te maken. Zie [Salarisronde aanmaken](/beheerders/personeelszaken/salarisrondes/aanmaken).
+
+## Velden
+
+Het overzicht heeft geen filters. Elke rij toont:
+
+| Kolom | Betekenis |
+|-------|-----------|
+| **Nummer** | Het volgnummer van de ronde. |
+| Periode | Het begin en het einde van de loonperiode. |
+| **Status** | Waar de ronde staat, zie hieronder. |
+| **Laatst uitgevoerd op** | Wanneer de ronde voor het laatst is berekend. |
+
+Een ronde heeft een van deze statussen:
+
+| Status | Betekenis |
+|--------|-----------|
+| **Concept** | De ronde is aangemaakt en kan nog opnieuw worden berekend. |
+| **Wachten...** | De berekening staat klaar om te starten. |
+| **Wordt uitgevoerd** | De berekening loopt; het percentage loopt mee. |
+| **Mislukt** | De berekening is niet gelukt. |
+| **Geslaagd** | De berekening is klaar. |
+| **Vergrendeld** | De ronde is vergrendeld en klaar om te verwerken. |
+| **Verwerkt** | De ronde is verwerkt. |
+| **Gecorrigeerd** | Na verwerking is een verschil gevonden. Zie [Correcties](/beheerders/personeelszaken/salarisrondes/correcties). |
+
+De acties in een rij hangen af van de status:
+
+| Actie | Wanneer |
+|-------|---------|
+| **Opties** → **Opnieuw uitvoeren** | Bij een concept. |
+| **Opties** → **Analyseer op correcties** | Bij een verwerkte of gecorrigeerde ronde. |
+| **Opties** → **Ontgrendel** | Bij een vergrendelde ronde. |
+| **Vergrendelen** | Bij een concept. |
+| **Afronden** of **Versturen** | Bij een vergrendelde of gecorrigeerde ronde zonder lopende taak. Zie [Salarisronde verwerken](/beheerders/personeelszaken/salarisrondes/verwerken). |
+| **Download** | Toont de exports die voor de ronde klaar zijn. Zie [Exports van een salarisronde](/beheerders/personeelszaken/salarisrondes/exports). |
+| **Verwijder** | Bij een ronde die nog niet is verwerkt. |
+
+## Wat er daarna gebeurt
+
+- Het overzicht ververst zichzelf terwijl een taak loopt. U ziet dan bijvoorbeeld **Correcties analyseren...** of **Correctie genereren...** in de status.
+- **Vergrendelen** vraagt eerst om bevestiging in het venster **Salarisronde vergrendelen**. Een vergrendelde ronde kunt u pas verwijderen nadat u hem hebt ontgrendeld.
+- **Verwijder** vraagt eerst om bevestiging in het venster **Verloonronde verwijderen**.
+
+## Beperkingen
+
+- Een verwerkte of gecorrigeerde ronde kunt u niet verwijderen.
+- Zolang een taak, export of verzending van een ronde loopt, weigert het systeem een nieuwe actie op die ronde. Wacht tot de taak klaar is en probeer het opnieuw.
+- Met **Salarisronde importeren** zet u een eerder gemaakte salarismutatie-export (.xlsx) als resultaat in een ronde. De uren worden dan niet opnieuw berekend.
+
+## Laatst gecontroleerd
+
+Nog niet gecontroleerd in de demo-werkruimte. Deze pagina beschrijft Platform 0.4.

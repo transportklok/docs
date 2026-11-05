@@ -182,6 +182,18 @@
       "selector": null
     },
     {
+      "file": "management-salarisrondes-overzicht.png",
+      "url": "/management/human-resources/payroll-runs",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-salarisrondes-aanmaken.png",
+      "url": "/management/human-resources/payroll-runs/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
       "file": "management-verantwoording-overzicht.png",
       "url": "/management/human-resources/accountability",
       "role": "admin",

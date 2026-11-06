@@ -35,10 +35,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prove the publisher moves docs-live only forward
+      - name: Prove the publisher merges only the live line into main
         run: scripts/test-publish-live.sh
 
-  # Mintlify previews only pull requests into its deploy branch (docs-live) by itself; this previews the rest.
+  # Mintlify previews only pull requests into its deploy branch (main) by itself; this previews the release-line ones.
   # Set the repository variable MINTLIFY_PROJECT_ID and the secret MINTLIFY_API_KEY when switching that branch.
   preview:
     name: Mintlify preview

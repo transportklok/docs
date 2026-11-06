@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prove publish-live.sh moves docs-live only forward, against a throwaway docs remote.
+# Prove publish-live.sh merges only the live docs line into main, against a throwaway docs remote and a fake gh.
 # Run: scripts/test-publish-live.sh
 set -u
 
@@ -16,15 +16,44 @@ export GIT_CONFIG_GLOBAL=/dev/null GIT_CONFIG_NOSYSTEM=1
 git init --quiet --bare "$tmp/origin.git"
 git clone --quiet "$tmp/origin.git" "$tmp/author" 2>/dev/null
 git clone --quiet "$tmp/origin.git" "$tmp/runner" 2>/dev/null
+git clone --quiet "$tmp/origin.git" "$tmp/github" 2>/dev/null
+
+# A fake gh that keeps one open pull request per head in $tmp/prs and merges it into the remote's main.
+mkdir -p "$tmp/bin" "$tmp/prs"
+cat > "$tmp/bin/gh" <<EOF
+#!/usr/bin/env bash
+set -euo pipefail
+echo "\$*" >> "$tmp/gh.log"
+value() { local key="\$1"; shift; while [ \$# -gt 0 ]; do [ "\$1" = "\$key" ] && { echo "\$2"; return; }; shift; done; }
+head="\$(value --head "\$@")"
+case "\$1 \$2" in
+  "pr list") [ -f "$tmp/prs/\${head//\//_}" ] && cat "$tmp/prs/\${head//\//_}" || echo "" ;;
+  "pr create")
+    url="https://github.com/transportklok/docs/pull/\$RANDOM"
+    echo "\$head" > "$tmp/prs/\$(basename "\$url")"
+    echo "\$url" > "$tmp/prs/\${head//\//_}"
+    echo "Creating pull request"; echo "\$url" ;;
+  "pr merge")
+    [ "\$4" = "--repo" ] && [ "\$6" = "--merge" ] || { echo "unexpected merge: \$*" >&2; exit 1; }
+    number="\$(basename "\$3")"; head="\$(cat "$tmp/prs/\$number")"
+    cd "$tmp/github" && git fetch --quiet origin && git checkout --quiet -B main origin/main &&
+      git merge --quiet --no-ff --no-edit "origin/\$head" && git push --quiet origin main
+    rm -f "$tmp/prs/\$number" "$tmp/prs/\${head//\//_}" ;;
+  *) echo "unexpected gh call: \$*" >&2; exit 1 ;;
+esac
+EOF
+chmod +x "$tmp/bin/gh"
+export PATH="$tmp/bin:$PATH"
 
 # Commit on a docs branch of the remote, creating it from $2 when given, and print the commit.
 commit_on() {
   local branch="$1" from="${2:-}"
   (
     cd "$tmp/author"
-    if [ -n "$from" ]; then git checkout --quiet -B "$branch" "$from"; else git checkout --quiet "$branch"; fi
-    echo "$branch $RANDOM" >> page.mdx
-    git add page.mdx
+    git fetch --quiet origin
+    if [ -n "$from" ]; then git checkout --quiet -B "$branch" "$from"; else git checkout --quiet -B "$branch" "origin/$branch"; fi
+    echo "$branch $RANDOM" > "${branch//\//_}.mdx"
+    git add "${branch//\//_}.mdx"
     git commit --quiet -m "change on $branch"
     git push --quiet origin "$branch"
     git rev-parse HEAD
@@ -50,7 +79,29 @@ expect() {
   fi
 }
 
-# Compare docs-live, or another remote ref, with the commit it should hold.
+# Succeed when the remote main holds commit $2.
+expect_on_main() {
+  local name="$1" commit="$2"
+  if git --git-dir="$tmp/origin.git" merge-base --is-ancestor "$commit" refs/heads/main; then
+    echo "ok   $name: main holds $commit"
+  else
+    echo "FAIL $name: main lacks $commit"
+    failures=$((failures + 1))
+  fi
+}
+
+# Succeed when the remote main lacks commit $2.
+expect_off_main() {
+  local name="$1" commit="$2"
+  if git --git-dir="$tmp/origin.git" merge-base --is-ancestor "$commit" refs/heads/main; then
+    echo "FAIL $name: main holds $commit"
+    failures=$((failures + 1))
+  else
+    echo "ok   $name: main lacks $commit"
+  fi
+}
+
+# Compare a remote ref with the commit it should hold.
 expect_ref() {
   local name="$1" ref="$2" want="$3" got
   got="$(remote_ref "$ref")"
@@ -62,50 +113,54 @@ expect_ref() {
   fi
 }
 
+# Count the gh calls of one kind.
+gh_calls() {
+  grep -c "^$1" "$tmp/gh.log" 2>/dev/null || true
+}
+
 (cd "$tmp/author" && git checkout --quiet -b main && echo base > page.mdx && git add page.mdx &&
   git commit --quiet -m base && git push --quiet origin main)
 line_04="$(commit_on release/0.4 main)"
 
 expect "bad release tag" 1 release 0.4
-expect "bad correction line" 1 correction 0.4.0
+expect "correction mode is gone" 1 correction 0.4
 expect "missing docs line" 1 release 0.9.0
-expect_ref "missing line publishes nothing" refs/heads/docs-live ""
+expect_off_main "unreleased line stays off main" "$line_04"
 
-expect "first release creates docs-live" 0 release 0.4.0
-expect_ref "first release" refs/heads/docs-live "$line_04"
+expect "first release merges its line into main" 0 release 0.4.0
+expect_on_main "first release" "$line_04"
 expect_ref "release records its live line" refs/tags/0.4.0 "$line_04"
+[ "$(gh_calls "pr merge")" = 1 ] && echo "ok   merged by one pull request" ||
+  { echo "FAIL merged by one pull request"; failures=$((failures + 1)); }
 
-line_05_cut="$(commit_on release/0.5 main)"
-expect "correction on a line not yet live" 0 correction 0.5
-expect_ref "not-live line publishes nothing" refs/heads/docs-live "$line_04"
-
-line_04="$(commit_on release/0.4)"
-expect "correction on the live line" 0 correction 0.4
-expect_ref "live-line correction moves docs-live" refs/heads/docs-live "$line_04"
+line_05_cut="$(commit_on release/0.5 release/0.4)"
+expect_off_main "next line stays off main before its release" "$line_05_cut"
 
 line_04="$(commit_on release/0.4)"
+expect_off_main "a live-line correction waits for its hotfix tag" "$line_04"
 expect "hotfix release on the live line" 0 release 0.4.1
-expect_ref "hotfix moves docs-live forward" refs/heads/docs-live "$line_04"
+expect_on_main "hotfix merges the live line" "$line_04"
 expect_ref "hotfix records its tag" refs/tags/0.4.1 "$line_04"
 
+expect "repeated release is idempotent" 0 release 0.4.1
+[ "$(gh_calls "pr merge")" = 2 ] && echo "ok   repeated release opens no pull request" ||
+  { echo "FAIL repeated release opens no pull request"; failures=$((failures + 1)); }
+
 expect "next line release" 0 release 0.5.0
-expect_ref "next line moves docs-live past the diverged old line" refs/heads/docs-live "$line_05_cut"
+expect_on_main "next line goes live" "$line_05_cut"
 
 line_04_late="$(commit_on release/0.4)"
 expect "release from an older line" 0 release 0.4.2
-expect "correction on an older line" 0 correction 0.4
-expect_ref "older line publishes nothing" refs/heads/docs-live "$line_05_cut"
+expect_off_main "older line publishes nothing" "$line_04_late"
 expect_ref "older line records no tag" refs/tags/0.4.2 ""
 
 line_05="$(commit_on release/0.5)"
-git --git-dir="$tmp/origin.git" update-ref refs/heads/docs-live "$line_05"
-git --git-dir="$tmp/origin.git" update-ref refs/heads/release/0.5 "$line_05_cut"
-expect "release whose line head is older than docs-live" 0 release 0.5.1
-expect_ref "older commit publishes nothing" refs/heads/docs-live "$line_05"
-
-git --git-dir="$tmp/origin.git" update-ref refs/heads/docs-live "$line_04_late"
-expect "correction on a live line that docs-live diverged from" 1 correction 0.5
-expect_ref "diverged live line publishes nothing" refs/heads/docs-live "$line_04_late"
+echo "https://github.com/transportklok/docs/pull/77" > "$tmp/prs/release_0.5"
+echo "release/0.5" > "$tmp/prs/77"
+expect "release reuses the open pull request" 0 release 0.5.1
+expect_on_main "reused pull request merges the line" "$line_05"
+grep -q "pr merge https://github.com/transportklok/docs/pull/77 " "$tmp/gh.log" && echo "ok   merged the open pull request" ||
+  { echo "FAIL merged the open pull request"; failures=$((failures + 1)); }
 
 if [ "$failures" -ne 0 ]; then
   echo "$failures publisher check(s) failed"

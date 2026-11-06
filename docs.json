@@ -138,7 +138,8 @@
                   "beheerders/urenbeheer/tijdregistratie/aanmaken",
                   "beheerders/urenbeheer/tijdregistratie/details",
                   "beheerders/urenbeheer/tijdregistratie/tijdlijn",
-                  "beheerders/urenbeheer/tijdregistratie/bewerken"
+                  "beheerders/urenbeheer/tijdregistratie/bewerken",
+                  "beheerders/urenbeheer/tijdregistratie/salarismutatie-export"
                 ]
               }
             ]

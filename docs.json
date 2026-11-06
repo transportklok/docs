@@ -121,7 +121,8 @@
               {
                 "group": "Aanvullingen en inhoudingen",
                 "pages": [
-                  "beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht"
+                  "beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht",
+                  "beheerders/personeelszaken/aanvullingen-inhoudingen/aanmaken"
                 ]
               }
             ]

@@ -23,6 +23,8 @@ A page describes only how the product works for the user, in plain, user-friendl
 
 Screenshots (`## Schermafbeelding`) sit after the purpose section.
 
+A side note goes in an (i) popover, never in a line of its own under a status or a step: import `Hint` from `/snippets/hint.jsx` and write `<Hint kind="red">…</Hint>` for what cannot be undone, `kind="yellow"` for what depends on the CAO, the contract or the organisation's setup, and `kind="grey"` for a plain extra. A snippet component takes no default prop values: Mintlify drops a component written as `({ kind = "grey" })`.
+
 ## Form of address
 
 Use **u**, never *je*. The existing pages in `beheerders/` and `medewerkers/` all address the reader as "u" and "uw" ("U beheert hier onder meer opdrachtgevers"). Keep sentences concise, one idea per sentence, and use sentence case for headings.

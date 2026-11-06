@@ -117,6 +117,12 @@
                   "beheerders/personeelszaken/salarisrondes/correcties",
                   "beheerders/personeelszaken/salarisrondes/exports"
                 ]
+              },
+              {
+                "group": "Aanvullingen en inhoudingen",
+                "pages": [
+                  "beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht"
+                ]
               }
             ]
           },

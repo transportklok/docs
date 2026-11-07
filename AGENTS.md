@@ -19,9 +19,11 @@ Every page under `beheerders/` and `medewerkers/` has frontmatter (`title`, `des
 4. `## Velden` — each field with what to enter; mark required fields.
 5. `## Wat er daarna gebeurt` — the result of the last step.
 6. `## Beperkingen` — what the page cannot do and what depends on setup (see the payroll rules below).
-7. `## Laatst gecontroleerd tegen versie X.Y.Z` — the release tag (`X.Y.Z`) the page was last checked against in the demo workspace.
+A page describes only how the product works for the user, in plain, user-friendly Dutch. It never says how, where or against which version the page was checked: no "last checked" section, no version number, no mention of a demo workspace or test run.
 
-Screenshots (`## Schermafbeelding`) come from the demo workspace and sit after the purpose section.
+Screenshots (`## Schermafbeelding`) sit after the purpose section.
+
+A side note goes in an (i) popover, never in a line of its own under a status or a step: import `Hint` from `/snippets/hint.jsx` and write `<Hint kind="red">…</Hint>` for what cannot be undone, `kind="yellow"` for what depends on the CAO, the contract or the organisation's setup, and `kind="grey"` for a plain extra. A snippet component takes no default prop values: Mintlify drops a component written as `({ kind = "grey" })`.
 
 ## Form of address
 
@@ -52,7 +54,7 @@ Module names: Wagenparkbeheer, HR-beheer, Urenbeheer, Klantenbeheer, Werk. A med
 
 - A payroll page describes what the system does, not what a CAO says or what should happen.
 - Mark every statement that depends on CAO or contract setup with the sentence "Dit hangt af van de CAO of de contractinstelling." and name which of the two it is; never state such a result as fixed.
-- Do not describe a calculation you have not seen run in the demo workspace.
+- Describe only calculations you have seen run; do not mention that on the page.
 
 ## Content boundaries
 
@@ -77,7 +79,7 @@ Every docs task checks its page against one workspace and one seed, so screensho
 - The docs show three roles, each with a seeded login (password `password`): the beheerder (admin, the seeded dev account `dev@transportklok.nl`), the planner (manager, `marieke.verhoef@docs-demo.example`) and the medewerker or bestuurder (worker, `medewerker@docs-demo.example`, owner of the time registration the `workforce` captures open). Give the worker login to the capture with `--credentials-file`.
 - The vehicle, trailer, customer and time-registration ids in `images/captures/manifest.json` are the fixed ids the seeder sets; `scripts/manifest-id-lint.sh` checks them in docs CI.
 
-Check each page against that workspace on the release tag named in its last-verified line, and update that line only after the check.
+Keep the version you checked a page against in the PR body, never on the page.
 
 ## Screenshot runbook
 

@@ -1,0 +1,52 @@
+---
+title: "Looncomponent aanmaken"
+description: "Een bedrag toevoegen dat u aan het salaris van een medewerker toevoegt of ervan afhaalt."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Hier voegt u voor één medewerker en één salarisperiode een bedrag toe aan het salaris, of haalt u een bedrag eraf.
+
+## Schermafbeelding
+
+![Looncomponent aanmaken](/images/captures/management-aanvullingen-inhoudingen-aanmaken.png)
+
+## Wie dit mag gebruiken
+
+- Een beheerder met volledige rechten in de organisatie.
+- De organisatie heeft de module **Salarismutaties** nodig.
+
+## Zo gebruikt u deze pagina
+
+1. Open **HRM** → **Salarisadministratie** → **Aanvullingen & Inhoudingen**.
+2. Klik op **Nieuwe looncomponent**.
+3. Kies de **Medewerker**.
+4. Kies de **Salarisperiode**.
+5. Kies bij **Type** of het een **Aanvulling** of een **Inhouding** is.
+6. Kies de **Looncomponent**.
+7. Vul de **Waarde** in.
+8. Klik op **Looncomponent opslaan**.
+
+## Velden
+
+Alle velden zijn verplicht.
+
+| Veld | Wat u invult |
+|------|--------------|
+| **Medewerker** | De medewerker die het bedrag krijgt of inlevert. |
+| **Salarisperiode** | De periode waarin het bedrag meetelt, bijvoorbeeld **Periode 2026-11**. U kiest uit de huidige periode en de periodes waarvoor al een salarisronde bestaat. |
+| **Type** | **Aanvulling** voegt het bedrag toe, **Inhouding** haalt het eraf. **Aanvulling** staat vooraf gekozen. |
+| **Looncomponent** | Het soort bedrag, bijvoorbeeld **Kilometervergoeding** of **Voorschot** bij een aanvulling en **Boetes** bij een inhouding. <Hint kind="yellow">Welke looncomponenten u ziet, hangt af van het type en van de instellingen van uw organisatie.</Hint> |
+| **Waarde** | Het bedrag in euro's, met twee decimalen. <Hint kind="grey">Een negatief bedrag verlaagt het totaal.</Hint> |
+
+## Wat er daarna gebeurt
+
+- U komt terug in het overzicht, waar de nieuwe looncomponent bij staat.
+- De salarisronde van die periode neemt het bedrag mee. Zie [Aanvullingen en inhoudingen](/beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht) voor wat er met de ronde gebeurt.
+
+## Beperkingen
+
+- Een looncomponent geldt voor één medewerker en één periode. Voor een vast bedrag elke periode maakt u per periode een looncomponent aan.
+- Laat u een verplicht veld leeg, dan wordt de looncomponent niet opgeslagen en ziet u bij dat veld een melding.

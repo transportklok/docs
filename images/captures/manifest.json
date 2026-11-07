@@ -194,6 +194,18 @@
       "selector": null
     },
     {
+      "file": "management-aanvullingen-inhoudingen-overzicht.png",
+      "url": "/management/human-resources/payroll-mutations",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-aanvullingen-inhoudingen-aanmaken.png",
+      "url": "/management/human-resources/payroll-mutations/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
       "file": "management-verantwoording-overzicht.png",
       "url": "/management/human-resources/accountability",
       "role": "admin",

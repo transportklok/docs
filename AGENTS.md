@@ -19,9 +19,11 @@ Every page under `beheerders/` and `medewerkers/` has frontmatter (`title`, `des
 4. `## Velden` — each field with what to enter; mark required fields.
 5. `## Wat er daarna gebeurt` — the result of the last step.
 6. `## Beperkingen` — what the page cannot do and what depends on setup (see the payroll rules below).
-7. `## Laatst gecontroleerd tegen versie X.Y.Z` — the release tag (`X.Y.Z`) the page was last checked against in the demo workspace.
+A page describes only how the product works for the user, in plain, user-friendly Dutch. It never says how, where or against which version the page was checked: no "last checked" section, no version number, no mention of a demo workspace or test run.
 
-Screenshots (`## Schermafbeelding`) come from the demo workspace and sit after the purpose section.
+Screenshots (`## Schermafbeelding`) sit after the purpose section.
+
+A side note goes in an (i) popover, never in a line of its own under a status or a step: import `Hint` from `/snippets/hint.jsx` and write `<Hint kind="red">…</Hint>` for what cannot be undone, `kind="yellow"` for what depends on the CAO, the contract or the organisation's setup, and `kind="grey"` for a plain extra. A snippet component takes no default prop values: Mintlify drops a component written as `({ kind = "grey" })`.
 
 ## Form of address
 
@@ -52,7 +54,7 @@ Module names: Wagenparkbeheer, HR-beheer, Urenbeheer, Klantenbeheer, Werk. A med
 
 - A payroll page describes what the system does, not what a CAO says or what should happen.
 - Mark every statement that depends on CAO or contract setup with the sentence "Dit hangt af van de CAO of de contractinstelling." and name which of the two it is; never state such a result as fixed.
-- Do not describe a calculation you have not seen run in the demo workspace.
+- Describe only calculations you have seen run; do not mention that on the page.
 
 ## Content boundaries
 
@@ -74,7 +76,7 @@ Every docs task checks its page against one workspace and one seed, so screensho
 - Workspace: `docs-demo` — create it with `make workspace docs-demo` and start it with `make ws docs-demo up`.
 - Seed: the `docs-demo` seed, loaded into that workspace only. Nothing from production is copied into it.
 
-Check each page against that workspace on the release tag named in its last-verified line, and update that line only after the check.
+Keep the version you checked a page against in the PR body, never on the page.
 
 ## Screenshot runbook
 

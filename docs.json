@@ -107,6 +107,24 @@
                 "pages": [
                   "beheerders/personeelszaken/personeel/overzicht"
                 ]
+              },
+              {
+                "group": "Salarisrondes",
+                "pages": [
+                  "beheerders/personeelszaken/salarisrondes/overzicht",
+                  "beheerders/personeelszaken/salarisrondes/aanmaken",
+                  "beheerders/personeelszaken/salarisrondes/verwerken",
+                  "beheerders/personeelszaken/salarisrondes/correcties",
+                  "beheerders/personeelszaken/salarisrondes/exports"
+                ]
+              },
+              {
+                "group": "Aanvullingen en inhoudingen",
+                "pages": [
+                  "beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht",
+                  "beheerders/personeelszaken/aanvullingen-inhoudingen/aanmaken",
+                  "beheerders/personeelszaken/aanvullingen-inhoudingen/wijzigen"
+                ]
               }
             ]
           },
@@ -120,7 +138,8 @@
                   "beheerders/urenbeheer/tijdregistratie/aanmaken",
                   "beheerders/urenbeheer/tijdregistratie/details",
                   "beheerders/urenbeheer/tijdregistratie/tijdlijn",
-                  "beheerders/urenbeheer/tijdregistratie/bewerken"
+                  "beheerders/urenbeheer/tijdregistratie/bewerken",
+                  "beheerders/urenbeheer/tijdregistratie/salarismutatie-export"
                 ]
               }
             ]

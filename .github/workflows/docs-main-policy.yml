@@ -1,0 +1,25 @@
+name: Docs main policy
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  # Main is what Mintlify deploys, so it takes only a docs release line, merged when its Platform tag deploys.
+  main-takes-only-a-line:
+    name: Main takes only a release line
+    if: github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refuse a pull request into main from anything but a release line
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          if ! [[ "$HEAD_BRANCH" =~ ^release/[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Docs main takes only a release/X.Y line, merged by the Platform production workflow when that line's tag deploys. Open this pull request into the docs release line it documents."
+            exit 1
+          fi

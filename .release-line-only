@@ -1,0 +1,4 @@
+# Commits on a docs line that the next line or main does not take as they are; each line is a commit and the reason.
+2aada98d1495 Time registration overview screenshot captured from Platform 0.4; the 0.5 docs keep the capture of the 0.5 screen (task 2321).
+2195fdfeacd8 Docs workflow of the 0.5 line: docs main receives release/0.5 through publish-docs when the Platform 0.5 tag deploys, never by a carry (task 2321).
+cd33f22b0e4a Docs pages describe only how the product works (no 'Laatst gecontroleerd'): docs main receives release/0.5 through publish-docs when the Platform 0.5 tag deploys, never by a carry (task 2321).

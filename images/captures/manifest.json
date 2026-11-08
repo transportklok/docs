@@ -360,6 +360,24 @@
       "url": "/settings/user/authentication-and-security/two-factor-authentication",
       "role": "admin",
       "selector": null
+    },
+    {
+      "file": "instellingen-integraties-qargo-account.png",
+      "url": "/settings/organization/integrations/accounts/create?integration=qargo",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-wagenparkbeheer-automatische-urenregistraties.png",
+      "url": "/settings/organization/configuration/modules/fleet-management/configuration",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-hrm-contracten.png",
+      "url": "/management/human-resources/contracts",
+      "role": "admin",
+      "selector": null
     }
   ]
 }

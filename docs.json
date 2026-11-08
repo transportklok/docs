@@ -131,7 +131,8 @@
                 "pages": [
                   "beheerders/personeelszaken/salariskoppelingen/overzicht",
                   "beheerders/personeelszaken/salariskoppelingen/nmbrs",
-                  "beheerders/personeelszaken/salariskoppelingen/loket"
+                  "beheerders/personeelszaken/salariskoppelingen/loket",
+                  "beheerders/personeelszaken/salariskoppelingen/afas"
                 ]
               }
             ]

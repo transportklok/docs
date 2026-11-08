@@ -30,155 +30,161 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Home",
-        "groups": [
+        "language": "nl",
+        "default": true,
+        "tabs": [
           {
-            "group": "Start",
-            "pages": [
-              "index"
+            "tab": "Home",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "nl/index"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Beheerders",
-        "groups": [
+          },
           {
-            "group": "Wagenparkbeheer",
-            "pages": [
-              "beheerders/wagenparkbeheer/kaart",
+            "tab": "Beheerders",
+            "groups": [
               {
-                "group": "Voertuigen",
+                "group": "Wagenparkbeheer",
                 "pages": [
-                  "beheerders/wagenparkbeheer/voertuigen/overzicht",
-                  "beheerders/wagenparkbeheer/voertuigen/aanmaken",
-                  "beheerders/wagenparkbeheer/voertuigen/bewerken"
-                ]
-              },
-              {
-                "group": "Trailers",
-                "pages": [
-                  "beheerders/wagenparkbeheer/trailers/overzicht",
-                  "beheerders/wagenparkbeheer/trailers/aanmaken",
-                  "beheerders/wagenparkbeheer/trailers/bewerken"
-                ]
-              },
-              {
-                "group": "Locaties",
-                "pages": [
-                  "beheerders/wagenparkbeheer/locaties/overzicht",
-                  "beheerders/wagenparkbeheer/locaties/aanmaken"
-                ]
-              },
-              {
-                "group": "Telematica",
-                "pages": [
-                  "beheerders/wagenparkbeheer/telematica/overzicht",
+                  "nl/management/fleet-management/map",
                   {
-                    "group": "Trackers",
+                    "group": "Voertuigen",
                     "pages": [
-                      "beheerders/wagenparkbeheer/telematica/trackers/overzicht",
-                      "beheerders/wagenparkbeheer/telematica/trackers/aanmaken"
+                      "nl/management/fleet-management/vehicles/overview",
+                      "nl/management/fleet-management/vehicles/create",
+                      "nl/management/fleet-management/vehicles/edit"
                     ]
                   },
                   {
-                    "group": "Druppels",
+                    "group": "Trailers",
                     "pages": [
-                      "beheerders/wagenparkbeheer/telematica/druppels/overzicht",
-                      "beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
-                      "beheerders/wagenparkbeheer/telematica/druppels/koppelen"
+                      "nl/management/fleet-management/trailers/overview",
+                      "nl/management/fleet-management/trailers/create",
+                      "nl/management/fleet-management/trailers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Locaties",
+                    "pages": [
+                      "nl/management/fleet-management/locations/overview",
+                      "nl/management/fleet-management/locations/create"
+                    ]
+                  },
+                  {
+                    "group": "Telematica",
+                    "pages": [
+                      "nl/management/fleet-management/telematics/overview",
+                      {
+                        "group": "Trackers",
+                        "pages": [
+                          "nl/management/fleet-management/telematics/trackers/overview",
+                          "nl/management/fleet-management/telematics/trackers/create"
+                        ]
+                      },
+                      {
+                        "group": "Druppels",
+                        "pages": [
+                          "nl/management/fleet-management/telematics/beacons/overview",
+                          "nl/management/fleet-management/telematics/beacons/create",
+                          "nl/management/fleet-management/telematics/beacons/connect"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tachograaf",
+                    "pages": [
+                      "nl/management/fleet-management/tachograph/vehicles",
+                      "nl/management/fleet-management/tachograph/drivers",
+                      "nl/management/fleet-management/tachograph/company-cards"
                     ]
                   }
                 ]
               },
               {
-                "group": "Tachograaf",
+                "group": "HR-beheer",
                 "pages": [
-                  "beheerders/wagenparkbeheer/tachograaf/voertuigen",
-                  "beheerders/wagenparkbeheer/tachograaf/bestuurders",
-                  "beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten"
+                  {
+                    "group": "Personeel",
+                    "pages": [
+                      "nl/management/human-resources/workers/overview"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Urenbeheer",
+                "pages": [
+                  {
+                    "group": "Tijdregistratie",
+                    "pages": [
+                      "nl/management/hour-management/time-registrations/overview",
+                      "nl/management/hour-management/time-registrations/create",
+                      "nl/management/hour-management/time-registrations/details",
+                      "nl/management/hour-management/time-registrations/timeline",
+                      "nl/management/hour-management/time-registrations/edit"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Klantenbeheer",
+                "pages": [
+                  {
+                    "group": "Opdrachtgevers",
+                    "pages": [
+                      "nl/management/customer-management/customers/overview",
+                      "nl/management/customer-management/customers/create",
+                      "nl/management/customer-management/customers/edit"
+                    ]
+                  }
                 ]
               }
             ]
           },
           {
-            "group": "HR-beheer",
-            "pages": [
+            "tab": "Medewerkers",
+            "groups": [
               {
-                "group": "Personeel",
+                "group": "Werk",
                 "pages": [
-                  "beheerders/personeelszaken/personeel/overzicht"
+                  {
+                    "group": "Tijdregistratie",
+                    "pages": [
+                      "nl/workforce/hour-management/time-registrations/overview",
+                      "nl/workforce/hour-management/time-registrations/create",
+                      "nl/workforce/hour-management/time-registrations/details",
+                      "nl/workforce/hour-management/time-registrations/timeline",
+                      "nl/workforce/hour-management/time-registrations/edit"
+                    ]
+                  }
                 ]
               }
             ]
           },
           {
-            "group": "Urenbeheer",
-            "pages": [
+            "tab": "API",
+            "groups": [
               {
-                "group": "Tijdregistratie",
+                "group": "Aan de slag",
                 "pages": [
-                  "beheerders/urenbeheer/tijdregistratie/overzicht",
-                  "beheerders/urenbeheer/tijdregistratie/aanmaken",
-                  "beheerders/urenbeheer/tijdregistratie/details",
-                  "beheerders/urenbeheer/tijdregistratie/tijdlijn",
-                  "beheerders/urenbeheer/tijdregistratie/bewerken"
+                  "nl/api/introduction",
+                  "nl/api/authentication",
+                  "nl/api/oauth",
+                  "nl/api/rate-limits"
                 ]
+              },
+              {
+                "group": "Naslag",
+                "openapi": "api/openapi.json"
               }
             ]
-          },
-          {
-            "group": "Klantenbeheer",
-            "pages": [
-              {
-                "group": "Opdrachtgevers",
-                "pages": [
-                  "beheerders/klantenbeheer/opdrachtgevers/overzicht",
-                  "beheerders/klantenbeheer/opdrachtgevers/aanmaken",
-                  "beheerders/klantenbeheer/opdrachtgevers/bewerken"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Medewerkers",
-        "groups": [
-          {
-            "group": "Werk",
-            "pages": [
-              {
-                "group": "Tijdregistratie",
-                "pages": [
-                  "medewerkers/werk/tijdregistratie/overzicht",
-                  "medewerkers/werk/tijdregistratie/aanmaken",
-                  "medewerkers/werk/tijdregistratie/details",
-                  "medewerkers/werk/tijdregistratie/tijdlijn",
-                  "medewerkers/werk/tijdregistratie/bewerken"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API",
-        "groups": [
-          {
-            "group": "Aan de slag",
-            "pages": [
-              "api/introduction",
-              "api/authentication",
-              "api/oauth",
-              "api/rate-limits"
-            ]
-          },
-          {
-            "group": "Naslag",
-            "openapi": "api/openapi.json"
           }
         ]
       }
@@ -187,43 +193,243 @@
   "redirects": [
     {
       "source": "/beheerders/start",
-      "destination": "/"
+      "destination": "/nl/index",
+      "permanent": true
     },
     {
       "source": "/medewerkers/start",
-      "destination": "/"
+      "destination": "/nl/index",
+      "permanent": true
     },
     {
       "source": "/api/orders",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/planning",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/voertuigen",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/chauffeurs",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/webhooks",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/expert-excel",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/introductie",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/authenticatie",
-      "destination": "/api/authentication"
+      "destination": "/nl/api/authentication",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "/nl/index",
+      "permanent": true
+    },
+    {
+      "source": "/api/authentication",
+      "destination": "/nl/api/authentication",
+      "permanent": true
+    },
+    {
+      "source": "/api/introduction",
+      "destination": "/nl/api/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api/oauth",
+      "destination": "/nl/api/oauth",
+      "permanent": true
+    },
+    {
+      "source": "/api/rate-limits",
+      "destination": "/nl/api/rate-limits",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/klantenbeheer/opdrachtgevers/aanmaken",
+      "destination": "/nl/management/customer-management/customers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/klantenbeheer/opdrachtgevers/bewerken",
+      "destination": "/nl/management/customer-management/customers/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/klantenbeheer/opdrachtgevers/overzicht",
+      "destination": "/nl/management/customer-management/customers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/overzicht",
+      "destination": "/nl/management/human-resources/workers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/aanmaken",
+      "destination": "/nl/management/hour-management/time-registrations/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/bewerken",
+      "destination": "/nl/management/hour-management/time-registrations/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/details",
+      "destination": "/nl/management/hour-management/time-registrations/details",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/overzicht",
+      "destination": "/nl/management/hour-management/time-registrations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/tijdlijn",
+      "destination": "/nl/management/hour-management/time-registrations/timeline",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/kaart",
+      "destination": "/nl/management/fleet-management/map",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/locaties/aanmaken",
+      "destination": "/nl/management/fleet-management/locations/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/locaties/overzicht",
+      "destination": "/nl/management/fleet-management/locations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten",
+      "destination": "/nl/management/fleet-management/tachograph/company-cards",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/tachograaf/bestuurders",
+      "destination": "/nl/management/fleet-management/tachograph/drivers",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/tachograaf/voertuigen",
+      "destination": "/nl/management/fleet-management/tachograph/vehicles",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
+      "destination": "/nl/management/fleet-management/telematics/beacons/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/druppels/koppelen",
+      "destination": "/nl/management/fleet-management/telematics/beacons/connect",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/druppels/overzicht",
+      "destination": "/nl/management/fleet-management/telematics/beacons/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/overzicht",
+      "destination": "/nl/management/fleet-management/telematics/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/trackers/aanmaken",
+      "destination": "/nl/management/fleet-management/telematics/trackers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/trackers/overzicht",
+      "destination": "/nl/management/fleet-management/telematics/trackers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/trailers/aanmaken",
+      "destination": "/nl/management/fleet-management/trailers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/trailers/bewerken",
+      "destination": "/nl/management/fleet-management/trailers/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/trailers/overzicht",
+      "destination": "/nl/management/fleet-management/trailers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/voertuigen/aanmaken",
+      "destination": "/nl/management/fleet-management/vehicles/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/voertuigen/bewerken",
+      "destination": "/nl/management/fleet-management/vehicles/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/voertuigen/overzicht",
+      "destination": "/nl/management/fleet-management/vehicles/overview",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/nl/index",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/aanmaken",
+      "destination": "/nl/workforce/hour-management/time-registrations/create",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/bewerken",
+      "destination": "/nl/workforce/hour-management/time-registrations/edit",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/details",
+      "destination": "/nl/workforce/hour-management/time-registrations/details",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/overzicht",
+      "destination": "/nl/workforce/hour-management/time-registrations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/tijdlijn",
+      "destination": "/nl/workforce/hour-management/time-registrations/timeline",
+      "permanent": true
     }
   ],
   "footer": {

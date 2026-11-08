@@ -312,6 +312,12 @@
       "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/edit",
       "role": "worker",
       "selector": null
+    },
+    {
+      "file": "instellingen-integraties-qargo-account.png",
+      "url": "/settings/organization/integrations/accounts/create?integration=qargo",
+      "role": "admin",
+      "selector": null
     }
   ]
 }

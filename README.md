@@ -40,6 +40,15 @@ mint dev
 
 View your local preview at `http://localhost:3000`.
 
+## Translations
+
+Pages are written in Dutch under `nl/`; `en/`, `de/`, `pl/` and `ro/` hold their translations under the same paths and are never edited by hand.
+
+- `python3 scripts/build-glossary.py` rebuilds `.translations/glossary.json`, every UI label of the app in the five languages, from the label files of mytimeflow, platform and shared.js next to this repository.
+- `python3 scripts/translate_docs.py [en de pl ro]` translates every new or changed Dutch page with Claude (`pip install -r scripts/requirements-translate.txt` and `ANTHROPIC_API_KEY`). Each translation records the hash of the Dutch page it came from, so an unchanged page is never sent again; a translation that changes links, code, components or a UI label is refused and not written.
+- `python3 scripts/translate_docs.py --check` translates nothing and fails on a page missing in a language, a translation of an older Dutch page, a link or image that does not resolve inside its language, or a bold label the app does not have in that language. The docs PR checks run it.
+- `python3 -m unittest discover -s tests` runs the tests of these scripts and of the language set-up in `fixtures/languages`.
+
 ## Publishing changes
 
 Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.

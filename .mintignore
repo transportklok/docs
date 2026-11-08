@@ -5,3 +5,9 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Test fixtures, each a Mintlify project of its own
+fixtures/
+
+# Translation tooling state
+.translations/

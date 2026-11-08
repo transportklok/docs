@@ -339,8 +339,8 @@
           {
             "group": "Aan de slag",
             "pages": [
-              "api/introductie",
-              "api/authenticatie",
+              "api/introduction",
+              "api/authentication",
               "api/oauth",
               "api/rate-limits"
             ]
@@ -428,27 +428,35 @@
     },
     {
       "source": "/api/orders",
-      "destination": "/api/introductie"
+      "destination": "/api/introduction"
     },
     {
       "source": "/api/planning",
-      "destination": "/api/introductie"
+      "destination": "/api/introduction"
     },
     {
       "source": "/api/voertuigen",
-      "destination": "/api/introductie"
+      "destination": "/api/introduction"
     },
     {
       "source": "/api/chauffeurs",
-      "destination": "/api/introductie"
+      "destination": "/api/introduction"
     },
     {
       "source": "/api/webhooks",
-      "destination": "/api/introductie"
+      "destination": "/api/introduction"
     },
     {
       "source": "/api/expert-excel",
-      "destination": "/api/introductie"
+      "destination": "/api/introduction"
+    },
+    {
+      "source": "/api/introductie",
+      "destination": "/api/introduction"
+    },
+    {
+      "source": "/api/authenticatie",
+      "destination": "/api/authentication"
     }
   ],
   "footer": {

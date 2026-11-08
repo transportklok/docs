@@ -130,7 +130,8 @@
                 "group": "Salariskoppelingen",
                 "pages": [
                   "beheerders/personeelszaken/salariskoppelingen/overzicht",
-                  "beheerders/personeelszaken/salariskoppelingen/nmbrs"
+                  "beheerders/personeelszaken/salariskoppelingen/nmbrs",
+                  "beheerders/personeelszaken/salariskoppelingen/loket"
                 ]
               }
             ]

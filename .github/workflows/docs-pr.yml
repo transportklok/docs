@@ -30,6 +30,16 @@ jobs:
       - name: Lint the capture manifest ids
         run: scripts/manifest-id-lint.sh
 
+  translations:
+    name: Translations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove the check fails on each kind of drift
+        run: cd tests && python3 -m unittest test_translate_docs test_glossary
+      - name: Check every language is translated, current, linked and labelled
+        run: python3 scripts/translate_docs.py --check
+
   publisher:
     name: Docs publisher
     runs-on: ubuntu-latest

@@ -14,6 +14,7 @@
 - A page explains one page or one feature of the product, and sits in the navigation under the section of that feature. A page with two purposes is split; a page about a control in the global header is not written: the feature behind the control gets its page.
 - General pages that belong to no domain, such as signing in and exporting, sit in the **Home** tab.
 - Page paths are English, even though the content is Dutch. A page that moves or is renamed keeps a redirect from its old path in `docs.json`.
+- `api/openapi.json` is generated, never edited by hand: run `php artisan rest:openapi api/openapi.json` in MyTimeFlow and copy the file here. Mintlify turns it into the API reference, one page per endpoint, grouped by tag.
 - `scripts/nav-check.sh` fails when the navigation, the pages, the redirects and the internal links disagree.
 
 ## Page template

@@ -194,6 +194,10 @@
               "api/oauth",
               "api/rate-limits"
             ]
+          },
+          {
+            "group": "Naslag",
+            "openapi": "api/openapi.json"
           }
         ]
       }

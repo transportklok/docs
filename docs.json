@@ -201,6 +201,27 @@
                   "beheerders/instellingen/organisatie/abonnement",
                   "beheerders/instellingen/organisatie/machtiging-en-facturering"
                 ]
+              },
+              {
+                "group": "Team",
+                "pages": [
+                  "beheerders/instellingen/team/algemeen",
+                  "beheerders/instellingen/team/configuratie-en-functies",
+                  "beheerders/instellingen/team/kenmerken",
+                  "beheerders/instellingen/team/werkpatronen",
+                  "beheerders/instellingen/team/werkzaamheden"
+                ]
+              },
+              {
+                "group": "Uw account",
+                "pages": [
+                  "beheerders/instellingen/account/profiel",
+                  "beheerders/instellingen/account/account",
+                  "beheerders/instellingen/account/beveiliging",
+                  "beheerders/instellingen/account/weergave",
+                  "beheerders/instellingen/account/apps",
+                  "beheerders/instellingen/account/organisaties-en-teams"
+                ]
               }
             ]
           }

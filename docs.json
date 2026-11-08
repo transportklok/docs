@@ -129,7 +129,8 @@
               {
                 "group": "Salariskoppelingen",
                 "pages": [
-                  "beheerders/personeelszaken/salariskoppelingen/overzicht"
+                  "beheerders/personeelszaken/salariskoppelingen/overzicht",
+                  "beheerders/personeelszaken/salariskoppelingen/nmbrs"
                 ]
               }
             ]

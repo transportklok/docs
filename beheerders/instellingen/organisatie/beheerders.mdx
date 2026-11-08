@@ -1,6 +1,6 @@
 ---
 title: "Beheerders"
-description: "Beheerders en managers van uw organisatie uitnodigen, wijzigen en verwijderen."
+description: "Beheerders en managers van uw organisatie uitnodigen, hun rol kiezen, wijzigen en verwijderen."
 ---
 
 import { Hint } from '/snippets/hint.jsx';
@@ -38,7 +38,7 @@ Iemand wijzigen of verwijderen:
 |-------|-----------|
 | **Naam** | De naam van de beheerder of manager. |
 | **E-mailadres** | Het e-mailadres waarmee de persoon inlogt. |
-| **Rol** | **Administrator** of **Manager**. Zie [Rollen en rechten](/beheerders/instellingen/organisatie/rollen-en-rechten). |
+| **Rol** | **Administrator** of **Manager**. |
 | **Laatst gezien** | **Online**, hoe lang geleden de persoon actief was, of **Gebruiker heeft nog niet ingelogd**. |
 
 Bij een uitnodiging:
@@ -49,14 +49,26 @@ Bij een uitnodiging:
 | **Rol** (verplicht) | **Administrator** of **Manager**. |
 | **Teams** | De teams waar de persoon bij kan. Minstens één. Dit veld ziet u als uw organisatie meer dan één team heeft. |
 
+Wat een rol mag:
+
+| Rol | Wat deze rol mag |
+|-----|------------------|
+| **Administrator** | De volledige organisatie beheren: alle instellingen, beheerders, abonnement en facturen, en alles wat een manager mag. |
+| **Manager** | Tijdregistraties bekijken, goedkeuren, afkeuren, aanmaken en exporteren, voor de teams waar de manager bij hoort. |
+
+Een medewerker krijgt hier geen rol. Een medewerker doet eigen tijdregistraties en krijgt een account als u de medewerker aanmaakt met een account. Zie [Arbeidskracht aanmaken](/beheerders/personeelszaken/personeel/aanmaken).
+
 ## Wat er daarna gebeurt
 
 - De uitnodiging staat op het tabblad **Uitnodigingen** tot die is geaccepteerd. Daar kunt u hem **Verstuur opnieuw** of **Annuleren**.
 - Na het accepteren staat de persoon op het tabblad **Beheerders**.
 - Met **Verlaten** in uw eigen rij verlaat u zelf de organisatie.
+- De rechten volgen direct uit de rol. U zet geen losse rechten per persoon aan of uit.
+- Met **Teams** beperkt u een manager tot bepaalde teams. Kiest u alle teams, dan geldt de rol voor de hele organisatie.
 
 ## Beperkingen
 
 - Een organisatie houdt altijd minstens één beheerder. <Hint kind="red">De laatste beheerder kunt u niet verwijderen.</Hint>
 - Uw eigen rol en teams kunt u niet zelf wijzigen.
+- Een manager ziet het menu **Organisatie Instellingen** niet.
 - Een e-mailadres dat al een uitnodiging heeft of al bij de organisatie hoort, kunt u niet nog eens uitnodigen.

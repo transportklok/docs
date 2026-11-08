@@ -32,25 +32,37 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Beheerders",
+        "tab": "Home",
         "groups": [
           {
             "group": "Start",
             "pages": [
-              "index",
-              "beheerders/start",
-              "beheerders/exports-en-meldingen"
+              "index"
             ]
           },
           {
             "group": "Aanmelden",
             "pages": [
-              "beheerders/aanmelden/registreren",
-              "beheerders/aanmelden/inloggen",
-              "beheerders/aanmelden/tweefactor-inloggen",
-              "beheerders/aanmelden/app-toegang"
+              "sign-in/register",
+              "sign-in/accept-invitation",
+              "sign-in/log-in",
+              "sign-in/two-factor",
+              "sign-in/forgot-password",
+              "sign-in/confirm-email",
+              "sign-in/app-access"
             ]
           },
+          {
+            "group": "Werken met TransportKlok",
+            "pages": [
+              "general/exports"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Beheerders",
+        "groups": [
           {
             "group": "Wagenparkbeheer",
             "pages": [
@@ -110,7 +122,6 @@
               {
                 "group": "GPS-koppelingen",
                 "pages": [
-                  "beheerders/wagenparkbeheer/koppelingen/overzicht",
                   "beheerders/wagenparkbeheer/koppelingen/webfleet",
                   "beheerders/wagenparkbeheer/koppelingen/samsara",
                   "beheerders/wagenparkbeheer/koppelingen/geotab",
@@ -157,7 +168,6 @@
               {
                 "group": "Salariskoppelingen",
                 "pages": [
-                  "beheerders/personeelszaken/salariskoppelingen/overzicht",
                   "beheerders/personeelszaken/salariskoppelingen/nmbrs",
                   "beheerders/personeelszaken/salariskoppelingen/loket",
                   "beheerders/personeelszaken/salariskoppelingen/afas",
@@ -177,6 +187,7 @@
                   "beheerders/urenbeheer/tijdregistratie/details",
                   "beheerders/urenbeheer/tijdregistratie/tijdlijn",
                   "beheerders/urenbeheer/tijdregistratie/bewerken",
+                  "management/hour-management/time-registrations/rejected",
                   "beheerders/urenbeheer/tijdregistratie/salarismutatie-export"
                 ]
               }
@@ -201,22 +212,58 @@
               {
                 "group": "Organisatie",
                 "pages": [
-                  "beheerders/instellingen/organisatie/algemeen",
+                  {
+                    "group": "Algemeen",
+                    "pages": [
+                      "settings/organization/general/profile",
+                      "settings/organization/general/address"
+                    ]
+                  },
                   "beheerders/instellingen/organisatie/beheerders",
-                  "beheerders/instellingen/organisatie/rollen-en-rechten",
                   "beheerders/instellingen/organisatie/teams",
-                  "beheerders/instellingen/organisatie/configuratie-en-modules",
-                  "beheerders/instellingen/organisatie/integraties",
+                  {
+                    "group": "Configuratie en modules",
+                    "pages": [
+                      "settings/organization/configuration/base",
+                      "settings/organization/configuration/modules"
+                    ]
+                  },
+                  {
+                    "group": "Integraties",
+                    "pages": [
+                      "settings/organization/integrations/instances",
+                      "settings/organization/integrations/accounts",
+                      "settings/organization/integrations/capabilities"
+                    ]
+                  },
                   "beheerders/instellingen/organisatie/notificaties",
                   "beheerders/instellingen/organisatie/abonnement",
-                  "beheerders/instellingen/organisatie/machtiging-en-facturering"
+                  {
+                    "group": "Machtiging en facturering",
+                    "pages": [
+                      "settings/organization/plan-and-billing/payment-method",
+                      "settings/organization/plan-and-billing/invoices"
+                    ]
+                  }
                 ]
               },
               {
                 "group": "Team",
                 "pages": [
-                  "beheerders/instellingen/team/algemeen",
-                  "beheerders/instellingen/team/configuratie-en-functies",
+                  {
+                    "group": "Team algemeen",
+                    "pages": [
+                      "settings/team/general/profile",
+                      "settings/team/general/address"
+                    ]
+                  },
+                  {
+                    "group": "Configuratie en functies",
+                    "pages": [
+                      "settings/team/configuration/base",
+                      "settings/team/configuration/features"
+                    ]
+                  },
                   "beheerders/instellingen/team/kenmerken",
                   "beheerders/instellingen/team/werkpatronen",
                   "beheerders/instellingen/team/werkzaamheden"
@@ -226,8 +273,21 @@
                 "group": "Uw account",
                 "pages": [
                   "beheerders/instellingen/account/profiel",
-                  "beheerders/instellingen/account/account",
-                  "beheerders/instellingen/account/beveiliging",
+                  {
+                    "group": "Account",
+                    "pages": [
+                      "settings/user/account/email",
+                      "settings/user/account/password"
+                    ]
+                  },
+                  {
+                    "group": "Authenticatie en beveiliging",
+                    "pages": [
+                      "settings/user/authentication-and-security/sessions",
+                      "settings/user/authentication-and-security/devices",
+                      "settings/user/authentication-and-security/two-factor-authentication"
+                    ]
+                  },
                   "beheerders/instellingen/account/weergave",
                   "beheerders/instellingen/account/apps",
                   "beheerders/instellingen/account/organisaties-en-teams"
@@ -240,18 +300,6 @@
       {
         "tab": "Medewerkers",
         "groups": [
-          {
-            "group": "Start",
-            "pages": [
-              "medewerkers/start"
-            ]
-          },
-          {
-            "group": "Aanmelden",
-            "pages": [
-              "medewerkers/aanmelden/uitnodiging-accepteren"
-            ]
-          },
           {
             "group": "De app",
             "pages": [
@@ -292,25 +340,119 @@
             "group": "Aan de slag",
             "pages": [
               "api/introductie",
-              "api/authenticatie",
-              "api/rate-limits",
-              "api/expert-excel"
-            ]
-          },
-          {
-            "group": "Resources",
-            "pages": [
-              "api/orders",
-              "api/planning",
-              "api/voertuigen",
-              "api/chauffeurs",
-              "api/webhooks"
+              "api/authenticatie"
             ]
           }
         ]
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/beheerders/start",
+      "destination": "/"
+    },
+    {
+      "source": "/medewerkers/start",
+      "destination": "/"
+    },
+    {
+      "source": "/beheerders/exports-en-meldingen",
+      "destination": "/general/exports"
+    },
+    {
+      "source": "/beheerders/aanmelden/registreren",
+      "destination": "/sign-in/register"
+    },
+    {
+      "source": "/beheerders/aanmelden/inloggen",
+      "destination": "/sign-in/log-in"
+    },
+    {
+      "source": "/beheerders/aanmelden/tweefactor-inloggen",
+      "destination": "/sign-in/two-factor"
+    },
+    {
+      "source": "/beheerders/aanmelden/app-toegang",
+      "destination": "/sign-in/app-access"
+    },
+    {
+      "source": "/medewerkers/aanmelden/uitnodiging-accepteren",
+      "destination": "/sign-in/accept-invitation"
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/overzicht",
+      "destination": "/settings/organization/integrations/instances"
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/overzicht",
+      "destination": "/settings/organization/integrations/instances"
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/integraties",
+      "destination": "/settings/organization/integrations/instances"
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/rollen-en-rechten",
+      "destination": "/beheerders/instellingen/organisatie/beheerders"
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/algemeen",
+      "destination": "/settings/organization/general/profile"
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/configuratie-en-modules",
+      "destination": "/settings/organization/configuration/base"
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/machtiging-en-facturering",
+      "destination": "/settings/organization/plan-and-billing/payment-method"
+    },
+    {
+      "source": "/beheerders/instellingen/team/algemeen",
+      "destination": "/settings/team/general/profile"
+    },
+    {
+      "source": "/beheerders/instellingen/team/configuratie-en-functies",
+      "destination": "/settings/team/configuration/base"
+    },
+    {
+      "source": "/beheerders/instellingen/account/account",
+      "destination": "/settings/user/account/email"
+    },
+    {
+      "source": "/beheerders/instellingen/account/beveiliging",
+      "destination": "/settings/user/authentication-and-security/sessions"
+    },
+    {
+      "source": "/api/orders",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/planning",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/voertuigen",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/chauffeurs",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/webhooks",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/rate-limits",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/expert-excel",
+      "destination": "/api/introductie"
+    }
+  ],
   "footer": {
     "socials": {
       "linkedin": "https://linkedin.com/company/transportklok"

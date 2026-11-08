@@ -1,0 +1,48 @@
+---
+title: "Accounts"
+description: "De accounts waarmee TransportKlok inlogt bij uw salarispakket of telematicasysteem."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Op het tabblad **Accounts** legt u vast hoe TransportKlok inlogt bij uw salarispakket of telematicasysteem. Een koppeling bij [Integraties](/settings/organization/integrations/instances) gebruikt zo'n account.
+
+## Wie dit mag gebruiken
+
+- Een beheerder of manager van de organisatie.
+
+## Zo gebruikt u deze pagina
+
+1. Open **Instellingen** → **Organisatie Instellingen** → **Integraties** en kies het tabblad **Accounts**.
+2. Klik op **Account aanmaken**.
+3. Kies bij **Integratie** uw systeem en vul een **Naam** in.
+4. Vul de inloggegevens in die het systeem vraagt, en klik op **Account aanmaken**.
+5. Bij een salarispakket gaat u naar de inlogpagina van dat pakket. Log daar in en geef toestemming.
+
+## Velden
+
+| Veld | Wat u invult |
+|------|--------------|
+| **Integratie** | Het salarispakket of telematicasysteem. |
+| **Naam** | Een naam waaraan u het account herkent. |
+| Inloggegevens | Wat het systeem vraagt. |
+
+De inloggegevens per telematicasysteem:
+
+| Systeem | Inloggen met |
+|---------|--------------|
+| Webfleet, FleetGo, Verizon Connect | **Gebruikersnaam** en **Wachtwoord** |
+| Samsara, Geotab, Linqo | **Token** |
+| CO3 | **Client-ID** en **Client secret** |
+
+Een salarispakket vraagt hier geen inloggegevens: u logt in op de inlogpagina van het pakket.
+
+## Wat er daarna gebeurt
+
+- Het account staat op **Verbonden**. U kiest het daarna bij een koppeling.
+
+## Beperkingen
+
+- **Account loskoppelen** verwijdert ook alle koppelingen die dat account gebruiken. <Hint kind="red">Na loskoppelen haalt TransportKlok via die koppelingen niets meer op en verstuurt het niets meer.</Hint>

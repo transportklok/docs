@@ -248,12 +248,6 @@
       "selector": null
     },
     {
-      "file": "management-verlof-overzicht.png",
-      "url": "/management/hour/leave",
-      "role": "admin",
-      "selector": null
-    },
-    {
       "file": "management-klantenbeheer-dashboard.png",
       "url": "/management/front-office/dashboard",
       "role": "admin",
@@ -274,12 +268,6 @@
     {
       "file": "management-opdrachtgevers-bewerken.png",
       "url": "/management/front-office/customers/019f0000-0000-7000-8000-000000000003/edit",
-      "role": "admin",
-      "selector": null
-    },
-    {
-      "file": "management-opdrachten-overzicht.png",
-      "url": "/management/front-office/orders",
       "role": "admin",
       "selector": null
     },
@@ -323,6 +311,24 @@
       "file": "workforce-tijdregistratie-bewerken.png",
       "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/edit",
       "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "instellingen-integraties-qargo-account.png",
+      "url": "/settings/organization/integrations/accounts/create?integration=qargo",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-wagenparkbeheer-automatische-urenregistraties.png",
+      "url": "/settings/organization/configuration/modules/fleet-management/configuration",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-hrm-contracten.png",
+      "url": "/management/human-resources/contracts",
+      "role": "admin",
       "selector": null
     }
   ]

@@ -118,7 +118,12 @@
               {
                 "group": "Personeel",
                 "pages": [
-                  "beheerders/personeelszaken/personeel/overzicht"
+                  "beheerders/personeelszaken/personeel/overzicht",
+                  "beheerders/personeelszaken/personeel/aanmaken",
+                  "beheerders/personeelszaken/personeel/wijzigen",
+                  "beheerders/personeelszaken/personeel/details",
+                  "beheerders/personeelszaken/personeel/uitnodigingen",
+                  "beheerders/personeelszaken/personeel/teams"
                 ]
               },
               {

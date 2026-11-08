@@ -177,7 +177,19 @@
     },
     {
       "file": "management-personeel-overzicht.png",
-      "url": "/management/human-resources/employments",
+      "url": "/management/human-resources/workers",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-personeel-aanmaken.png",
+      "url": "/management/human-resources/workers/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-personeel-uitnodigingen.png",
+      "url": "/management/human-resources/workers/invitations",
       "role": "admin",
       "selector": null
     },

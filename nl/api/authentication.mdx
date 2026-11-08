@@ -1,0 +1,36 @@
+---
+title: "API authenticatie"
+description: "Een verzoek aan de API meesturen met een toegangstoken."
+---
+
+## Het toegangstoken
+
+Elk verzoek aan de API stuurt een OAuth-toegangstoken mee in de `Authorization` header:
+
+```http
+GET /rest/v1/organizations HTTP/1.1
+Host: api.transportklok.nl
+Authorization: Bearer <toegangstoken>
+Accept: application/json
+```
+
+Hoe u een token krijgt, staat bij [OAuth](/nl/api/oauth).
+
+## Wat een token mag
+
+- Een token hoort bij de gebruiker die uw app toegang gaf. De API laat alleen zien wat die gebruiker zelf mag zien.
+- Een token geldt alleen voor de organisaties die de gebruiker bij het toestaan heeft gekozen.
+- Een token geldt alleen voor de rechten (scopes) die uw app heeft gevraagd en de gebruiker heeft toegestaan. Een scope heeft de vorm `<onderdeel>:<actie>`.
+- Het e-mailadres van de gebruiker moet bevestigd zijn.
+
+## Als het niet lukt
+
+| Status | Betekenis |
+|--------|-----------|
+| `401` | Er is geen geldig token meegestuurd, of het token is verlopen. Vraag met het refresh token een nieuw token aan. |
+| `403` | Het token mist de scope voor dit verzoek. |
+| `429` | U doet te veel verzoeken. Zie [Rate limits](/nl/api/rate-limits). |
+
+## Toegang intrekken
+
+Een gebruiker trekt de toegang van uw app in bij **Instellingen** → **Apps** in TransportKlok. Het token werkt daarna niet meer.

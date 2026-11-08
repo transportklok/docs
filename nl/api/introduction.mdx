@@ -1,0 +1,25 @@
+---
+title: "API introductie"
+description: "Uw eigen software koppelen aan TransportKlok via de REST API."
+---
+
+## Wat de API is
+
+Met de TransportKlok API leest uw eigen software gegevens uit TransportKlok, zoals de organisaties, medewerkers en exports waar u toegang toe hebt. De API is een REST API die JSON teruggeeft.
+
+## Basisadres
+
+Elk verzoek gaat naar:
+
+```text
+https://api.transportklok.nl/rest/v1
+```
+
+Een gegeven hoort altijd bij een organisatie. Daarom begint een pad na de organisaties met het id van de organisatie, zoals `/rest/v1/organizations/{organisatie-id}/workers`.
+
+## Zo begint u
+
+1. Vraag een OAuth-client aan bij TransportKlok via [info@transportklok.nl](mailto:info@transportklok.nl). Zie [OAuth](/nl/api/oauth).
+2. Laat een gebruiker uw app toegang geven en haal een toegangstoken op. Zie [OAuth](/nl/api/oauth).
+3. Stuur het token mee met elk verzoek. Zie [Authenticatie](/nl/api/authentication).
+4. Houd rekening met de grenzen aan het aantal verzoeken. Zie [Rate limits](/nl/api/rate-limits).

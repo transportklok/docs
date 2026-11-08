@@ -324,6 +324,12 @@
       "url": "/settings/organization/configuration/modules/fleet-management/configuration",
       "role": "admin",
       "selector": null
+    },
+    {
+      "file": "management-hrm-contracten.png",
+      "url": "/management/human-resources/contracts",
+      "role": "admin",
+      "selector": null
     }
   ]
 }

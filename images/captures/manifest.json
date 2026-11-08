@@ -354,6 +354,12 @@
       "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
       "role": "worker",
       "selector": null
+    },
+    {
+      "file": "account-tweefactorauthenticatie.png",
+      "url": "/settings/user/authentication-and-security/two-factor-authentication",
+      "role": "admin",
+      "selector": null
     }
   ]
 }

@@ -152,6 +152,12 @@
                     ]
                   },
                   {
+                    "group": "Contracten",
+                    "pages": [
+                      "nl/management/human-resources/contracts/overview"
+                    ]
+                  },
+                  {
                     "group": "Salarisrondes",
                     "pages": [
                       "nl/management/human-resources/payroll-runs/overview",

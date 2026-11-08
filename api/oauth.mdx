@@ -5,14 +5,14 @@ description: "Een toegangstoken ophalen met OAuth 2.0."
 
 ## Hoe het werkt
 
-Transportklok gebruikt OAuth 2.0 met de authorization code flow. Uw app stuurt de gebruiker naar Transportklok. Daar logt de gebruiker in, kiest de organisaties en geeft toestemming. Uw app wisselt daarna een code in voor een toegangstoken en een refresh token.
+TransportKlok gebruikt OAuth 2.0 met de authorization code flow. Uw app stuurt de gebruiker naar TransportKlok. Daar logt de gebruiker in, kiest de organisaties en geeft toestemming. Uw app wisselt daarna een code in voor een toegangstoken en een refresh token.
 
 ## Een client aanvragen
 
-Een OAuth-client vraagt u aan bij Transportklok via [info@transportklok.nl](mailto:info@transportklok.nl). Geef op:
+Een OAuth-client vraagt u aan bij TransportKlok via [info@transportklok.nl](mailto:info@transportklok.nl). Geef op:
 
 - de naam, een beschrijving, een logo en de website van uw app;
-- de redirect-URL's waar Transportklok de gebruiker na het toestaan naartoe stuurt;
+- de redirect-URL's waar TransportKlok de gebruiker na het toestaan naartoe stuurt;
 - de scopes die uw app nodig heeft;
 - of uw app voor beheerders of voor medewerkers is.
 
@@ -32,7 +32,7 @@ U krijgt een client-id en, voor een app met een eigen server, een client secret.
    ```
 
 2. De gebruiker ziet **Applicatie autoriseren**, kiest bij **Toegestane organisaties** de organisaties en klikt op **Toestaan**.
-3. Transportklok stuurt de gebruiker terug naar uw redirect-URL met `code` en `state`. Controleer dat `state` gelijk is aan wat u meestuurde.
+3. TransportKlok stuurt de gebruiker terug naar uw redirect-URL met `code` en `state`. Controleer dat `state` gelijk is aan wat u meestuurde.
 4. Wissel de code in voor een token:
 
    ```http
@@ -59,4 +59,4 @@ grant_type=refresh_token&client_id=<client-id>&client_secret=<client-secret>&ref
 
 ## Wat de gebruiker ziet
 
-Bij het toestaan ziet de gebruiker welke app toegang vraagt, met welk account en met welke rechten. De toegang intrekken doet de gebruiker bij **Instellingen** → **Apps** in Transportklok.
+Bij het toestaan ziet de gebruiker welke app toegang vraagt, met welk account en met welke rechten. De toegang intrekken doet de gebruiker bij **Instellingen** → **Apps** in TransportKlok.

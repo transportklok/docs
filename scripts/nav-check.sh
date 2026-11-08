@@ -21,7 +21,7 @@ def nav_pages(node):
         for item in node:
             yield from nav_pages(item)
     elif isinstance(node, dict):
-        for key in ("tabs", "groups", "pages"):
+        for key in ("languages", "tabs", "groups", "pages"):
             yield from nav_pages(node.get(key, []))
 
 

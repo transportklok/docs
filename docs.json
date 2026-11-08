@@ -30,324 +30,330 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Home",
-        "groups": [
+        "language": "nl",
+        "default": true,
+        "tabs": [
           {
-            "group": "Start",
-            "pages": [
-              "index"
+            "tab": "Home",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "nl/index"
+                ]
+              },
+              {
+                "group": "Aanmelden",
+                "pages": [
+                  "nl/sign-in/register",
+                  "nl/sign-in/accept-invitation",
+                  "nl/sign-in/log-in",
+                  "nl/sign-in/two-factor",
+                  "nl/sign-in/forgot-password",
+                  "nl/sign-in/confirm-email",
+                  "nl/sign-in/app-access"
+                ]
+              },
+              {
+                "group": "Werken met TransportKlok",
+                "pages": [
+                  "nl/general/exports"
+                ]
+              }
             ]
           },
           {
-            "group": "Aanmelden",
-            "pages": [
-              "sign-in/register",
-              "sign-in/accept-invitation",
-              "sign-in/log-in",
-              "sign-in/two-factor",
-              "sign-in/forgot-password",
-              "sign-in/confirm-email",
-              "sign-in/app-access"
-            ]
-          },
-          {
-            "group": "Werken met TransportKlok",
-            "pages": [
-              "general/exports"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Beheerders",
-        "groups": [
-          {
-            "group": "Wagenparkbeheer",
-            "pages": [
-              "beheerders/wagenparkbeheer/kaart",
+            "tab": "Beheerders",
+            "groups": [
               {
-                "group": "Voertuigen",
+                "group": "Wagenparkbeheer",
                 "pages": [
-                  "beheerders/wagenparkbeheer/voertuigen/overzicht",
-                  "beheerders/wagenparkbeheer/voertuigen/aanmaken",
-                  "beheerders/wagenparkbeheer/voertuigen/bewerken"
-                ]
-              },
-              {
-                "group": "Trailers",
-                "pages": [
-                  "beheerders/wagenparkbeheer/trailers/overzicht",
-                  "beheerders/wagenparkbeheer/trailers/aanmaken",
-                  "beheerders/wagenparkbeheer/trailers/bewerken"
-                ]
-              },
-              {
-                "group": "Locaties",
-                "pages": [
-                  "beheerders/wagenparkbeheer/locaties/overzicht",
-                  "beheerders/wagenparkbeheer/locaties/aanmaken"
-                ]
-              },
-              {
-                "group": "Telematica",
-                "pages": [
-                  "beheerders/wagenparkbeheer/telematica/overzicht",
+                  "nl/management/fleet-management/map",
                   {
-                    "group": "Trackers",
+                    "group": "Voertuigen",
                     "pages": [
-                      "beheerders/wagenparkbeheer/telematica/trackers/overzicht",
-                      "beheerders/wagenparkbeheer/telematica/trackers/aanmaken"
+                      "nl/management/fleet-management/vehicles/overview",
+                      "nl/management/fleet-management/vehicles/create",
+                      "nl/management/fleet-management/vehicles/edit"
                     ]
                   },
                   {
-                    "group": "Druppels",
+                    "group": "Trailers",
                     "pages": [
-                      "beheerders/wagenparkbeheer/telematica/druppels/overzicht",
-                      "beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
-                      "beheerders/wagenparkbeheer/telematica/druppels/koppelen"
+                      "nl/management/fleet-management/trailers/overview",
+                      "nl/management/fleet-management/trailers/create",
+                      "nl/management/fleet-management/trailers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Locaties",
+                    "pages": [
+                      "nl/management/fleet-management/locations/overview",
+                      "nl/management/fleet-management/locations/create"
+                    ]
+                  },
+                  {
+                    "group": "Telematica",
+                    "pages": [
+                      "nl/management/fleet-management/telematics/overview",
+                      {
+                        "group": "Trackers",
+                        "pages": [
+                          "nl/management/fleet-management/telematics/trackers/overview",
+                          "nl/management/fleet-management/telematics/trackers/create"
+                        ]
+                      },
+                      {
+                        "group": "Druppels",
+                        "pages": [
+                          "nl/management/fleet-management/telematics/beacons/overview",
+                          "nl/management/fleet-management/telematics/beacons/create",
+                          "nl/management/fleet-management/telematics/beacons/connect"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tachograaf",
+                    "pages": [
+                      "nl/management/fleet-management/tachograph/vehicles",
+                      "nl/management/fleet-management/tachograph/drivers",
+                      "nl/management/fleet-management/tachograph/company-cards"
+                    ]
+                  },
+                  {
+                    "group": "GPS-koppelingen",
+                    "pages": [
+                      "nl/management/fleet-management/integrations/webfleet",
+                      "nl/management/fleet-management/integrations/samsara",
+                      "nl/management/fleet-management/integrations/geotab",
+                      "nl/management/fleet-management/integrations/fleetgo",
+                      "nl/management/fleet-management/integrations/linqo",
+                      "nl/management/fleet-management/integrations/co3",
+                      "nl/management/fleet-management/integrations/verizon-connect"
                     ]
                   }
                 ]
               },
               {
-                "group": "Tachograaf",
-                "pages": [
-                  "beheerders/wagenparkbeheer/tachograaf/voertuigen",
-                  "beheerders/wagenparkbeheer/tachograaf/bestuurders",
-                  "beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten"
-                ]
-              },
-              {
-                "group": "GPS-koppelingen",
-                "pages": [
-                  "beheerders/wagenparkbeheer/koppelingen/webfleet",
-                  "beheerders/wagenparkbeheer/koppelingen/samsara",
-                  "beheerders/wagenparkbeheer/koppelingen/geotab",
-                  "beheerders/wagenparkbeheer/koppelingen/fleetgo",
-                  "beheerders/wagenparkbeheer/koppelingen/linqo",
-                  "beheerders/wagenparkbeheer/koppelingen/co3",
-                  "beheerders/wagenparkbeheer/koppelingen/verizon-connect"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "HR-beheer",
-            "pages": [
-              {
-                "group": "Personeel",
-                "pages": [
-                  "beheerders/personeelszaken/personeel/overzicht",
-                  "beheerders/personeelszaken/personeel/aanmaken",
-                  "beheerders/personeelszaken/personeel/wijzigen",
-                  "beheerders/personeelszaken/personeel/details",
-                  "beheerders/personeelszaken/personeel/uitnodigingen",
-                  "beheerders/personeelszaken/personeel/teams"
-                ]
-              },
-              {
-                "group": "Salarisrondes",
-                "pages": [
-                  "beheerders/personeelszaken/salarisrondes/overzicht",
-                  "beheerders/personeelszaken/salarisrondes/aanmaken",
-                  "beheerders/personeelszaken/salarisrondes/verwerken",
-                  "beheerders/personeelszaken/salarisrondes/correcties",
-                  "beheerders/personeelszaken/salarisrondes/exports"
-                ]
-              },
-              {
-                "group": "Aanvullingen en inhoudingen",
-                "pages": [
-                  "beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht",
-                  "beheerders/personeelszaken/aanvullingen-inhoudingen/aanmaken",
-                  "beheerders/personeelszaken/aanvullingen-inhoudingen/wijzigen"
-                ]
-              },
-              {
-                "group": "Salariskoppelingen",
-                "pages": [
-                  "beheerders/personeelszaken/salariskoppelingen/nmbrs",
-                  "beheerders/personeelszaken/salariskoppelingen/loket",
-                  "beheerders/personeelszaken/salariskoppelingen/afas",
-                  "beheerders/personeelszaken/salariskoppelingen/exact-online"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Urenbeheer",
-            "pages": [
-              {
-                "group": "Tijdregistratie",
-                "pages": [
-                  "beheerders/urenbeheer/tijdregistratie/overzicht",
-                  "beheerders/urenbeheer/tijdregistratie/aanmaken",
-                  "beheerders/urenbeheer/tijdregistratie/details",
-                  "beheerders/urenbeheer/tijdregistratie/tijdlijn",
-                  "beheerders/urenbeheer/tijdregistratie/bewerken",
-                  "management/hour-management/time-registrations/rejected",
-                  "beheerders/urenbeheer/tijdregistratie/salarismutatie-export"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Klantenbeheer",
-            "pages": [
-              {
-                "group": "Opdrachtgevers",
-                "pages": [
-                  "beheerders/klantenbeheer/opdrachtgevers/overzicht",
-                  "beheerders/klantenbeheer/opdrachtgevers/aanmaken",
-                  "beheerders/klantenbeheer/opdrachtgevers/bewerken"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Instellingen",
-            "pages": [
-              {
-                "group": "Organisatie",
+                "group": "HR-beheer",
                 "pages": [
                   {
-                    "group": "Algemeen",
+                    "group": "Personeel",
                     "pages": [
-                      "settings/organization/general/profile",
-                      "settings/organization/general/address"
-                    ]
-                  },
-                  "beheerders/instellingen/organisatie/beheerders",
-                  "beheerders/instellingen/organisatie/teams",
-                  {
-                    "group": "Configuratie en modules",
-                    "pages": [
-                      "settings/organization/configuration/base",
-                      "settings/organization/configuration/modules"
+                      "nl/management/human-resources/workers/overview",
+                      "nl/management/human-resources/workers/create",
+                      "nl/management/human-resources/workers/edit",
+                      "nl/management/human-resources/workers/details",
+                      "nl/management/human-resources/workers/invitations",
+                      "nl/management/human-resources/workers/teams"
                     ]
                   },
                   {
-                    "group": "Integraties",
+                    "group": "Salarisrondes",
                     "pages": [
-                      "settings/organization/integrations/instances",
-                      "settings/organization/integrations/accounts",
-                      "settings/organization/integrations/capabilities"
+                      "nl/management/human-resources/payroll-runs/overview",
+                      "nl/management/human-resources/payroll-runs/create",
+                      "nl/management/human-resources/payroll-runs/process",
+                      "nl/management/human-resources/payroll-runs/corrections",
+                      "nl/management/human-resources/payroll-runs/exports"
                     ]
                   },
-                  "beheerders/instellingen/organisatie/notificaties",
-                  "beheerders/instellingen/organisatie/abonnement",
                   {
-                    "group": "Machtiging en facturering",
+                    "group": "Aanvullingen en inhoudingen",
                     "pages": [
-                      "settings/organization/plan-and-billing/payment-method",
-                      "settings/organization/plan-and-billing/invoices"
+                      "nl/management/human-resources/payroll-components/overview",
+                      "nl/management/human-resources/payroll-components/create",
+                      "nl/management/human-resources/payroll-components/edit"
+                    ]
+                  },
+                  {
+                    "group": "Salariskoppelingen",
+                    "pages": [
+                      "nl/management/human-resources/payroll-integrations/nmbrs",
+                      "nl/management/human-resources/payroll-integrations/loket",
+                      "nl/management/human-resources/payroll-integrations/afas",
+                      "nl/management/human-resources/payroll-integrations/exact-online"
                     ]
                   }
                 ]
               },
               {
-                "group": "Team",
+                "group": "Urenbeheer",
                 "pages": [
                   {
-                    "group": "Team algemeen",
+                    "group": "Tijdregistratie",
                     "pages": [
-                      "settings/team/general/profile",
-                      "settings/team/general/address"
+                      "nl/management/hour-management/time-registrations/overview",
+                      "nl/management/hour-management/time-registrations/create",
+                      "nl/management/hour-management/time-registrations/details",
+                      "nl/management/hour-management/time-registrations/timeline",
+                      "nl/management/hour-management/time-registrations/edit",
+                      "nl/management/hour-management/time-registrations/rejected",
+                      "nl/management/hour-management/time-registrations/payroll-mutation-export"
                     ]
-                  },
-                  {
-                    "group": "Configuratie en functies",
-                    "pages": [
-                      "settings/team/configuration/base",
-                      "settings/team/configuration/features"
-                    ]
-                  },
-                  "beheerders/instellingen/team/kenmerken",
-                  "beheerders/instellingen/team/werkpatronen",
-                  "beheerders/instellingen/team/werkzaamheden"
+                  }
                 ]
               },
               {
-                "group": "Uw account",
+                "group": "Klantenbeheer",
                 "pages": [
-                  "beheerders/instellingen/account/profiel",
                   {
-                    "group": "Account",
+                    "group": "Opdrachtgevers",
                     "pages": [
-                      "settings/user/account/email",
-                      "settings/user/account/password"
+                      "nl/management/customer-management/customers/overview",
+                      "nl/management/customer-management/customers/create",
+                      "nl/management/customer-management/customers/edit"
                     ]
-                  },
-                  {
-                    "group": "Authenticatie en beveiliging",
-                    "pages": [
-                      "settings/user/authentication-and-security/sessions",
-                      "settings/user/authentication-and-security/devices",
-                      "settings/user/authentication-and-security/two-factor-authentication"
-                    ]
-                  },
-                  "beheerders/instellingen/account/weergave",
-                  "beheerders/instellingen/account/apps",
-                  "beheerders/instellingen/account/organisaties-en-teams"
+                  }
                 ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Medewerkers",
-        "groups": [
-          {
-            "group": "De app",
-            "pages": [
-              "medewerkers/app/inloggen",
-              "medewerkers/app/pushmeldingen",
-              "medewerkers/app/thuis",
-              "medewerkers/app/werk-registreren",
-              "medewerkers/app/verlof-registreren",
-              "medewerkers/app/overzicht",
-              "medewerkers/app/timer",
-              "medewerkers/app/kaart",
-              "medewerkers/app/organisaties",
-              "medewerkers/app/instellingen",
-              "medewerkers/app/storingen"
-            ]
-          },
-          {
-            "group": "Werk",
-            "pages": [
+              },
               {
-                "group": "Tijdregistratie",
+                "group": "Instellingen",
                 "pages": [
-                  "medewerkers/werk/tijdregistratie/overzicht",
-                  "medewerkers/werk/tijdregistratie/aanmaken",
-                  "medewerkers/werk/tijdregistratie/details",
-                  "medewerkers/werk/tijdregistratie/tijdlijn",
-                  "medewerkers/werk/tijdregistratie/bewerken"
+                  {
+                    "group": "Organisatie",
+                    "pages": [
+                      {
+                        "group": "Algemeen",
+                        "pages": [
+                          "nl/settings/organization/general/profile",
+                          "nl/settings/organization/general/address"
+                        ]
+                      },
+                      "nl/settings/organization/administrators",
+                      "nl/settings/organization/teams",
+                      {
+                        "group": "Configuratie en modules",
+                        "pages": [
+                          "nl/settings/organization/configuration/base",
+                          "nl/settings/organization/configuration/modules"
+                        ]
+                      },
+                      {
+                        "group": "Integraties",
+                        "pages": [
+                          "nl/settings/organization/integrations/instances",
+                          "nl/settings/organization/integrations/accounts",
+                          "nl/settings/organization/integrations/capabilities"
+                        ]
+                      },
+                      "nl/settings/organization/notifications",
+                      "nl/settings/organization/subscription",
+                      {
+                        "group": "Machtiging en facturering",
+                        "pages": [
+                          "nl/settings/organization/plan-and-billing/payment-method",
+                          "nl/settings/organization/plan-and-billing/invoices"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Team",
+                    "pages": [
+                      {
+                        "group": "Team algemeen",
+                        "pages": [
+                          "nl/settings/team/general/profile",
+                          "nl/settings/team/general/address"
+                        ]
+                      },
+                      {
+                        "group": "Configuratie en functies",
+                        "pages": [
+                          "nl/settings/team/configuration/base",
+                          "nl/settings/team/configuration/features"
+                        ]
+                      },
+                      "nl/settings/team/attributes",
+                      "nl/settings/team/work-patterns",
+                      "nl/settings/team/activities"
+                    ]
+                  },
+                  {
+                    "group": "Uw account",
+                    "pages": [
+                      "nl/settings/user/profile",
+                      {
+                        "group": "Account",
+                        "pages": [
+                          "nl/settings/user/account/email",
+                          "nl/settings/user/account/password"
+                        ]
+                      },
+                      {
+                        "group": "Authenticatie en beveiliging",
+                        "pages": [
+                          "nl/settings/user/authentication-and-security/sessions",
+                          "nl/settings/user/authentication-and-security/devices",
+                          "nl/settings/user/authentication-and-security/two-factor-authentication"
+                        ]
+                      },
+                      "nl/settings/user/appearance",
+                      "nl/settings/user/apps",
+                      "nl/settings/user/memberships"
+                    ]
+                  }
                 ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "API",
-        "groups": [
+          },
           {
-            "group": "Aan de slag",
-            "pages": [
-              "api/introduction",
-              "api/authentication",
-              "api/oauth",
-              "api/rate-limits"
+            "tab": "Medewerkers",
+            "groups": [
+              {
+                "group": "De app",
+                "pages": [
+                  "nl/workforce/app/login",
+                  "nl/workforce/app/push-notifications",
+                  "nl/workforce/app/home",
+                  "nl/workforce/app/register-work",
+                  "nl/workforce/app/register-leave",
+                  "nl/workforce/app/overview",
+                  "nl/workforce/app/timer",
+                  "nl/workforce/app/map",
+                  "nl/workforce/app/organizations",
+                  "nl/workforce/app/settings",
+                  "nl/workforce/app/malfunctions"
+                ]
+              },
+              {
+                "group": "Werk",
+                "pages": [
+                  {
+                    "group": "Tijdregistratie",
+                    "pages": [
+                      "nl/workforce/hour-management/time-registrations/overview",
+                      "nl/workforce/hour-management/time-registrations/create",
+                      "nl/workforce/hour-management/time-registrations/details",
+                      "nl/workforce/hour-management/time-registrations/timeline",
+                      "nl/workforce/hour-management/time-registrations/edit"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
-            "group": "Naslag",
-            "openapi": "api/openapi.json"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Aan de slag",
+                "pages": [
+                  "nl/api/introduction",
+                  "nl/api/authentication",
+                  "nl/api/oauth",
+                  "nl/api/rate-limits"
+                ]
+              },
+              {
+                "group": "Naslag",
+                "openapi": "api/openapi.json"
+              }
+            ]
           }
         ]
       }
@@ -356,111 +362,563 @@
   "redirects": [
     {
       "source": "/beheerders/start",
-      "destination": "/"
+      "destination": "/nl/index",
+      "permanent": true
     },
     {
       "source": "/medewerkers/start",
-      "destination": "/"
+      "destination": "/nl/index",
+      "permanent": true
     },
     {
       "source": "/beheerders/exports-en-meldingen",
-      "destination": "/general/exports"
+      "destination": "/nl/general/exports",
+      "permanent": true
     },
     {
       "source": "/beheerders/aanmelden/registreren",
-      "destination": "/sign-in/register"
+      "destination": "/nl/sign-in/register",
+      "permanent": true
     },
     {
       "source": "/beheerders/aanmelden/inloggen",
-      "destination": "/sign-in/log-in"
+      "destination": "/nl/sign-in/log-in",
+      "permanent": true
     },
     {
       "source": "/beheerders/aanmelden/tweefactor-inloggen",
-      "destination": "/sign-in/two-factor"
+      "destination": "/nl/sign-in/two-factor",
+      "permanent": true
     },
     {
       "source": "/beheerders/aanmelden/app-toegang",
-      "destination": "/sign-in/app-access"
+      "destination": "/nl/sign-in/app-access",
+      "permanent": true
     },
     {
       "source": "/medewerkers/aanmelden/uitnodiging-accepteren",
-      "destination": "/sign-in/accept-invitation"
+      "destination": "/nl/sign-in/accept-invitation",
+      "permanent": true
     },
     {
       "source": "/beheerders/wagenparkbeheer/koppelingen/overzicht",
-      "destination": "/settings/organization/integrations/instances"
+      "destination": "/nl/settings/organization/integrations/instances",
+      "permanent": true
     },
     {
       "source": "/beheerders/personeelszaken/salariskoppelingen/overzicht",
-      "destination": "/settings/organization/integrations/instances"
+      "destination": "/nl/settings/organization/integrations/instances",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/organisatie/integraties",
-      "destination": "/settings/organization/integrations/instances"
+      "destination": "/nl/settings/organization/integrations/instances",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/organisatie/rollen-en-rechten",
-      "destination": "/beheerders/instellingen/organisatie/beheerders"
+      "destination": "/nl/settings/organization/administrators",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/organisatie/algemeen",
-      "destination": "/settings/organization/general/profile"
+      "destination": "/nl/settings/organization/general/profile",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/organisatie/configuratie-en-modules",
-      "destination": "/settings/organization/configuration/base"
+      "destination": "/nl/settings/organization/configuration/base",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/organisatie/machtiging-en-facturering",
-      "destination": "/settings/organization/plan-and-billing/payment-method"
+      "destination": "/nl/settings/organization/plan-and-billing/payment-method",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/team/algemeen",
-      "destination": "/settings/team/general/profile"
+      "destination": "/nl/settings/team/general/profile",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/team/configuratie-en-functies",
-      "destination": "/settings/team/configuration/base"
+      "destination": "/nl/settings/team/configuration/base",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/account/account",
-      "destination": "/settings/user/account/email"
+      "destination": "/nl/settings/user/account/email",
+      "permanent": true
     },
     {
       "source": "/beheerders/instellingen/account/beveiliging",
-      "destination": "/settings/user/authentication-and-security/sessions"
+      "destination": "/nl/settings/user/authentication-and-security/sessions",
+      "permanent": true
     },
     {
       "source": "/api/orders",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/planning",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/voertuigen",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/chauffeurs",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/webhooks",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/expert-excel",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/introductie",
-      "destination": "/api/introduction"
+      "destination": "/nl/api/introduction",
+      "permanent": true
     },
     {
       "source": "/api/authenticatie",
-      "destination": "/api/authentication"
+      "destination": "/nl/api/authentication",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "/nl/index",
+      "permanent": true
+    },
+    {
+      "source": "/api/authentication",
+      "destination": "/nl/api/authentication",
+      "permanent": true
+    },
+    {
+      "source": "/api/introduction",
+      "destination": "/nl/api/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api/oauth",
+      "destination": "/nl/api/oauth",
+      "permanent": true
+    },
+    {
+      "source": "/api/rate-limits",
+      "destination": "/nl/api/rate-limits",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/apps",
+      "destination": "/nl/settings/user/apps",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/organisaties-en-teams",
+      "destination": "/nl/settings/user/memberships",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/profiel",
+      "destination": "/nl/settings/user/profile",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/weergave",
+      "destination": "/nl/settings/user/appearance",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/abonnement",
+      "destination": "/nl/settings/organization/subscription",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/beheerders",
+      "destination": "/nl/settings/organization/administrators",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/notificaties",
+      "destination": "/nl/settings/organization/notifications",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/teams",
+      "destination": "/nl/settings/organization/teams",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/kenmerken",
+      "destination": "/nl/settings/team/attributes",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/werkpatronen",
+      "destination": "/nl/settings/team/work-patterns",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/werkzaamheden",
+      "destination": "/nl/settings/team/activities",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/klantenbeheer/opdrachtgevers/aanmaken",
+      "destination": "/nl/management/customer-management/customers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/klantenbeheer/opdrachtgevers/bewerken",
+      "destination": "/nl/management/customer-management/customers/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/klantenbeheer/opdrachtgevers/overzicht",
+      "destination": "/nl/management/customer-management/customers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/aanvullingen-inhoudingen/aanmaken",
+      "destination": "/nl/management/human-resources/payroll-components/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/aanvullingen-inhoudingen/overzicht",
+      "destination": "/nl/management/human-resources/payroll-components/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/aanvullingen-inhoudingen/wijzigen",
+      "destination": "/nl/management/human-resources/payroll-components/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/aanmaken",
+      "destination": "/nl/management/human-resources/workers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/details",
+      "destination": "/nl/management/human-resources/workers/details",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/overzicht",
+      "destination": "/nl/management/human-resources/workers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/teams",
+      "destination": "/nl/management/human-resources/workers/teams",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/uitnodigingen",
+      "destination": "/nl/management/human-resources/workers/invitations",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/wijzigen",
+      "destination": "/nl/management/human-resources/workers/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/afas",
+      "destination": "/nl/management/human-resources/payroll-integrations/afas",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/exact-online",
+      "destination": "/nl/management/human-resources/payroll-integrations/exact-online",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/loket",
+      "destination": "/nl/management/human-resources/payroll-integrations/loket",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/nmbrs",
+      "destination": "/nl/management/human-resources/payroll-integrations/nmbrs",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salarisrondes/aanmaken",
+      "destination": "/nl/management/human-resources/payroll-runs/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salarisrondes/correcties",
+      "destination": "/nl/management/human-resources/payroll-runs/corrections",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salarisrondes/exports",
+      "destination": "/nl/management/human-resources/payroll-runs/exports",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salarisrondes/overzicht",
+      "destination": "/nl/management/human-resources/payroll-runs/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salarisrondes/verwerken",
+      "destination": "/nl/management/human-resources/payroll-runs/process",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/aanmaken",
+      "destination": "/nl/management/hour-management/time-registrations/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/bewerken",
+      "destination": "/nl/management/hour-management/time-registrations/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/details",
+      "destination": "/nl/management/hour-management/time-registrations/details",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/overzicht",
+      "destination": "/nl/management/hour-management/time-registrations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/salarismutatie-export",
+      "destination": "/nl/management/hour-management/time-registrations/payroll-mutation-export",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/urenbeheer/tijdregistratie/tijdlijn",
+      "destination": "/nl/management/hour-management/time-registrations/timeline",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/kaart",
+      "destination": "/nl/management/fleet-management/map",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/co3",
+      "destination": "/nl/management/fleet-management/integrations/co3",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/fleetgo",
+      "destination": "/nl/management/fleet-management/integrations/fleetgo",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/geotab",
+      "destination": "/nl/management/fleet-management/integrations/geotab",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/linqo",
+      "destination": "/nl/management/fleet-management/integrations/linqo",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/samsara",
+      "destination": "/nl/management/fleet-management/integrations/samsara",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/verizon-connect",
+      "destination": "/nl/management/fleet-management/integrations/verizon-connect",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/webfleet",
+      "destination": "/nl/management/fleet-management/integrations/webfleet",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/locaties/aanmaken",
+      "destination": "/nl/management/fleet-management/locations/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/locaties/overzicht",
+      "destination": "/nl/management/fleet-management/locations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten",
+      "destination": "/nl/management/fleet-management/tachograph/company-cards",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/tachograaf/bestuurders",
+      "destination": "/nl/management/fleet-management/tachograph/drivers",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/tachograaf/voertuigen",
+      "destination": "/nl/management/fleet-management/tachograph/vehicles",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/druppels/aanmaken",
+      "destination": "/nl/management/fleet-management/telematics/beacons/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/druppels/koppelen",
+      "destination": "/nl/management/fleet-management/telematics/beacons/connect",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/druppels/overzicht",
+      "destination": "/nl/management/fleet-management/telematics/beacons/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/overzicht",
+      "destination": "/nl/management/fleet-management/telematics/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/trackers/aanmaken",
+      "destination": "/nl/management/fleet-management/telematics/trackers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/telematica/trackers/overzicht",
+      "destination": "/nl/management/fleet-management/telematics/trackers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/trailers/aanmaken",
+      "destination": "/nl/management/fleet-management/trailers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/trailers/bewerken",
+      "destination": "/nl/management/fleet-management/trailers/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/trailers/overzicht",
+      "destination": "/nl/management/fleet-management/trailers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/voertuigen/aanmaken",
+      "destination": "/nl/management/fleet-management/vehicles/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/voertuigen/bewerken",
+      "destination": "/nl/management/fleet-management/vehicles/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/voertuigen/overzicht",
+      "destination": "/nl/management/fleet-management/vehicles/overview",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/nl/index",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/inloggen",
+      "destination": "/nl/workforce/app/login",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/instellingen",
+      "destination": "/nl/workforce/app/settings",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/kaart",
+      "destination": "/nl/workforce/app/map",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/organisaties",
+      "destination": "/nl/workforce/app/organizations",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/overzicht",
+      "destination": "/nl/workforce/app/overview",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/pushmeldingen",
+      "destination": "/nl/workforce/app/push-notifications",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/storingen",
+      "destination": "/nl/workforce/app/malfunctions",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/thuis",
+      "destination": "/nl/workforce/app/home",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/timer",
+      "destination": "/nl/workforce/app/timer",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/verlof-registreren",
+      "destination": "/nl/workforce/app/register-leave",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/app/werk-registreren",
+      "destination": "/nl/workforce/app/register-work",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/aanmaken",
+      "destination": "/nl/workforce/hour-management/time-registrations/create",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/bewerken",
+      "destination": "/nl/workforce/hour-management/time-registrations/edit",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/details",
+      "destination": "/nl/workforce/hour-management/time-registrations/details",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/overzicht",
+      "destination": "/nl/workforce/hour-management/time-registrations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/tijdlijn",
+      "destination": "/nl/workforce/hour-management/time-registrations/timeline",
+      "permanent": true
     }
   ],
   "footer": {

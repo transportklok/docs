@@ -190,7 +190,9 @@
             "group": "Aan de slag",
             "pages": [
               "api/introductie",
-              "api/authenticatie"
+              "api/authenticatie",
+              "api/oauth",
+              "api/rate-limits"
             ]
           }
         ]
@@ -224,10 +226,6 @@
     },
     {
       "source": "/api/webhooks",
-      "destination": "/api/introductie"
-    },
-    {
-      "source": "/api/rate-limits",
       "destination": "/api/introductie"
     },
     {

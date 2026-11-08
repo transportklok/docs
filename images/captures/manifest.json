@@ -230,6 +230,24 @@
       "selector": null
     },
     {
+      "file": "instellingen-organisatie-beheerders.png",
+      "url": "/settings/organization/administrators/users",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-organisatie-modules.png",
+      "url": "/settings/organization/configuration/modules",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-organisatie-teams.png",
+      "url": "/settings/organization/teams/active",
+      "role": "admin",
+      "selector": null
+    },
+    {
       "file": "management-verantwoording-overzicht.png",
       "url": "/management/human-resources/accountability",
       "role": "admin",

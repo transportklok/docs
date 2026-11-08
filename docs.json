@@ -184,6 +184,25 @@
                 ]
               }
             ]
+          },
+          {
+            "group": "Instellingen",
+            "pages": [
+              {
+                "group": "Organisatie",
+                "pages": [
+                  "beheerders/instellingen/organisatie/algemeen",
+                  "beheerders/instellingen/organisatie/beheerders",
+                  "beheerders/instellingen/organisatie/rollen-en-rechten",
+                  "beheerders/instellingen/organisatie/teams",
+                  "beheerders/instellingen/organisatie/configuratie-en-modules",
+                  "beheerders/instellingen/organisatie/integraties",
+                  "beheerders/instellingen/organisatie/notificaties",
+                  "beheerders/instellingen/organisatie/abonnement",
+                  "beheerders/instellingen/organisatie/machtiging-en-facturering"
+                ]
+              }
+            ]
           }
         ]
       },

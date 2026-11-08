@@ -210,13 +210,6 @@
     "text": "404\nNIET GEVONDEN"
   },
   {
-    "slug": "management-verlof-overzicht",
-    "route": "/management/hour/leave",
-    "finalUrl": "http://localhost:8000/management/hour/leave",
-    "title": "Verlofaanvragen",
-    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nTijdregistratie\nVerlof\n22-06-2026 - 28-06-2026\nAlle statussen\nAangevraagd: 0\nGoedgekeurd: 0\nAfgekeurd: 0\n\t\nDATUM\n\t\nVERLOF REGELS\n\t\nSTATUS\n\n\nEr zijn geen verlofaanvragen in de gekozen periode.\nlocal"
-  },
-  {
     "slug": "management-klantenbeheer-dashboard",
     "route": "/management/front-office/dashboard",
     "finalUrl": "http://localhost:8000/management/front-office/dashboard",

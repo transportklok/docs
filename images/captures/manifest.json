@@ -260,12 +260,6 @@
       "selector": null
     },
     {
-      "file": "management-verlof-overzicht.png",
-      "url": "/management/hour/leave",
-      "role": "admin",
-      "selector": null
-    },
-    {
       "file": "management-klantenbeheer-dashboard.png",
       "url": "/management/front-office/dashboard",
       "role": "admin",

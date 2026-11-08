@@ -284,12 +284,6 @@
       "selector": null
     },
     {
-      "file": "management-opdrachten-overzicht.png",
-      "url": "/management/front-office/orders",
-      "role": "admin",
-      "selector": null
-    },
-    {
       "file": "management-facturen-overzicht.png",
       "url": "/management/front-office/invoicing",
       "role": "admin",

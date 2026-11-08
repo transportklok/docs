@@ -245,13 +245,6 @@
     "text": "404\nNIET GEVONDEN"
   },
   {
-    "slug": "management-opdrachten-overzicht",
-    "route": "/management/front-office/orders",
-    "finalUrl": "http://localhost:8000/management/front-office/orders",
-    "title": "",
-    "text": "Uw team zit momenteel in een proefperiode die afloopt over 4 weken. Rond het abonnement af via: Instellingen > Abonnement.\n\nKlantenbeheer\nUrenbeheer\nWagenparkbeheer\nPersoneelszaken\nTest B.V.\nInstellingen\nOpdrachten\n\nTOTAAL OPDRACHTEN\n\n72,540\n\nfrom 70,104\n\n12.5%\n\nSESSIONS\n\n29.4%\n\nfrom 29.1%\n\n1.7%\n\nAVG. CLICK RATE\n\n56.8%\n\nfrom 61.2%\n\n4.4%\n\nPAGEVIEWS\n\n92,913\n\nfrom 94,012\n\n0.1%\nFilters\nINVOICE NUMBER\n\t\nAMOUNT\n\t\nSTATUS\n\t\nDUE\n\t\nCREATED\n\t\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\nUS $200.00\n\t\nPaid\n\t\n06 Jan 2023\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ218F94-0061\n\t\nUS $994.00\n\t\nDeclined\n\t\n01 Jan 2023\n\t\n14 Dec, 09:45\n\t\nView\n\n\n#ADUQ2138D4-0038\n\t\nUS $4,150.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2138R2-0012\n\t\nUS $2,489.00\n\t\nPaid\n\t\n29 Dec\n\t\n01 Dec, 16:59\n\t\nView\n\n\n#ADUQ2131GS-0010\n\t\nUS $47.00\n\t\nPaid\n\t\n28 Dec\n\t\n28 Nov, 11:00\n\t\nView\n\n\n#ADUQ288UUE-3892\n\t\nUS $2,220.00\n\t\nPaid\n\t\n24 Dec\n\t\n20 Dec, 09:27\n\t\nView\n\n\n#ADUQ2189C7-3822\n\t\nUS $80.00\n\t\nDeclined\n\t\n29 Nov\n\t\n28 Nov, 12:04\n\t\nView\n\n\n#ADUQ2138F2-0099\n\t\nUS $1,249.00\n\t\nPaid\n\t\n29 Nov\n\t\n01 Nov, 14:32\n\t\nView\n\n\n#ADUQ2189H1-0038\n\t\nUS $400.00\n\t\nPaid\n\t\n10 Jan 2023\n\t\n28 Dec, 12:12\n\t\nView\n\n\n#ADUQ218ADD-0099\n\t\n"
-  },
-  {
     "slug": "management-facturen-overzicht",
     "route": "/management/front-office/invoicing",
     "finalUrl": "http://localhost:8000/management/front-office/invoicing",

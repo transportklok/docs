@@ -360,6 +360,12 @@
       "url": "/settings/user/authentication-and-security/two-factor-authentication",
       "role": "admin",
       "selector": null
+    },
+    {
+      "file": "instellingen-integraties-qargo-account.png",
+      "url": "/settings/organization/integrations/accounts/create?integration=qargo",
+      "role": "admin",
+      "selector": null
     }
   ]
 }

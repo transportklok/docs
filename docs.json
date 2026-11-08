@@ -207,6 +207,12 @@
                       "nl/management/customer-management/customers/create",
                       "nl/management/customer-management/customers/edit"
                     ]
+                  },
+                  {
+                    "group": "Koppelingen",
+                    "pages": [
+                      "nl/management/customer-management/integrations/qargo"
+                    ]
                   }
                 ]
               },

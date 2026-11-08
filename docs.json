@@ -32,15 +32,19 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Beheerders",
+        "tab": "Home",
         "groups": [
           {
             "group": "Start",
             "pages": [
-              "index",
-              "beheerders/start"
+              "index"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Beheerders",
+        "groups": [
           {
             "group": "Wagenparkbeheer",
             "pages": [
@@ -144,12 +148,6 @@
         "tab": "Medewerkers",
         "groups": [
           {
-            "group": "Start",
-            "pages": [
-              "medewerkers/start"
-            ]
-          },
-          {
             "group": "Werk",
             "pages": [
               {
@@ -173,25 +171,51 @@
             "group": "Aan de slag",
             "pages": [
               "api/introductie",
-              "api/authenticatie",
-              "api/rate-limits",
-              "api/expert-excel"
-            ]
-          },
-          {
-            "group": "Resources",
-            "pages": [
-              "api/orders",
-              "api/planning",
-              "api/voertuigen",
-              "api/chauffeurs",
-              "api/webhooks"
+              "api/authenticatie"
             ]
           }
         ]
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/beheerders/start",
+      "destination": "/"
+    },
+    {
+      "source": "/medewerkers/start",
+      "destination": "/"
+    },
+    {
+      "source": "/api/orders",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/planning",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/voertuigen",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/chauffeurs",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/webhooks",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/rate-limits",
+      "destination": "/api/introductie"
+    },
+    {
+      "source": "/api/expert-excel",
+      "destination": "/api/introductie"
+    }
+  ],
   "footer": {
     "socials": {
       "linkedin": "https://linkedin.com/company/transportklok"

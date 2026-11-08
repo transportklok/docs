@@ -366,6 +366,12 @@
       "url": "/settings/organization/integrations/accounts/create?integration=qargo",
       "role": "admin",
       "selector": null
+    },
+    {
+      "file": "instellingen-wagenparkbeheer-automatische-urenregistraties.png",
+      "url": "/settings/organization/configuration/modules/fleet-management/configuration",
+      "role": "admin",
+      "selector": null
     }
   ]
 }

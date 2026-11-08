@@ -194,7 +194,8 @@
                       "nl/management/hour-management/time-registrations/rejected",
                       "nl/management/hour-management/time-registrations/payroll-mutation-export"
                     ]
-                  }
+                  },
+                  "nl/management/hour-management/automatic-time-registrations"
                 ]
               },
               {
@@ -271,7 +272,9 @@
                         "group": "Configuratie en functies",
                         "pages": [
                           "nl/settings/team/configuration/base",
-                          "nl/settings/team/configuration/features"
+                          "nl/settings/team/configuration/features",
+                          "nl/settings/team/configuration/break-schema",
+                          "nl/settings/team/configuration/parcel-delivery"
                         ]
                       },
                       "nl/settings/team/attributes",

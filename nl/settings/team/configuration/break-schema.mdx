@@ -1,0 +1,46 @@
+---
+title: "Pauzestaffel"
+description: "De pauze van een registratie laten berekenen uit de gewerkte tijd."
+---
+
+## Waar deze pagina voor is
+
+Met de functie **Pauzestaffel** berekent TransportKlok de pauze van een tijdregistratie uit de gewerkte tijd. U bepaalt per staffel hoeveel pauze er geldt.
+
+## Wie dit mag gebruiken
+
+- Een beheerder of manager van het team.
+
+## Zo gebruikt u deze pagina
+
+1. Open **Instellingen**, kies het team, kies **Configuratie en functies** en open het tabblad **Functies**.
+2. Activeer de functie **Pauzestaffel**. Zie [Functies](/nl/settings/team/configuration/features).
+3. Klik bij **Pauzestaffel** op **Instellingen**.
+4. Vul per staffel het aantal pauzeminuten in en kies de schakelaars.
+5. Klik op **Opslaan**.
+
+## Velden
+
+| Veld | Wat u invult | Standaard |
+|------|--------------|-----------|
+| **Pauze bij 4.5 uur werk** | Pauzeminuten bij meer dan 4,5 uur werk. | 30 |
+| **Pauze bij 7.5 uur werk** | Pauzeminuten bij meer dan 7,5 uur werk. | 60 |
+| **Pauze bij 10.5 uur werk** | Pauzeminuten bij meer dan 10,5 uur werk. | 90 |
+| **Pauze bij 13.5 uur werk** | Pauzeminuten bij meer dan 13,5 uur werk. | 120 |
+| **Pauze bij 16.5 uur werk** | Pauzeminuten bij meer dan 16,5 uur werk. | 150 |
+| **Pauzestaffel afdwingen (niet overschijfbaar)** | Aan: niemand kan de berekende pauze aanpassen. | aan |
+| **Sta werken zonder pauze toe (met verplichte toelichting)** | Aan: medewerkers kunnen aangeven dat zij geen pauze hebben genomen, met een toelichting. | uit |
+| **Sta beheerders toe om pauzetijd aan te passen** | Aan: beheerders en managers kunnen de berekende pauze aanpassen, medewerkers niet. | uit |
+
+## Wat er daarna gebeurt
+
+- Bij een registratie vult TransportKlok het veld **Pauze (minuten)** zelf in zodra de begin- en eindtijden bekend zijn. De hoogste staffel die de gewerkte tijd overschrijdt, geldt. Bij precies 4,5 uur werk geldt nog geen pauze.
+- Staat **Pauzestaffel afdwingen** aan, dan is **Pauze (minuten)** niet aan te passen. TransportKlok rekent de pauze bij het opslaan opnieuw uit.
+- Staat **Sta werken zonder pauze toe** aan, dan ziet de medewerker het veld **Geen pauze genomen**. Met een toelichting wordt de pauze 0 minuten.
+- De staffel geldt ook voor registraties die TransportKlok maakt met [automatische urenregistratie](/nl/management/hour-management/automatic-time-registrations).
+
+## Beperkingen
+
+- Zonder **Pauzestaffel afdwingen** kunnen medewerkers de berekende pauze zelf aanpassen. Een pauze die niet bij een staffel hoort, laat TransportKlok staan.
+- De pauze moet minstens één minuut korter zijn dan de hele registratie. Anders ziet u "De pauze moet minimaal één minuut korter zijn dan de gehele registratie."
+- Wie **Geen pauze genomen** kiest zonder toelichting, ziet "Er is een uitleg vereist wanneer er geen pauze is genomen."

@@ -24,7 +24,7 @@ icon: "truck"
 
 U beheert hier uw voertuigen. Lees eerst [Aan de slag](/nl/getting-started).
 
-![Overzicht](/images/captures/management-vehicles.png)
+![Overzicht](/images/nl/captures/management-vehicles.png)
 
 <Card title="Tijdregistraties" icon="arrow-right" href="/nl/management/time-registrations">
   Bekijk de tijdregistraties.
@@ -95,7 +95,7 @@ class TranslateDocsTest(unittest.TestCase):
                 self.assertIn('icon: "truck"\n---\n{/* translated-from: nl/management/vehicles.mdx sha256:' + base_hash + " */}\n", text)
                 self.assertIn(f"[Aan de slag](/{lang}/getting-started)", text)
                 self.assertIn(f'href="/{lang}/management/time-registrations"', text)
-                self.assertIn("](/images/captures/management-vehicles.png)", text)
+                self.assertIn(f"](/images/{lang}/captures/management-vehicles.png)", text)
                 self.assertIn("```bash\ncurl https://app.transportklok.nl\n```", text)
                 self.assertIn("`kenteken`", text)
                 self.assertIn(f"**{save}**", text)
@@ -140,8 +140,9 @@ class TranslationCheckTest(unittest.TestCase):
         self.docs = docs_with_base_page(self)
         (self.docs / "nl" / "getting-started.mdx").write_text('---\ntitle: "Aan de slag"\n---\n\nWelkom.\n')
         (self.docs / "nl" / "management" / "time-registrations.mdx").write_text('---\ntitle: "Tijdregistraties"\n---\n\nOverzicht.\n')
-        (self.docs / "images" / "captures").mkdir(parents=True)
-        (self.docs / "images" / "captures" / "management-vehicles.png").write_bytes(b"png")
+        for lang in ("nl", *translate_docs.LANGUAGES):
+            (self.docs / "images" / lang / "captures").mkdir(parents=True)
+            (self.docs / "images" / lang / "captures" / "management-vehicles.png").write_bytes(b"png")
         glossary = translate_docs.Glossary(self.docs / ".translations" / "glossary.json")
         self.assertEqual(translate_docs.run(self.docs, list(translate_docs.LANGUAGES), FakeModel(), glossary), [])
 
@@ -180,8 +181,12 @@ class TranslationCheckTest(unittest.TestCase):
         self.assertFails("en/management/vehicles.mdx: /nl/management/time-registrations leaves the en pages")
 
     def test_a_missing_image_fails(self):
-        (self.docs / "images" / "captures" / "management-vehicles.png").unlink()
-        self.assertFails("nl/management/vehicles.mdx: /images/captures/management-vehicles.png does not exist")
+        (self.docs / "images" / "pl" / "captures" / "management-vehicles.png").unlink()
+        self.assertFails("pl/management/vehicles.mdx: /images/pl/captures/management-vehicles.png does not exist")
+
+    def test_a_page_using_another_languages_screenshot_fails(self):
+        self.edit("en/management/vehicles.mdx", "/images/en/captures/", "/images/nl/captures/")
+        self.assertFails("en/management/vehicles.mdx: /images/nl/captures/management-vehicles.png is a nl screenshot")
 
     def test_a_label_not_in_the_glossary_fails(self):
         self.edit("en/management/vehicles.mdx", "**Save**", "**Store**")

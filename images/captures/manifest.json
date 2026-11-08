@@ -27,11 +27,11 @@
     "selectors": [],
     "columns": [
       {
-        "header": "^(contactpersoon|medewerker|bestuurder|werknemer|chauffeur)$",
+        "header": "^(contactpersoon|medewerker|bestuurder|werknemer|chauffeur|contact person|employee|worker|driver|ansprechpartner|mitarbeitende:r|mitarbeiter|arbeitnehmer|fahrer|osoba kontaktowa|pracownik|kierowca|persoană de contact|angajat|angajatul|șofer)$",
         "replace": "Demo medewerker {n}"
       },
       {
-        "header": "^(naam|opdrachtgever)$",
+        "header": "^(naam|opdrachtgever|name|client|auftraggeber|nazwa|zleceniodawca|nume)$",
         "replace": "Demo naam {n}"
       }
     ],

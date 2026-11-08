@@ -60,8 +60,8 @@ def recorded_hash(text):
 
 
 def localise_links(text, lang):
-    """Point every link into the base language's folder at the same page in the target language."""
-    return re.sub(rf"(\]\(|href=\"|href=\{{\")/{BASE}/", rf"\1/{lang}/", text)
+    """Point every link and screenshot of the base language at the same page or screenshot of the target language."""
+    return re.sub(rf"(\]\(|(?:href|src)=\{{?\")(/images)?/{BASE}/", rf"\1\2/{lang}/", text)
 
 
 def frontmatter(text):
@@ -205,6 +205,8 @@ def unresolved(docs, page, reference):
         return f"{reference} points outside the docs"
     relative = target.relative_to(docs.resolve())
     if relative.suffix:
+        if relative.parts[:1] == ("images",) and relative.parts[1:2] != page.parts[:1] and relative.parts[1] in (BASE, *LANGUAGES):
+            return f"{reference} is a {relative.parts[1]} screenshot"
         return "" if (docs / relative).is_file() else f"{reference} does not exist"
     if relative.parts[:1] != page.parts[:1]:
         return f"{reference} leaves the {page.parts[0]} pages"

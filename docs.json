@@ -96,6 +96,19 @@
                   "beheerders/wagenparkbeheer/tachograaf/bestuurders",
                   "beheerders/wagenparkbeheer/tachograaf/bedrijfskaarten"
                 ]
+              },
+              {
+                "group": "GPS-koppelingen",
+                "pages": [
+                  "beheerders/wagenparkbeheer/koppelingen/overzicht",
+                  "beheerders/wagenparkbeheer/koppelingen/webfleet",
+                  "beheerders/wagenparkbeheer/koppelingen/samsara",
+                  "beheerders/wagenparkbeheer/koppelingen/geotab",
+                  "beheerders/wagenparkbeheer/koppelingen/fleetgo",
+                  "beheerders/wagenparkbeheer/koppelingen/linqo",
+                  "beheerders/wagenparkbeheer/koppelingen/co3",
+                  "beheerders/wagenparkbeheer/koppelingen/verizon-connect"
+                ]
               }
             ]
           },

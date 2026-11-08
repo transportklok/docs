@@ -1,0 +1,44 @@
+---
+title: "Linqo"
+description: "Linqo koppelen en wat er uit Linqo wordt opgehaald."
+---
+
+## Waar deze pagina voor is
+
+Met de Linqo-koppeling haalt TransportKlok voertuigen en posities uit Linqo op.
+
+## Wie dit mag gebruiken
+
+- Een beheerder of manager van de organisatie.
+- De organisatie heeft de module **Wagenparkbeheer** nodig, en telematica moet aan staan. Zie [GPS-koppelingen](/beheerders/wagenparkbeheer/koppelingen/overzicht).
+
+## Zo gebruikt u deze pagina
+
+1. Maak bij **Accounts** een account aan voor **Linqo** met een **Token** van Linqo.
+2. Open **Integraties**, klik op **Integratie toevoegen** en klik bij **Linqo** op **Verbinden**.
+3. Kies het **Account**, geef de koppeling een **Naam** en klik op **Verbinden**.
+4. Vul de instellingen in en klik op **Instellingen opslaan**.
+
+## Velden
+
+Op de pagina met instellingen vult u in:
+
+| Instelling | Wat u invult |
+|------------|--------------|
+| **Koppel Linqo-tachograafcode aan chauffeurs** | Zet dit aan als de tachograafcodes in Linqo gelijk zijn aan de tachograafcodes van uw medewerkers. |
+
+## Wat er daarna gebeurt
+
+| Functie | Loopt vanzelf |
+|---------|---------------|
+| **Voertuigen synchroniseren** | elk kwartier |
+| **Bestuurders synchroniseren** | elk kwartier |
+| **Voertuigtoewijzingen synchroniseren** | elk kwartier |
+| **Telemetrie ontvangen** | elk kwartier |
+
+- Voertuigen worden gekoppeld op het chassisnummer (VIN). Bestuurders worden gekoppeld op tachograafcode.
+- Posities verschijnen op de [Kaart](/beheerders/wagenparkbeheer/kaart).
+
+## Beperkingen
+
+- De koppeling haalt alleen gegevens op uit Linqo. Ze stuurt niets terug.

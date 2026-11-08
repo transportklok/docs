@@ -253,6 +253,22 @@
             ]
           },
           {
+            "group": "De app",
+            "pages": [
+              "medewerkers/app/inloggen",
+              "medewerkers/app/pushmeldingen",
+              "medewerkers/app/thuis",
+              "medewerkers/app/werk-registreren",
+              "medewerkers/app/verlof-registreren",
+              "medewerkers/app/overzicht",
+              "medewerkers/app/timer",
+              "medewerkers/app/kaart",
+              "medewerkers/app/organisaties",
+              "medewerkers/app/instellingen",
+              "medewerkers/app/storingen"
+            ]
+          },
+          {
             "group": "Werk",
             "pages": [
               {

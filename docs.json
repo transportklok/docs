@@ -38,7 +38,17 @@
             "group": "Start",
             "pages": [
               "index",
-              "beheerders/start"
+              "beheerders/start",
+              "beheerders/exports-en-meldingen"
+            ]
+          },
+          {
+            "group": "Aanmelden",
+            "pages": [
+              "beheerders/aanmelden/registreren",
+              "beheerders/aanmelden/inloggen",
+              "beheerders/aanmelden/tweefactor-inloggen",
+              "beheerders/aanmelden/app-toegang"
             ]
           },
           {
@@ -234,6 +244,12 @@
             "group": "Start",
             "pages": [
               "medewerkers/start"
+            ]
+          },
+          {
+            "group": "Aanmelden",
+            "pages": [
+              "medewerkers/aanmelden/uitnodiging-accepteren"
             ]
           },
           {

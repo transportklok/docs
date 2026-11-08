@@ -206,6 +206,18 @@
       "selector": null
     },
     {
+      "file": "instellingen-integraties-overzicht.png",
+      "url": "/settings/organization/integrations/instances",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-integraties-nmbrs-koppelen.png",
+      "url": "/settings/organization/integrations/nmbrs/instances/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
       "file": "management-verantwoording-overzicht.png",
       "url": "/management/human-resources/accountability",
       "role": "admin",

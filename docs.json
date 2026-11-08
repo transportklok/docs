@@ -125,6 +125,12 @@
                   "beheerders/personeelszaken/aanvullingen-inhoudingen/aanmaken",
                   "beheerders/personeelszaken/aanvullingen-inhoudingen/wijzigen"
                 ]
+              },
+              {
+                "group": "Salariskoppelingen",
+                "pages": [
+                  "beheerders/personeelszaken/salariskoppelingen/overzicht"
+                ]
               }
             ]
           },

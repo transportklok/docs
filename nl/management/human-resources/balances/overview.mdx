@@ -1,0 +1,53 @@
+---
+title: "Saldi"
+description: "Het vakantie- en ATV-saldo van uw medewerkers bekijken en handmatig corrigeren."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Op **Saldi** ziet u per medewerker hoeveel vakantie en ATV nog beschikbaar is, en welke boekingen daarachter zitten. Deze pagina is er alleen als de module **Verlof** voor uw organisatie aanstaat.
+
+## Wie dit mag gebruiken
+
+- Een beheerder van de organisatie met de module **Verlof**.
+
+## Zo gebruikt u deze pagina
+
+1. Open **HRM** en kies **Saldi**.
+2. Bekijk bij **Saldi** per medewerker het **Totaal** van elk saldo, in de eenheid van dat saldo.
+3. Bekijk bij **Boekingen** wat het totaal opbouwt: wat is opgebouwd, opgenomen, vervallen of verrekend.
+4. Boek een correctie als een saldo niet klopt. Kies het **Saldo**, de **Soort** (voor vakantie en ATV is dat **Correctie**), de **Hoeveelheid** in minuten, de **Datum** en de **Reden**. Een reden is verplicht.
+5. Draai een boeking terug als u die per ongeluk hebt gemaakt. Een boeking die al is teruggedraaid, kunt u niet nog een keer terugdraaien.
+
+## Velden
+
+| Kolom bij Saldi | Betekenis |
+|-----------------|-----------|
+| **Medewerker** | De medewerker van wie het saldo is. |
+| **Saldo** | Het soort saldo: vakantie of ATV. |
+| **Totaal** | Wat er nu beschikbaar is. |
+| **Eenheid** | De eenheid van het saldo, minuten. |
+
+| Kolom bij Boekingen | Betekenis |
+|---------------------|-----------|
+| **Datum** | De dag waarop de boeking geldt. |
+| **Soort** | **Opgebouwd**, **Opgenomen**, **Correctie**, **Vervallen**, **Verrekend bij uitdienst** of **Beginsaldo**. |
+| **Periode** | De dag waarop dit deel van het saldo vervalt, als het saldo per tegoed vervalt. |
+| **Hoeveelheid** | Het aantal minuten. Een opname is negatief. |
+| **Reden** | De reden die bij een handmatige boeking is ingevuld. |
+| **Geboekt op** | Het moment waarop de boeking is gemaakt. |
+
+## Wat er daarna gebeurt
+
+- Een correctie telt direct mee in het saldo.
+- De opbouw, het vervallen en de verrekening bij uitdienst boekt het systeem zelf; u hoeft ze niet in te voeren. Zie [Vakantiesaldo](/nl/management/human-resources/balances/vacation) en [ATV-saldo](/nl/management/human-resources/balances/atv).
+
+## Beperkingen
+
+- U kunt alleen de soort **Correctie** handmatig boeken op het vakantie- en het ATV-saldo.
+- Een boeking die het saldo onder nul zou brengen, wordt geweigerd. Alleen vervallen en verrekenen bij uitdienst gaan altijd door.
+- Zonder geboortedatum bij de medewerker bouwt het systeem geen vakantiedagen op.
+
+<Hint kind="yellow">Hoeveel een medewerker per jaar opbouwt, hangt af van de CAO of de contractinstelling.</Hint>

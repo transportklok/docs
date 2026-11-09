@@ -1,0 +1,39 @@
+---
+title: "Vakantiesaldo"
+description: "Hoe de vakantie van een medewerker wordt opgebouwd, opgenomen en vervalt."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Deze pagina legt uit hoe het vakantiesaldo van een medewerker werkt: opbouw, opname, vervallen en verrekening bij uitdienst. Het saldo staat bij [Saldi](/nl/management/human-resources/balances/overview) en werkt alleen met de module **Verlof**.
+
+## Wie dit mag gebruiken
+
+- Een beheerder van de organisatie met de module **Verlof**.
+
+## Hoe het saldo werkt
+
+1. **Opbouw.** Op de laatste dag van elke salarisperiode bouwt de medewerker vakantie op. Het systeem rekent het aantal vakantiedagen van het jaar om naar uren per dag volgens het contract, en geeft de periode haar deel van het jaar naar het aantal kalenderdagen waarin een contract in loondienst liep.
+2. **Aantal dagen.** Het aantal dagen per jaar volgt uit de leeftijd of de dienstjaren van de medewerker op 1 juli; het hoogste telt. Daarvoor is de geboortedatum nodig.
+3. **Opname.** Registreert een medewerker uren van het soort **Verlof** en worden die goedgekeurd, dan neemt het systeem die uren van het vakantiesaldo af. Zie [Verlof en saldo](/nl/workforce/app/leave-balance).
+4. **Vooruit opnemen.** Een medewerker mag vakantie opnemen die nog moet worden opgebouwd, tot het einde van het contractjaar (31 december of het einde van het lopende contract). Meer dan dat wordt geweigerd.
+5. **Vervallen.** De opbouw wordt bewaard per tegoed. Een opname gaat eerst van het tegoed dat het eerst vervalt.
+6. **Uitdienst.** Staat het saldo op de laatste contractdag onder nul, dan houdt de salarisrun dat bedrag in op de laatste loonstrook.
+
+## Wanneer een tegoed vervalt
+
+| Deel | Vervalt |
+|------|---------|
+| Wettelijke dagen (de eerste 20 dagen van het jaar) | Op 1 juli van het jaar na het opbouwjaar. |
+| Bovenwettelijke dagen | Vijf jaar na het opbouwjaar. |
+
+Bij een oproepkracht bouwt het systeem alleen de wettelijke dagen op.
+
+## Beperkingen
+
+- Zonder geboortedatum bij de medewerker bouwt het systeem geen dagen op.
+- Een boeking die het saldo onder het toegestane niveau brengt, wordt geweigerd.
+
+<Hint kind="yellow">Het aantal dagen, het vervallen en de verrekening hangen af van de CAO. Dit hangt af van de CAO of de contractinstelling.</Hint>

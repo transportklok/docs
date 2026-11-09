@@ -1,0 +1,37 @@
+---
+title: "Veelgestelde vragen over salarisrondes"
+description: "Wat u doet als een salarisexport niet lukt of een correctie niet wordt meegenomen."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Hier staan de meldingen die u bij salarisrondes het vaakst ziet: een salarisexport die niet gemaakt kan worden en een correctie die niet in de volgende ronde terechtkomt.
+
+## Wie dit mag gebruiken
+
+- Een beheerder van de organisatie met de module **Salarismutaties**.
+
+## Zo gebruikt u deze pagina
+
+Zoek de melding die u ziet en volg wat erbij staat.
+
+## Velden
+
+| Melding | Wat het betekent | Wat u doet |
+|---------|------------------|------------|
+| "De salarisexport kan niet worden gemaakt omdat in payrollperiode … geen geldig contract is gevonden. Controleer de betrokken contracten." | Een medewerker in de ronde heeft in die periode geen contract. | Leg het contract vast bij de arbeidskracht. Zie [Arbeidskracht aanmaken](/nl/management/human-resources/workers/create). |
+| "De salarisexport kan niet worden gemaakt omdat een medewerker geen contract heeft dat payrollperiode … afdekt. Controleer de contractdatums." | Het contract begint later of eindigt eerder dan de periode. | Pas de start- of einddatum van het contract aan, of voeg een contract toe voor de rest van de periode. |
+| "De salarisexport kan niet worden gemaakt omdat … op … een tijdregistratie heeft zonder geldig contract op die datum." | Er staat een registratie op een dag zonder contract. | Voeg een passend contract toe of pas de registratie aan. |
+| **Correctieanalyses gestart**: "De correctieanalyse van eerdere salarisrondes is nog niet uitgevoerd met de huidige berekening." | De correcties van eerdere rondes worden eerst opnieuw berekend. | Wacht tot de analyses klaar zijn en klik dan opnieuw op **Versturen** of **Afronden**. |
+| Een correctie staat niet in de nieuwe ronde | Bij **Correcties meenemen** is de oudere ronde niet aangevinkt. | Vink bij het verwerken de ronde aan waarvan u de correctie wilt meenemen. Zie [Correcties](/nl/management/human-resources/payroll-runs/corrections). |
+
+## Wat er daarna gebeurt
+
+- Een meegenomen correctie staat bij de oudere ronde als **Verrekend in salarisronde** met het nummer van de nieuwe ronde.
+
+## Beperkingen
+
+- Meenemen is definitief. <Hint kind="red">Een correctie die u in een ronde hebt meegenomen, kunt u niet terugzetten.</Hint>
+- Welke weken bij een ronde horen, volgt uit de **Loonsverwerkingsperiode** bij de module **Salarismutaties**. Zie [Modules](/nl/settings/organization/configuration/modules).

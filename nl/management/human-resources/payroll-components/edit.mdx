@@ -1,0 +1,45 @@
+---
+title: "Looncomponent wijzigen"
+description: "Een aanvulling of inhouding aanpassen of verwijderen."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Hier past u een looncomponent aan, of verwijdert u hem.
+
+## Wie dit mag gebruiken
+
+- Een beheerder met volledige rechten in de organisatie.
+- De organisatie heeft de module **Salarismutaties** nodig.
+
+## Zo gebruikt u deze pagina
+
+Een looncomponent aanpassen:
+
+1. Open **HRM** → **Salarisadministratie** → **Aanvullingen & Inhoudingen**.
+2. Klik op **Wijzig** in de rij van de looncomponent.
+3. Pas de velden aan.
+4. Klik op **Wijzigingen opslaan**.
+
+Een looncomponent verwijderen:
+
+1. Klik op **Verwijder** in de rij van de looncomponent.
+2. Controleer in het venster **Looncomponent verwijderen** de looncomponent en de medewerker.
+3. Klik op **Verwijderen**.
+
+## Velden
+
+Het formulier **Looncomponent wijzigen** heeft dezelfde velden als het aanmaakformulier, al ingevuld met de huidige waarden: **Medewerker**, **Salarisperiode**, **Type**, **Looncomponent** en **Waarde**. Zie [Looncomponent aanmaken](/nl/management/human-resources/payroll-components/create).
+
+## Wat er daarna gebeurt
+
+- Na **Wijzigingen opslaan** staat de aangepaste looncomponent in het overzicht.
+- Na **Verwijderen** verdwijnt de looncomponent direct uit het overzicht. <Hint kind="red">Een verwijderde looncomponent kunt u niet terughalen.</Hint>
+- De salarisronde van de periode neemt de wijziging mee. Is die ronde een concept of vergrendeld, dan wordt hij opnieuw berekend.
+- Is de ronde al verwerkt, dan wordt hij opnieuw gecontroleerd op correcties. Blijft er een verschil met wat al is verwerkt, dan krijgt hij de status **Gecorrigeerd**. Valt het verschil weg, dan staat hij weer op **Verwerkt**. Zie [Correcties op een salarisronde](/nl/management/human-resources/payroll-runs/corrections).
+
+## Beperkingen
+
+- Ook bij een verwerkte salarisronde kunt u een looncomponent nog aanpassen of verwijderen. De wijziging komt dan als correctie in een volgende verwerking.

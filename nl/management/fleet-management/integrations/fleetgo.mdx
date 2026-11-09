@@ -1,0 +1,47 @@
+---
+title: "FleetGo"
+description: "FleetGo koppelen en wat er uit FleetGo wordt opgehaald."
+---
+
+## Waar deze pagina voor is
+
+Met de FleetGo-koppeling haalt TransportKlok voertuigen en posities uit FleetGo op.
+
+## Wie dit mag gebruiken
+
+- Een beheerder of manager van de organisatie.
+- De organisatie heeft de module **Wagenparkbeheer** nodig, en telematica moet aan staan. Zie [Integraties](/nl/settings/organization/integrations/instances).
+
+## Zo gebruikt u deze pagina
+
+1. Maak bij **Accounts** een account aan voor **FleetGo** met **Gebruikersnaam** en **Wachtwoord** van uw FleetGO-account.
+2. Open **Integraties**, klik op **Integratie toevoegen** en klik bij **FleetGo** op **Verbinden**.
+3. Kies het **Account**, geef de koppeling een **Naam** en klik op **Verbinden**.
+4. Vul de instellingen in en klik op **Instellingen opslaan**.
+
+## Velden
+
+Op de pagina met instellingen vult u in:
+
+| Instelling | Wat u invult |
+|------------|--------------|
+| **Koppel FleetGO-personeelsnummer aan personeelsnummer** | Zet dit aan als het personeelsnummer in FleetGO gelijk is aan één personeelsnummer in TransportKlok. |
+| **Koppel FleetGO-voertuignummer aan referentienummer** | Zet dit aan als het voertuignummer in FleetGO gelijk is aan het referentienummer van het voertuig in TransportKlok. |
+| **FleetGO-signaal-ID brandstofniveau** (verplicht) | Het signaalnummer voor het brandstofniveau uit de signaallijst van uw FleetGO-omgeving. |
+| **FleetGO-signaal-ID kilometerstand** (verplicht) | Het signaalnummer voor de kilometerstand uit dezelfde signaallijst. |
+
+## Wat er daarna gebeurt
+
+| Functie | Loopt vanzelf |
+|---------|---------------|
+| **Voertuigen synchroniseren** | elk kwartier |
+| **Bestuurders synchroniseren** | elk kwartier |
+| **Voertuigtoewijzingen synchroniseren** | elk kwartier |
+| **Telemetrie ontvangen** | elke minuut |
+
+- Voertuigen worden gekoppeld op het FleetGO-voertuignummer, of op het referentienummer als u die schakelaar aanzet.
+- Posities verschijnen op de [Kaart](/nl/management/fleet-management/map).
+
+## Beperkingen
+
+- De koppeling haalt alleen gegevens op uit FleetGo. Ze stuurt niets terug.

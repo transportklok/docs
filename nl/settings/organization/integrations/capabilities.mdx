@@ -1,0 +1,46 @@
+---
+title: "Synchronisatiegedrag"
+description: "Welke gegevens elke koppeling ophaalt of verstuurt, en hoe elke keer is verlopen."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Op het tabblad **Synchronisatiegedrag** kiest u per functie welke koppeling de gegevens ophaalt of verstuurt, en ziet u hoe elke keer is verlopen.
+
+## Wie dit mag gebruiken
+
+- Een beheerder of manager van de organisatie.
+
+## Zo gebruikt u deze pagina
+
+1. Open **Instellingen** → **Organisatie Instellingen** → **Integraties** en kies het tabblad **Synchronisatiegedrag**.
+2. Zet bij een functie de schakelaar aan of uit voor uw koppeling.
+3. Klik op **Instellingen opslaan**.
+4. Klik op **Synchroniseren** om een functie meteen te laten lopen.
+5. Klik op **Uitvoeringen** om te zien hoe elke keer is verlopen.
+
+## Velden
+
+| Functie | Wat het doet |
+|---------|--------------|
+| **Voertuigen synchroniseren** | Haalt voertuigen op en koppelt ze aan uw voertuigen in TransportKlok. |
+| **Bestuurders synchroniseren** | Vult bij medewerkers de tachograafkaartcode aan. |
+| **Voertuigtoewijzingen synchroniseren** | Haalt op welke bestuurder in welk voertuig rijdt. |
+| **Telemetrie ontvangen** | Haalt posities en andere voertuiggegevens op. Die ziet u op de [Kaart](/nl/management/fleet-management/map). |
+| **Salarisrondes versturen** | Stuurt een verwerkte salarisronde naar uw salarispakket. |
+| **Klanten synchroniseren** | Haalt klanten en hun factuuradres op en maakt er [opdrachtgevers](/nl/management/customer-management/customers/overview) van. |
+
+**Uitvoeringen** toont per keer het begin, de status (**Wacht**, **Bezig**, **Geslaagd**, **Mislukt** of **Overgeslagen**), de duur en het aantal logregels.
+
+## Wat er daarna gebeurt
+
+- Een functie loopt vanzelf op vaste tijden.
+- Staat **Salarisrondes versturen** aan, dan heet de knop bij een salarisronde **Versturen** in plaats van **Afronden**. Zie [Salarisronde verwerken](/nl/management/human-resources/payroll-runs/process).
+
+## Beperkingen
+
+- Sommige functies zijn verplicht voor een koppeling. <Hint kind="grey">Die kunt u niet uitzetten.</Hint>
+- Een voertuig krijgt zijn posities uit één bron. Komt een voertuig al uit een andere bron, dan slaat de koppeling het over.
+- De GPS-koppelingen halen alleen gegevens op. Ze sturen niets terug naar uw telematicasysteem.

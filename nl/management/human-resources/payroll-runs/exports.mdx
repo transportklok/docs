@@ -1,0 +1,45 @@
+---
+title: "Exports van een salarisronde"
+description: "De exports die u per salarisronde downloadt."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Hier ziet u welke bestanden u per salarisronde downloadt en wanneer elk bestand klaarstaat.
+
+## Wie dit mag gebruiken
+
+- Een beheerder met volledige rechten in de organisatie.
+- De organisatie heeft de module **Salarismutaties** nodig.
+
+## Zo gebruikt u deze pagina
+
+1. Open **HRM** → **Salarisadministratie** → **Salarisrondes**.
+2. Klik in de rij van de ronde op **Download**.
+3. Kies de export.
+4. Wacht tot het venster **Voltooid** toont. Het bestand wordt dan gedownload.
+5. Klik op **Sluiten**.
+
+## Velden
+
+De export stelt geen vragen. **Download** toont alleen de exports die voor de ronde klaarstaan:
+
+| Export | Wanneer | Bestand |
+|--------|---------|---------|
+| **Salarisronde export** | Bij een verwerkte ronde. | Een Excel-bestand met wat de ronde heeft verwerkt, zoals **Salarisronde van de periode 2026-08-01 - 2026-08-31.xlsx**. |
+| **Salariscorrectie export** | Bij een gecorrigeerde ronde. | Een Excel-bestand met alleen het verschil met wat al is verwerkt, zoals **Salariscorrectie van de periode 2026-08-01 - 2026-08-31.xlsx**. |
+| **Loonoverzicht (Beta, pdf)** | Zodra de loonoverzichten van de ronde klaar zijn. | Een zip-bestand met een pdf per medewerker, zoals **Loonoverzicht (Beta) 2026-08.zip**. <Hint kind="grey">Het loonoverzicht in pdf is nog een bètaversie.</Hint> |
+
+## Wat er daarna gebeurt
+
+- Het bestand wordt gedownload zodra de export klaar is. Met **Minimaliseren** werkt u verder terwijl de export wordt gemaakt.
+- Bij het verwerken van een ronde krijgen beheerders die de melding **Kopie exports bij verwerken salarisronde** aan hebben staan, een kopie per e-mail.
+
+## Beperkingen
+
+- Is de correctie van een ronde meegenomen in een nieuwere ronde, dan staat de **Salariscorrectie export** niet meer bij de oudere ronde.
+- Zolang een taak van de ronde loopt, kunt u de export nog niet downloaden. Probeer het opnieuw zodra de ronde klaar is.
+- Wat in een export staat, volgt uit de berekening van de ronde. <Hint kind="yellow">Dit hangt af van de CAO of de contractinstelling: welke looncomponenten een medewerker krijgt, volgt uit de CAO en uit het contract van de medewerker.</Hint>
+- Wilt u de uren van een willekeurige periode, los van een salarisronde? Gebruik dan de [Salarismutatie export](/nl/management/hour-management/time-registrations/payroll-mutation-export).

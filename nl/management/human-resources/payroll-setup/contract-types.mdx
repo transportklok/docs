@@ -1,0 +1,49 @@
+---
+title: "Contracttypen"
+description: "Hoe het contract van een medewerker de salarisverwerking stuurt, en hoe u het instelt."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+Het contract van een medewerker bepaalt hoe TransportKlok zijn uren verwerkt: hoeveel uur het contract is, wanneer uren meeruren of overuren worden en welke loongarantie geldt. Hier leest u welke contracttypen er zijn en hoe u ze instelt.
+
+## Wie dit mag gebruiken
+
+- Een beheerder van de organisatie.
+
+## Zo gebruikt u deze pagina
+
+1. Open **HRM** → **Arbeidskrachten** en open de arbeidskracht.
+2. Kies het tabblad **Contracten** en klik op **+**.
+3. Kies het **Dienstverband**, het **Contracttype** en het **Contracturen type**, en vul de uren in.
+4. Klik op **Opslaan**.
+
+Zie ook [Arbeidskracht aanmaken](/nl/management/human-resources/workers/create).
+
+## Velden
+
+| Contracttype | Contracturen | Wat u invult |
+|--------------|--------------|--------------|
+| **Voltijdwerknemer** | **Vaste uren**, 40 uur per week | Het contract is altijd 40 uur. |
+| **Deeltijdwerknemer** | **Vaste uren** onder de 40 uur, of **Min-max uren** | Bij **Min-max uren** vult u de minimum- en maximumuren per week in. |
+| **Oproepkracht** | **Vaste uren** onder de 40 uur | De contracturen per week. |
+
+| Veld | Wat u invult |
+|------|--------------|
+| **Urenmaximum** | Het maximum aantal uren per jaar, of geen maximum. |
+| **Loongarantie termijn** | **Per week** of **Per 4 weken**. Verplicht bij een urenmaximum van 2080 of 2340 uur. |
+
+<Hint kind="yellow">Hoeveel uur een contract is en welke loongarantie geldt, spreekt u af met de medewerker. Dit hangt af van de CAO of de contractinstelling. Het gaat hier om de contractinstelling.</Hint>
+
+## Wat er daarna gebeurt
+
+- In een salarisronde vergelijkt TransportKlok de gewerkte uren met de contracturen. Uren boven het contract worden meeruren; uren boven de cao-grens worden overuren. Werkt een medewerker minder, dan ziet u **Tekorturen** en, bij een loongarantie, **Aanvuluren**. Zie [Cao Beroepsgoederenvervoer](/nl/management/human-resources/payroll-setup/cao-beroepsgoederenvervoer).
+- Voor een oproepkracht gelden eigen regels voor doorbetaalde afwezigheid en verlof. Dit hangt af van de CAO of de contractinstelling. Het gaat hier om de cao.
+
+## Beperkingen
+
+- Een contract dat is begonnen of al is afgelopen, kunt u niet meer wijzigen. Maak een nieuw contract vanaf de datum van de wijziging.
+- Zzp'ers en charters vallen niet onder de salarisrondes. Hun contract legt alleen de start en het einde vast. Zie [Contracten](/nl/management/human-resources/contracts/overview).
+- Het uurloon staat niet in het contract. Dat staat in uw salarispakket.

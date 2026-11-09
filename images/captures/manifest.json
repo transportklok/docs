@@ -378,12 +378,6 @@
       "url": "/management/human-resources/contracts",
       "role": "admin",
       "selector": null
-    },
-    {
-      "file": "instellingen-urenbeheer-app.png",
-      "url": "/settings/organization/configuration/modules/hour-management/configuration",
-      "role": "admin",
-      "selector": null
     }
   ]
 }

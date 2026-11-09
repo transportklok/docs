@@ -9,5 +9,8 @@ drafts/
 # Test fixtures, each a Mintlify project of its own
 fixtures/
 
+# Tests of the docs tooling
+tests/
+
 # Translation tooling state
 .translations/

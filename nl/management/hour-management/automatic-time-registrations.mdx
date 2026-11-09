@@ -35,6 +35,11 @@ Met automatische urenregistratie maakt TransportKlok tijdregistraties uit de rit
 | **Kantooradres werkzaamheid** | De werkzaamheid voor een stop op een kantooradres. Standaard **Standplaats**. |
 | **Woonadres werkzaamheid** | De werkzaamheid voor een stop op een woonadres. Standaard **Standplaats**. |
 | **Klantadres werkzaamheid** | De werkzaamheid voor een stop op een klantadres. Standaard **Laden & Lossen (extern)**. |
+| **Stoplengte (minuten)** | Hoe lang een stop moet duren om de rit ervoor af te sluiten. Standaard 240 minuten. |
+| **Minimale activiteitsduur (seconden)** | Hoe lang een activiteit moet duren om een regel in de registratie te worden. Standaard 60 seconden. |
+| **Automatische registraties starten op** | De datum vanaf wanneer TransportKlok registraties maakt. Leeg: zonder vaste startdatum. |
+| **Geen vaste startdatum** | Aan: de medewerker heeft geen vaste startdatum, wat de datum van de organisatie ook is. |
+| **Onbetaald woon-werkverkeer** | Aan: ritten tussen thuis en kantoor worden geboekt op de onbetaalde woon-werkactiviteit. |
 
 Welk soort adres een stop is, volgt uit uw [locaties](/nl/management/fleet-management/locations/overview).
 
@@ -53,5 +58,6 @@ TransportKlok werkt met twee versies van automatische urenregistratie. <Hint kin
 
 ## Beperkingen
 
+- Automatische urenregistratie werkt voor een organisatie met precies één team. Heeft uw organisatie meer teams, dan ziet u bij het aanzetten "Automatische urenregistratie vraagt een organisatie met precies één team".
 - Een medewerker moet in TransportKlok aan het voertuig en aan de GPS-gegevens gekoppeld zijn. Zonder die koppeling komen er geen registraties.
 - Past een registratie niet, bijvoorbeeld omdat die overlapt met een bestaande registratie of buiten het contract valt, dan maakt TransportKlok die registratie niet. <Hint kind="yellow">Controleer dan de registraties van die dag zelf bij Tijdregistratie.</Hint>

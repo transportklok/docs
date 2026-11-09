@@ -197,8 +197,8 @@
                       "nl/management/hour-management/time-registrations/details",
                       "nl/management/hour-management/time-registrations/timeline",
                       "nl/management/hour-management/time-registrations/edit",
-                      "nl/management/hour-management/time-registrations/rejected",
-                      "nl/management/hour-management/time-registrations/payroll-mutation-export"
+                      "nl/management/hour-management/time-registrations/payroll-mutation-export",
+                      "nl/management/hour-management/time-registrations/rejected"
                     ]
                   },
                   "nl/management/hour-management/automatic-time-registrations"
@@ -856,6 +856,31 @@
       "permanent": true
     },
     {
+      "source": "/medewerkers/werk/tijdregistratie/aanmaken",
+      "destination": "/nl/workforce/hour-management/time-registrations/create",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/bewerken",
+      "destination": "/nl/workforce/hour-management/time-registrations/edit",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/details",
+      "destination": "/nl/workforce/hour-management/time-registrations/details",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/overzicht",
+      "destination": "/nl/workforce/hour-management/time-registrations/overview",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/werk/tijdregistratie/tijdlijn",
+      "destination": "/nl/workforce/hour-management/time-registrations/timeline",
+      "permanent": true
+    },
+    {
       "source": "/medewerkers/app/inloggen",
       "destination": "/nl/workforce/app/login",
       "permanent": true
@@ -908,31 +933,6 @@
     {
       "source": "/medewerkers/app/werk-registreren",
       "destination": "/nl/workforce/app/register-work",
-      "permanent": true
-    },
-    {
-      "source": "/medewerkers/werk/tijdregistratie/aanmaken",
-      "destination": "/nl/workforce/hour-management/time-registrations/create",
-      "permanent": true
-    },
-    {
-      "source": "/medewerkers/werk/tijdregistratie/bewerken",
-      "destination": "/nl/workforce/hour-management/time-registrations/edit",
-      "permanent": true
-    },
-    {
-      "source": "/medewerkers/werk/tijdregistratie/details",
-      "destination": "/nl/workforce/hour-management/time-registrations/details",
-      "permanent": true
-    },
-    {
-      "source": "/medewerkers/werk/tijdregistratie/overzicht",
-      "destination": "/nl/workforce/hour-management/time-registrations/overview",
-      "permanent": true
-    },
-    {
-      "source": "/medewerkers/werk/tijdregistratie/tijdlijn",
-      "destination": "/nl/workforce/hour-management/time-registrations/timeline",
       "permanent": true
     }
   ],

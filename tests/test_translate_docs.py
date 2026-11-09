@@ -185,8 +185,12 @@ class TranslationCheckTest(unittest.TestCase):
         self.assertFails("pl/management/vehicles.mdx: /images/pl/captures/management-vehicles.png does not exist")
 
     def test_a_page_using_another_languages_screenshot_fails(self):
+        self.edit("en/management/vehicles.mdx", "/images/en/captures/", "/images/de/captures/")
+        self.assertFails("en/management/vehicles.mdx: /images/de/captures/management-vehicles.png is a de screenshot")
+
+    def test_a_page_may_use_the_dutch_screenshot_as_fallback(self):
         self.edit("en/management/vehicles.mdx", "/images/en/captures/", "/images/nl/captures/")
-        self.assertFails("en/management/vehicles.mdx: /images/nl/captures/management-vehicles.png is a nl screenshot")
+        self.assertEqual(self.check().returncode, 0)
 
     def test_a_label_not_in_the_glossary_fails(self):
         self.edit("en/management/vehicles.mdx", "**Save**", "**Store**")

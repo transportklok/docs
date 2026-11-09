@@ -196,7 +196,7 @@ def stale_pages(docs, languages):
 
 
 def unresolved(docs, page, reference):
-    """Return why a link or image of a page does not resolve inside its own language, or an empty string."""
+    """Return why a link or image of a page does not resolve inside its own language, or an empty string; a Dutch screenshot stands in until the language has its own."""
     if re.match(r"[a-z][a-z0-9+.-]*:|#|//", reference):
         return ""
     path = reference.split("#", 1)[0].split("?", 1)[0]
@@ -205,7 +205,7 @@ def unresolved(docs, page, reference):
         return f"{reference} points outside the docs"
     relative = target.relative_to(docs.resolve())
     if relative.suffix:
-        if relative.parts[:1] == ("images",) and relative.parts[1:2] != page.parts[:1] and relative.parts[1] in (BASE, *LANGUAGES):
+        if relative.parts[:1] == ("images",) and relative.parts[1:2] != page.parts[:1] and relative.parts[1] != BASE and relative.parts[1] in LANGUAGES:
             return f"{reference} is a {relative.parts[1]} screenshot"
         return "" if (docs / relative).is_file() else f"{reference} does not exist"
     if relative.parts[:1] != page.parts[:1]:

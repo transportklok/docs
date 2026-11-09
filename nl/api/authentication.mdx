@@ -12,8 +12,6 @@ TransportKlok gebruikt twee hosts. Elke route hoort bij precies één host.
 | `app.transportklok.nl` | De webapplicatie: inloggen, de OAuth-toestemming (`/oauth/authorize`, `/oauth/device`) en de goedkeuring van een apparaat in de browser. Hier geldt alleen de inlogsessie van de browser. |
 | `api.transportklok.nl` | De API: REST API v1 (`/rest/v1`), de OAuth-tokenroutes (`/oauth/token`, `/oauth/device/code`, `/oauth/revoke`), de OAuth-metadata onder `/.well-known/` en de MCP-server (`/mcp`). Hier geldt nooit een browsercookie. |
 
-Op staging zijn dat `app.stage.transportklok.nl` en `api.stage.transportklok.nl`.
-
 Een token dat u naar de app-host stuurt, geeft daar geen toegang. Een browsercookie op de API-host geeft ook geen toegang.
 
 ## Het toegangstoken

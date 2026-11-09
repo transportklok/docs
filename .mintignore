@@ -3,10 +3,6 @@
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
 # Every other file is published, also a page outside the navigation.
 
-# Draft content
-drafts/
-*.draft.mdx
-
 # Authoring instructions, tooling and its data: never published
 AGENTS.md
 scripts/
@@ -19,3 +15,7 @@ images/captures/*.json
 # Repository configuration
 .gitignore
 .mintignore
+
+# Draft content
+drafts/
+*.draft.mdx

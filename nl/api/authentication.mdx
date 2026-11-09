@@ -16,6 +16,12 @@ Accept: application/json
 
 Hoe u een token krijgt, staat bij [OAuth](/nl/api/oauth).
 
+## Welke tokens de API kent
+
+Een koppeling gebruikt altijd een OAuth-toegangstoken. De eigen apps van TransportKlok (de mobiele app en de tachograafkaartlezer) gebruiken eigen apparaat- en sessietokens. Die worden niet aan koppelingen uitgegeven.
+
+Stuur het token alleen in de `Authorization` header. Een token in de querystring wordt niet gelezen.
+
 ## Wat een token mag
 
 - Een token hoort bij de gebruiker die uw app toegang gaf. De API laat alleen zien wat die gebruiker zelf mag zien.
@@ -29,6 +35,7 @@ Hoe u een token krijgt, staat bij [OAuth](/nl/api/oauth).
 |--------|-----------|
 | `401` | Er is geen geldig token meegestuurd, of het token is verlopen. Vraag met het refresh token een nieuw token aan. |
 | `403` | Het token mist de scope voor dit verzoek. |
+| `404` | De organisatie of het gegeven valt buiten de organisaties die bij het token horen. |
 | `429` | U doet te veel verzoeken. Zie [Rate limits](/nl/api/rate-limits). |
 
 ## Toegang intrekken

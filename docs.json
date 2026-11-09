@@ -261,7 +261,8 @@
                           "nl/settings/organization/plan-and-billing/payment-method",
                           "nl/settings/organization/plan-and-billing/invoices"
                         ]
-                      }
+                      },
+                      "nl/settings/organization/mobile-app"
                     ]
                   },
                   {

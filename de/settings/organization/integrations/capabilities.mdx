@@ -1,0 +1,47 @@
+---
+title: "Synchronisationsverhalten"
+description: "Welche Daten jede Integration abruft oder sendet und wie jeder Durchlauf verlaufen ist."
+---
+{/* translated-from: nl/settings/organization/integrations/capabilities.mdx sha256:cbf0e6423b7f1a5ee2a6d95b497fbc387367a520b14a79b9067906278c1ae1c7 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Auf dem Tab **Synchronisationsverhalten** wählen Sie pro Funktion, welche Integration die Daten abruft oder sendet, und sehen, wie jeder Durchlauf verlaufen ist.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Einstellungen** → **Organisationseinstellungen** → **Integrationen** und wählen Sie den Tab **Synchronisationsverhalten**.
+2. Schalten Sie bei einer Funktion den Schalter für Ihre Integration ein oder aus.
+3. Klicken Sie auf **Einstellungen speichern**.
+4. Klicken Sie auf **Synchronisieren**, um eine Funktion sofort laufen zu lassen.
+5. Klicken Sie auf **Ausführungen**, um zu sehen, wie jeder Durchlauf verlaufen ist.
+
+## Felder
+
+| Funktion | Was sie tut |
+|---------|--------------|
+| **Fahrzeuge synchronisieren** | Ruft Fahrzeuge ab und verknüpft sie mit Ihren Fahrzeugen in TransportKlok. |
+| **Fahrer synchronisieren** | Ergänzt bei Mitarbeitenden den Fahrerkartencode. |
+| **Fahrzeugzuweisungen synchronisieren** | Ruft ab, welcher Fahrer in welchem Fahrzeug fährt. |
+| **Telemetrie empfangen** | Ruft Positionen und andere Fahrzeugdaten ab. Diese sehen Sie auf der [Karte](/de/management/fleet-management/map). |
+| **Lohnabrechnungsläufe senden** | Sendet einen verarbeiteten Lohnabrechnungslauf an Ihr Lohnpaket. |
+| **Kunden synchronisieren** | Ruft Kunden und ihre Rechnungsadresse ab und macht daraus [Auftraggeber](/de/management/customer-management/customers/overview). |
+
+**Ausführungen** zeigt pro Durchlauf den Beginn, den Status (**Wartend**, **Läuft**, **Erfolgreich**, **Fehlgeschlagen** oder **Übersprungen**), die Dauer und die Anzahl der Logzeilen.
+
+## Was danach passiert
+
+- Eine Funktion läuft automatisch zu festen Zeiten.
+- Ist **Lohnabrechnungsläufe senden** eingeschaltet, heißt die Schaltfläche bei einem Lohnabrechnungslauf **Senden** statt **Abschließen**. Siehe [Lohnabrechnungslauf verarbeiten](/de/management/human-resources/payroll-runs/process).
+
+## Einschränkungen
+
+- Einige Funktionen sind für eine Integration verpflichtend. <Hint kind="grey">Diese können Sie nicht ausschalten.</Hint>
+- Ein Fahrzeug bezieht seine Positionen aus einer Quelle. Stammt ein Fahrzeug bereits aus einer anderen Quelle, überspringt die Integration es.
+- Die GPS-Integrationen rufen nur Daten ab. Sie senden nichts an Ihr Telematiksystem zurück.

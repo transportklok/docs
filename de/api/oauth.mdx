@@ -1,0 +1,63 @@
+---
+title: "OAuth"
+description: "Ein Zugriffstoken mit OAuth 2.0 abrufen."
+---
+{/* translated-from: nl/api/oauth.mdx sha256:58584c13525b95f4ff283de6f52e7029addf210b3d67ebe8dffbae2496197b49 */}
+
+## So funktioniert es
+
+TransportKlok verwendet OAuth 2.0 mit dem Authorization-Code-Flow. Ihre App leitet den Benutzer zu TransportKlok weiter. Dort meldet sich der Benutzer an, wählt die Organisationen aus und erteilt seine Zustimmung. Ihre App tauscht anschließend einen Code gegen ein Zugriffstoken und ein Refresh-Token ein.
+
+## Einen Client anfordern
+
+Einen OAuth-Client fordern Sie bei TransportKlok über [info@transportklok.nl](mailto:info@transportklok.nl) an. Geben Sie an:
+
+- den Namen, eine Beschreibung, ein Logo und die Website Ihrer App;
+- die Redirect-URLs, zu denen TransportKlok den Benutzer nach der Freigabe weiterleitet;
+- die Scopes, die Ihre App benötigt;
+- ob Ihre App für Administratoren oder für Mitarbeitende gedacht ist.
+
+Sie erhalten eine Client-ID und, für eine App mit eigenem Server, ein Client-Secret.
+
+## Die Schritte
+
+1. Leiten Sie den Benutzer zur Autorisierungsadresse weiter:
+
+   ```text
+   https://app.transportklok.nl/oauth/authorize
+     ?client_id=<client-id>
+     &redirect_uri=<redirect-url>
+     &response_type=code
+     &scope=<scopes, met spaties ertussen>
+     &state=<willekeurige waarde>
+   ```
+
+2. Der Benutzer sieht **Anwendung autorisieren**, wählt unter **Zugelassene Organisationen** die Organisationen aus und klickt auf **Zulassen**.
+3. TransportKlok leitet den Benutzer mit `code` und `state` zu Ihrer Redirect-URL zurück. Prüfen Sie, dass `state` mit dem übereinstimmt, was Sie mitgesendet haben.
+4. Tauschen Sie den Code gegen ein Token ein:
+
+   ```http
+   POST /oauth/token HTTP/1.1
+   Host: app.transportklok.nl
+   Content-Type: application/x-www-form-urlencoded
+
+   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>
+   ```
+
+5. Die Antwort enthält `access_token`, `refresh_token`, `token_type` und `expires_in` (in Sekunden).
+
+## Ein neues Token abrufen
+
+Ist das Zugriffstoken abgelaufen, fordern Sie mit dem Refresh-Token ein neues an:
+
+```http
+POST /oauth/token HTTP/1.1
+Host: app.transportklok.nl
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&client_id=<client-id>&client_secret=<client-secret>&refresh_token=<refresh-token>
+```
+
+## Was der Benutzer sieht
+
+Bei der Freigabe sieht der Benutzer, welche App Zugriff anfordert, mit welchem Konto und mit welchen Berechtigungen. Den Zugriff widerruft der Benutzer unter **Einstellungen** → **Apps** in TransportKlok.

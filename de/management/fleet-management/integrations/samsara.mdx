@@ -1,0 +1,49 @@
+---
+title: "Samsara"
+description: "Samsara verbinden und was aus Samsara abgerufen wird."
+---
+{/* translated-from: nl/management/fleet-management/integrations/samsara.mdx sha256:97af95c34759fd295bb2bb698d13176c429c951a2f8e001ee5e8c70d6e8bd63f */}
+
+## Wofür diese Seite da ist
+
+Mit der Samsara-Integration ruft TransportKlok Fahrzeuge und Positionen aus Samsara ab.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Die Organisation benötigt das Modul **Fuhrparkverwaltung**, und Telematik muss aktiviert sein. Siehe [Integrationen](/de/settings/organization/integrations/instances).
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie unter **Konten** ein Konto für **Samsara** mit einem **Token** (API-Token) von Samsara an.
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Samsara** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+4. Tragen Sie die Einstellungen ein und klicken Sie auf **Einstellungen speichern**.
+
+## Felder
+
+Auf der Einstellungsseite tragen Sie ein:
+
+| Einstellung | Was Sie eintragen |
+|------------|--------------|
+| **Attribut Personalnummer** | Das Samsara-Fahrerattribut, in dem die Personalnummer steht. |
+| **Dokumenttyp für Start** | Der Dokumenttyp in Samsara, der einen Zeiteintrag startet. |
+| **Dokumenttyp für Stopp** | Der Dokumenttyp in Samsara, der einen Zeiteintrag beendet. |
+
+## Was danach passiert
+
+| Funktion | Läuft automatisch |
+|---------|---------------|
+| **Fahrzeuge synchronisieren** | jede Nacht |
+| **Fahrer synchronisieren** | jede Nacht |
+| **Fahrzeugzuweisungen synchronisieren** | alle 15 Minuten |
+| **Telemetrie empfangen** | alle 15 Minuten |
+
+- Fahrzeuge werden über die Fahrgestellnummer (VIN) verknüpft.
+- Positionen erscheinen auf der [Karte](/de/management/fleet-management/map).
+- Bis die Einstellungen eingetragen sind, steht die Integration auf **Konfiguration erforderlich**.
+- Trägt ein Fahrer in Samsara das Startdokument oder das Stoppdokument ein, startet oder beendet TransportKlok einen Zeiteintrag für diesen Mitarbeitenden.
+
+## Einschränkungen
+
+- Die Integration ruft nur Daten aus Samsara ab. Sie sendet nichts zurück.

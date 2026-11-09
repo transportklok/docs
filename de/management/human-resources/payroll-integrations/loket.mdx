@@ -1,0 +1,37 @@
+---
+title: "Loket.nl"
+description: "Loket.nl verbinden und was an Loket.nl gesendet wird."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/loket.mdx sha256:ab567f41e96acb8c3f5becc051406cdacb8da1cdeba0912d4ca1ee377b01ce1c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Mit der Loket.nl-Integration senden Sie Mitarbeitende, Verträge und verarbeitete Lohnabrechnungsläufe an Loket.nl.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation, mit einem Loket.nl-Konto, das Zugriff auf den Arbeitgeber hat.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie ein Konto für **Loket.nl** an und melden Sie sich bei Loket.nl an. Siehe [Konten](/de/settings/organization/integrations/accounts).
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Loket.nl** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+4. Schalten Sie unter **Synchronisationsverhalten** die Schalter für das ein, was Sie senden möchten, etwa **Lohnabrechnungsläufe senden**, und speichern Sie.
+
+## Felder
+
+Außer **Konto** und **Name** verlangt die Integration keine Einstellungen. Der Arbeitgeber ergibt sich aus dem Konto, mit dem Sie sich anmelden.
+
+## Was danach passiert
+
+- Legen Sie einen Mitarbeitenden oder Vertrag an oder ändern Sie ihn, sendet TransportKlok diese Daten an Loket.nl.
+- Beim **Senden** eines Lohnabrechnungslaufs sendet TransportKlok pro Mitarbeitenden die Stunden und Lohnarten dieses Zeitraums an Loket.nl. Bestehende Daten für diesen Zeitraum werden überschrieben.
+
+## Einschränkungen
+
+- Nur Lohnarten mit einem Loket.nl-Code werden gesendet. <Hint kind="yellow">Welche Codes eingestellt sind, hängt von der Einrichtung der Integration für Ihre Organisation ab. Prüfen Sie nach dem ersten Versand in Loket.nl, ob die Stunden und Lohnarten dort stehen.</Hint>
+- Die Integration ruft nichts aus Loket.nl ab.

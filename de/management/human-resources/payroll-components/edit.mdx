@@ -1,0 +1,46 @@
+---
+title: "Lohnart bearbeiten"
+description: "Einen Bezug oder Abzug anpassen oder löschen."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/edit.mdx sha256:d15619b70eec11ef0a8c0a5ede5a7be64a6873aceea328fc58644fce4df425c9 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Hier passen Sie eine Lohnart an oder löschen sie.
+
+## Wer das nutzen darf
+
+- Ein Administrator mit vollständigen Rechten in der Organisation.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+Eine Lohnart anpassen:
+
+1. Öffnen Sie **Personal** → **Gehaltsabrechnung** → **Bezüge & Abzüge**.
+2. Klicken Sie in der Zeile der Lohnart auf **Bearbeiten**.
+3. Passen Sie die Felder an.
+4. Klicken Sie auf **Änderungen speichern**.
+
+Eine Lohnart löschen:
+
+1. Klicken Sie in der Zeile der Lohnart auf **Löschen**.
+2. Prüfen Sie im Fenster **Lohnart löschen** die Lohnart und den Mitarbeitenden.
+3. Klicken Sie auf **Löschen**.
+
+## Felder
+
+Das Formular **Lohnart bearbeiten** hat dieselben Felder wie das Formular zum Anlegen, bereits mit den aktuellen Werten ausgefüllt: **Mitarbeitende:r**, **Abrechnungszeitraum**, **Typ**, **Lohnart** und **Wert**. Siehe [Lohnart anlegen](/de/management/human-resources/payroll-components/create).
+
+## Was danach passiert
+
+- Nach **Änderungen speichern** steht die angepasste Lohnart in der Übersicht.
+- Nach **Löschen** verschwindet die Lohnart sofort aus der Übersicht. <Hint kind="red">Eine gelöschte Lohnart können Sie nicht wiederherstellen.</Hint>
+- Der Lohnabrechnungslauf des Zeitraums berücksichtigt die Änderung. Ist dieser Lauf ein Entwurf oder gesperrt, wird er neu berechnet.
+- Ist der Lauf bereits verarbeitet, wird er erneut auf Korrekturen geprüft. Bleibt ein Unterschied zu dem, was bereits verarbeitet wurde, erhält er den Status **Korrigiert**. Entfällt der Unterschied, steht er wieder auf **Verarbeitet**. Siehe [Korrekturen an einem Lohnabrechnungslauf](/de/management/human-resources/payroll-runs/corrections).
+
+## Einschränkungen
+
+- Auch bei einem verarbeiteten Lohnabrechnungslauf können Sie eine Lohnart noch anpassen oder löschen. Die Änderung kommt dann als Korrektur in einer folgenden Verarbeitung.

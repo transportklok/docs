@@ -1,0 +1,50 @@
+---
+title: "Bezüge und Abzüge"
+description: "Beträge, die Sie pro Mitarbeitenden und Abrechnungszeitraum zum Gehalt addieren oder davon abziehen."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/overview.mdx sha256:df5f92848b99f94f979811bd40269c1fca2471937be026975560b1967afc0b31 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Hier verwalten Sie Beträge, die Sie unabhängig von den Stunden zum Gehalt addieren oder davon abziehen, etwa ein Kilometergeld, einen Vorschuss oder ein Bußgeld. Ein solcher Betrag heißt Lohnart.
+
+## Screenshot
+
+![Bezüge und Abzüge](/images/de/captures/management-aanvullingen-inhoudingen-overzicht.png)
+
+## Wer das nutzen darf
+
+- Ein Administrator mit vollständigen Rechten in der Organisation.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Personal** und wählen Sie **Gehaltsabrechnung**.
+2. Klicken Sie auf **Bezüge & Abzüge**.
+3. Sehen Sie pro Zeile den Mitarbeitenden, den Zeitraum und den Betrag.
+4. Klicken Sie auf **Neue Lohnart**, um einen Betrag hinzuzufügen. Siehe [Lohnart anlegen](/de/management/human-resources/payroll-components/create).
+5. Klicken Sie in der Zeile einer Lohnart auf **Bearbeiten** oder **Löschen**. Siehe [Lohnart bearbeiten](/de/management/human-resources/payroll-components/edit).
+
+## Felder
+
+| Spalte | Bedeutung |
+|-------|-----------|
+| **Mitarbeitende:r** | Der Mitarbeitende, der den Betrag erhält oder abgibt. |
+| **Zeitraum** | Der Abrechnungszeitraum, zum Beispiel 2026-10. |
+| **Verarbeitet** | Der Status des Lohnabrechnungslaufs, der den Betrag ausgezahlt hat. Ein Strich bedeutet, dass das noch nicht geschehen ist. |
+| **Typ** | **Bezug** oder **Abzug**. |
+| **Lohnart** | Die Art des Betrags, etwa **Kilometergeld** oder **Bußgelder**. |
+| **Wert** | Der Betrag. |
+| **Aktualisiert am** | Wann die Lohnart zuletzt gespeichert wurde. |
+
+## Was danach passiert
+
+- Eine Lohnart zählt im Lohnabrechnungslauf ihres Zeitraums. Ist dieser Lauf ein Entwurf oder gesperrt, wird er sofort neu berechnet. <Hint kind="grey">Sie müssen den Lauf dafür nicht selbst erneut ausführen.</Hint>
+- Ist dieser Lauf bereits verarbeitet, erhält er den Status **Korrigiert**. Der Betrag geht dann mit einer Korrektur mit. Siehe [Korrekturen an einem Lohnabrechnungslauf](/de/management/human-resources/payroll-runs/corrections).
+
+## Einschränkungen
+
+- Die Übersicht hat keine Filter und kein Suchfeld.
+- **Löschen** fragt nach einer Bestätigung und entfernt die Lohnart danach sofort. <Hint kind="red">Eine gelöschte Lohnart können Sie nicht wiederherstellen. Gehört sie zu einem verarbeiteten Lauf, wird der Lauf erneut auf Korrekturen geprüft.</Hint>

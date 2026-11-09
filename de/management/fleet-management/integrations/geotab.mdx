@@ -1,0 +1,40 @@
+---
+title: "Geotab"
+description: "Geotab verbinden und was aus Geotab abgerufen wird."
+---
+{/* translated-from: nl/management/fleet-management/integrations/geotab.mdx sha256:1cfb4f922a34a9bce3a4133fd17a5c698fdd2e9d1f710eb1693bb1dfab11d081 */}
+
+## Wofür diese Seite da ist
+
+Mit der Geotab-Integration ruft TransportKlok Fahrzeuge und Positionen aus Geotab ab.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Die Organisation benötigt das Modul **Fuhrparkverwaltung**, und Telematik muss aktiviert sein. Siehe [Integrationen](/de/settings/organization/integrations/instances).
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie unter **Konten** ein Konto für **Geotab** mit einem **Token** von Geotab an.
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Geotab** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+
+## Felder
+
+Nach dem Verbinden verlangt die Integration keine Einstellungen.
+
+## Was danach passiert
+
+| Funktion | Läuft automatisch |
+|---------|---------------|
+| **Fahrzeuge synchronisieren** | jede Nacht |
+| **Fahrer synchronisieren** | jede Nacht |
+| **Fahrzeugzuweisungen synchronisieren** | alle 15 Minuten |
+| **Telemetrie empfangen** | alle 15 Minuten |
+
+- Fahrzeuge werden über das Kennzeichen verknüpft. Ein aktives Fahrzeug hat Vorrang vor einem gelöschten Fahrzeug.
+- Positionen erscheinen auf der [Karte](/de/management/fleet-management/map).
+
+## Einschränkungen
+
+- Die Integration ruft nur Daten aus Geotab ab. Sie sendet nichts zurück.

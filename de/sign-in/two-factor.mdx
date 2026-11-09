@@ -1,0 +1,39 @@
+---
+title: "Anmeldung mit Zwei-Faktor-Authentifizierung"
+description: "Den Code aus Ihrer Authenticator-App oder einen Wiederherstellungscode bei der Anmeldung eintragen."
+---
+{/* translated-from: nl/sign-in/two-factor.mdx sha256:7215fd3ab5d58174c4cfe84dcc426b9a43a8c9bf797aee946fa3ce8033ae33a6 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Ist die Zwei-Faktor-Authentifizierung für Ihr Konto eingeschaltet, verlangt TransportKlok nach Ihrem Passwort auch einen Code. Hier lesen Sie, wie das funktioniert.
+
+## Wer das nutzen darf
+
+- Alle, die die Zwei-Faktor-Authentifizierung eingeschaltet haben. Siehe [Zwei-Faktor-Authentifizierung](/de/settings/user/authentication-and-security/two-factor-authentication).
+
+## So nutzen Sie diese Seite
+
+1. Melden Sie sich mit Ihrer E-Mail-Adresse und Ihrem Passwort an.
+2. Öffnen Sie auf dem Bildschirm **Zwei-Faktor-Authentifizierung** die Authenticator-App auf Ihrem Telefon.
+3. Tragen Sie den **Code** aus der App ein und klicken Sie auf **Anmelden**.
+4. Haben Sie Ihr Telefon nicht zur Hand, klicken Sie auf **Wiederherstellungscode verwenden** und tragen Sie einen Ihrer Wiederherstellungscodes ein.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Code** | Der 6-stellige Code aus Ihrer Authenticator-App. |
+| **Wiederherstellungscode** | Einer der Wiederherstellungscodes, die Sie beim Einschalten aufbewahrt haben. |
+
+## Was danach passiert
+
+- Mit einem richtigen Code gelangen Sie zu TransportKlok.
+- Mit **Authentifizierungscode verwenden** wechseln Sie vom Wiederherstellungscode zurück zum Code aus der App.
+
+## Einschränkungen
+
+- Jeder Wiederherstellungscode funktioniert einmal. <Hint kind="red">Haben Sie Ihr Telefon und Ihre Wiederherstellungscodes verloren, kommen Sie nicht mehr in Ihr Konto. Erstellen Sie unter [Zwei-Faktor-Authentifizierung](/de/settings/user/authentication-and-security/two-factor-authentication) rechtzeitig neue Wiederherstellungscodes.</Hint>
+- Nach einigen falschen Versuchen müssen Sie einen Moment warten, bevor Sie es erneut versuchen.

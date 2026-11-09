@@ -1,0 +1,44 @@
+---
+title: "CO3"
+description: "CO3 verbinden und was aus CO3 abgerufen wird."
+---
+{/* translated-from: nl/management/fleet-management/integrations/co3.mdx sha256:96a46389d098b5ee05d23e0d2b1f506cba7006a639c80ec785491ccc7bce8844 */}
+
+## Wofür diese Seite da ist
+
+Mit der CO3-Integration ruft TransportKlok Fahrzeuge und Positionen aus CO3 ab.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Die Organisation benötigt das Modul **Fuhrparkverwaltung**, und Telematik muss aktiviert sein. Siehe [Integrationen](/de/settings/organization/integrations/instances).
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie unter **Konten** ein Konto für **CO3** mit einer **Client-ID** und einem **Client-Secret** von CO3 an.
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **CO3** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+4. Tragen Sie die Einstellungen ein und klicken Sie auf **Einstellungen speichern**.
+
+## Felder
+
+Auf der Einstellungsseite tragen Sie ein:
+
+| Einstellung | Was Sie eintragen |
+|------------|--------------|
+| **CO3-Sharing-Company-ID** | Der Code des CO3-Unternehmens, das die Fahrzeuge mit Ihrem Konto teilt. Die Synchronisation startet erst, wenn dies eingetragen ist. |
+
+## Was danach passiert
+
+| Funktion | Läuft automatisch |
+|---------|---------------|
+| **Fahrzeuge synchronisieren** | alle 15 Minuten |
+| **Telemetrie empfangen** | alle 15 Minuten |
+
+- Fahrzeuge werden anhand der Fahrgestellnummer (VIN) und des Kennzeichens mit Ihren bestehenden Fahrzeugen verknüpft. CO3 legt selbst keine neuen Fahrzeuge an.
+- Positionen erscheinen auf der [Karte](/de/management/fleet-management/map).
+- CO3 ruft keine Fahrer und keine Fahrzeugzuweisungen ab. Auch frühere GPS-Positionen werden abgerufen.
+
+## Einschränkungen
+
+- Die Integration ruft nur Daten aus CO3 ab. Sie sendet nichts zurück.

@@ -1,0 +1,49 @@
+---
+title: "Konten"
+description: "Die Konten, mit denen sich TransportKlok bei Ihrem Lohnpaket oder Telematiksystem anmeldet."
+---
+{/* translated-from: nl/settings/organization/integrations/accounts.mdx sha256:4a2b5c1c0091d7c59db51f3f4859a164dfd37949500bc40814feea469902f2d2 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Auf dem Tab **Konten** legen Sie fest, wie sich TransportKlok bei Ihrem Lohnpaket oder Telematiksystem anmeldet. Eine Integration unter [Integrationen](/de/settings/organization/integrations/instances) verwendet ein solches Konto.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Einstellungen** → **Organisationseinstellungen** → **Integrationen** und wählen Sie den Tab **Konten**.
+2. Klicken Sie auf **Konto erstellen**.
+3. Wählen Sie bei **Integration** Ihr System und tragen Sie bei **Name** einen Namen ein.
+4. Tragen Sie die Zugangsdaten ein, die das System verlangt, und klicken Sie auf **Konto erstellen**.
+5. Bei einem Lohnpaket gehen Sie zur Anmeldeseite dieses Pakets. Melden Sie sich dort an und erteilen Sie die Zustimmung.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Integration** | Das Lohnpaket oder Telematiksystem. |
+| **Name** | Ein Name, an dem Sie das Konto erkennen. |
+| Zugangsdaten | Was das System verlangt. |
+
+Die Zugangsdaten pro Telematiksystem:
+
+| System | Anmelden mit |
+|---------|--------------|
+| Webfleet, FleetGo, Verizon Connect | **Benutzername** und **Passwort** |
+| Samsara, Geotab, Linqo | **Token** |
+| CO3 | **Client-ID** und **Client-Secret** |
+
+Ein Lohnpaket verlangt hier keine Zugangsdaten: Sie melden sich auf der Anmeldeseite des Pakets an.
+
+## Was danach passiert
+
+- Das Konto steht auf **Verbunden**. Sie wählen es danach bei einer Integration.
+
+## Einschränkungen
+
+- **Konto trennen** löscht auch alle Integrationen, die dieses Konto verwenden. <Hint kind="red">Nach dem Trennen ruft TransportKlok über diese Integrationen nichts mehr ab und sendet nichts mehr.</Hint>

@@ -1,0 +1,54 @@
+---
+title: "Export der Lohnbewegungsdaten"
+description: "Die Stunden eines Zeitraums pro Mitarbeitenden als Datei für die Lohnbuchhaltung."
+---
+{/* translated-from: nl/management/hour-management/time-registrations/payroll-mutation-export.mdx sha256:0e7871aaee3c4f176b1316b6979cc3e4c20fd5367f761d5950513390e22ea380 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Mit dem Export der Lohnbewegungsdaten laden Sie die Stunden eines Zeitraums pro Mitarbeitenden als Datei für die Lohnbuchhaltung herunter.
+
+## Screenshot
+
+![Übersicht der Zeiteinträge mit der Schaltfläche Exportieren](/images/de/captures/management-tijdregistratie-overzicht.png)
+
+## Wer das nutzen darf
+
+- Ein Administrator, der die Übersicht der Zeiteinträge in der **Stundenverwaltung** öffnen kann.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**. Ohne dieses Modul steht **Export der Lohnbewegungsdaten** nicht in der Liste.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie die **Stundenverwaltung** und wählen Sie **Zeiterfassung**.
+2. Wählen Sie oben in der Übersicht den Zeitraum. <Hint kind="grey">Der Export verwendet dieselbe Auswahl wie die Übersicht, also auch die Filter, die Sie gewählt haben.</Hint>
+3. Klicken Sie auf **Exportieren**.
+4. Wählen Sie **Export der Lohnbewegungsdaten**.
+5. Warten Sie, bis das Fenster **Abgeschlossen** anzeigt. Die Datei wird dann heruntergeladen.
+6. Klicken Sie auf **Schließen**.
+
+## Felder
+
+Der Export stellt keine Fragen. Die Datei hat eine Zeile pro Mitarbeitenden mit unter anderem:
+
+| Spalte | Inhalt |
+|-------|--------|
+| **Personalnummer** | Die Personalnummer des Mitarbeitenden. |
+| **Nachname**, **Namenszusatz**, **Vorname** | Der Name des Mitarbeitenden. |
+| `te_betalen_uren` | Die Stunden, die ausgezahlt werden. |
+| `contracturen` | Die Stunden laut Vertrag. |
+| `meeruren`, `overuren` | Die Stunden über den Vertragsstunden. |
+| `tekorturen`, `aanvuluren` | Die Stunden unter den Vertragsstunden und die Stunden, die dafür aufgefüllt werden. |
+
+Danach folgen Spalten pro Stundenart und pro Vergütung, etwa Stunden zu einem höheren Prozentsatz, Zuschläge und Verpflegungsmehraufwand. <Hint kind="yellow">Welche Spalten es gibt und wie die Stunden verteilt werden, hängt vom Tarifvertrag (CAO) und der Vertragseinstellung jedes Mitarbeitenden ab. Auch der Dateityp (Excel oder CSV) und das Layout (eine Zeile pro Mitarbeitenden oder pro Lohnart) ergeben sich aus den Einstellungen Ihrer Organisation.</Hint>
+
+## Was danach passiert
+
+- Sie laden eine Datei mit einem Namen wie `Salarismutaties export van de periode 2026-11-02 - 2026-11-08.xlsx` herunter.
+- Mit **Minimieren** arbeiten Sie weiter, während der Export erstellt wird.
+
+## Einschränkungen
+
+- Der Export rechnet mit den Zeiteinträgen, wie sie zu diesem Zeitpunkt sind. Was ein verarbeiteter Lohnabrechnungslauf genau ausgezahlt hat, entnehmen Sie dem **Export des Lohnabrechnungslaufs**. Siehe [Exporte eines Lohnabrechnungslaufs](/de/management/human-resources/payroll-runs/exports).
+- Ein großer Zeitraum kann etwas dauern. <Hint kind="grey">Das Fenster zeigt **Warten auf Export** und danach **Wird exportiert** mit einer Prozentangabe.</Hint>

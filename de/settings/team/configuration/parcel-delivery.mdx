@@ -1,0 +1,54 @@
+---
+title: "Routen"
+description: "Zustellrouten verwalten und pro Fahrt die Route, Stopps und Pakete erfassen lassen."
+---
+{/* translated-from: nl/settings/team/configuration/parcel-delivery.mdx sha256:73fc7969abcbbbaa193b36f176555e73929f4e97c03342d1e35da52790953f3c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Mit der Funktion **Routen** erfassen Ihre Fahrer bei einer Fahrt, welche Zustellroute sie gefahren sind, wie viele Stopps sie gemacht und wie viele Pakete sie zugestellt haben.
+
+## Wer das nutzen darf
+
+- Ein Administrator der Organisation oder der Eigentümer oder Administrator des Teams.
+
+## So nutzen Sie diese Seite
+
+Die Funktion einschalten:
+
+1. Öffnen Sie **Einstellungen**, wählen Sie das Team, wählen Sie **Konfiguration und Funktionen** und öffnen Sie den Tab **Funktionen**.
+2. Aktivieren Sie die Funktion **Routen**. Siehe [Funktionen](/de/settings/team/configuration/features).
+3. Öffnen Sie beim Team **Eigenschaften** und schalten Sie **Route**, **Anzahl Stopps** und **Anzahl Pakete** für die Einträge ein, bei denen Sie diese abfragen möchten. Siehe [Eigenschaften](/de/settings/team/attributes).
+
+Routen verwalten:
+
+1. Wählen Sie beim Team im Menü unter **Funktionen** die Option **Routen**. Sie sehen **Zustellrouten**.
+2. Klicken Sie oben rechts auf `+`, tragen Sie den **Name** ein und klicken Sie auf **Erstellen**.
+3. Klicken Sie auf **Bearbeiten**, um einen Namen anzupassen, und dann auf **Speichern**, oder auf **Entfernen**, um eine Route zu löschen.
+4. Mit **Papierkorb** sehen Sie gelöschte Routen. Klicken Sie auf **Wiederherstellen**, um eine Route zurückzuholen.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Name** (Pflicht) | Der Name der Route. Jeder Name kommt in einem Team einmal vor. |
+
+Bei einem Eintrag:
+
+| Merkmal | Was der Fahrer einträgt |
+|---------|-------------------------|
+| **Route** | Die Zustellroute, die er gefahren ist, aus den Routen des Teams. |
+| **Anzahl Stopps** | Wie viele Stopps er gemacht hat. |
+| **Anzahl Pakete** | Wie viele Pakete er zugestellt hat. |
+
+## Was danach passiert
+
+- Die Routen stehen in der Auswahlliste **Route** bei einem Eintrag, im Web und in der App.
+- Mit dem Filter **Routen** unter [Zeiterfassung](/de/management/hour-management/time-registrations/overview) sehen Sie die Einträge einer Route.
+
+## Einschränkungen
+
+- Einen Routennamen, der bereits im Papierkorb steht, können Sie nicht erneut verwenden. Sie sehen dann „Im Papierkorb befindet sich bereits eine Route mit diesem Namen." Stellen Sie diese Route wieder her, statt eine neue anzulegen.
+- Die Eigenschaften sind nicht automatisch eingeschaltet. <Hint kind="grey">Schalten Sie sie pro Team unter Eigenschaften ein.</Hint>

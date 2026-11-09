@@ -1,0 +1,47 @@
+---
+title: "Pausenstaffel"
+description: "Die Pause eines Eintrags aus der gearbeiteten Zeit berechnen lassen."
+---
+{/* translated-from: nl/settings/team/configuration/break-schema.mdx sha256:8a33b4e84c8ccf2096dfc64b0add758055a7e633197175df485288cf6b3d6186 */}
+
+## Wofür diese Seite da ist
+
+Mit der Funktion **Pausenstaffel** berechnet TransportKlok die Pause eines Zeiteintrags aus der gearbeiteten Zeit. Sie legen pro Staffel fest, wie viel Pause gilt.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager des Teams.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Einstellungen**, wählen Sie das Team, wählen Sie **Konfiguration und Funktionen** und öffnen Sie den Tab **Funktionen**.
+2. Aktivieren Sie die Funktion **Pausenstaffel**. Siehe [Funktionen](/de/settings/team/configuration/features).
+3. Klicken Sie bei **Pausenstaffel** auf **Einstellungen**.
+4. Tragen Sie pro Staffel die Anzahl der Pausenminuten ein und wählen Sie die Schalter.
+5. Klicken Sie auf **Speichern**.
+
+## Felder
+
+| Feld | Was Sie eintragen | Standard |
+|------|--------------|-----------|
+| **Pause bei 4,5 Std. Arbeit** | Pausenminuten bei mehr als 4,5 Stunden Arbeit. | 30 |
+| **Pause bei 7,5 Std. Arbeit** | Pausenminuten bei mehr als 7,5 Stunden Arbeit. | 60 |
+| **Pause bei 10,5 Std. Arbeit** | Pausenminuten bei mehr als 10,5 Stunden Arbeit. | 90 |
+| **Pause bei 13,5 Std. Arbeit** | Pausenminuten bei mehr als 13,5 Stunden Arbeit. | 120 |
+| **Pause bei 16,5 Std. Arbeit** | Pausenminuten bei mehr als 16,5 Stunden Arbeit. | 150 |
+| **Pausenstaffel erzwingen (nicht überschreibbar)** | Ein: Niemand kann die berechnete Pause anpassen. | ein |
+| **Arbeiten ohne Pause erlauben (Begründung erforderlich)** | Ein: Mitarbeitende können angeben, dass sie keine Pause genommen haben, mit einer Begründung. | aus |
+| **Administratoren dürfen Pausenzeit anpassen** | Ein: Administratoren und Manager können die berechnete Pause anpassen, Mitarbeitende nicht. | aus |
+
+## Was danach passiert
+
+- Bei einem Eintrag füllt TransportKlok das Feld **Pause (Minuten)** selbst aus, sobald die Beginn- und Endzeiten bekannt sind. Es gilt die höchste Staffel, die die gearbeitete Zeit überschreitet. Bei genau 4,5 Stunden Arbeit gilt noch keine Pause.
+- Ist `Pauzestaffel afdwingen` eingeschaltet, lässt sich **Pause (Minuten)** nicht anpassen. TransportKlok berechnet die Pause beim Speichern neu.
+- Ist `Sta werken zonder pauze toe` eingeschaltet, sieht der Mitarbeitende das Feld **Keine Pause genommen**. Mit einer Begründung wird die Pause 0 Minuten.
+- Die Staffel gilt auch für Einträge, die TransportKlok mit der [automatischen Stundenerfassung](/de/management/hour-management/automatic-time-registrations) erstellt.
+
+## Einschränkungen
+
+- Ohne `Pauzestaffel afdwingen` können Mitarbeitende die berechnete Pause selbst anpassen. Eine Pause, die zu keiner Staffel passt, lässt TransportKlok stehen.
+- Die Pause muss mindestens eine Minute kürzer sein als der gesamte Eintrag. Andernfalls sehen Sie „Die Pause muss mindestens eine Minute kürzer sein als der gesamte Eintrag."
+- Wer **Keine Pause genommen** ohne Begründung wählt, sieht „Eine Begründung ist erforderlich, wenn keine Pause genommen wurde."

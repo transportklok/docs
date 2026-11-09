@@ -1,0 +1,53 @@
+---
+title: "Lohnart anlegen"
+description: "Einen Betrag hinzufügen, den Sie zum Gehalt eines Mitarbeitenden addieren oder davon abziehen."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/create.mdx sha256:5e418ad2b4c0319cbea47b15effdfcbbc27fac75b847c52556595b23e6faa3de */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Hier fügen Sie für einen Mitarbeitenden und einen Abrechnungszeitraum einen Betrag zum Gehalt hinzu oder ziehen einen Betrag davon ab.
+
+## Screenshot
+
+![Lohnart anlegen](/images/de/captures/management-aanvullingen-inhoudingen-aanmaken.png)
+
+## Wer das nutzen darf
+
+- Ein Administrator mit vollständigen Rechten in der Organisation.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Personal** → **Gehaltsabrechnung** → **Bezüge & Abzüge**.
+2. Klicken Sie auf **Neue Lohnart**.
+3. Wählen Sie den **Mitarbeitende:r**.
+4. Wählen Sie den **Abrechnungszeitraum**.
+5. Wählen Sie bei **Typ**, ob es ein **Bezug** oder ein **Abzug** ist.
+6. Wählen Sie die **Lohnart**.
+7. Tragen Sie den **Wert** ein.
+8. Klicken Sie auf **Lohnart speichern**.
+
+## Felder
+
+Alle Felder sind Pflicht.
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Mitarbeitende:r** | Der Mitarbeitende, der den Betrag erhält oder abgibt. |
+| **Abrechnungszeitraum** | Der Zeitraum, in dem der Betrag zählt, zum Beispiel `Periode 2026-11`. Sie wählen aus dem aktuellen Zeitraum und den Zeiträumen, für die bereits ein Lohnabrechnungslauf existiert. |
+| **Typ** | **Bezug** addiert den Betrag, **Abzug** zieht ihn ab. **Bezug** ist vorausgewählt. |
+| **Lohnart** | Die Art des Betrags, zum Beispiel **Kilometergeld** oder **Vorschuss** bei einem Bezug und **Bußgelder** bei einem Abzug. <Hint kind="yellow">Welche Lohnarten Sie sehen, hängt vom Typ und von den Einstellungen Ihrer Organisation ab.</Hint> |
+| **Wert** | Der Betrag in Euro, mit zwei Dezimalstellen. <Hint kind="grey">Ein negativer Betrag verringert die Summe.</Hint> |
+
+## Was danach passiert
+
+- Sie kehren zur Übersicht zurück, in der die neue Lohnart aufgeführt ist.
+- Der Lohnabrechnungslauf dieses Zeitraums berücksichtigt den Betrag. Siehe [Bezüge und Abzüge](/de/management/human-resources/payroll-components/overview) dazu, was mit dem Lauf geschieht.
+
+## Einschränkungen
+
+- Eine Lohnart gilt für einen Mitarbeitenden und einen Zeitraum. Für einen festen Betrag in jedem Zeitraum legen Sie pro Zeitraum eine Lohnart an.
+- Lassen Sie ein Pflichtfeld leer, wird die Lohnart nicht gespeichert und Sie sehen bei diesem Feld eine Meldung.

@@ -73,12 +73,23 @@ Een scope heeft de vorm `<onderdeel>:<actie>`. Een `*` geeft alle acties van dat
 | organizations | `organizations:read`, `organizations:update` | `organizations:read` |
 | workers | `workers:read` | `workers:me` |
 | engagements | `engagements:read` | geen |
-| teams | `teams:read`, `teams:create`, `teams:update`, `teams:delete` | `teams:read` |
-| tasks | `tasks:read`, `tasks:create`, `tasks:update`, `tasks:delete` | geen |
-| time-registrations | `time-registrations:read`, `time-registrations:create`, `time-registrations:update`, `time-registrations:delete` | `time-registrations:read`, `time-registrations:create`, `time-registrations:update` |
-| imports | `imports:read`, `imports:create` | geen |
 | exports | `exports:read`, `exports:create`, `exports:download` | `exports:read`, `exports:create`, `exports:download` |
 | mcp | `mcp:use`, `mcp:read`, `mcp:write`, `mcp:destructive` | `mcp:use`, `mcp:read`, `mcp:write`, `mcp:destructive` |
+
+## Welke routes een scope bewaakt
+
+De REST API v1 heeft routes voor organisaties, medewerkers, contractperioden en exports. Alleen die scopes bewaken een route:
+
+| Scope | Route |
+|-------|-------|
+| `organizations:read` | `GET /rest/v1/organizations` en `GET /rest/v1/organizations/{organisatie-id}` |
+| `workers:read` | `GET /rest/v1/organizations/{organisatie-id}/workers` en `.../workers/{medewerker-id}` |
+| `engagements:read` | `GET /rest/v1/organizations/{organisatie-id}/workers/{medewerker-id}/engagements` |
+| `exports:read` | `GET /rest/v1/organizations/{organisatie-id}/exports` en `.../exports/{export-id}` |
+| `exports:create` | `POST /rest/v1/organizations/{organisatie-id}/exports` |
+| `exports:download` | `GET /rest/v1/organizations/{organisatie-id}/exports/{export-id}/download` |
+
+De overige scopes in de tabel bewaken nog geen route in de REST API.
 
 ## Wat de gebruiker ziet
 

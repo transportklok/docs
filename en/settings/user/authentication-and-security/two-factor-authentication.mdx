@@ -1,0 +1,46 @@
+---
+title: "Two-factor authentication"
+description: "Turn on two-factor authentication and manage your recovery codes."
+---
+{/* translated-from: nl/settings/user/authentication-and-security/two-factor-authentication.mdx sha256:ccb27f71b5b08c80e9f6aad1ab3f90d680c5ab7c260da760e48ef48c21779625 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+Here you turn on two-factor authentication. TransportKlok then also asks for a code from an app on your phone when you log in.
+
+## Screenshot
+
+![Two-factor authentication](/images/en/captures/account-tweefactorauthenticatie.png)
+
+## Who can use this
+
+- Every user, for their own account.
+
+## How to use this page
+
+1. At the top right, click your initials and choose **Settings** → **Authentication and security**.
+2. Open the **Two-factor authentication** tab and click **Enable**.
+3. Scan the QR code with an authenticator app on your phone, such as Google Authenticator. Or copy the **Setup key** to the app.
+4. Fill in the 6-digit **Authenticator code** from the app and click **Confirm setup**.
+5. Keep the recovery codes in a safe place. <Hint kind="red">With a recovery code you get into your account if you lose your phone. Without a recovery code, that is not possible.</Hint>
+
+## Fields
+
+| What you see | Meaning |
+|------------|-----------|
+| Status | Whether two-factor authentication is on. |
+| **Show recovery codes** | Shows your recovery codes. |
+| **Regenerate recovery codes** | Creates new recovery codes. |
+| **Show QR code** | Shows the QR code again. |
+| **Disable** | Turns two-factor authentication off. |
+
+## What happens next
+
+- When you log in, TransportKlok also asks for a code from the app. See [Logging in with two-factor authentication](/en/sign-in/two-factor).
+- After turning it on, you are logged out on your other devices and browsers. After that, you log in there again with the code.
+
+## Limitations
+
+- For recovery codes, the QR code and disabling, TransportKlok first asks for your password.

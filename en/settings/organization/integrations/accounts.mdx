@@ -1,0 +1,49 @@
+---
+title: "Accounts"
+description: "The accounts TransportKlok uses to log in to your payroll package or telematics system."
+---
+{/* translated-from: nl/settings/organization/integrations/accounts.mdx sha256:4a2b5c1c0091d7c59db51f3f4859a164dfd37949500bc40814feea469902f2d2 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+On the **Accounts** tab, you record how TransportKlok logs in to your payroll package or telematics system. An integration under [Integrations](/en/settings/organization/integrations/instances) uses such an account.
+
+## Who can use this
+
+- An administrator or manager of the organization.
+
+## How to use this page
+
+1. Open **Settings** → **Organization settings** → **Integrations** and choose the **Accounts** tab.
+2. Click **Create Account**.
+3. Under **Integration**, choose your system and fill in a **Name**.
+4. Fill in the login details the system asks for, and click **Create Account**.
+5. For a payroll package, you go to that package's login page. Log in there and give permission.
+
+## Fields
+
+| Field | What you fill in |
+|------|--------------|
+| **Integration** | The payroll package or telematics system. |
+| **Name** | A name by which you recognize the account. |
+| Login details | What the system asks for. |
+
+The login details per telematics system:
+
+| System | Log in with |
+|---------|--------------|
+| Webfleet, FleetGo, Verizon Connect | **Username** and **Password** |
+| Samsara, Geotab, Linqo | **Token** |
+| CO3 | **Client ID** and **Client secret** |
+
+A payroll package asks for no login details here: you log in on the package's login page.
+
+## What happens next
+
+- The account is **Connected**. You then choose it for an integration.
+
+## Limitations
+
+- **Disconnect account** also deletes all integrations that use that account. <Hint kind="red">After disconnecting, TransportKlok no longer fetches or sends anything through those integrations.</Hint>

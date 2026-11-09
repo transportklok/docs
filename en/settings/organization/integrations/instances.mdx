@@ -1,0 +1,55 @@
+---
+title: "Integrations"
+description: "Add, set up and disconnect integrations with your payroll package or telematics system."
+---
+{/* translated-from: nl/settings/organization/integrations/instances.mdx sha256:8b8cba69127ca2c3727a68df43b6dcfb9cc4b01ce6206241f733fd04b1309be8 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+On the **Integrations** tab, you connect TransportKlok to your payroll package or your telematics system. An integration uses an account that you first create under [Accounts](/en/settings/organization/integrations/accounts).
+
+## Screenshot
+
+![Integrations](/images/en/captures/instellingen-integraties-overzicht.png)
+
+## Who can use this
+
+- An administrator or manager of the organization.
+- A payroll integration requires the **Payroll inputs** module. A GPS integration requires the **Fleet management** module, with telematics on. <Hint kind="yellow">If telematics is not on for your organization, you see when connecting: "Telematics is not enabled for this organization. Enable telematics first before you create an integration."</Hint>
+- The integrations are in beta. <Hint kind="grey">You only see them if your organization takes part in the beta program.</Hint>
+
+## How to use this page
+
+1. Open **Settings** → **Organization settings** → **Integrations**.
+2. On the **Integrations** tab, click **Add integration**.
+3. Click **Connect** next to your system.
+4. Choose the **Account**, fill in the other fields, such as the **Employer** for Nmbrs, and give the integration a **Name**.
+5. Click **Connect**.
+6. On the settings page, fill in what your system needs and click **Save settings**.
+
+## Fields
+
+| Field | What you fill in |
+|------|--------------|
+| **Account** | The account the integration uses to log in to your system. |
+| **Name** | The name in the overview, for example the name of your company. |
+
+What each system asks for and does is on that system's page:
+
+| Kind | Systems |
+|-------|----------|
+| Payroll package | [Nmbrs](/en/management/human-resources/payroll-integrations/nmbrs), [Loket.nl](/en/management/human-resources/payroll-integrations/loket), [AFAS Profit](/en/management/human-resources/payroll-integrations/afas), [Exact Online](/en/management/human-resources/payroll-integrations/exact-online) |
+| Telematics | [Webfleet](/en/management/fleet-management/integrations/webfleet), [Samsara](/en/management/fleet-management/integrations/samsara), [Geotab](/en/management/fleet-management/integrations/geotab), [FleetGo](/en/management/fleet-management/integrations/fleetgo), [Linqo](/en/management/fleet-management/integrations/linqo), [CO3](/en/management/fleet-management/integrations/co3), [Verizon Connect](/en/management/fleet-management/integrations/verizon-connect) |
+| TMS | [Qargo](/en/management/customer-management/integrations/qargo) |
+
+## What happens next
+
+- The integration is **Connected** in the overview.
+- You turn on which data the integration fetches or sends under [Sync behavior](/en/settings/organization/integrations/capabilities).
+- If permissions or settings are missing, you see a message with **Authorize again** or **Open settings**.
+
+## Limitations
+
+- You disconnect an integration with **Disconnect**. Tick **Also disconnect the underlying OAuth account.** to also delete the account. <Hint kind="red">A disconnected integration no longer fetches or sends anything. To connect again, you create the integration again.</Hint>

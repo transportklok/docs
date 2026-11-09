@@ -16,6 +16,7 @@ SOURCES = (
     "platform/lang/{lang}.json",
     "platform/lang/{lang}/*.json",
     "shared.js/src/i18n/languages/{lang}.json",
+    "mobile/src/i18n/lanaguages/{lang}.json",
 )
 
 

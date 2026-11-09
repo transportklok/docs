@@ -1,0 +1,48 @@
+---
+title: "Exporting"
+description: "Export data to a file and download your exports later."
+---
+{/* translated-from: nl/general/exports.mdx sha256:f5ed31248208370ee25672b2cf18f58b54e746327266e14922e377752c3a9cdd */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+With an export, you put data from TransportKlok in a file, for example the time registrations of a period. Here you read how an export works and where to find your exports.
+
+## Who can use this
+
+- Every user who sees the **Export** button on an overview. Which exports you see depends on your role and your organization's modules.
+
+## How to use this page
+
+1. Open the overview with the data you want to export, such as the time registrations.
+2. Choose the period and the filters. <Hint kind="grey">The export uses the same selection as the overview.</Hint>
+3. Click **Export** and choose the export.
+4. Wait until the window shows **Completed**. The file is then downloaded.
+5. If you want to keep working while the export is being created, click **Minimize**.
+6. You download an earlier export with the **Exports** button at the top right: click **Download** next to the export.
+
+## Fields
+
+An export's window shows the status:
+
+| Status | Meaning |
+|--------|-----------|
+| **Waiting for export** | The export is ready to start. |
+| **Exporting** | The export is being created, with a percentage. |
+| **Completed** | The file is ready. |
+| **Failed** | The export did not succeed. Start the export again. |
+
+The list behind the **Exports** button shows the name, the day, the status and **Download** for each export. The number on the button is the number of exports in the list.
+
+## What happens next
+
+- A downloaded export appears in the list under **Downloaded**. You can download it again.
+
+## Limitations
+
+- You only see your own exports, and only those of the past week.
+- A failed export stays in the list for an hour.
+- The file type, Excel (xlsx) or CSV, is set by an administrator under [Base configuration](/en/settings/organization/configuration/base).
+- What an export contains is described with that export: [Payroll mutation export](/en/management/hour-management/time-registrations/payroll-mutation-export) and [Exports of a payroll run](/en/management/human-resources/payroll-runs/exports).

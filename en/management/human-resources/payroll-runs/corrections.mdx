@@ -1,0 +1,56 @@
+---
+title: "Corrections on a payroll run"
+description: "Find corrections on a processed payroll run and carry them into a newer run."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/corrections.mdx sha256:56f0c4b827cbacc5e417c11b0fe9ccb41781d592f78168243c0063f7505a882a */}
+
+## What this page is for
+
+Here you read how to check whether a processed payroll run is still correct, and how a newer run carries the corrections of older runs.
+
+## Who can use this
+
+- An administrator with full rights in the organization.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+Find a correction:
+
+1. Open **HR** → **Payroll administration** → **Payroll runs**.
+2. In the row of a processed run, choose **Options** → **Analyze for corrections**.
+3. Wait until the analysis is finished.
+
+Carry a correction into a newer run:
+
+1. Next to the newer, locked run, click **Complete**.
+2. The **Carry corrections** window shows the older runs with a correction that has not yet been paid out.
+3. Tick the runs whose correction this run carries, and click **Continue**.
+4. In the **Confirm carrying** window, check the chosen runs.
+5. Click **Carry and process**.
+
+If you tick nothing, the run is processed as usual.
+
+## Fields
+
+The **Carry corrections** window shows for each older run:
+
+| Column | Meaning |
+|-------|-----------|
+| **Payroll run** | The number of the older run. |
+| **Period** | The pay period of that run. |
+| **Correction** | How many workers in that run were corrected, for example "1 worker corrected". |
+
+## What happens next
+
+- If the analysis finds a difference with the processed version, the run gets the status **Corrected**. Whether there is a difference depends on the registrations and the calculation. This depends on the CAO or the contract setting: the calculation follows the CAO and each worker's contract.
+- You complete a corrected run again with **Complete**, or you let a newer run carry the correction.
+- After carrying, the older run gets the status **Processed** again, with `Verrekend in salarisronde` and the number of the newer run. That text is a link to the newer run.
+- The newer run shows `Neemt correcties van 1 salarisronde mee`.
+- Open the details of the newer run and expand a worker's row. Under **Payslip check** you see the **Own result**, the `Correctie salarisronde` of the older run and the **Payslip total**.
+
+## Limitations
+
+- Carrying is final and cannot be undone.
+- You do not create a correction by hand. The system derives it from the current calculation; to change it, you adjust the registrations or settings and analyze again.
+- You cannot delete a processed, corrected or settled run. You can still view it.

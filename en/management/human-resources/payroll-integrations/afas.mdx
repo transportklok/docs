@@ -1,0 +1,42 @@
+---
+title: "AFAS Profit"
+description: "Connect AFAS Profit and what is sent to AFAS Profit."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/afas.mdx sha256:fe9691630dbde489526778659ad0ec3d948e40fbd3bf0a85efff7ffbb4529ed0 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+With the AFAS Profit integration, you send workers, contracts and processed payroll runs to AFAS Profit.
+
+## Who can use this
+
+- An administrator or manager of the organization, with an AFAS Profit account that has access to the environment.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+1. Create an account for **AFAS Profit** and log in to AFAS. See [Accounts](/en/settings/organization/integrations/accounts).
+2. Open **Integrations**, click **Add integration** and click **Connect** next to **AFAS Profit**.
+3. Choose the **Account**, give the integration a **Name** and click **Connect**.
+4. Fill in the connectors and click **Save settings**.
+5. On **Sync behavior**, turn on the switches for what you want to send, such as **Send payroll runs**, and save.
+
+## Fields
+
+| Field | What you fill in |
+|------|--------------|
+| **Employees connector** | The name of the AFAS GetConnector for worker data, for example `Employees`. |
+| **Engagement data connector** | The name of the AFAS GetConnector for employment data. |
+
+## What happens next
+
+- After **Save settings**, TransportKlok sends the workers to AFAS Profit.
+- If you create or change a worker or contract, TransportKlok sends that data to AFAS Profit.
+- When a payroll run is **Sent**, TransportKlok enters a mutation per pay component per worker in AFAS Profit, for the year and period of the run.
+
+## Limitations
+
+- Only pay components with an AFAS code are sent. <Hint kind="yellow">Which codes are set depends on how the integration is set up for your organization. After the first submission, check in AFAS Profit that the mutations are there.</Hint>
+- The integration fetches nothing from AFAS Profit.

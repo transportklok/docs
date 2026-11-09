@@ -1,0 +1,42 @@
+---
+title: "Process payroll run"
+description: "Check, lock and complete a payroll run."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/process.mdx sha256:d5881489156ea00be4fcb4bf4578fd82300814e7787e43f831e8538dbc62588c */}
+
+## What this page is for
+
+Here you read how to take a payroll run from draft to processed: checking, locking and completing.
+
+## Who can use this
+
+- An administrator with full rights in the organization.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+1. Open **HR** → **Payroll administration** → **Payroll runs**.
+2. Check the draft. Open the details with the icon in front of the number, or use **Download**.
+3. If registrations have changed since, choose **Options** → **Run again** and wait until the status is **Draft** again.
+4. Click **Lock** and confirm in the **Lock payroll run** window.
+5. Wait until the status is **Locked**.
+6. Click **Complete**.
+7. If the **Carry corrections** window appears, choose which older corrections the run carries. See [Corrections](/en/management/human-resources/payroll-runs/corrections).
+
+## Fields
+
+Completing has no fields to fill in. Without older corrections, the run is processed right away, without an extra window.
+
+## What happens next
+
+- The run gets the status **Processed**.
+- Under **Download** you now find the **Payroll run export**. See [Exports of a payroll run](/en/management/human-resources/payroll-runs/exports).
+- Anyone who has **Copy of exports when a payroll run is processed** turned on in the notifications receives an email with a copy of the export.
+
+## Limitations
+
+- You cannot undo processing with a button.
+- You can no longer delete a processed run.
+- If you still want to change a locked run, choose **Options** → **Unlock**.
+- If your organization takes the variable pay components from the previous period, and that previous period has no run, the **Previous period without a payroll run** window asks you to confirm that the period has nothing to pay. A run's detail page shows the **Source period for variable pay components**.
+- What the calculation produces depends on the registrations and the settings. This depends on the CAO or the contract setting: which pay components a worker gets follows from the CAO and from the worker's contract.

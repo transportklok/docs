@@ -1,0 +1,54 @@
+---
+title: "Payroll input export"
+description: "The hours of a period per worker as a file for the payroll administration."
+---
+{/* translated-from: nl/management/hour-management/time-registrations/payroll-mutation-export.mdx sha256:0e7871aaee3c4f176b1316b6979cc3e4c20fd5367f761d5950513390e22ea380 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+With the payroll input export, you download the hours of a period per worker as a file for the payroll administration.
+
+## Screenshot
+
+![Time registration overview with the Export button](/images/en/captures/management-tijdregistratie-overzicht.png)
+
+## Who can use this
+
+- An administrator who can open the time registration overview in **Hours management**.
+- The organization needs the **Payroll inputs** module. Without that module, **Payroll input export** is not in the list.
+
+## How to use this page
+
+1. Open **Hours management** and choose **Time entries**.
+2. Choose the period at the top of the overview. <Hint kind="grey">The export uses the same selection as the overview, including the filters you chose.</Hint>
+3. Click **Export**.
+4. Choose **Payroll input export**.
+5. Wait until the window shows **Completed**. The file is then downloaded.
+6. Click **Close**.
+
+## Fields
+
+The export asks no questions. The file has one line per worker with, among other things:
+
+| Column | Content |
+|-------|--------|
+| **personnel number** | The worker's personnel number. |
+| **last name**, **preposition**, **first name** | The worker's name. |
+| `te_betalen_uren` | The hours that are paid out. |
+| `contracturen` | The hours according to the contract. |
+| `meeruren`, `overuren` | The hours above the contract hours. |
+| `tekorturen`, `aanvuluren` | The hours below the contract hours and the hours that are topped up for them. |
+
+After that come columns per kind of hours and per allowance, such as hours at a higher percentage, surcharges and subsistence allowance. <Hint kind="yellow">Which columns there are and how the hours are divided depends on the collective labor agreement (CAO) and the contract setting of each worker. The file type (Excel or CSV) and the layout (one line per worker or per pay component) also follow from your organization's settings.</Hint>
+
+## What happens next
+
+- You download a file with a name like `Salarismutaties export van de periode 2026-11-02 - 2026-11-08.xlsx`.
+- With **Minimize** you keep working while the export is being created.
+
+## Limitations
+
+- The export calculates with the time registrations as they are at that moment. For exactly what a processed payroll run paid out, use the **Payroll run export**. See [Exports of a payroll run](/en/management/human-resources/payroll-runs/exports).
+- A large period can take a while. <Hint kind="grey">The window shows **Waiting for export** and then **Exporting** with a percentage.</Hint>

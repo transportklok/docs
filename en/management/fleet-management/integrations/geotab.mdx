@@ -1,0 +1,40 @@
+---
+title: "Geotab"
+description: "Connect Geotab and what is fetched from Geotab."
+---
+{/* translated-from: nl/management/fleet-management/integrations/geotab.mdx sha256:1cfb4f922a34a9bce3a4133fd17a5c698fdd2e9d1f710eb1693bb1dfab11d081 */}
+
+## What this page is for
+
+With the Geotab integration, TransportKlok fetches vehicles and positions from Geotab.
+
+## Who can use this
+
+- An administrator or manager of the organization.
+- The organization needs the **Fleet management** module, and telematics must be on. See [Integrations](/en/settings/organization/integrations/instances).
+
+## How to use this page
+
+1. Under **Accounts**, create an account for **Geotab** with a **Token** from Geotab.
+2. Open **Integrations**, click **Add integration** and click **Connect** next to **Geotab**.
+3. Choose the **Account**, give the integration a **Name** and click **Connect**.
+
+## Fields
+
+After connecting, the integration asks for no settings.
+
+## What happens next
+
+| Function | Runs automatically |
+|---------|---------------|
+| **Synchronize vehicles** | every night |
+| **Synchronize drivers** | every night |
+| **Synchronize vehicle assignments** | every quarter of an hour |
+| **Receive telemetry** | every quarter of an hour |
+
+- Vehicles are linked on license plate. An active vehicle takes precedence over a deleted vehicle.
+- Positions appear on the [Map](/en/management/fleet-management/map).
+
+## Limitations
+
+- The integration only fetches data from Geotab. It does not send anything back.

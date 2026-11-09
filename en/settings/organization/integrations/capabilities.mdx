@@ -1,0 +1,47 @@
+---
+title: "Sync behavior"
+description: "Which data each integration fetches or sends, and how each run went."
+---
+{/* translated-from: nl/settings/organization/integrations/capabilities.mdx sha256:cbf0e6423b7f1a5ee2a6d95b497fbc387367a520b14a79b9067906278c1ae1c7 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+On the **Sync behavior** tab, you choose per function which integration fetches or sends the data, and you see how each run went.
+
+## Who can use this
+
+- An administrator or manager of the organization.
+
+## How to use this page
+
+1. Open **Settings** → **Organization settings** → **Integrations** and choose the **Sync behavior** tab.
+2. For a function, turn the switch on or off for your integration.
+3. Click **Save settings**.
+4. Click **Sync** to run a function right away.
+5. Click **Runs** to see how each run went.
+
+## Fields
+
+| Function | What it does |
+|---------|--------------|
+| **Synchronize vehicles** | Fetches vehicles and links them to your vehicles in TransportKlok. |
+| **Synchronize drivers** | Fills in the tachograph card code for workers. |
+| **Synchronize vehicle assignments** | Fetches which driver drives which vehicle. |
+| **Receive telemetry** | Fetches positions and other vehicle data. You see them on the [Map](/en/management/fleet-management/map). |
+| **Send payroll runs** | Sends a processed payroll run to your payroll package. |
+| **Synchronize clients** | Fetches customers and their billing address and turns them into [clients](/en/management/customer-management/customers/overview). |
+
+**Runs** shows for each run the start, the status (**Pending**, **Running**, **Succeeded**, **Failed** or **Skipped**), the duration and the number of log lines.
+
+## What happens next
+
+- A function runs automatically at fixed times.
+- If **Send payroll runs** is on, the button on a payroll run is called **Send** instead of **Complete**. See [Process payroll run](/en/management/human-resources/payroll-runs/process).
+
+## Limitations
+
+- Some functions are required for an integration. <Hint kind="grey">You cannot turn those off.</Hint>
+- A vehicle gets its positions from one source. If a vehicle already comes from another source, the integration skips it.
+- The GPS integrations only fetch data. They do not send anything back to your telematics system.

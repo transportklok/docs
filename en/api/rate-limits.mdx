@@ -1,0 +1,26 @@
+---
+title: "Rate limits"
+description: "How many requests your app may make to the API."
+---
+{/* translated-from: nl/api/rate-limits.mdx sha256:0a41ba553ec4c8ec14431b1a3d468cd1f8ddd50c578359f721c5c883648666a0 */}
+
+## The limits
+
+The API counts requests per access token. A token may not do more than the following at the same time:
+
+| Period | Requests |
+|---------|-----------|
+| 1 minute | 180 |
+| 5 minutes | 600 |
+| 1 hour | 3,600 |
+
+## When you reach a limit
+
+- The API responds with status `429 Too Many Requests`.
+- The `Retry-After` header tells you after how many seconds you can try again.
+- The `X-RateLimit-Limit` and `X-RateLimit-Remaining` headers show how many requests are allowed in the period and how many are left.
+
+## How to stay under the limit
+
+- After a `429`, wait at least as long as `Retry-After` indicates.
+- Keep what you have already fetched instead of requesting everything again each time.

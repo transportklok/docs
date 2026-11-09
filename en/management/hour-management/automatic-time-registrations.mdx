@@ -1,0 +1,64 @@
+---
+title: "Automatic hour registration"
+description: "Have time registrations created from your vehicles' GPS data."
+---
+{/* translated-from: nl/management/hour-management/automatic-time-registrations.mdx sha256:8b44d3f0a9616d4758e17dc8431e6c1ec2dadce4e01ed4209ea540241fd87ef9 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+With automatic hour registration, TransportKlok creates time registrations from the trips and stops that your GPS integration or trackers report. Your workers then do not have to enter those hours themselves.
+
+## Screenshot
+
+![Automatic time registrations](/images/en/captures/instellingen-wagenparkbeheer-automatische-urenregistraties.png)
+
+## Who can use this
+
+- An administrator of the organization turns it on.
+- The organization needs the **Fleet management** and **Hour management** modules, and vehicles with a tracker or a GPS integration. See [Telematics](/en/management/fleet-management/telematics/overview).
+
+## How to use this page
+
+1. Open **Settings** → **Organization settings** → **Configuration and modules** and choose the **Modules** tab.
+2. Next to **Fleet management**, click **Settings**.
+3. Turn on **Automatic time entries**.
+4. Choose the **Generation mode** and the activities per kind of address.
+5. Click **Save**.
+
+## Fields
+
+| Field | What you choose |
+|------|-------------|
+| **Generation mode** | **Create mode**: TransportKlok creates new time registrations from the GPS data. **Replace mode**: TransportKlok does not create new registrations, but adds the activity **Automatic (GPS segment)** to existing registrations with the trips and stops. **Create mode** is on by default. |
+| **Default stop activity** | The activity for a stop at an address that TransportKlok does not know. Empty by default: such a stop then gets no activity. |
+| **Office address activity** | The activity for a stop at an office address. **Depot** by default. |
+| **Home address activity** | The activity for a stop at a home address. **Depot** by default. |
+| **Client address activity** | The activity for a stop at a client address. **Loading & unloading (external)** by default. |
+| **Stop length (minutes)** | How long a stop must last to close the trip before it. 240 minutes by default. |
+| **Minimum activity length (seconds)** | How long an activity must last to become a line in the registration. 60 seconds by default. |
+| **Automatic registrations start on** | The date from which TransportKlok creates registrations. Empty: without a fixed start date. |
+| **No fixed start date** | On: the worker has no fixed start date, whatever the organization's date is. |
+| **Unpaid home-office commute** | On: trips between home and the office are booked on the unpaid commuting activity. |
+
+Which kind of address a stop is follows from your [locations](/en/management/fleet-management/locations/overview).
+
+## What happens next
+
+- From a worker's trips and stops, TransportKlok creates a time registration, with the trips and stops as activities.
+- The registrations appear under [Time registration](/en/management/hour-management/time-registrations/overview) and in the worker's app, like any other registration. You approve them in the same way.
+- TransportKlok no longer changes a registration that has been approved, that someone has changed or that falls in a processed payroll period.
+
+TransportKlok works with two versions of automatic hour registration. <Hint kind="grey">TransportKlok sets which version your organization uses for you. The settings above are the same for both versions.</Hint>
+
+| Version | How it works |
+|--------|---------------|
+| Version 1 | TransportKlok creates the registrations in one go from the trips and stops. If a trip overlaps an existing registration, it skips that trip. |
+| Version 2 | TransportKlok updates the registrations as soon as new GPS data comes in, and leaves approved or changed registrations alone. |
+
+## Limitations
+
+- Automatic hour registration works for an organization with exactly one team. If your organization has more teams, you see "Automatic hour registration requires an organization with exactly one team" when you turn it on.
+- A worker must be linked in TransportKlok to the vehicle and to the GPS data. Without that link, no registrations are created.
+- If a registration does not fit, for example because it overlaps an existing registration or falls outside the contract, TransportKlok does not create that registration. <Hint kind="yellow">Then check that day's registrations yourself under Time registration.</Hint>

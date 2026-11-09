@@ -1,0 +1,54 @@
+---
+title: "Routes"
+description: "Manage delivery routes and have the route, stops and parcels registered per trip."
+---
+{/* translated-from: nl/settings/team/configuration/parcel-delivery.mdx sha256:73fc7969abcbbbaa193b36f176555e73929f4e97c03342d1e35da52790953f3c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+With the **Routes** feature, your drivers register for a trip which delivery route they drove, how many stops they made and how many parcels they delivered.
+
+## Who can use this
+
+- An administrator of the organization, or the owner or administrator of the team.
+
+## How to use this page
+
+Turn on the feature:
+
+1. Open **Settings**, choose the team, choose **Configuration and features** and open the **Features** tab.
+2. Activate the **Routes** feature. See [Features](/en/settings/team/configuration/features).
+3. Open **Attributes** for the team and turn on **Route**, **Number of stops** and **Number of parcels** for the registrations where you want to ask for them. See [Attributes](/en/settings/team/attributes).
+
+Manage routes:
+
+1. For the team, in the menu under **Features**, choose **Routes**. You see **Delivery routes**.
+2. At the top right, click `+`, fill in the **Name** and click **Create**.
+3. Click **Edit** to change a name and then **Save**, or **Delete** to delete a route.
+4. With **Trash** you see deleted routes. Click **Restore** to put a route back.
+
+## Fields
+
+| Field | What you fill in |
+|------|--------------|
+| **Name** (required) | The name of the route. Each name occurs once in a team. |
+
+For a registration:
+
+| Attribute | What the driver fills in |
+|---------|-------------------------|
+| **Route** | The delivery route they drove, from the team's routes. |
+| **Number of stops** | How many stops they made. |
+| **Number of parcels** | How many parcels they delivered. |
+
+## What happens next
+
+- The routes are in the **Route** selection list for a registration, on the web and in the app.
+- With the **Routes** filter under [Time registration](/en/management/hour-management/time-registrations/overview), you see the registrations of one route.
+
+## Limitations
+
+- You cannot reuse a route name that is already in the trash. You then see "A route with this name is already in the trash." Restore that route instead of creating a new one.
+- The attributes are not on automatically. <Hint kind="grey">Turn them on per team under Attributes.</Hint>

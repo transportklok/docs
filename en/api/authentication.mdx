@@ -1,0 +1,37 @@
+---
+title: "API authentication"
+description: "Send a request to the API with an access token."
+---
+{/* translated-from: nl/api/authentication.mdx sha256:f62f7ff6e730b597dbf3fc9718b9988ff12485a544234e3dcf2e9b9248f5d5e5 */}
+
+## The access token
+
+Every request to the API sends an OAuth access token in the `Authorization` header:
+
+```http
+GET /rest/v1/organizations HTTP/1.1
+Host: api.transportklok.nl
+Authorization: Bearer <toegangstoken>
+Accept: application/json
+```
+
+How to get a token is described under [OAuth](/en/api/oauth).
+
+## What a token may do
+
+- A token belongs to the user who gave your app access. The API only shows what that user may see.
+- A token only applies to the organizations the user chose when granting access.
+- A token only applies to the permissions (scopes) your app requested and the user allowed. A scope has the form `<onderdeel>:<actie>`.
+- The user's email address must be confirmed.
+
+## When it does not work
+
+| Status | Meaning |
+|--------|-----------|
+| `401` | No valid token was sent, or the token has expired. Use the refresh token to request a new token. |
+| `403` | The token lacks the scope for this request. |
+| `429` | You are making too many requests. See [Rate limits](/en/api/rate-limits). |
+
+## Revoking access
+
+A user revokes your app's access under **Settings** → **Apps** in TransportKlok. The token stops working after that.

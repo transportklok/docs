@@ -1,0 +1,46 @@
+---
+title: "Edit pay component"
+description: "Change or delete an addition or deduction."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/edit.mdx sha256:d15619b70eec11ef0a8c0a5ede5a7be64a6873aceea328fc58644fce4df425c9 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+Here you change a pay component, or delete it.
+
+## Who can use this
+
+- An administrator with full rights in the organization.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+Change a pay component:
+
+1. Open **HR** → **Payroll administration** → **Additions & Deductions**.
+2. Click **Edit** in the pay component's row.
+3. Change the fields.
+4. Click **Save changes**.
+
+Delete a pay component:
+
+1. Click **Delete** in the pay component's row.
+2. In the **Delete pay component** window, check the pay component and the worker.
+3. Click **Delete**.
+
+## Fields
+
+The **Edit pay component** form has the same fields as the create form, already filled in with the current values: **Worker**, **Payroll period**, **Type**, **Pay component** and **Value**. See [Create pay component](/en/management/human-resources/payroll-components/create).
+
+## What happens next
+
+- After **Save changes**, the changed pay component is in the overview.
+- After **Delete**, the pay component disappears from the overview right away. <Hint kind="red">You cannot restore a deleted pay component.</Hint>
+- The period's payroll run includes the change. If that run is a draft or locked, it is recalculated.
+- If the run has already been processed, it is checked again for corrections. If a difference remains with what was already processed, it gets the status **Corrected**. If the difference disappears, it goes back to **Processed**. See [Corrections on a payroll run](/en/management/human-resources/payroll-runs/corrections).
+
+## Limitations
+
+- Even for a processed payroll run, you can still change or delete a pay component. The change then comes as a correction in a following processing.

@@ -1,0 +1,46 @@
+---
+title: "Eksporty naliczenia płac"
+description: "Eksporty, które pobiera się dla każdego naliczenia płac."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/exports.mdx sha256:7c34913eee6c340598d36b4c141dfdd0b047fe8fad28bf598f0a28cda4baf531 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj widać, jakie pliki pobiera się dla każdego naliczenia płac i kiedy każdy plik jest gotowy.
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **HR** → **Administracja płac** → **Naliczenia płac**.
+2. W wierszu naliczenia kliknąć **Pobierz**.
+3. Wybrać eksport.
+4. Poczekać, aż w oknie pojawi się **Zakończono**. Plik zostanie wtedy pobrany.
+5. Kliknąć **Zamknij**.
+
+## Pola
+
+Eksport nie zadaje pytań. **Pobierz** pokazuje tylko eksporty, które są gotowe dla naliczenia:
+
+| Eksport | Kiedy | Plik |
+|--------|---------|---------|
+| **Eksport naliczenia płac** | Przy przetworzonym naliczeniu. | Plik Excel z tym, co naliczenie przetworzyło, taki jak `Salarisronde van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Eksport korekty płac** | Przy skorygowanym naliczeniu. | Plik Excel tylko z różnicą względem tego, co już przetworzono, taki jak `Salariscorrectie van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Zestawienie wynagrodzeń (Beta, PDF)** | Gdy zestawienia wynagrodzeń naliczenia są gotowe. | Plik zip z plikiem PDF dla każdego pracownika, taki jak `Loonoverzicht (Beta) 2026-08.zip`. <Hint kind="grey">Zestawienie wynagrodzeń w PDF jest nadal wersją beta.</Hint> |
+
+## Co dzieje się potem
+
+- Plik jest pobierany, gdy tylko eksport będzie gotowy. Za pomocą **Minimalizuj** można pracować dalej w trakcie tworzenia eksportu.
+- Przy przetwarzaniu naliczenia administratorzy, którzy mają włączone powiadomienie **Kopia eksportów po przetworzeniu naliczenia płac**, otrzymują kopię e-mailem.
+
+## Ograniczenia
+
+- Jeśli korekta naliczenia została przeniesiona do nowszego naliczenia, **Eksport korekty płac** nie jest już dostępny przy starszym naliczeniu.
+- Dopóki trwa zadanie naliczenia, eksportu nie można jeszcze pobrać. Należy spróbować ponownie, gdy naliczenie będzie gotowe.
+- To, co znajduje się w eksporcie, wynika z obliczeń naliczenia. <Hint kind="yellow">Zależy to od układu zbiorowego (CAO) lub ustawienia umowy: jakie składniki wynagrodzenia otrzymuje pracownik, wynika z CAO i z umowy pracownika.</Hint>
+- Potrzebne są godziny z dowolnego okresu, niezależnie od naliczenia płac? Należy wtedy użyć [Eksport zmiennych składników płac](/pl/management/hour-management/time-registrations/payroll-mutation-export).

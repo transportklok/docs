@@ -1,0 +1,58 @@
+---
+title: "Qargo"
+description: "Połączenie z Qargo i przejmowanie klientów z Qargo jako zleceniodawców."
+---
+{/* translated-from: nl/management/customer-management/integrations/qargo.mdx sha256:4387ab77afd7c9a116a23b0e1a7511989cda383eb413d48add04eef7a52eb409 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Dzięki integracji z Qargo TransportKlok przejmuje klientów z Qargo jako zleceniodawców, z ich adresem do faktury jako lokalizacją.
+
+## Zrzut ekranu
+
+![Utworzenie konta dla Qargo](/images/pl/captures/instellingen-integraties-qargo-account.png)
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie klientami**.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **Ustawienia** → **Ustawienia organizacji** → **Integracje** i wybrać kartę **Konta**.
+2. Kliknąć **Utwórz konto** i w polu **Integracja** wybrać **Qargo**.
+3. W polu **Nazwa** wpisać nazwę, a następnie **Identyfikator klienta** i **Sekret klienta** użytkownika API w Qargo i kliknąć **Utwórz konto**.
+4. Otworzyć kartę **Integracje**, kliknąć **Dodaj integrację** i przy **Qargo** kliknąć **Połącz**.
+5. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Nazwa** (wymagane) | Nazwa konta w przeglądzie. |
+| **Identyfikator klienta** (wymagane) | Identyfikator klienta użytkownika API w Qargo. |
+| **Sekret klienta** (wymagane) | Sekret przypisany do tego identyfikatora klienta. |
+
+<Hint kind="yellow">Użytkownik API w Qargo potrzebuje roli `API_MASTER_DATA` lub `API_ACCOUNTING`, aby móc odczytywać firmy. Bez tej roli TransportKlok odrzuca konto.</Hint>
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja klientów** | codziennie o 03:00 |
+
+- Za pomocą **Synchronizuj** na karcie **Zachowanie synchronizacji** klientów pobiera się od razu. Zob. [Zachowanie synchronizacji](/pl/settings/organization/integrations/capabilities).
+- Każdy klient w Qargo staje się zleceniodawcą w TransportKlok, z nazwą w polu **Nazwa**, kodem klienta jako **Referencja** i notatką jako **Notatki**. Zob. [Zleceniodawcy](/pl/management/customer-management/customers/overview).
+- Adres do faktury klienta staje się lokalizacją typu **Klient** przy tym zleceniodawcy.
+- Za pierwszym razem integracja pobiera wszystkich klientów. Potem tylko tych, którzy zostali zmienieni w Qargo.
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z Qargo. Niczego tam nie odsyła.
+- Firm w Qargo, które nie są klientami lub są zarchiwizowane, integracja nie przejmuje.
+- Jeśli w TransportKlok zmieni się nazwę, numer referencyjny lub notatki przejętego zleceniodawcy, zmiana pozostaje. <Hint kind="grey">Pole, którego nie zmieniono, przy następnej synchronizacji podąża za Qargo.</Hint>
+- Jeśli adres do faktury w Qargo nie ma współrzędnych, zleceniodawca zostaje przejęty, ale bez lokalizacji.
+- Zleceniodawca lub lokalizacja usunięte w TransportKlok nie wracają. <Hint kind="red">Integracja nie tworzy ponownie usuniętego zleceniodawcy.</Hint>
+- Integracja jest w wersji beta. Qargo jest widoczne tylko wtedy, gdy organizacja uczestniczy w programie beta.

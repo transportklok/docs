@@ -1,0 +1,39 @@
+---
+title: "Aplikacje"
+description: "Zewnętrzne aplikacje, które mają dostęp do konta."
+---
+{/* translated-from: nl/settings/user/apps.mdx sha256:b787a341ea84d2fa6cbbafd8748289c6b39d85122cc9228dc803ebc4f40bd57d */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj widać, które zewnętrzne aplikacje mają przez OAuth dostęp do konta, i cofa się ten dostęp.
+
+## Kto może z tego korzystać
+
+- Każdy użytkownik, dla własnego konta.
+
+## Jak korzystać z tej strony
+
+1. Kliknąć inicjały w prawym górnym rogu i wybrać **Ustawienia** → **Aplikacje**.
+2. Dla każdej aplikacji sprawdzić, kiedy udzielono dostępu, dla której organizacji, z jakimi uprawnieniami i kiedy aplikacja ostatnio coś zrobiła.
+3. Kliknąć **Odłącz**, aby cofnąć dostęp aplikacji, i potwierdzić.
+4. Za pomocą **Marketplace** widać, jakie aplikacje są dostępne dla organizacji.
+
+## Pola
+
+| Co widać | Znaczenie |
+|------------|-----------|
+| `Geautoriseerd op` | Kiedy udzielono aplikacji dostępu. |
+| **Organizacja** | Dla której organizacji aplikacja ma dostęp. |
+| **Uprawnienia** | Co może robić aplikacja. |
+| `Laatst gebruikt op` | Kiedy aplikacja ostatnio coś zrobiła, albo **Jeszcze nie używano**. |
+
+## Co dzieje się potem
+
+- Po **Odłącz** aplikacja nie ma już dostępu. <Hint kind="red">Aby znów korzystać z aplikacji, należy ponownie udzielić zgody z poziomu tej aplikacji.</Hint>
+
+## Ograniczenia
+
+- Jeśli nie ma jeszcze żadnej aplikacji, widać komunikat „Nie udzielono jeszcze żadnym aplikacjom dostępu OAuth."

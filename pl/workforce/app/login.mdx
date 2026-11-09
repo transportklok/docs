@@ -1,0 +1,57 @@
+---
+title: "Logowanie w aplikacji"
+description: "Logowanie w aplikacji TransportKlok, z hasłem, uwierzytelnianiem dwuskładnikowym i Face ID lub odciskiem palca."
+---
+{/* translated-from: nl/workforce/app/login.mdx sha256:f872462220821e6db2e363ef810da1a8dec376bf94e20b3e450d2b0d24cd21ce */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj opisano, jak zalogować się w aplikacji TransportKlok na telefonie i jak aplikacja później używa twarzy lub odcisku palca.
+
+## Zrzut ekranu
+
+<img src="/images/pl/captures/app-inloggen.png" alt="Logowanie w aplikacji" width="320" />
+
+## Kto może z tego korzystać
+
+- Każdy pracownik, który ma konto TransportKlok. Jeśli konta jeszcze nie ma, najpierw należy przyjąć zaproszenie od pracodawcy. Zob. [Przyjęcie zaproszenia](/pl/sign-in/accept-invitation).
+
+## Jak korzystać z tej strony
+
+Logowanie:
+
+1. Otworzyć aplikację TransportKlok. Widoczne jest **Witamy z powrotem**.
+2. Wpisać **E-mail** i **Hasło** i stuknąć **Zaloguj się**.
+3. Jeśli w telefonie skonfigurowano Face ID, Touch ID lub odcisk palca, telefon poprosi teraz o to. Należy spojrzeć na telefon lub przyłożyć palec do czujnika.
+4. Jeśli uwierzytelnianie dwuskładnikowe jest włączone, wpisać kod z aplikacji uwierzytelniającej i stuknąć **Zaloguj się**. Jeśli aplikacji nie ma pod ręką, stuknąć `Use a recovery code` i wpisać kod odzyskiwania.
+
+Nie pamiętam hasła:
+
+1. Stuknąć **Nie pamiętasz hasła?**.
+2. Wpisać adres e-mail i stuknąć **Wyślij link do resetowania hasła**.
+3. Otworzyć e-mail i ustawić nowe hasło. Następnie stuknąć w aplikacji **Powrót do logowania**.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **E-mail** | Adres e-mail konta TransportKlok. |
+| **Hasło** | Hasło. |
+
+## Co dzieje się potem
+
+- Po zalogowaniu aplikacja raz pyta, czy mają być powiadomienia push. Zob. [Powiadomienia push](/pl/workforce/app/push-notifications). Potem widoczna jest **Strona główna**. Zob. [Strona główna](/pl/workforce/app/home).
+- Jeśli używane jest Face ID lub odcisk palca, aplikacja prosi o to także przy późniejszym otwarciu aplikacji i przy odnowieniu sesji. Nie trzeba wtedy ponownie wpisywać hasła.
+
+<img src="/images/pl/captures/app-opstarten-face-id.png" alt="Face ID przy otwieraniu aplikacji" width="320" />
+
+- Jeśli pojawi się **Szybsze i bezpieczniejsze logowanie**, stuknąć `Gezichts-ID inschakelen` (lub nazwę odcisku palca), aby to włączyć, albo **Pomiń**.
+- Jeśli adres e-mail nie został jeszcze potwierdzony, aplikacja o to poprosi. Kliknąć link w e-mailu i stuknąć **Odśwież** albo stuknąć **Wyślij ponownie e-mail weryfikacyjny**.
+
+## Ograniczenia
+
+- Po kilku błędnych próbach widoczny jest komunikat „Zbyt wiele prób logowania. Proszę poczekać 1 minutę."
+- Jeśli przy otwieraniu pojawi się `Sessie niet hersteld`, stuknąć `Opnieuw inloggen` i zalogować się adresem e-mail i hasłem.
+- Jeśli nie skonfigurowano Face ID, Touch ID ani odcisku palca, loguje się tylko hasłem. <Hint kind="grey">Jeśli później włączy się w telefonie Face ID lub odcisk palca, aplikacja zacznie z nich korzystać od następnego logowania.</Hint>

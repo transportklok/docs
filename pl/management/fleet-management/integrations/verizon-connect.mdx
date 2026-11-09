@@ -1,0 +1,40 @@
+---
+title: "Verizon Connect"
+description: "Połączenie z Verizon Connect i dane pobierane z Verizon Connect."
+---
+{/* translated-from: nl/management/fleet-management/integrations/verizon-connect.mdx sha256:5b3286653e85ce7fd5a955115e4ff623b340bf85b92ceb793ee1346c4f304421 */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z Verizon Connect TransportKlok pobiera z Verizon Connect pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **Verizon Connect** z **Nazwa użytkownika** i **Hasło** do konta Verizon Connect.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Verizon Connect** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+
+## Pola
+
+Po połączeniu integracja nie wymaga żadnych ustawień.
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co noc |
+| **Synchronizacja kierowców** | co kwadrans |
+| **Odbiór telemetrii** | co kwadrans |
+
+- Pojazdy są łączone według numeru rejestracyjnego.
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+- Verizon Connect nie pobiera przypisań pojazdów.
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z Verizon Connect. Niczego tam nie odsyła.

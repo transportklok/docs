@@ -1,0 +1,37 @@
+---
+title: "Loket.nl"
+description: "Połączenie z Loket.nl i dane wysyłane do Loket.nl."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/loket.mdx sha256:ab567f41e96acb8c3f5becc051406cdacb8da1cdeba0912d4ca1ee377b01ce1c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Dzięki integracji z Loket.nl wysyła się pracowników, umowy i przetworzone naliczenia płac do Loket.nl.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji, z kontem Loket.nl mającym dostęp do pracodawcy.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Utworzyć konto dla **Loket.nl** i zalogować się w Loket.nl. Zob. [Konta](/pl/settings/organization/integrations/accounts).
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Loket.nl** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Na **Zachowanie synchronizacji** włączyć przełączniki dla tego, co ma być wysyłane, na przykład **Wysyłanie naliczeń płac**, i zapisać.
+
+## Pola
+
+Poza polami **Konto** i **Nazwa** integracja nie wymaga żadnych ustawień. Pracodawca wynika z konta, którym się logowano.
+
+## Co dzieje się potem
+
+- Gdy zostanie utworzony lub zmieniony pracownik albo umowa, TransportKlok wysyła te dane do Loket.nl.
+- Przy **Wyślij** naliczenia płac TransportKlok wysyła dla każdego pracownika godziny i składniki wynagrodzenia z tego okresu do Loket.nl. Istniejące dane za ten okres zostają nadpisane.
+
+## Ograniczenia
+
+- Wysyłane są tylko składniki wynagrodzenia z kodem Loket.nl. <Hint kind="yellow">To, jakie kody są ustawione, zależy od konfiguracji integracji dla organizacji. Po pierwszej wysyłce należy sprawdzić w Loket.nl, czy godziny i składniki wynagrodzenia tam są.</Hint>
+- Integracja niczego nie pobiera z Loket.nl.

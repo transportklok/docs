@@ -1,0 +1,39 @@
+---
+title: "Logowanie z uwierzytelnianiem dwuskładnikowym"
+description: "Wpisanie kodu z aplikacji uwierzytelniającej lub kodu odzyskiwania podczas logowania."
+---
+{/* translated-from: nl/sign-in/two-factor.mdx sha256:7215fd3ab5d58174c4cfe84dcc426b9a43a8c9bf797aee946fa3ce8033ae33a6 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Jeśli dla konta włączone jest uwierzytelnianie dwuskładnikowe, TransportKlok prosi po haśle także o kod. Tutaj opisano, jak to działa.
+
+## Kto może z tego korzystać
+
+- Każdy, kto włączył uwierzytelnianie dwuskładnikowe. Zob. [Uwierzytelnianie dwuskładnikowe](/pl/settings/user/authentication-and-security/two-factor-authentication).
+
+## Jak korzystać z tej strony
+
+1. Zalogować się adresem e-mail i hasłem.
+2. Na ekranie **Uwierzytelnianie dwuskładnikowe** otworzyć aplikację uwierzytelniającą na telefonie.
+3. Wpisać **Kod** z aplikacji i kliknąć **Zaloguj się**.
+4. Jeśli telefonu nie ma pod ręką, kliknąć **Użyj kodu odzyskiwania** i wpisać jeden z kodów odzyskiwania.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Kod** | 6-cyfrowy kod z aplikacji uwierzytelniającej. |
+| **Kod odzyskiwania** | Jeden z kodów odzyskiwania zachowanych podczas włączania. |
+
+## Co dzieje się potem
+
+- Po wpisaniu poprawnego kodu następuje przejście do TransportKlok.
+- Za pomocą **Użyj kodu uwierzytelniającego** wraca się od kodu odzyskiwania do kodu z aplikacji.
+
+## Ograniczenia
+
+- Każdy kod odzyskiwania działa jeden raz. <Hint kind="red">Jeśli utracono telefon i kody odzyskiwania, nie można już wejść na konto. Nowe kody odzyskiwania należy utworzyć w porę w [Uwierzytelnianie dwuskładnikowe](/pl/settings/user/authentication-and-security/two-factor-authentication).</Hint>
+- Po kilku błędnych próbach trzeba chwilę poczekać, zanim spróbuje się ponownie.

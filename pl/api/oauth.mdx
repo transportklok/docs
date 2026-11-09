@@ -1,0 +1,63 @@
+---
+title: "OAuth"
+description: "Pobieranie tokenu dostępu za pomocą OAuth 2.0."
+---
+{/* translated-from: nl/api/oauth.mdx sha256:58584c13525b95f4ff283de6f52e7029addf210b3d67ebe8dffbae2496197b49 */}
+
+## Jak to działa
+
+TransportKlok korzysta z OAuth 2.0 z przepływem authorization code. Aplikacja kieruje użytkownika do TransportKlok. Tam użytkownik loguje się, wybiera organizacje i wyraża zgodę. Następnie aplikacja wymienia kod na token dostępu i token odświeżania.
+
+## Zamawianie klienta
+
+Klienta OAuth zamawia się w TransportKlok pod adresem [info@transportklok.nl](mailto:info@transportklok.nl). Należy podać:
+
+- nazwę, opis, logo i stronę internetową aplikacji;
+- adresy przekierowania, pod które TransportKlok kieruje użytkownika po udzieleniu zgody;
+- zakresy (scopes), których aplikacja potrzebuje;
+- czy aplikacja jest przeznaczona dla administratorów, czy dla pracowników.
+
+Otrzymuje się identyfikator klienta oraz, w przypadku aplikacji z własnym serwerem, sekret klienta.
+
+## Kroki
+
+1. Należy skierować użytkownika pod adres autoryzacji:
+
+   ```text
+   https://app.transportklok.nl/oauth/authorize
+     ?client_id=<client-id>
+     &redirect_uri=<redirect-url>
+     &response_type=code
+     &scope=<scopes, met spaties ertussen>
+     &state=<willekeurige waarde>
+   ```
+
+2. Użytkownik widzi **Autoryzuj aplikację**, w polu **Dozwolone organizacje** wybiera organizacje i klika **Zezwól**.
+3. TransportKlok odsyła użytkownika pod adres przekierowania z parametrami `code` i `state`. Należy sprawdzić, czy `state` jest taki sam jak przesłany.
+4. Kod wymienia się na token:
+
+   ```http
+   POST /oauth/token HTTP/1.1
+   Host: app.transportklok.nl
+   Content-Type: application/x-www-form-urlencoded
+
+   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>
+   ```
+
+5. Odpowiedź zawiera `access_token`, `refresh_token`, `token_type` i `expires_in` (w sekundach).
+
+## Pobieranie nowego tokenu
+
+Gdy token dostępu wygaśnie, nowy pobiera się za pomocą tokenu odświeżania:
+
+```http
+POST /oauth/token HTTP/1.1
+Host: app.transportklok.nl
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&client_id=<client-id>&client_secret=<client-secret>&refresh_token=<refresh-token>
+```
+
+## Co widzi użytkownik
+
+Podczas udzielania zgody użytkownik widzi, która aplikacja prosi o dostęp, z jakim kontem i z jakimi uprawnieniami. Dostęp użytkownik cofa w TransportKlok w sekcji **Ustawienia** → **Aplikacje**.

@@ -1,0 +1,45 @@
+---
+title: "Linqo"
+description: "Połączenie z Linqo i dane pobierane z Linqo."
+---
+{/* translated-from: nl/management/fleet-management/integrations/linqo.mdx sha256:f0cb03281ca4eb5d3e7f9b8aad22013b1682922124938245d6b0dcd92ab0c66b */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z Linqo TransportKlok pobiera z Linqo pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **Linqo** z **Token** z Linqo.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Linqo** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Wypełnić ustawienia i kliknąć **Zapisz ustawienia**.
+
+## Pola
+
+Na stronie ustawień należy wpisać:
+
+| Ustawienie | Co należy wpisać |
+|------------|--------------|
+| **Powiąż kod tachografu z Linqo z kierowcami** | Włączyć, jeśli kody tachografu w Linqo są takie same jak kody tachografu pracowników. |
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co kwadrans |
+| **Synchronizacja kierowców** | co kwadrans |
+| **Synchronizacja przypisań pojazdów** | co kwadrans |
+| **Odbiór telemetrii** | co kwadrans |
+
+- Pojazdy są łączone według numeru nadwozia (VIN). Kierowcy są łączeni według kodu tachografu.
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z Linqo. Niczego tam nie odsyła.

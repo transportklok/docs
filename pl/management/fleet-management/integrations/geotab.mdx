@@ -1,0 +1,40 @@
+---
+title: "Geotab"
+description: "Połączenie z Geotab i dane pobierane z Geotab."
+---
+{/* translated-from: nl/management/fleet-management/integrations/geotab.mdx sha256:1cfb4f922a34a9bce3a4133fd17a5c698fdd2e9d1f710eb1693bb1dfab11d081 */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z Geotab TransportKlok pobiera z Geotab pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **Geotab** z **Token** z Geotab.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Geotab** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+
+## Pola
+
+Po połączeniu integracja nie wymaga żadnych ustawień.
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co noc |
+| **Synchronizacja kierowców** | co noc |
+| **Synchronizacja przypisań pojazdów** | co kwadrans |
+| **Odbiór telemetrii** | co kwadrans |
+
+- Pojazdy są łączone według numeru rejestracyjnego. Aktywny pojazd ma pierwszeństwo przed usuniętym.
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z Geotab. Niczego tam nie odsyła.

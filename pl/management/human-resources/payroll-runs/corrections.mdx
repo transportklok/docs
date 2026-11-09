@@ -1,0 +1,56 @@
+---
+title: "Korekty naliczenia płac"
+description: "Znajdowanie korekt w przetworzonym naliczeniu płac i przenoszenie ich do nowszego naliczenia."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/corrections.mdx sha256:56f0c4b827cbacc5e417c11b0fe9ccb41781d592f78168243c0063f7505a882a */}
+
+## Do czego służy ta strona
+
+Tutaj opisano, jak sprawdzić, czy przetworzone naliczenie płac nadal się zgadza, i jak nowsze naliczenie przenosi korekty starszych naliczeń.
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+Znalezienie korekty:
+
+1. Otworzyć **HR** → **Administracja płac** → **Naliczenia płac**.
+2. W wierszu przetworzonego naliczenia wybrać **Opcje** → **Analizuj pod kątem korekt**.
+3. Poczekać na zakończenie analizy.
+
+Przeniesienie korekty do nowszego naliczenia:
+
+1. Przy nowszym, zablokowanym naliczeniu kliknąć **Zakończ**.
+2. Okno **Przenieś korekty** pokazuje starsze naliczenia z korektą, która nie została jeszcze wypłacona.
+3. Zaznaczyć naliczenia, których korektę przenosi to naliczenie, i kliknąć **Dalej**.
+4. W oknie **Potwierdź przeniesienie** sprawdzić wybrane naliczenia.
+5. Kliknąć **Przenieś i przetwórz**.
+
+Jeśli nic nie zostanie zaznaczone, naliczenie jest przetwarzane jak zwykle.
+
+## Pola
+
+Okno **Przenieś korekty** pokazuje dla każdego starszego naliczenia:
+
+| Kolumna | Znaczenie |
+|-------|-----------|
+| **Naliczenie płac** | Numer starszego naliczenia. |
+| **Okres** | Okres płacowy tego naliczenia. |
+| **Korekta** | Ilu pracowników w tym naliczeniu skorygowano, na przykład „skorygowano 1 pracownika". |
+
+## Co dzieje się potem
+
+- Jeśli analiza znajdzie różnicę względem przetworzonej wersji, naliczenie otrzymuje status **Skorygowane**. To, czy jest różnica, zależy od rejestracji i obliczeń. Zależy to od układu zbiorowego (CAO) lub ustawienia umowy: obliczenia wynikają z CAO i umowy każdego pracownika.
+- Skorygowane naliczenie kończy się ponownie przyciskiem **Zakończ** albo pozwala się nowszemu naliczeniu przenieść korektę.
+- Po przeniesieniu starsze naliczenie znów otrzymuje status **Przetworzono**, z `Verrekend in salarisronde` i numerem nowszego naliczenia. Ten tekst jest linkiem do nowszego naliczenia.
+- Przy nowszym naliczeniu widnieje `Neemt correcties van 1 salarisronde mee`.
+- Otworzyć szczegóły nowszego naliczenia i rozwinąć wiersz pracownika. W sekcji **Kontrola paska wynagrodzenia** widać **Własny wynik**, `Correctie salarisronde` starszego naliczenia i **Suma na pasku wynagrodzenia**.
+
+## Ograniczenia
+
+- Przeniesienie jest ostateczne i nie można go cofnąć.
+- Korekty nie tworzy się ręcznie. System wyprowadza ją z bieżących obliczeń; w tym celu zmienia się rejestracje lub ustawienia i analizuje ponownie.
+- Przetworzonego, skorygowanego ani rozliczonego naliczenia nie można usunąć. Nadal można je przeglądać.

@@ -1,0 +1,49 @@
+---
+title: "Konta"
+description: "Konta, za pomocą których TransportKlok loguje się do pakietu płacowego lub systemu telematycznego."
+---
+{/* translated-from: nl/settings/organization/integrations/accounts.mdx sha256:4a2b5c1c0091d7c59db51f3f4859a164dfd37949500bc40814feea469902f2d2 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Na karcie **Konta** zapisuje się, jak TransportKlok loguje się do pakietu płacowego lub systemu telematycznego. Integracja w sekcji [Integracje](/pl/settings/organization/integrations/instances) korzysta z takiego konta.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **Ustawienia** → **Ustawienia organizacji** → **Integracje** i wybrać kartę **Konta**.
+2. Kliknąć **Utwórz konto**.
+3. W polu **Integracja** wybrać system i wpisać **Nazwa**.
+4. Wpisać dane logowania, o które prosi system, i kliknąć **Utwórz konto**.
+5. W przypadku pakietu płacowego przechodzi się na stronę logowania tego pakietu. Tam należy się zalogować i wyrazić zgodę.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Integracja** | Pakiet płacowy lub system telematyczny. |
+| **Nazwa** | Nazwa, po której rozpoznaje się konto. |
+| Dane logowania | To, o co prosi system. |
+
+Dane logowania dla poszczególnych systemów telematycznych:
+
+| System | Logowanie za pomocą |
+|---------|--------------|
+| Webfleet, FleetGo, Verizon Connect | **Nazwa użytkownika** i **Hasło** |
+| Samsara, Geotab, Linqo | **Token** |
+| CO3 | **Identyfikator klienta** i **Sekret klienta** |
+
+Pakiet płacowy nie prosi tutaj o dane logowania: loguje się na stronie logowania pakietu.
+
+## Co dzieje się potem
+
+- Konto ma status **Połączono**. Następnie wybiera się je przy integracji.
+
+## Ograniczenia
+
+- **Odłącz konto** usuwa także wszystkie integracje korzystające z tego konta. <Hint kind="red">Po odłączeniu TransportKlok niczego już nie pobiera ani nie wysyła przez te integracje.</Hint>

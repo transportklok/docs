@@ -1,0 +1,53 @@
+---
+title: "Nmbrs"
+description: "Połączenie z Nmbrs, co jest wysyłane i pobierane oraz co widać, gdy coś pójdzie nie tak."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/nmbrs.mdx sha256:7a8a42a026df04516a531f2e502d6ba211349696a8050f78b22b445203d90354 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Dzięki integracji z Nmbrs wysyła się przetworzone naliczenia płac do Nmbrs i pobiera z Nmbrs pracowników, umowy i urlopy.
+
+## Zrzut ekranu
+
+![Połączenie z Nmbrs](/images/pl/captures/instellingen-integraties-nmbrs-koppelen.png)
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji, z kontem Nmbrs mającym dostęp do pracodawcy.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Utworzyć konto dla **Nmbrs** i zalogować się w Nmbrs. Zob. [Konta](/pl/settings/organization/integrations/accounts).
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Nmbrs** kliknąć **Połącz**.
+3. Wybrać **Konto**.
+4. Wybrać **Pracodawca** z listy Nmbrs.
+5. W polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+6. Wypełnić ustawienia i kliknąć **Zapisz ustawienia**.
+7. Na **Zachowanie synchronizacji** włączyć przełącznik przy **Wysyłanie naliczeń płac** i zapisać.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Pracodawca** (wymagane) | Firma w Nmbrs. Pracodawcy, który jest już powiązany, nie można wybrać ponownie. |
+| **Automatycznie dodawaj pracowników** | Jeśli wyłączone, TransportKlok łączy tylko pracowników o tym samym numerze pracownika i tym samym nazwisku. |
+| **Powiązania kodów płacowych** | Który kod płacowy Nmbrs odpowiada któremu rodzajowi godzin i dodatku. <Hint kind="yellow">Zależy to od konfiguracji firmy w Nmbrs. Kody należy uzgodnić z osobą prowadzącą administrację płac.</Hint> |
+| **Pracownicy Nmbrs do importu płac** | Pracownicy Nmbrs, którzy biorą udział, oddzieleni przecinkami lub wierszami. Jeśli pole pozostanie puste, biorą udział wszyscy powiązani pracownicy. |
+| **Powiązania grup urlopowych Nmbrs** | Która grupa urlopowa w Nmbrs odpowiada któremu rodzajowi urlopu. |
+
+## Co dzieje się potem
+
+- Przy **Wyślij** naliczenia płac TransportKlok zapisuje w Nmbrs dla każdego pracownika godziny i składniki wynagrodzenia z tego okresu oraz dołącza zestawienie wynagrodzeń w pliku PDF. Przeniesione korekty są dołączane.
+- Dane, które TransportKlok wcześniej zapisał w Nmbrs za ten okres, są aktualizowane lub usuwane, tak aby Nmbrs miało ostatnią przetworzoną wersję.
+- Co noc TransportKlok pobiera z Nmbrs pracowników, umowy i urlopy.
+- W **Zachowanie synchronizacji** → **Uruchomienia** widać dla każdej wysyłki, czy zakończyła się statusem **Sukces**, czy **Nieudane**.
+
+## Ograniczenia
+
+- Firma w Nmbrs musi pracować z okresami miesięcznymi. <Hint kind="yellow">Zależy to od konfiguracji firmy w Nmbrs.</Hint>
+- Pracowników, którzy nie są powiązani z wybranym pracodawcą w Nmbrs, wysyłka pomija.
+- Wysyłka kończy się niepowodzeniem m.in. wtedy, gdy dostęp do Nmbrs wygasł, gdy nie wybrano pracodawcy, gdy składnik wynagrodzenia nie ma kodu Nmbrs albo gdy dany okres w Nmbrs zawiera już dane z innego naliczenia lub integracji.

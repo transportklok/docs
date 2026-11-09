@@ -1,0 +1,48 @@
+---
+title: "FleetGo"
+description: "Połączenie z FleetGo i dane pobierane z FleetGo."
+---
+{/* translated-from: nl/management/fleet-management/integrations/fleetgo.mdx sha256:b31ffd788ac9d58f6964b5211b5ca5ed3959bd84802e34da00ac8a470ffc125b */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z FleetGo TransportKlok pobiera z FleetGo pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **FleetGo** z **Nazwa użytkownika** i **Hasło** do konta FleetGO.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **FleetGo** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Wypełnić ustawienia i kliknąć **Zapisz ustawienia**.
+
+## Pola
+
+Na stronie ustawień należy wpisać:
+
+| Ustawienie | Co należy wpisać |
+|------------|--------------|
+| **Powiąż numer pracownika z FleetGO z numerem ewidencyjnym** | Włączyć, jeśli numer pracownika w FleetGO jest taki sam jak jeden numer ewidencyjny w TransportKlok. |
+| **Powiąż numer pojazdu z FleetGO z numerem referencyjnym** | Włączyć, jeśli numer pojazdu w FleetGO jest taki sam jak numer referencyjny pojazdu w TransportKlok. |
+| **Identyfikator sygnału poziomu paliwa FleetGO** (wymagane) | Numer sygnału poziomu paliwa z listy sygnałów środowiska FleetGO. |
+| **Identyfikator sygnału stanu licznika FleetGO** (wymagane) | Numer sygnału stanu licznika z tej samej listy sygnałów. |
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co kwadrans |
+| **Synchronizacja kierowców** | co kwadrans |
+| **Synchronizacja przypisań pojazdów** | co kwadrans |
+| **Odbiór telemetrii** | co minutę |
+
+- Pojazdy są łączone według numeru pojazdu w FleetGO albo według numeru referencyjnego, jeśli ten przełącznik jest włączony.
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z FleetGo. Niczego tam nie odsyła.

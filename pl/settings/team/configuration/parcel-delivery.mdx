@@ -1,0 +1,54 @@
+---
+title: "Trasy"
+description: "Zarządzanie trasami dostaw i rejestrowanie dla każdego kursu trasy, przystanków i paczek."
+---
+{/* translated-from: nl/settings/team/configuration/parcel-delivery.mdx sha256:73fc7969abcbbbaa193b36f176555e73929f4e97c03342d1e35da52790953f3c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Dzięki funkcji **Trasy** kierowcy rejestrują przy kursie, którą trasę dostaw jechali, ile zrobili przystanków i ile paczek dostarczyli.
+
+## Kto może z tego korzystać
+
+- Administrator organizacji albo właściciel lub administrator zespołu.
+
+## Jak korzystać z tej strony
+
+Włączenie funkcji:
+
+1. Otworzyć **Ustawienia**, wybrać zespół, wybrać **Konfiguracja i funkcje** i otworzyć kartę **Funkcje**.
+2. Aktywować funkcję **Trasy**. Zob. [Funkcje](/pl/settings/team/configuration/features).
+3. Przy zespole otworzyć **Cechy** i włączyć **Trasa**, **Liczba przystanków** i **Liczba paczek** dla rejestracji, przy których mają być wymagane. Zob. [Cechy](/pl/settings/team/attributes).
+
+Zarządzanie trasami:
+
+1. Przy zespole w menu pod **Funkcje** wybrać **Trasy**. Widać **Trasy dostaw**.
+2. Kliknąć `+` w prawym górnym rogu, wpisać **Nazwa** i kliknąć **Utwórz**.
+3. Kliknąć **Edytuj**, aby zmienić nazwę, i **Zapisz**, albo **Usuń**, aby usunąć trasę.
+4. Za pomocą **Kosz** widać usunięte trasy. Kliknąć **Przywróć**, aby przywrócić trasę.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Nazwa** (wymagane) | Nazwa trasy. Każda nazwa występuje w zespole raz. |
+
+Przy rejestracji:
+
+| Cecha | Co wpisuje kierowca |
+|---------|-------------------------|
+| **Trasa** | Trasa dostaw, którą jechał, spośród tras zespołu. |
+| **Liczba przystanków** | Ile zrobił przystanków. |
+| **Liczba paczek** | Ile paczek dostarczył. |
+
+## Co dzieje się potem
+
+- Trasy znajdują się na liście wyboru **Trasa** przy rejestracji, w przeglądarce i w aplikacji.
+- Za pomocą filtra **Trasy** w [Rejestracja czasu pracy](/pl/management/hour-management/time-registrations/overview) widać rejestracje jednej trasy.
+
+## Ograniczenia
+
+- Nazwy trasy, która jest już w koszu, nie można użyć ponownie. Widać wtedy komunikat „W koszu znajduje się już trasa o tej nazwie." Zamiast tworzyć nową, należy przywrócić tę trasę.
+- Cechy nie są włączone automatycznie. <Hint kind="grey">Włącza się je dla każdego zespołu w Cechy.</Hint>

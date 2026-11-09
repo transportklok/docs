@@ -1,0 +1,42 @@
+---
+title: "Tworzenie naliczenia płac"
+description: "Utworzenie nowego naliczenia płac dla okresu płacowego."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/create.mdx sha256:8a5b905e0fa8211ecd339f490c4ac08d666d12d67e3bb18b83621f84225cb300 */}
+
+## Do czego służy ta strona
+
+Tutaj tworzy się naliczenie płac dla okresu płacowego. Naliczenie zaczyna jako wersja robocza, aby można je sprawdzić przed przetworzeniem.
+
+## Zrzut ekranu
+
+![Tworzenie naliczenia płac](/images/pl/captures/management-salarisrondes-aanmaken.png)
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **HR** → **Administracja płac** → **Naliczenia płac**.
+2. Kliknąć **Nowy okres**.
+3. Wybrać **Okres płacowy**.
+4. Kliknąć **Utwórz wersję roboczą**.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Okres płacowy** (wymagane) | Okres płacowy naliczenia, na przykład `Periode 2026-08`. Wybiera się spośród okresów, które nie mają jeszcze naliczenia. |
+
+## Co dzieje się potem
+
+- Następuje powrót do przeglądu. Nowe naliczenie jest od razu przeliczane i do tego czasu ma status **W trakcie**.
+- Potem naliczenie otrzymuje status **Wersja robocza**.
+- Następnie przechodzi się do blokowania i zakończenia. Zob. [Przetwarzanie naliczenia płac](/pl/management/human-resources/payroll-runs/process).
+
+## Ograniczenia
+
+- Naliczenia tworzy się tylko dla okresów do dzisiaj włącznie. Jeśli dla każdego okresu istnieje już naliczenie, widać komunikat **Wszystkie okresy płacowe do dzisiaj już istnieją.**
+- Na okres przypada jedno naliczenie: okres z naliczeniem nie ma już na liście wyboru.

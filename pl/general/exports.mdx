@@ -1,0 +1,48 @@
+---
+title: "Eksportowanie"
+description: "Eksportowanie danych do pliku i późniejsze pobieranie eksportów."
+---
+{/* translated-from: nl/general/exports.mdx sha256:f5ed31248208370ee25672b2cf18f58b54e746327266e14922e377752c3a9cdd */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Eksport zapisuje dane z TransportKlok w pliku, na przykład rejestracje czasu pracy z danego okresu. Tutaj opisano, jak działa eksport i gdzie znaleźć wcześniejsze eksporty.
+
+## Kto może z tego korzystać
+
+- Każdy użytkownik, który w przeglądzie widzi przycisk **Eksportuj**. To, jakie eksporty są widoczne, zależy od roli i modułów organizacji.
+
+## Jak korzystać z tej strony
+
+1. Należy otworzyć przegląd z danymi do wyeksportowania, na przykład rejestracje czasu pracy.
+2. Należy wybrać okres i filtry. <Hint kind="grey">Eksport używa tego samego wyboru co przegląd.</Hint>
+3. Kliknąć **Eksportuj** i wybrać eksport.
+4. Poczekać, aż w oknie pojawi się **Zakończono**. Plik zostanie wtedy pobrany.
+5. Aby pracować dalej w trakcie tworzenia eksportu, kliknąć **Minimalizuj**.
+6. Wcześniejszy eksport pobiera się przyciskiem **Eksporty** w prawym górnym rogu: przy eksporcie należy kliknąć **Pobierz**.
+
+## Pola
+
+Okno eksportu pokazuje status:
+
+| Status | Znaczenie |
+|--------|-----------|
+| **Oczekiwanie na eksport** | Eksport czeka na rozpoczęcie. |
+| **Eksportowanie** | Eksport jest tworzony, z podanym procentem. |
+| **Zakończono** | Plik jest gotowy. |
+| **Nieudane** | Eksport się nie powiódł. Należy uruchomić eksport ponownie. |
+
+Lista pod przyciskiem **Eksporty** pokazuje dla każdego eksportu nazwę, dzień, status i **Pobierz**. Liczba na przycisku to liczba eksportów na liście.
+
+## Co dzieje się potem
+
+- Pobrany eksport znajduje się na liście w grupie **Pobrano**. Można go pobrać ponownie.
+
+## Ograniczenia
+
+- Widoczne są tylko własne eksporty, i to tylko z ostatniego tygodnia.
+- Nieudany eksport pozostaje na liście przez godzinę.
+- Typ pliku, Excel (xlsx) lub CSV, ustawia administrator w [Konfiguracja podstawowa](/pl/settings/organization/configuration/base).
+- Zawartość eksportu opisano przy danym eksporcie: [Eksport zmiennych składników płac](/pl/management/hour-management/time-registrations/payroll-mutation-export) i [Eksporty naliczenia płac](/pl/management/human-resources/payroll-runs/exports).

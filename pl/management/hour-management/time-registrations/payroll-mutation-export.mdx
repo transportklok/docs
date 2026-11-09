@@ -1,0 +1,54 @@
+---
+title: "Eksport zmiennych składników płac"
+description: "Godziny z okresu w podziale na pracowników jako plik dla administracji płac."
+---
+{/* translated-from: nl/management/hour-management/time-registrations/payroll-mutation-export.mdx sha256:0e7871aaee3c4f176b1316b6979cc3e4c20fd5367f761d5950513390e22ea380 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Eksport zmiennych składników płac pobiera godziny z okresu w podziale na pracowników jako plik dla administracji płac.
+
+## Zrzut ekranu
+
+![Przegląd rejestracji czasu pracy z przyciskiem Eksportuj](/images/pl/captures/management-tijdregistratie-overzicht.png)
+
+## Kto może z tego korzystać
+
+- Administrator, który może otworzyć przegląd rejestracji czasu pracy w module **Zarządzanie godzinami**.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**. Bez tego modułu **Eksport zmiennych składników płac** nie ma na liście.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **Zarządzanie godzinami** i wybrać **Rejestracja czasu pracy**.
+2. Wybrać okres u góry przeglądu. <Hint kind="grey">Eksport używa tego samego wyboru co przegląd, a więc także wybranych filtrów.</Hint>
+3. Kliknąć **Eksportuj**.
+4. Wybrać **Eksport zmiennych składników płac**.
+5. Poczekać, aż w oknie pojawi się **Zakończono**. Plik zostanie wtedy pobrany.
+6. Kliknąć **Zamknij**.
+
+## Pola
+
+Eksport nie zadaje pytań. Plik ma jeden wiersz na pracownika, m.in. z:
+
+| Kolumna | Zawartość |
+|-------|--------|
+| **numer pracownika** | Numer pracownika. |
+| **nazwisko**, **przedrostek**, **imię** | Imię i nazwisko pracownika. |
+| `te_betalen_uren` | Godziny, które są wypłacane. |
+| `contracturen` | Godziny zgodnie z umową. |
+| `meeruren`, `overuren` | Godziny ponad godziny umowne. |
+| `tekorturen`, `aanvuluren` | Godziny poniżej godzin umownych oraz godziny, którymi się je uzupełnia. |
+
+Dalej następują kolumny według rodzaju godzin i według dodatku, takie jak godziny w wyższej stawce procentowej, dodatki i dieta. <Hint kind="yellow">To, jakie kolumny są dostępne i jak dzielone są godziny, zależy od układu zbiorowego (CAO) i ustawień umowy każdego pracownika. Typ pliku (Excel lub CSV) i układ (jeden wiersz na pracownika lub na składnik wynagrodzenia) wynikają z ustawień organizacji.</Hint>
+
+## Co dzieje się potem
+
+- Pobierany jest plik o nazwie takiej jak `Salarismutaties export van de periode 2026-11-02 - 2026-11-08.xlsx`.
+- Za pomocą **Minimalizuj** można pracować dalej w trakcie tworzenia eksportu.
+
+## Ograniczenia
+
+- Eksport liczy na podstawie rejestracji czasu pracy w stanie z danej chwili. To, co dokładnie wypłaciło przetworzone naliczenie płac, sprawdza się w **Eksport naliczenia płac**. Zob. [Eksporty naliczenia płac](/pl/management/human-resources/payroll-runs/exports).
+- Duży okres może chwilę potrwać. <Hint kind="grey">Okno pokazuje **Oczekiwanie na eksport**, a potem **Eksportowanie** z podanym procentem.</Hint>

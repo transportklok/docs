@@ -1,0 +1,42 @@
+---
+title: "AFAS Profit"
+description: "Połączenie z AFAS Profit i dane wysyłane do AFAS Profit."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/afas.mdx sha256:fe9691630dbde489526778659ad0ec3d948e40fbd3bf0a85efff7ffbb4529ed0 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Dzięki integracji z AFAS Profit wysyła się pracowników, umowy i przetworzone naliczenia płac do AFAS Profit.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji, z kontem AFAS Profit mającym dostęp do środowiska.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Utworzyć konto dla **AFAS Profit** i zalogować się w AFAS. Zob. [Konta](/pl/settings/organization/integrations/accounts).
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **AFAS Profit** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Wypełnić konektory i kliknąć **Zapisz ustawienia**.
+5. Na **Zachowanie synchronizacji** włączyć przełączniki dla tego, co ma być wysyłane, na przykład **Wysyłanie naliczeń płac**, i zapisać.
+
+## Pola
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Konektor pracowników** | Nazwa konektora AFAS GetConnector z danymi pracowników, na przykład `Employees`. |
+| **Konektor danych o zatrudnieniu** | Nazwa konektora AFAS GetConnector z danymi o zatrudnieniu. |
+
+## Co dzieje się potem
+
+- Po **Zapisz ustawienia** TransportKlok wysyła pracowników do AFAS Profit.
+- Gdy zostanie utworzony lub zmieniony pracownik albo umowa, TransportKlok wysyła te dane do AFAS Profit.
+- Przy **Wyślij** naliczenia płac TransportKlok zapisuje dla każdego pracownika zmianę dla każdego składnika wynagrodzenia w AFAS Profit, za rok i okres naliczenia.
+
+## Ograniczenia
+
+- Wysyłane są tylko składniki wynagrodzenia z kodem AFAS. <Hint kind="yellow">To, jakie kody są ustawione, zależy od konfiguracji integracji dla organizacji. Po pierwszej wysyłce należy sprawdzić w AFAS Profit, czy zmiany tam są.</Hint>
+- Integracja niczego nie pobiera z AFAS Profit.

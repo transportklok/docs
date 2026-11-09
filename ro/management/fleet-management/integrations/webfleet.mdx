@@ -1,0 +1,46 @@
+---
+title: "Webfleet"
+description: "Conectarea Webfleet și ce se preia din Webfleet."
+---
+{/* translated-from: nl/management/fleet-management/integrations/webfleet.mdx sha256:fc8a6bcc07fa7708d673d7fbb06c30f2b8e71041f15f77cfea157b3f864cef19 */}
+
+## Pentru ce este această pagină
+
+Cu integrarea Webfleet, TransportKlok preia vehicule și poziții din Webfleet.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea flotei**, iar telematica trebuie să fie activată. Consultați [Integrări](/ro/settings/organization/integrations/instances).
+
+## Cum folosiți această pagină
+
+1. La **Conturi**, creați un cont pentru **Webfleet** cu **Nume de utilizator** și **Parolă** ale contului dumneavoastră Webfleet.
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **Webfleet** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. Completați setările și faceți clic pe **Salvați setările**.
+
+## Câmpuri
+
+Pe pagina de setări completați:
+
+| Setare | Ce completați |
+|------------|--------------|
+| **Numele contului Webfleet** | Numele contului Webfleet pe care îl conectați. |
+| **Asociați numărul de șofer Webfleet cu numărul de marcă** | Activați dacă numerele de șofer din Webfleet sunt identice cu numerele de marcă din TransportKlok. |
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare vehicule** | din 15 în 15 minute |
+| **Sincronizare șoferi** | din 15 în 15 minute |
+| **Sincronizare atribuiri de vehicule** | din 15 în 15 minute |
+| **Primire telemetrie** | în fiecare minut |
+
+- Vehiculele sunt asociate după obiectul Webfleet sau după numărul de înmatriculare. Dacă un număr de înmatriculare corespunde mai multor vehicule, vehiculul nu este asociat.
+- Pozițiile apar pe [Hartă](/ro/management/fleet-management/map).
+
+## Limitări
+
+- Integrarea doar preia date din Webfleet. Nu trimite nimic înapoi.

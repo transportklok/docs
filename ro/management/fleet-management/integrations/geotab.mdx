@@ -1,0 +1,40 @@
+---
+title: "Geotab"
+description: "Conectarea Geotab și ce se preia din Geotab."
+---
+{/* translated-from: nl/management/fleet-management/integrations/geotab.mdx sha256:1cfb4f922a34a9bce3a4133fd17a5c698fdd2e9d1f710eb1693bb1dfab11d081 */}
+
+## Pentru ce este această pagină
+
+Cu integrarea Geotab, TransportKlok preia vehicule și poziții din Geotab.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea flotei**, iar telematica trebuie să fie activată. Consultați [Integrări](/ro/settings/organization/integrations/instances).
+
+## Cum folosiți această pagină
+
+1. La **Conturi**, creați un cont pentru **Geotab** cu un **Token** de la Geotab.
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **Geotab** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+
+## Câmpuri
+
+După conectare, integrarea nu solicită setări.
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare vehicule** | în fiecare noapte |
+| **Sincronizare șoferi** | în fiecare noapte |
+| **Sincronizare atribuiri de vehicule** | din 15 în 15 minute |
+| **Primire telemetrie** | din 15 în 15 minute |
+
+- Vehiculele sunt asociate după numărul de înmatriculare. Un vehicul activ are prioritate față de un vehicul șters.
+- Pozițiile apar pe [Hartă](/ro/management/fleet-management/map).
+
+## Limitări
+
+- Integrarea doar preia date din Geotab. Nu trimite nimic înapoi.

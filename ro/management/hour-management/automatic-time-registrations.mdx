@@ -1,0 +1,64 @@
+---
+title: "Înregistrarea automată a orelor"
+description: "Crearea înregistrărilor timpului de lucru din datele GPS ale vehiculelor dumneavoastră."
+---
+{/* translated-from: nl/management/hour-management/automatic-time-registrations.mdx sha256:8b44d3f0a9616d4758e17dc8431e6c1ec2dadce4e01ed4209ea540241fd87ef9 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Cu înregistrarea automată a orelor, TransportKlok creează înregistrări ale timpului de lucru din cursele și opririle transmise de integrarea dumneavoastră GPS sau de trackere. Angajații dumneavoastră nu mai trebuie să introducă ei înșiși aceste ore.
+
+## Captură de ecran
+
+![Înregistrări automate ale timpului de lucru](/images/ro/captures/instellingen-wagenparkbeheer-automatische-urenregistraties.png)
+
+## Cine o poate folosi
+
+- Un administrator al organizației o activează.
+- Organizația are nevoie de modulele **Gestionarea flotei** și **Gestionarea orelor** și de vehicule cu un tracker sau cu o integrare GPS. Consultați [Telematică](/ro/management/fleet-management/telematics/overview).
+
+## Cum folosiți această pagină
+
+1. Deschideți **Setări** → **Setările organizației** → **Configurare și module** și alegeți fila **Module**.
+2. La **Gestionarea flotei**, faceți clic pe **Setări**.
+3. Activați **Înregistrări automate ale timpului de lucru**.
+4. Alegeți **Modul de generare** și activitățile pentru fiecare tip de adresă.
+5. Faceți clic pe **Salvați**.
+
+## Câmpuri
+
+| Câmp | Ce alegeți |
+|------|-------------|
+| **Modul de generare** | **Mod de creare**: TransportKlok creează înregistrări noi ale timpului de lucru din datele GPS. **Mod de înlocuire**: TransportKlok nu creează înregistrări noi, ci completează în înregistrările existente activitatea **Automat (segment GPS)** cu cursele și opririle. În mod implicit este activat **Mod de creare**. |
+| **Activitate implicită la oprire** | Activitatea pentru o oprire la o adresă pe care TransportKlok nu o cunoaște. Implicit goală: o astfel de oprire nu primește atunci nicio activitate. |
+| **Activitate la adresa biroului** | Activitatea pentru o oprire la o adresă de birou. Implicit **Bază**. |
+| **Activitate la adresa de domiciliu** | Activitatea pentru o oprire la o adresă de domiciliu. Implicit **Bază**. |
+| **Activitate la adresa clientului** | Activitatea pentru o oprire la o adresă de client. Implicit **Încărcare și descărcare (extern)**. |
+| **Durata opririi (minute)** | Cât trebuie să dureze o oprire pentru a încheia cursa dinaintea ei. Implicit 240 de minute. |
+| **Durata minimă a activității (secunde)** | Cât trebuie să dureze o activitate pentru a deveni un rând în înregistrare. Implicit 60 de secunde. |
+| **Înregistrările automate încep la** | Data de la care TransportKlok creează înregistrări. Gol: fără dată fixă de început. |
+| **Fără dată fixă de început** | Activat: angajatul nu are o dată fixă de început, indiferent care este data organizației. |
+| **Navetă casă-birou neplătită** | Activat: cursele între domiciliu și birou sunt înregistrate pe activitatea neplătită de navetă. |
+
+Ce tip de adresă este o oprire rezultă din [locațiile](/ro/management/fleet-management/locations/overview) dumneavoastră.
+
+## Ce se întâmplă după aceea
+
+- Din cursele și opririle unui angajat, TransportKlok creează o înregistrare a timpului de lucru, cu cursele și opririle ca activități.
+- Înregistrările se află la [Înregistrarea timpului de lucru](/ro/management/hour-management/time-registrations/overview) și în aplicația angajatului, ca orice altă înregistrare. Le aprobați în același mod.
+- O înregistrare care a fost aprobată, pe care cineva a modificat-o sau care se încadrează într-o perioadă de salarizare procesată nu mai este modificată de TransportKlok.
+
+TransportKlok lucrează cu două versiuni ale înregistrării automate a orelor. <Hint kind="grey">Ce versiune folosește organizația dumneavoastră stabilește TransportKlok pentru dumneavoastră. Setările de mai sus sunt identice pentru ambele versiuni.</Hint>
+
+| Versiune | Cum funcționează |
+|--------|---------------|
+| Versiunea 1 | TransportKlok creează înregistrările dintr-o dată din curse și opriri. Dacă o cursă se suprapune cu o înregistrare existentă, o omite. |
+| Versiunea 2 | TransportKlok actualizează înregistrările de îndată ce sosesc date GPS noi și lasă în pace înregistrările aprobate sau modificate. |
+
+## Limitări
+
+- Înregistrarea automată a orelor funcționează pentru o organizație cu exact o echipă. Dacă organizația dumneavoastră are mai multe echipe, la activare vedeți „Înregistrarea automată a orelor necesită o organizație cu exact o echipă".
+- Un angajat trebuie să fie asociat în TransportKlok cu vehiculul și cu datele GPS. Fără această asociere nu apar înregistrări.
+- Dacă o înregistrare nu se potrivește, de exemplu pentru că se suprapune cu o înregistrare existentă sau iese din contract, TransportKlok nu creează acea înregistrare. <Hint kind="yellow">Verificați atunci singur înregistrările acelei zile la Înregistrarea timpului de lucru.</Hint>

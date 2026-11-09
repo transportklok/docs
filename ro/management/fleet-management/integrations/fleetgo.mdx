@@ -1,0 +1,48 @@
+---
+title: "FleetGo"
+description: "Conectarea FleetGo și ce se preia din FleetGo."
+---
+{/* translated-from: nl/management/fleet-management/integrations/fleetgo.mdx sha256:b31ffd788ac9d58f6964b5211b5ca5ed3959bd84802e34da00ac8a470ffc125b */}
+
+## Pentru ce este această pagină
+
+Cu integrarea FleetGo, TransportKlok preia vehicule și poziții din FleetGo.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea flotei**, iar telematica trebuie să fie activată. Consultați [Integrări](/ro/settings/organization/integrations/instances).
+
+## Cum folosiți această pagină
+
+1. La **Conturi**, creați un cont pentru **FleetGo** cu **Nume de utilizator** și **Parolă** ale contului dumneavoastră FleetGO.
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **FleetGo** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. Completați setările și faceți clic pe **Salvați setările**.
+
+## Câmpuri
+
+Pe pagina de setări completați:
+
+| Setare | Ce completați |
+|------------|--------------|
+| **Asociați numărul de personal FleetGO cu numărul de marcă** | Activați dacă numărul de personal din FleetGO este identic cu un singur număr de marcă din TransportKlok. |
+| **Asociați numărul vehiculului FleetGO cu numărul de referință** | Activați dacă numărul vehiculului din FleetGO este identic cu numărul de referință al vehiculului din TransportKlok. |
+| **ID-ul semnalului FleetGO pentru nivelul de combustibil** (obligatoriu) | Numărul semnalului pentru nivelul de combustibil din lista de semnale a mediului dumneavoastră FleetGO. |
+| **ID-ul semnalului FleetGO pentru kilometraj** (obligatoriu) | Numărul semnalului pentru kilometraj din aceeași listă de semnale. |
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare vehicule** | din 15 în 15 minute |
+| **Sincronizare șoferi** | din 15 în 15 minute |
+| **Sincronizare atribuiri de vehicule** | din 15 în 15 minute |
+| **Primire telemetrie** | în fiecare minut |
+
+- Vehiculele sunt asociate după numărul vehiculului din FleetGO sau după numărul de referință, dacă activați acel comutator.
+- Pozițiile apar pe [Hartă](/ro/management/fleet-management/map).
+
+## Limitări
+
+- Integrarea doar preia date din FleetGo. Nu trimite nimic înapoi.

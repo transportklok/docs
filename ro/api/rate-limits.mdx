@@ -1,0 +1,26 @@
+---
+title: "Limite de cereri"
+description: "Câte cereri poate trimite aplicația dumneavoastră către API."
+---
+{/* translated-from: nl/api/rate-limits.mdx sha256:0a41ba553ec4c8ec14431b1a3d468cd1f8ddd50c578359f721c5c883648666a0 */}
+
+## Limitele
+
+API-ul numără cererile pe token de acces. Un token nu poate face simultan mai mult de:
+
+| Perioadă | Cereri |
+|---------|-----------|
+| 1 minut | 180 |
+| 5 minute | 600 |
+| 1 oră | 3.600 |
+
+## Când atingeți o limită
+
+- API-ul răspunde cu starea `429 Too Many Requests`.
+- Antetul `Retry-After` indică după câte secunde puteți încerca din nou.
+- Antetele `X-RateLimit-Limit` și `X-RateLimit-Remaining` arată câte cereri sunt permise în perioadă și câte au mai rămas.
+
+## Cum rămâneți sub limită
+
+- După un `429`, așteptați cel puțin cât indică `Retry-After`.
+- Păstrați ce ați obținut deja, în loc să solicitați de fiecare dată totul din nou.

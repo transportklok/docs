@@ -1,0 +1,44 @@
+---
+title: "CO3"
+description: "Conectarea CO3 și ce se preia din CO3."
+---
+{/* translated-from: nl/management/fleet-management/integrations/co3.mdx sha256:96a46389d098b5ee05d23e0d2b1f506cba7006a639c80ec785491ccc7bce8844 */}
+
+## Pentru ce este această pagină
+
+Cu integrarea CO3, TransportKlok preia vehicule și poziții din CO3.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea flotei**, iar telematica trebuie să fie activată. Consultați [Integrări](/ro/settings/organization/integrations/instances).
+
+## Cum folosiți această pagină
+
+1. La **Conturi**, creați un cont pentru **CO3** cu **ID client** și **Secret client** de la CO3.
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **CO3** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. Completați setările și faceți clic pe **Salvați setările**.
+
+## Câmpuri
+
+Pe pagina de setări completați:
+
+| Setare | Ce completați |
+|------------|--------------|
+| **ID-ul companiei care partajează în CO3** | Codul firmei din CO3 care partajează vehiculele cu contul dumneavoastră. Sincronizarea începe abia după ce acesta este completat. |
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare vehicule** | din 15 în 15 minute |
+| **Primire telemetrie** | din 15 în 15 minute |
+
+- Vehiculele sunt asociate cu vehiculele dumneavoastră existente după seria de șasiu (VIN) și numărul de înmatriculare. CO3 nu creează singur vehicule noi.
+- Pozițiile apar pe [Hartă](/ro/management/fleet-management/map).
+- CO3 nu preia șoferi și nici atribuiri de vehicule. Sunt preluate și pozițiile GPS mai vechi.
+
+## Limitări
+
+- Integrarea doar preia date din CO3. Nu trimite nimic înapoi.

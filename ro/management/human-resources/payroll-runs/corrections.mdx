@@ -1,0 +1,56 @@
+---
+title: "Corecții la o rulare de salarizare"
+description: "Găsirea corecțiilor la o rulare de salarizare procesată și preluarea lor într-o rulare mai nouă."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/corrections.mdx sha256:56f0c4b827cbacc5e417c11b0fe9ccb41781d592f78168243c0063f7505a882a */}
+
+## Pentru ce este această pagină
+
+Aici citiți cum verificați dacă o rulare de salarizare procesată mai este corectă și cum o rulare mai nouă preia corecțiile rulărilor mai vechi.
+
+## Cine o poate folosi
+
+- Un administrator cu drepturi depline în organizație.
+- Organizația are nevoie de modulul **Variabile de salarizare**.
+
+## Cum folosiți această pagină
+
+Găsirea unei corecții:
+
+1. Deschideți **Resurse umane** → **Administrare salarii** → **Rulări de salarizare**.
+2. Pe rândul unei rulări procesate alegeți **Opțiuni** → **Analizați corecțiile**.
+3. Așteptați până când analiza este gata.
+
+Preluarea unei corecții într-o rulare mai nouă:
+
+1. La rularea mai nouă, blocată, faceți clic pe **Finalizați**.
+2. Fereastra **Preluați corecțiile** afișează rulările mai vechi cu o corecție care încă nu a fost plătită.
+3. Bifați rulările a căror corecție o preia această rulare și faceți clic pe **Continuați**.
+4. În fereastra **Confirmați preluarea** verificați rulările alese.
+5. Faceți clic pe **Preluați și procesați**.
+
+Dacă nu bifați nimic, rularea este procesată ca de obicei.
+
+## Câmpuri
+
+Fereastra **Preluați corecțiile** afișează pentru fiecare rulare mai veche:
+
+| Coloană | Semnificație |
+|-------|-----------|
+| **Rulare de salarizare** | Numărul rulării mai vechi. |
+| **Perioadă** | Perioada de salarizare a acelei rulări. |
+| **Corecție** | Câți angajați din acea rulare au fost corectați, de exemplu „1 angajat corectat". |
+
+## Ce se întâmplă după aceea
+
+- Dacă analiza găsește o diferență față de versiunea procesată, rularea primește starea **Corectat**. Dacă există o diferență depinde de înregistrări și de calcul. Aceasta depinde de contractul colectiv (CAO) sau de setarea contractului: calculul urmează CAO și contractul fiecărui angajat.
+- O rulare corectată o finalizați din nou cu **Finalizați** sau lăsați o rulare mai nouă să preia corecția.
+- După preluare, rularea mai veche primește din nou starea **Procesat**, cu `Verrekend in salarisronde` și numărul rulării mai noi. Acel text este un link către rularea mai nouă.
+- La rularea mai nouă apare `Neemt correcties van 1 salarisronde mee`.
+- Deschideți detaliile rulării mai noi și desfaceți rândul unui angajat. Sub **Verificarea fluturașului de salariu** vedeți **Rezultat propriu**, `Correctie salarisronde` al rulării mai vechi și **Total pe fluturaș**.
+
+## Limitări
+
+- Preluarea este definitivă și nu poate fi anulată.
+- O corecție nu o creați manual. Sistemul o deduce din calculul curent; pentru aceasta modificați înregistrările sau setările și analizați din nou.
+- O rulare procesată, corectată sau decontată nu o puteți șterge. O puteți vizualiza în continuare.

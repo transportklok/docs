@@ -1,0 +1,47 @@
+---
+title: "Comportamentul sincronizării"
+description: "Ce date preia sau trimite fiecare integrare și cum a decurs fiecare rulare."
+---
+{/* translated-from: nl/settings/organization/integrations/capabilities.mdx sha256:cbf0e6423b7f1a5ee2a6d95b497fbc387367a520b14a79b9067906278c1ae1c7 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+În fila **Comportamentul sincronizării** alegeți, pentru fiecare funcție, ce integrare preia sau trimite datele și vedeți cum a decurs fiecare rulare.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+
+## Cum folosiți această pagină
+
+1. Deschideți **Setări** → **Setările organizației** → **Integrări** și alegeți fila **Comportamentul sincronizării**.
+2. La o funcție, activați sau dezactivați comutatorul pentru integrarea dumneavoastră.
+3. Faceți clic pe **Salvați setările**.
+4. Faceți clic pe **Sincronizare** pentru a rula imediat o funcție.
+5. Faceți clic pe **Execuții** pentru a vedea cum a decurs fiecare rulare.
+
+## Câmpuri
+
+| Funcție | Ce face |
+|---------|--------------|
+| **Sincronizare vehicule** | Preia vehicule și le asociază cu vehiculele dumneavoastră din TransportKlok. |
+| **Sincronizare șoferi** | Completează la angajați codul cardului de tahograf. |
+| **Sincronizare atribuiri de vehicule** | Preia ce șofer conduce în ce vehicul. |
+| **Primire telemetrie** | Preia poziții și alte date ale vehiculelor. Le vedeți pe [Hartă](/ro/management/fleet-management/map). |
+| **Trimitere rulări de salarizare** | Trimite o rulare de salarizare procesată către pachetul dumneavoastră de salarizare. |
+| **Sincronizare clienți** | Preia clienți și adresa lor de facturare și face din ei [clienți](/ro/management/customer-management/customers/overview). |
+
+**Execuții** afișează pentru fiecare rulare începutul, starea (**În așteptare**, **În curs**, **Reușit**, **Eșuat** sau **Omis**), durata și numărul de rânduri de jurnal.
+
+## Ce se întâmplă după aceea
+
+- O funcție rulează automat la ore fixe.
+- Dacă **Trimitere rulări de salarizare** este activată, butonul de la o rulare de salarizare se numește **Trimitere** în loc de **Finalizați**. Consultați [Procesarea unei rulări de salarizare](/ro/management/human-resources/payroll-runs/process).
+
+## Limitări
+
+- Unele funcții sunt obligatorii pentru o integrare. <Hint kind="grey">Pe acestea nu le puteți dezactiva.</Hint>
+- Un vehicul își primește pozițiile dintr-o singură sursă. Dacă un vehicul provine deja dintr-o altă sursă, integrarea îl omite.
+- Integrările GPS doar preiau date. Nu trimit nimic înapoi către sistemul dumneavoastră de telematică.

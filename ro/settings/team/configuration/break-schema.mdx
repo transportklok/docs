@@ -1,0 +1,47 @@
+---
+title: "Grilă de pauze"
+description: "Calcularea pauzei unei înregistrări din timpul lucrat."
+---
+{/* translated-from: nl/settings/team/configuration/break-schema.mdx sha256:8a33b4e84c8ccf2096dfc64b0add758055a7e633197175df485288cf6b3d6186 */}
+
+## Pentru ce este această pagină
+
+Cu funcția **Grilă de pauze**, TransportKlok calculează pauza unei înregistrări a timpului de lucru din timpul lucrat. Stabiliți pe fiecare treaptă cât de lungă este pauza.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al echipei.
+
+## Cum folosiți această pagină
+
+1. Deschideți **Setări**, alegeți echipa, alegeți **Configurare și funcții** și deschideți fila **Funcții**.
+2. Activați funcția **Grilă de pauze**. Consultați [Funcții](/ro/settings/team/configuration/features).
+3. La **Grilă de pauze**, faceți clic pe **Setări**.
+4. Pentru fiecare treaptă, completați numărul de minute de pauză și alegeți comutatoarele.
+5. Faceți clic pe **Salvați**.
+
+## Câmpuri
+
+| Câmp | Ce completați | Implicit |
+|------|--------------|-----------|
+| **Pauză la 4,5 ore de lucru** | Minute de pauză la mai mult de 4,5 ore de lucru. | 30 |
+| **Pauză la 7,5 ore de lucru** | Minute de pauză la mai mult de 7,5 ore de lucru. | 60 |
+| **Pauză la 10,5 ore de lucru** | Minute de pauză la mai mult de 10,5 ore de lucru. | 90 |
+| **Pauză la 13,5 ore de lucru** | Minute de pauză la mai mult de 13,5 ore de lucru. | 120 |
+| **Pauză la 16,5 ore de lucru** | Minute de pauză la mai mult de 16,5 ore de lucru. | 150 |
+| **Impunerea grilei de pauze (nu poate fi suprascrisă)** | Activat: nimeni nu poate modifica pauza calculată. | activat |
+| **Permiteți lucrul fără pauză (cu explicație obligatorie)** | Activat: angajații pot indica faptul că nu au făcut pauză, cu o explicație. | dezactivat |
+| **Permiteți administratorilor să modifice durata pauzei** | Activat: administratorii și managerii pot modifica pauza calculată, angajații nu. | dezactivat |
+
+## Ce se întâmplă după aceea
+
+- La o înregistrare, TransportKlok completează singur câmpul **Pauză (minute)** de îndată ce orele de început și de sfârșit sunt cunoscute. Se aplică treapta cea mai înaltă pe care o depășește timpul lucrat. La exact 4,5 ore de lucru nu se aplică încă o pauză.
+- Dacă `Pauzestaffel afdwingen` este activat, **Pauză (minute)** nu poate fi modificat. TransportKlok recalculează pauza la salvare.
+- Dacă `Sta werken zonder pauze toe` este activat, angajatul vede câmpul **Nicio pauză luată**. Cu o explicație, pauza devine 0 minute.
+- Grila este valabilă și pentru înregistrările pe care le creează TransportKlok cu [înregistrarea automată a orelor](/ro/management/hour-management/automatic-time-registrations).
+
+## Limitări
+
+- Fără `Pauzestaffel afdwingen`, angajații pot modifica singuri pauza calculată. O pauză care nu corespunde unei trepte este lăsată de TransportKlok neschimbată.
+- Pauza trebuie să fie cu cel puțin un minut mai scurtă decât întreaga înregistrare. Altfel vedeți „Pauza trebuie să fie cu cel puțin un minut mai scurtă decât întreaga înregistrare."
+- Cine alege **Nicio pauză luată** fără explicație vede „Este necesară o explicație atunci când nu s-a luat pauză."

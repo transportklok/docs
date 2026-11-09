@@ -1,0 +1,54 @@
+---
+title: "Rute"
+description: "Gestionarea rutelor de livrare și înregistrarea, pentru fiecare cursă, a rutei, a opririlor și a coletelor."
+---
+{/* translated-from: nl/settings/team/configuration/parcel-delivery.mdx sha256:73fc7969abcbbbaa193b36f176555e73929f4e97c03342d1e35da52790953f3c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Cu funcția **Rute**, șoferii dumneavoastră înregistrează la o cursă ce rută de livrare au condus, câte opriri au făcut și câte colete au livrat.
+
+## Cine o poate folosi
+
+- Un administrator al organizației sau proprietarul ori administratorul echipei.
+
+## Cum folosiți această pagină
+
+Activarea funcției:
+
+1. Deschideți **Setări**, alegeți echipa, alegeți **Configurare și funcții** și deschideți fila **Funcții**.
+2. Activați funcția **Rute**. Consultați [Funcții](/ro/settings/team/configuration/features).
+3. La echipă, deschideți **Caracteristici** și activați **Rută**, **Numărul de opriri** și **Numărul de colete** pentru înregistrările la care doriți să le cereți. Consultați [Caracteristici](/ro/settings/team/attributes).
+
+Gestionarea rutelor:
+
+1. La echipă, în meniu, sub **Funcții**, alegeți **Rute**. Vedeți **Rute de livrare**.
+2. Faceți clic în dreapta sus pe `+`, completați **Nume** și faceți clic pe **Creați**.
+3. Faceți clic pe **Editați** pentru a modifica un nume și pe **Salvați**, sau pe **Ștergeți** pentru a șterge o rută.
+4. Cu **Coș de gunoi** vedeți rutele șterse. Faceți clic pe **Restaurați** pentru a readuce o rută.
+
+## Câmpuri
+
+| Câmp | Ce completați |
+|------|--------------|
+| **Nume** (obligatoriu) | Numele rutei. Fiecare nume apare o singură dată într-o echipă. |
+
+La o înregistrare:
+
+| Caracteristică | Ce completează șoferul |
+|---------|-------------------------|
+| **Rută** | Ruta de livrare pe care a condus-o, din rutele echipei. |
+| **Numărul de opriri** | Câte opriri a făcut. |
+| **Numărul de colete** | Câte colete a livrat. |
+
+## Ce se întâmplă după aceea
+
+- Rutele apar în lista de alegere **Rută** la o înregistrare, pe web și în aplicație.
+- Cu filtrul **Rute** de la [Înregistrarea timpului de lucru](/ro/management/hour-management/time-registrations/overview) vedeți înregistrările unei rute.
+
+## Limitări
+
+- Un nume de rută care se află deja în coșul de gunoi nu-l puteți folosi din nou. Vedeți atunci „În coșul de gunoi există deja o rută cu acest nume." Restaurați acea rută în loc să creați una nouă.
+- Caracteristicile nu sunt activate automat. <Hint kind="grey">Activați-le pe echipă la Caracteristici.</Hint>

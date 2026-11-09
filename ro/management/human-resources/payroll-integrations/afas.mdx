@@ -1,0 +1,42 @@
+---
+title: "AFAS Profit"
+description: "Conectarea AFAS Profit și ce se trimite către AFAS Profit."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/afas.mdx sha256:fe9691630dbde489526778659ad0ec3d948e40fbd3bf0a85efff7ffbb4529ed0 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Cu integrarea AFAS Profit trimiteți angajați, contracte și rulări de salarizare procesate către AFAS Profit.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației, cu un cont AFAS Profit care are acces la mediu.
+- Organizația are nevoie de modulul **Variabile de salarizare**.
+
+## Cum folosiți această pagină
+
+1. Creați un cont pentru **AFAS Profit** și autentificați-vă la AFAS. Consultați [Conturi](/ro/settings/organization/integrations/accounts).
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **AFAS Profit** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. Completați conectorii și faceți clic pe **Salvați setările**.
+5. La **Comportamentul sincronizării**, activați comutatoarele pentru ce doriți să trimiteți, precum **Trimitere rulări de salarizare**, și salvați.
+
+## Câmpuri
+
+| Câmp | Ce completați |
+|------|--------------|
+| **Conector pentru angajați** | Numele AFAS GetConnector pentru datele angajaților, de exemplu `Employees`. |
+| **Conector pentru datele angajării** | Numele AFAS GetConnector pentru datele angajării. |
+
+## Ce se întâmplă după aceea
+
+- După **Salvați setările**, TransportKlok trimite angajații către AFAS Profit.
+- Dacă creați sau modificați un angajat sau un contract, TransportKlok trimite aceste date către AFAS Profit.
+- La **Trimitere** a unei rulări de salarizare, TransportKlok introduce în AFAS Profit, pentru fiecare angajat, o mișcare pe element salarial, pentru anul și perioada rulării.
+
+## Limitări
+
+- Se trimit doar elementele salariale cu un cod AFAS. <Hint kind="yellow">Ce coduri sunt setate depinde de configurarea integrării pentru organizația dumneavoastră. După prima trimitere, verificați în AFAS Profit dacă mișcările sunt acolo.</Hint>
+- Integrarea nu preia nimic din AFAS Profit.

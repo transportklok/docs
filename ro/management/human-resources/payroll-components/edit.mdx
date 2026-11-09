@@ -1,0 +1,46 @@
+---
+title: "Modificarea unui element salarial"
+description: "Modificarea sau ștergerea unui adaos sau a unei rețineri."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/edit.mdx sha256:d15619b70eec11ef0a8c0a5ede5a7be64a6873aceea328fc58644fce4df425c9 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Aici modificați un element salarial sau îl ștergeți.
+
+## Cine o poate folosi
+
+- Un administrator cu drepturi depline în organizație.
+- Organizația are nevoie de modulul **Variabile de salarizare**.
+
+## Cum folosiți această pagină
+
+Modificarea unui element salarial:
+
+1. Deschideți **Resurse umane** → **Administrare salarii** → **Adaosuri și rețineri**.
+2. Faceți clic pe **Editați** pe rândul elementului salarial.
+3. Modificați câmpurile.
+4. Faceți clic pe **Salvați modificările**.
+
+Ștergerea unui element salarial:
+
+1. Faceți clic pe **Ștergeți** pe rândul elementului salarial.
+2. În fereastra **Ștergeți elementul salarial** verificați elementul salarial și angajatul.
+3. Faceți clic pe **Eliminați**.
+
+## Câmpuri
+
+Formularul **Modificați elementul salarial** are aceleași câmpuri ca formularul de creare, deja completate cu valorile curente: **Angajat**, **Perioadă de salarizare**, **Tip**, **Element salarial** și **Valoare**. Consultați [Crearea unui element salarial](/ro/management/human-resources/payroll-components/create).
+
+## Ce se întâmplă după aceea
+
+- După **Salvați modificările**, elementul salarial modificat apare în prezentarea generală.
+- După **Eliminați**, elementul salarial dispare imediat din prezentarea generală. <Hint kind="red">Un element salarial șters nu poate fi recuperat.</Hint>
+- Rularea de salarizare a perioadei preia modificarea. Dacă acea rulare este o ciornă sau este blocată, ea este recalculată.
+- Dacă rularea a fost deja procesată, este verificată din nou pentru corecții. Dacă rămâne o diferență față de ce s-a procesat deja, primește starea **Corectat**. Dacă diferența dispare, revine la **Procesat**. Consultați [Corecții la o rulare de salarizare](/ro/management/human-resources/payroll-runs/corrections).
+
+## Limitări
+
+- Chiar și la o rulare de salarizare procesată puteți modifica sau șterge în continuare un element salarial. Modificarea ajunge atunci ca o corecție într-o procesare următoare.

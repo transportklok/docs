@@ -1,0 +1,26 @@
+---
+title: "Introducere în API"
+description: "Conectarea propriului software la TransportKlok prin API-ul REST."
+---
+{/* translated-from: nl/api/introduction.mdx sha256:6343b3308ac1daa78b737ca05d102ebf3fe2504cdc1383094215a3187b076976 */}
+
+## Ce este API-ul
+
+Cu API-ul TransportKlok, propriul dumneavoastră software citește date din TransportKlok, precum organizațiile, angajații și exporturile la care aveți acces. API-ul este un API REST care returnează JSON.
+
+## Adresa de bază
+
+Fiecare cerere merge la:
+
+```text
+https://api.transportklok.nl/rest/v1
+```
+
+O dată aparține întotdeauna unei organizații. De aceea, o cale de după organizații începe cu ID-ul organizației, de exemplu `/rest/v1/organizations/{organisatie-id}/workers`.
+
+## Cum începeți
+
+1. Solicitați un client OAuth de la TransportKlok la [info@transportklok.nl](mailto:info@transportklok.nl). Consultați [OAuth](/ro/api/oauth).
+2. Lăsați un utilizator să ofere aplicației dumneavoastră acces și obțineți un token de acces. Consultați [OAuth](/ro/api/oauth).
+3. Trimiteți tokenul cu fiecare cerere. Consultați [Autentificare](/ro/api/authentication).
+4. Respectați limitele privind numărul de cereri. Consultați [Limite de cereri](/ro/api/rate-limits).

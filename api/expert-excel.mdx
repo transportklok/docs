@@ -19,7 +19,7 @@ Deze pagina beschrijft hoe `expertexcel.nl` met Transportklok verbindt. De koppe
 | `workers:read` | Medewerkers lezen |
 | `exports:*` | Exports lezen (`exports:read`), starten (`exports:create`) en downloaden (`exports:download`) |
 
-De routes voor medewerkers en exports controleren hun scope bij elke aanvraag. De organisatieroutes controleren `organizations:read` niet; daar bepaalt alleen de organisatie die aan het token is toegekend wat u ziet. Vraag de scope toch aan, zodat de koppeling meegaat met een latere controle.
+Elke route controleert haar scope bij elke aanvraag. Voor de organisatieroutes wordt een ontbrekende `organizations:read` tijdens de [overgangsperiode](/api/authenticatie#overgangsperiode) alleen gelogd; daarna antwoordt de route `403`. Vraag de scope dus aan.
 
 ## Gegevens die u nodig hebt
 
@@ -28,8 +28,8 @@ De routes voor medewerkers en exports controleren hun scope bij elke aanvraag. D
 | `client_id` | Het geregistreerde OAuth-client-id |
 | `client_secret` | Geheim van een server-side client; nooit in frontendcode |
 | `redirect_uri` | De exacte callback-URL; wildcards zijn niet toegestaan |
-| `app_base_url` | De basis-URL van de Transportklok-applicatie; hier staan de OAuth-routes (`/oauth/authorize` en `/oauth/token`) |
-| `api_base_url` | De basis-URL van de API van dezelfde omgeving |
+| `app_base_url` | De basis-URL van de Transportklok-applicatie (`https://app.transportklok.nl`); hier staat de toestemmingspagina `/oauth/authorize` |
+| `api_base_url` | De basis-URL van de API van dezelfde omgeving (`https://api.transportklok.nl`); hier staan `/oauth/token`, `/oauth/revoke` en REST API v1 |
 
 De REST API-basisroute is `{api_base_url}/rest/v1` op een omgeving met een eigen API-domein (staging en productie). Zonder eigen API-domein is de basisroute `{api_base_url}/api/rest/v1`. Alle routes hieronder liggen onder die basisroute.
 
@@ -55,7 +55,7 @@ GET {app_base_url}/oauth/authorize
 4. Wissel de ontvangen code server-side om voor tokens:
 
 ```http
-POST {app_base_url}/oauth/token
+POST {api_base_url}/oauth/token
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 ```
@@ -71,7 +71,9 @@ code_verifier={code_verifier}
 
 Voor een public client laat u `client_secret` weg; de `code_verifier` blijft verplicht. De response bevat `token_type` (`Bearer`), `expires_in`, `access_token` en `refresh_token`. Sla beide tokens versleuteld op.
 
-5. Vernieuw het access-token met `grant_type=refresh_token`, `client_id`, `client_secret` en `refresh_token`. Gebruik een teruggestuurd nieuw refresh-token en behandel het oude als vervangen.
+5. Vernieuw het access-token met `grant_type=refresh_token`, `client_id`, `client_secret` en `refresh_token` op dezelfde tokenroute. Elke vernieuwing geeft een nieuw refresh-token en maakt het oude ongeldig. Bewaar het nieuwe meteen: wie een gebruikt refresh-token opnieuw stuurt, verliest de hele toegang van de koppeling voor die gebruiker.
+
+`/oauth/token` op de app-host blijft tijdens de [overgangsperiode](/api/authenticatie#overgangsperiode) werken, met een `Deprecation`-header. Gebruik de API-host.
 
 ### 2. Aanvragen doen
 
@@ -207,4 +209,4 @@ Bij `format: "json"` is het bestand een JSON-array met per rij een object waarva
 
 ## Laatst gecontroleerd tegen versie 1.3.16
 
-Gecontroleerd tegen de MyTimeFlow REST-routes, controllers, publicatievelden, exportkolommen en OAuth-scopes op tag 1.3.16.
+Gecontroleerd tegen de MyTimeFlow REST-routes, controllers, publicatievelden, exportkolommen en OAuth-scopes op tag 1.3.16. De hosts, de tokenroute op de API-host, de scopecontrole van de organisatieroutes en de vernieuwingsregel zijn gecontroleerd tegen MyTimeFlow `main` (commit `c4fb859`) en zitten nog niet in een releasetag.

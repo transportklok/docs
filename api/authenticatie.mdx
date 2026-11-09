@@ -1,17 +1,109 @@
 ---
 title: "API authenticatie"
-description: "Authenticatie voor de Transportklok API."
+description: "Hosts, tokens, OAuth-clients en scopes van de Transportklok API, en de overgangsperiode voor de oude paden."
 ---
 
-## Doel van de pagina
+## Waar deze pagina voor is
 
-Deze pagina beschrijft hoe clients authenticeren tegen de Transportklok API.
+Deze pagina beschrijft op welke host u welke aanvraag doet, welk token daar geldt en welke scopes een OAuth-client krijgt.
 
-## Kernpunt
+## Hosts
 
-Gebruik een bearer token in de `Authorization` header.
+Transportklok gebruikt twee hosts. Elke route hoort bij precies één host.
+
+| Host | Waarvoor |
+| --- | --- |
+| `app.transportklok.nl` | De webapplicatie: inloggen, de OAuth-toestemming (`/oauth/authorize`, `/oauth/device`) en de goedkeuring van een apparaat in de browser. Hier geldt alleen de inlogsessie van de browser. |
+| `api.transportklok.nl` | De API: REST API v1 (`/rest/v1`), de OAuth-tokenroutes (`/oauth/token`, `/oauth/device/code`, `/oauth/revoke`), de OAuth-metadata onder `/.well-known/` en de MCP-server (`/mcp`). Hier geldt nooit een browsercookie. |
+
+Op staging zijn dat `app.stage.transportklok.nl` en `api.stage.transportklok.nl`.
+
+Een token dat u naar de app-host stuurt, geeft daar geen toegang. Een browsercookie op de API-host geeft ook geen toegang.
+
+## Soorten tokens
+
+De API-host kent drie soorten tokens. Elke route noemt welke soort ze accepteert.
+
+| Token | Wie het gebruikt | Wat het mag |
+| --- | --- | --- |
+| OAuth-accesstoken | Uw koppeling, via een OAuth-client | Alleen REST- en MCP-routes, binnen de toegekende scopes en de organisaties die de gebruiker heeft goedgekeurd |
+| Apparaattoken | Alleen de eigen apps van Transportklok (de mobiele app en de tachograafkaartlezer) | Alleen het eigen apparaat beheren en een sessie starten |
+| Sessietoken | Alleen de eigen apps van Transportklok | De gewone aanvragen van die apps. Een sessietoken verloopt na 15 minuten. |
+
+Een externe koppeling gebruikt altijd OAuth. Apparaat- en sessietokens worden niet aan koppelingen uitgegeven.
+
+Stuur elk token als `Authorization: Bearer {token}`. Een token in de querystring wordt niet gelezen.
+
+Alleen `GET /rest/me` accepteert naast een OAuth-accesstoken met `users:me` ook een sessietoken.
+
+## OAuth-clients
+
+| Client | Hoe u hem krijgt | Grants |
+| --- | --- | --- |
+| Koppeling van een partner | Transportklok registreert de client voor u | `authorization_code` met PKCE, `refresh_token` |
+| App van een gebruiker | De gebruiker maakt hem aan in de instellingen bij **Apps**, als public of confidential client | `authorization_code` met PKCE, `refresh_token` |
+| MCP-connector (Claude, ChatGPT, Claude Code) | Geregistreerd in Transportklok; dynamische registratie staat uit | `authorization_code` met PKCE S256, `refresh_token` |
+
+De implicit grant en de password grant worden niet aangeboden.
+
+## Scopes
+
+Een REST-route controleert bij elke aanvraag de scope die ze nodig heeft. Zonder die scope antwoordt de route `403`.
+
+| Resource | Scopes |
+| --- | --- |
+| users | `users:*`, `users:read`, `users:me` |
+| organizations | `organizations:*`, `organizations:read`, `organizations:update` |
+| workers | `workers:*`, `workers:read`, `workers:me` |
+| engagements | `engagements:read` |
+| teams | `teams:*`, `teams:read`, `teams:create`, `teams:update`, `teams:delete` |
+| tasks | `tasks:*`, `tasks:read`, `tasks:create`, `tasks:update`, `tasks:delete` |
+| time-registrations | `time-registrations:*`, `time-registrations:read`, `time-registrations:create`, `time-registrations:update`, `time-registrations:delete` |
+| imports | `imports:*`, `imports:read`, `imports:create` |
+| exports | `exports:*`, `exports:read`, `exports:create`, `exports:download` |
+| mcp | `mcp:use`, `mcp:read`, `mcp:write`, `mcp:destructive` |
+
+Een `*`-scope geeft alle acties van die resource. Voor `mcp` bestaat geen `*`-scope. Een MCP-token geldt alleen voor de MCP-server en wordt op REST-routes geweigerd.
+
+## Regels voor tokens
+
+- Gebruik PKCE met `S256`. MCP-connectors moeten dat altijd; na de overgangsperiode geldt het voor elke client.
+- Een autorisatiecode werkt één keer.
+- Elke vernieuwing geeft een nieuw refresh-token en maakt het oude ongeldig. Wie een gebruikt refresh-token opnieuw stuurt, verliest de hele toegang van die client voor die gebruiker.
+- Na de overgangsperiode leeft een accesstoken één uur en een refresh-token dertig dagen. Voor MCP-connectors geldt dat nu al.
+- Trek een token in met `POST /oauth/revoke` op de API-host, met uw `client_id` en, voor een confidential client, uw `client_secret`.
+
+## Overgangsperiode
+
+Zodra de hosts gescheiden zijn, blijven de oude paden een tijd werken. Zo blijft een bestaande koppeling werken terwijl u overstapt.
+
+| Oud pad | Nieuw pad |
+| --- | --- |
+| `/oauth/token`, `/oauth/revoke`, `/mcp` en de OAuth-metadata op de app-host | Dezelfde paden op de API-host |
+| `/api/...` op elke host | Hetzelfde pad zonder `/api` op de API-host |
+
+- Elk antwoord op een oud pad heeft de header `Deprecation` met het moment waarop de overgangsperiode begon.
+- Zodra de einddatum vastligt, krijgt elk antwoord op een oud pad ook `Sunset` met die datum en `Link` met een verwijzing naar de aankondiging. U hoort die datum minstens 30 dagen vooraf.
+- Na de einddatum geeft een oud pad `410 Gone`.
+
+Stap daarom nu over op de API-host voor `/oauth/token` en alle REST-aanvragen.
+
+## Foutcodes
+
+| Status | Betekenis |
+| --- | --- |
+| `401` | Geen, verlopen of ingetrokken token, of een token van de verkeerde soort voor deze route |
+| `403` | Het token mist de scope van de route |
+| `404` | De organisatie of het record valt buiten wat aan het token is toegekend |
+| `410` | Een oud pad na de einddatum van de overgangsperiode |
 
 ## Gerelateerde pagina's
 
 - [API introductie](/api/introductie)
+- [Expert Excel-koppeling](/api/expert-excel)
+- [Rate limits](/api/rate-limits)
 - [Webhooks](/api/webhooks)
+
+## Laatst gecontroleerd tegen versie
+
+Gecontroleerd tegen de broncode van MyTimeFlow `main` (commit `c4fb859`). Deze regels zitten nog niet in een releasetag.

@@ -185,6 +185,7 @@
               "api/planning",
               "api/voertuigen",
               "api/chauffeurs",
+              "api/tijdregistraties",
               "api/webhooks"
             ]
           }

@@ -1,0 +1,89 @@
+---
+title: "API tijdregistraties"
+description: "Tijdregistraties van een organisatie lezen via REST API v1."
+---
+
+## Waar deze pagina voor is
+
+Deze pagina beschrijft de twee REST API v1-endpoints waarmee u tijdregistraties van een organisatie leest. De API leest alleen: tijdregistraties aanmaken, wijzigen of verwijderen kan niet via de API.
+
+## Wie dit mag gebruiken
+
+- Een koppeling met een OAuth-token met de scope `time-registrations:read`. Zonder die scope geeft elk endpoint `403`.
+- Het token werkt alleen binnen de organisatie die bij de autorisatie is gekozen. Een andere organisatie, of een tijdregistratie van een andere organisatie, geeft `404`.
+- Een beheerder of manager ziet alle tijdregistraties van de organisatie. Een medewerker ziet alleen de eigen tijdregistraties.
+
+## Zo gebruikt u deze pagina
+
+De routes liggen onder de REST API-basisroute `{api_base_url}/rest/v1`; zie [Expert Excel-koppeling](/api/expert-excel) voor de autorisatie en de basisroute.
+
+| Doel | Route | Scope |
+| --- | --- | --- |
+| Tijdregistraties ophalen | `GET /organizations/{organization_id}/time-registrations` | `time-registrations:read` |
+| Tijdregistratie | `GET /organizations/{organization_id}/time-registrations/{time_registration_id}` | `time-registrations:read` |
+
+1. Haal de lijst op met de filters die u nodig hebt.
+2. Blader met `page` door de pagina's tot `current_page` gelijk is aan `last_page`.
+3. Haal één tijdregistratie op met haar `id` uit de lijst.
+
+```text
+GET {api_base_url}/rest/v1/organizations/{organization_id}/time-registrations
+    ?worker={worker_id}
+    &from=2026-10-01
+    &to=2026-10-31
+    &status=approved
+    &limit=100
+    &page=1
+```
+
+## Velden
+
+### Lijstparameters
+
+| Parameter | Type | Standaard | Uitleg |
+| --- | --- | --- | --- |
+| `worker` | uuid | geen | Alleen tijdregistraties van deze medewerker |
+| `from` | datum `YYYY-MM-DD` | geen | Alleen tijdregistraties op of na deze datum |
+| `to` | datum `YYYY-MM-DD` | geen | Alleen tijdregistraties op of voor deze datum; niet vóór `from` |
+| `status` | `draft`, `proposal`, `open`, `recording`, `approved`, `corrected` | geen | Alleen tijdregistraties met deze status |
+| `limit` | integer, 1–100 | `15` | Aantal records per pagina |
+| `page` | integer, vanaf 1 | `1` | Gevraagde pagina |
+| `order_identifier` | `date`, `created_at`, `updated_at` | `date` | Veld waarop wordt gesorteerd |
+| `order_direction` | `asc`, `desc` | `asc` | Sorteervolgorde |
+
+Een onbekende parameter of een ongeldige waarde geeft `422`. De periode is inclusief en filtert op de datum van de tijdregistratie.
+
+### Tijdregistratiegegevens
+
+De lijst geeft een pagina terug met de tijdregistraties in `data`, en `current_page`, `last_page`, `per_page` en `total`. Eén tijdregistratie staat in `data` van de response.
+
+```json
+{
+  "id": "0d6f...",
+  "worker_id": "8b21...",
+  "team_id": "41c7...",
+  "date": "2026-10-05",
+  "started_at": "2026-10-05T07:00:00+00:00",
+  "ended_at": "2026-10-05T15:30:00+00:00",
+  "status": "approved",
+  "created_at": "2026-10-05T15:32:10+00:00",
+  "updated_at": "2026-10-06T08:01:44+00:00"
+}
+```
+
+| Veld | Betekenis |
+| --- | --- |
+| `id` | Id van de tijdregistratie |
+| `worker_id` | Id van de medewerker; dezelfde als in `/workers` |
+| `team_id` | Id van het team waarin is geregistreerd |
+| `date` | Datum van de tijdregistratie |
+| `started_at`, `ended_at` | Begin en einde van de geregistreerde tijd; `null` als de tijdregistratie geen tijdvak heeft |
+| `status` | Status van de huidige versie |
+| `created_at`, `updated_at` | Aanmaak- en wijzigingstijdstip |
+
+## Beperkingen
+
+- De API leest alleen. Aanmaken, wijzigen en verwijderen geeft `405`.
+- Tijdregistraties zonder lopend contract op hun datum staan niet in de API.
+- De regels van een tijdregistratie (activiteiten, pauzes en attributen) staan niet in de response. Gebruik daarvoor de export `productive-time-registrations-data` uit [Expert Excel-koppeling](/api/expert-excel).
+- Beschikbaar vanaf release 0.7.

@@ -120,7 +120,8 @@
                     "pages": [
                       "nl/management/fleet-management/tachograph/vehicles",
                       "nl/management/fleet-management/tachograph/drivers",
-                      "nl/management/fleet-management/tachograph/company-cards"
+                      "nl/management/fleet-management/tachograph/company-cards",
+                      "nl/management/fleet-management/tachograph/card-client"
                     ]
                   },
                   {

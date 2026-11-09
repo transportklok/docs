@@ -1,0 +1,58 @@
+---
+title: "Tachograafkaart Verbinder"
+description: "De app installeren die uw bedrijfskaarten in een kaartlezer met TransportKlok verbindt."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+De **TransportKlok Tachograafkaart Verbinder** is een app voor uw computer. Hij verbindt de tachograaf-bedrijfskaarten in uw smartcardlezer met TransportKlok, zodat TransportKlok uw bedrijfskaarten kan gebruiken om tachografen op afstand uit te lezen.
+
+## Wie dit mag gebruiken
+
+- Een beheerder of manager van de organisatie. <Hint kind="red">Met een medewerkersaccount kunt u de app niet verbinden. U ziet dan "Medewerkersaccounts zijn niet toegestaan voor tachograafauthenticatie."</Hint>
+
+## Zo gebruikt u deze pagina
+
+De app installeren en verbinden:
+
+1. Installeer de app met het installatiebestand dat u van TransportKlok krijgt.
+2. Sluit uw smartcardlezer aan en steek de bedrijfskaart erin.
+3. Open de app. U ziet **Applicatie niet verbonden**. Klik op **Verbind applicatie**.
+4. Uw browser opent. Log in bij TransportKlok en bevestig de aanmelding.
+5. Ga terug naar de app. Die controleert de aanmelding zelf en toont daarna uw kaartlezers.
+
+Een kaart toevoegen:
+
+1. Klik bij **Smartcards** op **Kaart toevoegen**.
+2. Vul het **Kaartnummer** en een **Kaartnaam** in en klik op **Opslaan**.
+3. Zit er een kaart in de lezer die de app nog niet kent, dan staat er **ONBEKENDE KAART**. Klik op het koppelpictogram en kies de kaart in de lijst, of klik op **Kaart toevoegen**.
+
+## Velden
+
+| Veld | Wat u invult |
+|------|--------------|
+| **Kaartnummer** (verplicht) | Het nummer van de bedrijfskaart: 16 tekens, alleen hoofdletters en cijfers. |
+| **Kaartnaam** | Een naam waaraan u de kaart herkent. |
+| **ICCID** | Het chipnummer van de kaart. De app vult dit zelf in. |
+
+| In de kaartlezer | Betekenis |
+|------------------|-----------|
+| Naam of kaartnummer | Een bekende kaart zit in de lezer. |
+| **ONBEKENDE KAART** | Er zit een kaart in die nog niet aan een kaartnummer is gekoppeld. |
+| **LEGE SLEUF** | Er zit geen kaart in de lezer. |
+| **Geen aangesloten smartcardlezers** | De app ziet geen kaartlezer. Controleer de aansluiting. |
+
+## Wat er daarna gebeurt
+
+- Zolang de app verbonden is en de kaart in de lezer zit, kan TransportKlok de kaart gebruiken. Zie [Tachograaf bedrijfskaarten](/nl/management/fleet-management/tachograph/company-cards).
+- Met **Verbreek verbinding** koppelt u de app los van TransportKlok.
+- De app werkt zichzelf bij. Is er een update, dan vraagt de app om te **Herstarten**, of installeert hij de update bij de volgende start.
+
+## Beperkingen
+
+- Laat de computer met de kaartlezer aan staan en de app open. <Hint kind="yellow">Is de app dicht of de computer uit, dan kan TransportKlok de kaart niet gebruiken.</Hint>
+- Een kaartnummer komt één keer voor. Een nummer dat al bestaat, ziet u als "Kaartnummer bestaat al".
+- Ziet u **Geen internetverbinding** of **Onderhoud actief**, klik dan na een tijd op **Opnieuw controleren**.
+- Is de geïnstalleerde versie te oud, dan vraagt de app u een nieuwe versie te downloaden.

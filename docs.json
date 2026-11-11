@@ -189,6 +189,13 @@
                       "nl/management/human-resources/payroll-integrations/afas",
                       "nl/management/human-resources/payroll-integrations/exact-online"
                     ]
+                  },
+                  {
+                    "group": "Salarisinrichting",
+                    "pages": [
+                      "nl/management/human-resources/payroll-setup/cao-beroepsgoederenvervoer",
+                      "nl/management/human-resources/payroll-setup/contract-types"
+                    ]
                   }
                 ]
               },

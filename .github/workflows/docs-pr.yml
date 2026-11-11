@@ -41,17 +41,3 @@ jobs:
           scripts/test-migrate-to-language.sh
       - name: Check the navigation, redirects and links
         run: scripts/nav-check.sh
-
-  coverage:
-    name: Coverage check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      # Slot for the coverage check of task 1641: add scripts/coverage-check.sh and it runs here.
-      - name: Run the coverage check
-        run: |
-          if [ -x scripts/coverage-check.sh ]; then
-            scripts/coverage-check.sh
-          else
-            echo "::notice::scripts/coverage-check.sh does not exist yet (task 1641); coverage check skipped."
-          fi

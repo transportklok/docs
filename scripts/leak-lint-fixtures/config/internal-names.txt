@@ -1,0 +1,20 @@
+# One internal tool, framework or repository name per line, matched case-insensitively as a whole word.
+# Pages say what the customer sees in the product, never what it is built or checked with.
+# Lines starting with # and blank lines are ignored.
+TrackMijn
+MyTimeFlow
+Inectia
+Laravel
+shared.js
+Capacitor
+Capawesome
+Graphify
+Playwright
+GitHub
+Docker
+Terraform
+Sentry
+Codex
+journal
+make env
+make ws

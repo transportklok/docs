@@ -6,19 +6,81 @@ on:
 
 jobs:
   coverage:
+    name: Coverage check
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.WORKSPACE_READ_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
           path: docs
       - uses: actions/checkout@v4
+        if: github.event_name == 'pull_request'
+        with:
+          ref: ${{ github.base_ref }}
+          path: docs-base
+      - uses: actions/checkout@v4
         with:
           repository: transportklok/transportklok-workspace
           token: ${{ secrets.WORKSPACE_READ_TOKEN }}
           path: workspace
-      - name: Report feature-to-docs gaps as warnings
-        run: python3 workspace/scripts/docs-coverage/docs_coverage.py --workspace workspace --docs docs --github --json docs-coverage.json
+      - name: Resolve the product versions this docs line documents
+        id: versions
+        run: |
+          line="${{ github.base_ref || github.ref_name }}"
+          case "$line" in release/*) ;; *) line="${{ github.head_ref }}" ;; esac
+          case "$line" in release/*) ;; *) line=main ;; esac
+          mobile="$(gh api repos/transportklok/mobile/git/matching-refs/tags/ --jq '.[].ref' | sed 's#refs/tags/##' | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -1)"
+          [ -n "$mobile" ] || { echo "::error::no mobile production tag found"; exit 1; }
+          echo "platform=$line" >> "$GITHUB_OUTPUT"
+          echo "mobile=$mobile" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          repository: transportklok/platform
+          ref: ${{ steps.versions.outputs.platform }}
+          token: ${{ secrets.WORKSPACE_READ_TOKEN }}
+          path: products/platform
+      - name: Read the MyTimeFlow pin of the Platform line
+        id: pin
+        run: |
+          pin="$(jq -er .mytimeflow products/platform/release-dependencies.json)" || { echo "::error::Platform ${{ steps.versions.outputs.platform }} pins no MyTimeFlow version"; exit 1; }
+          echo "mytimeflow=$pin" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          repository: movingsoftware/mytimeflow
+          ref: ${{ steps.pin.outputs.mytimeflow }}
+          token: ${{ secrets.WORKSPACE_READ_TOKEN }}
+          path: products/mytimeflow
+      - uses: actions/checkout@v4
+        with:
+          repository: transportklok/mobile
+          ref: ${{ steps.versions.outputs.mobile }}
+          token: ${{ secrets.WORKSPACE_READ_TOKEN }}
+          path: products/mobile
+      - uses: actions/checkout@v4
+        with:
+          repository: movingsoftware/tachograph-card-client
+          ref: main
+          token: ${{ secrets.WORKSPACE_READ_TOKEN }}
+          path: products/tachograph-card-client
+      - name: Measure the base line
+        if: github.event_name == 'pull_request'
+        run: python3 workspace/scripts/docs-coverage/docs_coverage.py --workspace products --docs docs-base --json docs-coverage-base.json
+      - name: Fail on a gap the base line does not have
+        run: |
+          baseline=""
+          [ -f docs-coverage-base.json ] && baseline="--baseline docs-coverage-base.json"
+          python3 workspace/scripts/docs-coverage/docs_coverage.py --workspace products --docs docs --github --json docs-coverage.json --strict $baseline
+      - name: Write the summary
+        if: always() && hashFiles('docs-coverage.json') != ''
+        run: |
+          {
+            echo "Platform ${{ steps.versions.outputs.platform }}, MyTimeFlow ${{ steps.pin.outputs.mytimeflow }}, mobile ${{ steps.versions.outputs.mobile }}, card client main"
+            echo
+            jq -r '.summary | to_entries[] | "- \(.key): \(.value)"' docs-coverage.json
+          } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
+        if: always() && hashFiles('docs-coverage.json') != ''
         with:
           name: docs-coverage
           path: docs-coverage.json

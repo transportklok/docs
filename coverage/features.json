@@ -1,20 +1,14 @@
 {
   "nl/api/authentication.mdx": {
     "features": [
-      "mytimeflow:Settings/User/Apps/Overview",
-      "mytimeflow:Settings/User/Apps/Create",
-      "mytimeflow:Settings/User/Apps/Edit",
-      "mytimeflow:Settings/User/Apps/OAuthTestCallback"
+      "mytimeflow:Settings/User/Apps/Overview"
     ],
     "verified_tag": "0.5.0",
     "screenshot_date": "2026-11-09"
   },
   "nl/api/introduction.mdx": {
     "features": [
-      "mytimeflow:Settings/User/Apps/Overview",
-      "mytimeflow:Settings/User/Apps/Create",
-      "mytimeflow:Settings/User/Apps/Edit",
-      "mytimeflow:Settings/User/Apps/OAuthTestCallback"
+      "mytimeflow:Settings/User/Apps/Overview"
     ],
     "verified_tag": "0.5.0",
     "screenshot_date": "2026-11-08"
@@ -22,9 +16,6 @@
   "nl/api/oauth.mdx": {
     "features": [
       "mytimeflow:Settings/User/Apps/Overview",
-      "mytimeflow:Settings/User/Apps/Create",
-      "mytimeflow:Settings/User/Apps/Edit",
-      "mytimeflow:Settings/User/Apps/OAuthTestCallback",
       "mytimeflow:OAuth/Authorize",
       "mytimeflow:OAuth/DeviceAuthorize",
       "mytimeflow:OAuth/DeviceUserCode"
@@ -684,7 +675,6 @@
     "features": [
       "mytimeflow:Settings/Team/Attributes/Activity/Overview",
       "mytimeflow:Settings/Team/Attributes/Productive/Overview",
-      "mytimeflow:Settings/Team/Attributes/Unproductive/Overview",
       "mytimeflow:Settings/Team/Attributes/Version/Overview"
     ],
     "verified_tag": "0.5.0",
@@ -769,10 +759,7 @@
   },
   "nl/settings/user/apps.mdx": {
     "features": [
-      "mytimeflow:Settings/User/Apps/Overview",
-      "mytimeflow:Settings/User/Apps/Create",
-      "mytimeflow:Settings/User/Apps/Edit",
-      "mytimeflow:Settings/User/Apps/OAuthTestCallback"
+      "mytimeflow:Settings/User/Apps/Overview"
     ],
     "verified_tag": "0.5.0",
     "screenshot_date": "2026-11-08"

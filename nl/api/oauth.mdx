@@ -5,22 +5,31 @@ description: "Een toegangstoken ophalen met OAuth 2.0."
 
 ## Hoe het werkt
 
-TransportKlok gebruikt OAuth 2.0 met de authorization code flow. Uw app stuurt de gebruiker naar TransportKlok. Daar logt de gebruiker in, kiest de organisaties en geeft toestemming. Uw app wisselt daarna een code in voor een toegangstoken en een refresh token.
+TransportKlok gebruikt OAuth 2.0 met de authorization code flow en PKCE. Uw app stuurt de gebruiker naar TransportKlok. Daar logt de gebruiker in, kiest de organisaties en geeft toestemming. Uw app wisselt daarna een code in voor een toegangstoken en een refresh token. De implicit grant en de password grant worden niet aangeboden.
+
+De toestemming staat op de app-host (`app.transportklok.nl`). De tokenroutes staan op de API-host (`api.transportklok.nl`). Zie [API authenticatie](/nl/api/authentication#hosts).
 
 ## Een client aanvragen
 
-Een OAuth-client vraagt u aan bij TransportKlok via [info@transportklok.nl](mailto:info@transportklok.nl). Geef op:
+| Client | Hoe u hem krijgt | Grants |
+|--------|------------------|--------|
+| Koppeling van een partner | TransportKlok registreert de client voor u via [info@transportklok.nl](mailto:info@transportklok.nl) | `authorization_code` met PKCE, `refresh_token` |
+| App van een gebruiker | De gebruiker maakt hem aan bij **Instellingen** → **Apps**, als public of confidential client | `authorization_code` met PKCE, `refresh_token` |
+| MCP-connector (Claude, ChatGPT, Claude Code) | Geregistreerd in TransportKlok; dynamische registratie staat uit | `authorization_code` met PKCE, `refresh_token` |
+
+Bij een aanvraag via TransportKlok geeft u op:
 
 - de naam, een beschrijving, een logo en de website van uw app;
 - de redirect-URL's waar TransportKlok de gebruiker na het toestaan naartoe stuurt;
 - de scopes die uw app nodig heeft;
 - of uw app voor beheerders of voor medewerkers is.
 
-U krijgt een client-id en, voor een app met een eigen server, een client secret.
+U krijgt een client-id en, voor een confidential client met een eigen server, een client secret. Een public client heeft geen secret.
 
 ## De stappen
 
-1. Stuur de gebruiker naar het autorisatieadres:
+1. Maak een `code_verifier` (een willekeurige string van 43 tot 128 tekens) en bereken de `code_challenge`: de base64url-codering van de SHA-256 van de verifier, zonder `=`.
+2. Stuur de gebruiker naar het autorisatieadres:
 
    ```text
    https://app.transportklok.nl/oauth/authorize
@@ -29,34 +38,59 @@ U krijgt een client-id en, voor een app met een eigen server, een client secret.
      &response_type=code
      &scope=<scopes, met spaties ertussen>
      &state=<willekeurige waarde>
+     &code_challenge=<code-challenge>
+     &code_challenge_method=S256
    ```
 
-2. De gebruiker ziet **Applicatie autoriseren**, kiest bij **Toegestane organisaties** de organisaties en klikt op **Toestaan**.
-3. TransportKlok stuurt de gebruiker terug naar uw redirect-URL met `code` en `state`. Controleer dat `state` gelijk is aan wat u meestuurde.
-4. Wissel de code in voor een token:
+3. De gebruiker ziet **Applicatie autoriseren**, kiest bij **Toegestane organisaties** de organisaties en klikt op **Toestaan**.
+4. TransportKlok stuurt de gebruiker terug naar uw redirect-URL met `code` en `state`. Controleer dat `state` gelijk is aan wat u meestuurde.
+5. Wissel de code in voor een token op de API-host:
 
    ```http
    POST /oauth/token HTTP/1.1
-   Host: app.transportklok.nl
+   Host: api.transportklok.nl
    Content-Type: application/x-www-form-urlencoded
 
-   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>
+   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>&code_verifier=<code-verifier>
    ```
 
-5. Het antwoord bevat `access_token`, `refresh_token`, `token_type` en `expires_in` (in seconden).
+   Een public client laat `client_secret` weg; de `code_verifier` blijft verplicht.
+6. Het antwoord bevat `access_token`, `refresh_token`, `token_type` en `expires_in` (in seconden).
+
+Een autorisatiecode werkt één keer. Een toegangstoken leeft één uur en een refresh token dertig dagen.
 
 ## Een nieuw token ophalen
 
-Is het toegangstoken verlopen, vraag dan met het refresh token een nieuw aan:
+Is het toegangstoken verlopen, vraag dan met het refresh token een nieuw aan, op dezelfde tokenroute:
 
 ```http
 POST /oauth/token HTTP/1.1
-Host: app.transportklok.nl
+Host: api.transportklok.nl
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=refresh_token&client_id=<client-id>&client_secret=<client-secret>&refresh_token=<refresh-token>
 ```
 
+Elke vernieuwing geeft een nieuw refresh token en maakt het oude ongeldig. Bewaar het nieuwe meteen: wie een gebruikt refresh token opnieuw stuurt, verliest de hele toegang van de client voor die gebruiker.
+
+## Een token intrekken
+
+Trek een toegangstoken of refresh token in met een verzoek op de API-host:
+
+```http
+POST /oauth/revoke HTTP/1.1
+Host: api.transportklok.nl
+Content-Type: application/x-www-form-urlencoded
+
+client_id=<client-id>&client_secret=<client-secret>&token=<token>
+```
+
+Een public client laat `client_secret` weg.
+
+## Overstappen naar de API-host
+
+`/oauth/token` op de app-host blijft tijdens de [overgangsperiode](/nl/api/authentication#overgangsperiode) werken, met een `Deprecation`-header. Gebruik de API-host.
+
 ## Wat de gebruiker ziet
 
-Bij het toestaan ziet de gebruiker welke app toegang vraagt, met welk account en met welke rechten. De toegang intrekken doet de gebruiker bij **Instellingen** → **Apps** in TransportKlok.
+Wat de gebruiker bij het toestaan ziet en hoe die de toegang weer intrekt, staat bij [Een app toegang geven](/nl/sign-in/app-access).

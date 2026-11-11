@@ -339,19 +339,19 @@
     },
     {
       "file": "workforce-tijdregistratie-details.png",
-      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/show",
+      "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/show",
       "role": "worker",
       "selector": null
     },
     {
       "file": "workforce-tijdregistratie-tijdlijn.png",
-      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/timeline",
+      "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/timeline",
       "role": "worker",
       "selector": null
     },
     {
       "file": "workforce-tijdregistratie-bewerken.png",
-      "url": "/workforce/hour/time-registrations/019ef9d2-f8ab-7308-87de-0fcf7dac9c79/edit",
+      "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/edit",
       "role": "worker",
       "selector": null
     },

@@ -42,18 +42,6 @@ jobs:
       - name: Check the navigation, redirects and links
         run: scripts/nav-check.sh
 
-  navigation:
-    name: Navigation check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Prove the check fires on each mismatch
-        run: |
-          scripts/test-nav-check.sh
-          scripts/test-migrate-to-language.sh
-      - name: Check the navigation, redirects and links
-        run: scripts/nav-check.sh
-
   coverage:
     name: Coverage check
     runs-on: ubuntu-latest

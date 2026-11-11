@@ -171,7 +171,8 @@
                       "nl/management/human-resources/payroll-runs/create",
                       "nl/management/human-resources/payroll-runs/process",
                       "nl/management/human-resources/payroll-runs/corrections",
-                      "nl/management/human-resources/payroll-runs/exports"
+                      "nl/management/human-resources/payroll-runs/exports",
+                      "nl/management/human-resources/payroll-runs/faq"
                     ]
                   },
                   {
@@ -216,7 +217,8 @@
                       "nl/management/hour-management/time-registrations/rejected"
                     ]
                   },
-                  "nl/management/hour-management/automatic-time-registrations"
+                  "nl/management/hour-management/automatic-time-registrations",
+                  "nl/management/hour-management/faq"
                 ]
               },
               {
@@ -265,7 +267,8 @@
                         "pages": [
                           "nl/settings/organization/integrations/instances",
                           "nl/settings/organization/integrations/accounts",
-                          "nl/settings/organization/integrations/capabilities"
+                          "nl/settings/organization/integrations/capabilities",
+                          "nl/settings/organization/integrations/faq"
                         ]
                       },
                       "nl/settings/organization/notifications",
@@ -347,7 +350,8 @@
                   "nl/workforce/app/map",
                   "nl/workforce/app/organizations",
                   "nl/workforce/app/settings",
-                  "nl/workforce/app/malfunctions"
+                  "nl/workforce/app/malfunctions",
+                  "nl/workforce/app/faq"
                 ]
               },
               {

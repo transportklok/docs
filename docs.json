@@ -1746,6 +1746,91 @@
       "permanent": true
     },
     {
+      "source": "/beheerders/exports-en-meldingen",
+      "destination": "/nl/general/exports",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/aanmelden/registreren",
+      "destination": "/nl/sign-in/register",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/aanmelden/inloggen",
+      "destination": "/nl/sign-in/log-in",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/aanmelden/tweefactor-inloggen",
+      "destination": "/nl/sign-in/two-factor",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/aanmelden/app-toegang",
+      "destination": "/nl/sign-in/app-access",
+      "permanent": true
+    },
+    {
+      "source": "/medewerkers/aanmelden/uitnodiging-accepteren",
+      "destination": "/nl/sign-in/accept-invitation",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/overzicht",
+      "destination": "/nl/settings/organization/integrations/instances",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/overzicht",
+      "destination": "/nl/settings/organization/integrations/instances",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/integraties",
+      "destination": "/nl/settings/organization/integrations/instances",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/rollen-en-rechten",
+      "destination": "/nl/settings/organization/administrators",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/algemeen",
+      "destination": "/nl/settings/organization/general/profile",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/configuratie-en-modules",
+      "destination": "/nl/settings/organization/configuration/base",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/machtiging-en-facturering",
+      "destination": "/nl/settings/organization/plan-and-billing/payment-method",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/algemeen",
+      "destination": "/nl/settings/team/general/profile",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/configuratie-en-functies",
+      "destination": "/nl/settings/team/configuration/base",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/account",
+      "destination": "/nl/settings/user/account/email",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/beveiliging",
+      "destination": "/nl/settings/user/authentication-and-security/sessions",
+      "permanent": true
+    },
+    {
       "source": "/api/orders",
       "destination": "/nl/api/introduction",
       "permanent": true
@@ -1811,6 +1896,61 @@
       "permanent": true
     },
     {
+      "source": "/beheerders/instellingen/account/apps",
+      "destination": "/nl/settings/user/apps",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/organisaties-en-teams",
+      "destination": "/nl/settings/user/memberships",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/profiel",
+      "destination": "/nl/settings/user/profile",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/account/weergave",
+      "destination": "/nl/settings/user/appearance",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/abonnement",
+      "destination": "/nl/settings/organization/subscription",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/beheerders",
+      "destination": "/nl/settings/organization/administrators",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/notificaties",
+      "destination": "/nl/settings/organization/notifications",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/organisatie/teams",
+      "destination": "/nl/settings/organization/teams",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/kenmerken",
+      "destination": "/nl/settings/team/attributes",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/werkpatronen",
+      "destination": "/nl/settings/team/work-patterns",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/instellingen/team/werkzaamheden",
+      "destination": "/nl/settings/team/activities",
+      "permanent": true
+    },
+    {
       "source": "/beheerders/klantenbeheer/opdrachtgevers/aanmaken",
       "destination": "/nl/management/customer-management/customers/create",
       "permanent": true
@@ -1841,8 +1981,53 @@
       "permanent": true
     },
     {
+      "source": "/beheerders/personeelszaken/personeel/aanmaken",
+      "destination": "/nl/management/human-resources/workers/create",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/details",
+      "destination": "/nl/management/human-resources/workers/details",
+      "permanent": true
+    },
+    {
       "source": "/beheerders/personeelszaken/personeel/overzicht",
       "destination": "/nl/management/human-resources/workers/overview",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/teams",
+      "destination": "/nl/management/human-resources/workers/teams",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/uitnodigingen",
+      "destination": "/nl/management/human-resources/workers/invitations",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/personeel/wijzigen",
+      "destination": "/nl/management/human-resources/workers/edit",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/afas",
+      "destination": "/nl/management/human-resources/payroll-integrations/afas",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/exact-online",
+      "destination": "/nl/management/human-resources/payroll-integrations/exact-online",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/loket",
+      "destination": "/nl/management/human-resources/payroll-integrations/loket",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/personeelszaken/salariskoppelingen/nmbrs",
+      "destination": "/nl/management/human-resources/payroll-integrations/nmbrs",
       "permanent": true
     },
     {
@@ -1903,6 +2088,41 @@
     {
       "source": "/beheerders/wagenparkbeheer/kaart",
       "destination": "/nl/management/fleet-management/map",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/co3",
+      "destination": "/nl/management/fleet-management/integrations/co3",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/fleetgo",
+      "destination": "/nl/management/fleet-management/integrations/fleetgo",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/geotab",
+      "destination": "/nl/management/fleet-management/integrations/geotab",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/linqo",
+      "destination": "/nl/management/fleet-management/integrations/linqo",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/samsara",
+      "destination": "/nl/management/fleet-management/integrations/samsara",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/verizon-connect",
+      "destination": "/nl/management/fleet-management/integrations/verizon-connect",
+      "permanent": true
+    },
+    {
+      "source": "/beheerders/wagenparkbeheer/koppelingen/webfleet",
+      "destination": "/nl/management/fleet-management/integrations/webfleet",
       "permanent": true
     },
     {
@@ -2018,226 +2238,6 @@
     {
       "source": "/medewerkers/werk/tijdregistratie/tijdlijn",
       "destination": "/nl/workforce/hour-management/time-registrations/timeline",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/exports-en-meldingen",
-      "destination": "/nl/general/exports",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/aanmelden/registreren",
-      "destination": "/nl/sign-in/register",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/aanmelden/inloggen",
-      "destination": "/nl/sign-in/log-in",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/aanmelden/tweefactor-inloggen",
-      "destination": "/nl/sign-in/two-factor",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/aanmelden/app-toegang",
-      "destination": "/nl/sign-in/app-access",
-      "permanent": true
-    },
-    {
-      "source": "/medewerkers/aanmelden/uitnodiging-accepteren",
-      "destination": "/nl/sign-in/accept-invitation",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/overzicht",
-      "destination": "/nl/settings/organization/integrations/instances",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/salariskoppelingen/overzicht",
-      "destination": "/nl/settings/organization/integrations/instances",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/integraties",
-      "destination": "/nl/settings/organization/integrations/instances",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/rollen-en-rechten",
-      "destination": "/nl/settings/organization/administrators",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/algemeen",
-      "destination": "/nl/settings/organization/general/profile",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/configuratie-en-modules",
-      "destination": "/nl/settings/organization/configuration/base",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/machtiging-en-facturering",
-      "destination": "/nl/settings/organization/plan-and-billing/payment-method",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/team/algemeen",
-      "destination": "/nl/settings/team/general/profile",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/team/configuratie-en-functies",
-      "destination": "/nl/settings/team/configuration/base",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/account/account",
-      "destination": "/nl/settings/user/account/email",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/account/beveiliging",
-      "destination": "/nl/settings/user/authentication-and-security/sessions",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/account/apps",
-      "destination": "/nl/settings/user/apps",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/account/organisaties-en-teams",
-      "destination": "/nl/settings/user/memberships",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/account/profiel",
-      "destination": "/nl/settings/user/profile",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/account/weergave",
-      "destination": "/nl/settings/user/appearance",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/abonnement",
-      "destination": "/nl/settings/organization/subscription",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/beheerders",
-      "destination": "/nl/settings/organization/administrators",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/notificaties",
-      "destination": "/nl/settings/organization/notifications",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/organisatie/teams",
-      "destination": "/nl/settings/organization/teams",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/team/kenmerken",
-      "destination": "/nl/settings/team/attributes",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/team/werkpatronen",
-      "destination": "/nl/settings/team/work-patterns",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/instellingen/team/werkzaamheden",
-      "destination": "/nl/settings/team/activities",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/personeel/aanmaken",
-      "destination": "/nl/management/human-resources/workers/create",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/personeel/details",
-      "destination": "/nl/management/human-resources/workers/details",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/personeel/teams",
-      "destination": "/nl/management/human-resources/workers/teams",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/personeel/uitnodigingen",
-      "destination": "/nl/management/human-resources/workers/invitations",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/personeel/wijzigen",
-      "destination": "/nl/management/human-resources/workers/edit",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/salariskoppelingen/afas",
-      "destination": "/nl/management/human-resources/payroll-integrations/afas",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/salariskoppelingen/exact-online",
-      "destination": "/nl/management/human-resources/payroll-integrations/exact-online",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/salariskoppelingen/loket",
-      "destination": "/nl/management/human-resources/payroll-integrations/loket",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/personeelszaken/salariskoppelingen/nmbrs",
-      "destination": "/nl/management/human-resources/payroll-integrations/nmbrs",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/co3",
-      "destination": "/nl/management/fleet-management/integrations/co3",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/fleetgo",
-      "destination": "/nl/management/fleet-management/integrations/fleetgo",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/geotab",
-      "destination": "/nl/management/fleet-management/integrations/geotab",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/linqo",
-      "destination": "/nl/management/fleet-management/integrations/linqo",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/samsara",
-      "destination": "/nl/management/fleet-management/integrations/samsara",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/verizon-connect",
-      "destination": "/nl/management/fleet-management/integrations/verizon-connect",
-      "permanent": true
-    },
-    {
-      "source": "/beheerders/wagenparkbeheer/koppelingen/webfleet",
-      "destination": "/nl/management/fleet-management/integrations/webfleet",
       "permanent": true
     },
     {

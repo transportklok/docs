@@ -177,7 +177,73 @@
     },
     {
       "file": "management-personeel-overzicht.png",
-      "url": "/management/human-resources/employments",
+      "url": "/management/human-resources/workers",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-personeel-aanmaken.png",
+      "url": "/management/human-resources/workers/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-personeel-uitnodigingen.png",
+      "url": "/management/human-resources/workers/invitations",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-salarisrondes-overzicht.png",
+      "url": "/management/human-resources/payroll-runs",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-salarisrondes-aanmaken.png",
+      "url": "/management/human-resources/payroll-runs/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-aanvullingen-inhoudingen-overzicht.png",
+      "url": "/management/human-resources/payroll-mutations",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "management-aanvullingen-inhoudingen-aanmaken.png",
+      "url": "/management/human-resources/payroll-mutations/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-integraties-overzicht.png",
+      "url": "/settings/organization/integrations/instances",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-integraties-nmbrs-koppelen.png",
+      "url": "/settings/organization/integrations/nmbrs/instances/create",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-organisatie-beheerders.png",
+      "url": "/settings/organization/administrators/users",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-organisatie-modules.png",
+      "url": "/settings/organization/configuration/modules",
+      "role": "admin",
+      "selector": null
+    },
+    {
+      "file": "instellingen-organisatie-teams.png",
+      "url": "/settings/organization/teams/active",
       "role": "admin",
       "selector": null
     },
@@ -311,6 +377,12 @@
       "file": "workforce-tijdregistratie-bewerken.png",
       "url": "/workforce/hour/time-registrations/019f0000-0000-7000-8000-000000000004/edit",
       "role": "worker",
+      "selector": null
+    },
+    {
+      "file": "account-tweefactorauthenticatie.png",
+      "url": "/settings/user/authentication-and-security/two-factor-authentication",
+      "role": "admin",
       "selector": null
     },
     {

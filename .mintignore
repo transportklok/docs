@@ -1,6 +1,20 @@
 # Mintlify automatically ignores these files and directories:
 # .git, .github, .claude, .agents, .idea, node_modules,
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
+# Every other file is published, also a page outside the navigation.
+
+# Authoring instructions, tooling and its data: never published
+AGENTS.md
+scripts/
+.workspaces/
+.atlas-analysis.json
+.release-line-only
+mobile-gps-tracker-concept.md
+images/captures/*.json
+
+# Repository configuration
+.gitignore
+.mintignore
 
 # Draft content
 drafts/

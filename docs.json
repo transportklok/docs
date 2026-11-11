@@ -68,6 +68,12 @@
             "tab": "Beheerders",
             "groups": [
               {
+                "group": "Aan de slag",
+                "pages": [
+                  "nl/management/first-setup"
+                ]
+              },
+              {
                 "group": "Wagenparkbeheer",
                 "pages": [
                   "nl/management/fleet-management/map",
@@ -378,7 +384,7 @@
   "redirects": [
     {
       "source": "/beheerders/start",
-      "destination": "/nl/index",
+      "destination": "/nl/management/first-setup",
       "permanent": true
     },
     {

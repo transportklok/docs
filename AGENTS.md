@@ -27,7 +27,7 @@ Every page outside `api/` has frontmatter (`title`, `description`) and these sec
 4. `## Velden` — each field with what to enter; mark required fields.
 5. `## Wat er daarna gebeurt` — the result of the last step.
 6. `## Beperkingen` — what the page cannot do and what depends on setup (see the payroll rules below).
-A page describes only how the product works for the user, in plain, user-friendly Dutch. It never says how, where or against which version the page was checked: no "last checked" section, no version number, no mention of a demo workspace or test run.
+A page describes only how the product works for the user, in plain, user-friendly Dutch: only what a customer can see and know. It never says how, where or against which version the page was checked: no "last checked" section, no version number, no mention of a demo workspace or test run. It never names an environment (staging, a test environment), a host, an internal tool or repository, a branch, or a task, plan or pull request number; `scripts/leak-lint.sh` fails the docs PR on each of them in every published file. Mintlify publishes every file outside `.mintignore`, also a page outside the navigation, so a file that is not for the customer goes in `.mintignore`.
 
 Screenshots (`## Schermafbeelding`) sit after the purpose section.
 

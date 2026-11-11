@@ -1,23 +1,43 @@
 #!/usr/bin/env bash
-# Fail when published docs content leaks internal hostnames, email addresses,
-# tokens, table names or customer names.
-# Usage: scripts/leak-lint.sh [root] [config-dir]
+# Fail when a file Mintlify publishes leaks internal hostnames, environments, check methods,
+# branch or ticket numbers, internal tool names, email addresses, tokens, table or customer names.
+# Mintlify publishes every file outside its default ignores and .mintignore, so that is what is scanned.
+# Usage: scripts/leak-lint.sh [root] [config-dir]   (root must be a git work tree)
 set -u
 
 root="${1:-.}"
 config="${2:-$root/.github/leak-lint}"
 status=0
 
+# Print the files Mintlify publishes, relative to the root.
+served() {
+  local ignores all ignored
+  ignores=$(mktemp)
+  all=$(mktemp)
+  ignored=$(mktemp)
+  printf '%s\n' .git/ .github/ .claude/ .agents/ .idea/ .vscode/ .cursor/ .mintlify/ node_modules/ \
+    README.md LICENSE.md CHANGELOG.md CONTRIBUTING.md >"$ignores"
+  if [ -f "$root/.mintignore" ]; then
+    cat "$root/.mintignore" >>"$ignores"
+  fi
+  (cd "$root" && find . -type f -not -path './.git/*' | sed 's|^\./||' | LC_ALL=C sort) >"$all"
+  (cd "$root" && git -c core.excludesFile="$ignores" check-ignore --no-index --stdin <"$all" >"$ignored")
+  if [ $? -gt 1 ]; then
+    echo "leak-lint: $root is not a git work tree" >&2
+    rm -f "$ignores" "$all" "$ignored"
+    exit 2
+  fi
+  LC_ALL=C sort "$ignored" | LC_ALL=C comm -23 "$all" -
+  rm -f "$ignores" "$all" "$ignored"
+}
+
 files=()
 while IFS= read -r file; do
   files+=("$file")
-done < <(cd "$root" && find . -type f \( -name '*.md' -o -name '*.mdx' -o -name 'docs.json' \) \
-  -not -path './.git/*' -not -path './.github/*' -not -path './scripts/*' \
-  -not -path './node_modules/*' -not -path './images/*' \
-  -not -name 'README.md' -not -name 'AGENTS.md' | sort)
+done < <(served)
 
 if [ "${#files[@]}" -eq 0 ]; then
-  echo "leak-lint: no content files found under $root" >&2
+  echo "leak-lint: no published files found under $root" >&2
   exit 2
 fi
 
@@ -31,7 +51,7 @@ entries() {
 # Report every line matching an extended regex; $3 is an optional grep flag.
 scan() {
   local label="$1" pattern="$2" flag="${3:-}" hits
-  hits=$(cd "$root" && grep -nE ${flag:+"$flag"} -e "$pattern" "${files[@]}" 2>/dev/null || true)
+  hits=$(cd "$root" && grep -InE ${flag:+"$flag"} -e "$pattern" "${files[@]}" 2>/dev/null || true)
   if [ -n "$hits" ]; then
     echo "leak-lint: $label"
     echo "$hits" | sed 's/^/  /'
@@ -42,7 +62,19 @@ scan() {
 scan "internal hostname" \
   '(localhost|\b[a-z0-9-]+(\.[a-z0-9-]+)*\.(internal|local|lan|corp|intranet)\b|\b(10\.[0-9]{1,3}|192\.168|172\.(1[6-9]|2[0-9]|3[01]))\.[0-9]{1,3}\.[0-9]{1,3}\b|[a-z0-9.-]+\.rds\.amazonaws\.com)' -i
 
-emails=$(cd "$root" && grep -noE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "${files[@]}" 2>/dev/null || true)
+scan "internal environment or demo data" \
+  '(staging|\.stage\.|testomgeving|demo-?werkruimte|docs-demo)' -i
+
+scan "how the page was checked" \
+  '(laatst (gecontroleerd|geverifieerd)|(gecontroleerd|geverifieerd) (in|tegen|op) (de )?(demo|versie|tag|release|platform|[0-9]))' -i
+
+scan "branch or release line" \
+  '\b(release|hotfix)/[0-9]+\.[0-9]+' -i
+
+scan "task, plan or pull request number" \
+  '(\b(task|taak|plan|pr|pull request|issue|ticket)[ -]?#?[0-9]+\b|\b[a-z0-9_.-]+/[a-z0-9_.-]+#[0-9]+\b)' -i
+
+emails=$(cd "$root" && grep -InoE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "${files[@]}" 2>/dev/null || true)
 while IFS= read -r allowed; do
   emails=$(echo "$emails" | grep -viF -e "$allowed" || true)
 done < <(entries "$config/allowed-emails.txt")
@@ -58,7 +90,7 @@ scan "token or secret" \
 scan "SQL statement on a table" \
   '\b(FROM|JOIN|INSERT INTO|UPDATE)[[:space:]]+[a-z_]+[[:space:]]+(WHERE|SET|VALUES|ON|LIMIT)\b' -i
 
-for kind in table customer; do
+for kind in table customer internal; do
   while IFS= read -r name; do
     scan "$kind name '$name'" "(^|[^A-Za-z0-9_])$name([^A-Za-z0-9_]|$)" -i
   done < <(entries "$config/$kind-names.txt")

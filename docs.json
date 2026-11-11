@@ -68,6 +68,12 @@
             "tab": "Beheerders",
             "groups": [
               {
+                "group": "Aan de slag",
+                "pages": [
+                  "nl/management/first-setup"
+                ]
+              },
+              {
                 "group": "Wagenparkbeheer",
                 "pages": [
                   "nl/management/fleet-management/map",
@@ -120,7 +126,8 @@
                     "pages": [
                       "nl/management/fleet-management/tachograph/vehicles",
                       "nl/management/fleet-management/tachograph/drivers",
-                      "nl/management/fleet-management/tachograph/company-cards"
+                      "nl/management/fleet-management/tachograph/company-cards",
+                      "nl/management/fleet-management/tachograph/card-client"
                     ]
                   },
                   {
@@ -164,7 +171,8 @@
                       "nl/management/human-resources/payroll-runs/create",
                       "nl/management/human-resources/payroll-runs/process",
                       "nl/management/human-resources/payroll-runs/corrections",
-                      "nl/management/human-resources/payroll-runs/exports"
+                      "nl/management/human-resources/payroll-runs/exports",
+                      "nl/management/human-resources/payroll-runs/faq"
                     ]
                   },
                   {
@@ -182,6 +190,13 @@
                       "nl/management/human-resources/payroll-integrations/loket",
                       "nl/management/human-resources/payroll-integrations/afas",
                       "nl/management/human-resources/payroll-integrations/exact-online"
+                    ]
+                  },
+                  {
+                    "group": "Salarisinrichting",
+                    "pages": [
+                      "nl/management/human-resources/payroll-setup/cao-beroepsgoederenvervoer",
+                      "nl/management/human-resources/payroll-setup/contract-types"
                     ]
                   }
                 ]
@@ -201,7 +216,8 @@
                       "nl/management/hour-management/time-registrations/payroll-mutation-export"
                     ]
                   },
-                  "nl/management/hour-management/automatic-time-registrations"
+                  "nl/management/hour-management/automatic-time-registrations",
+                  "nl/management/hour-management/faq"
                 ]
               },
               {
@@ -250,7 +266,8 @@
                         "pages": [
                           "nl/settings/organization/integrations/instances",
                           "nl/settings/organization/integrations/accounts",
-                          "nl/settings/organization/integrations/capabilities"
+                          "nl/settings/organization/integrations/capabilities",
+                          "nl/settings/organization/integrations/faq"
                         ]
                       },
                       "nl/settings/organization/notifications",
@@ -332,7 +349,8 @@
                   "nl/workforce/app/map",
                   "nl/workforce/app/organizations",
                   "nl/workforce/app/settings",
-                  "nl/workforce/app/malfunctions"
+                  "nl/workforce/app/malfunctions",
+                  "nl/workforce/app/faq"
                 ]
               },
               {
@@ -377,7 +395,7 @@
   "redirects": [
     {
       "source": "/beheerders/start",
-      "destination": "/nl/index",
+      "destination": "/nl/management/first-setup",
       "permanent": true
     },
     {

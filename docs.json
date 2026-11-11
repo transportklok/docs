@@ -197,6 +197,7 @@
                       "nl/management/hour-management/time-registrations/details",
                       "nl/management/hour-management/time-registrations/timeline",
                       "nl/management/hour-management/time-registrations/edit",
+                      "nl/management/hour-management/time-registrations/time-for-time",
                       "nl/management/hour-management/time-registrations/payroll-mutation-export",
                       "nl/management/hour-management/time-registrations/rejected"
                     ]

@@ -9,7 +9,7 @@ permissions:
 jobs:
   broken-links:
     name: Broken links
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_TK_2 || 'tk-2' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,7 +20,7 @@ jobs:
 
   leak-lint:
     name: Leak lint
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_TK_2 || 'tk-2' }}
     steps:
       - uses: actions/checkout@v4
       - name: Prove the lint fires on each leak kind
@@ -32,7 +32,7 @@ jobs:
 
   navigation:
     name: Navigation check
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_TK_2 || 'tk-2' }}
     steps:
       - uses: actions/checkout@v4
       - name: Prove the check fires on each mismatch

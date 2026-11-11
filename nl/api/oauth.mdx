@@ -29,7 +29,11 @@ U krijgt een client-id en, voor een app met een eigen server, een client secret.
      &response_type=code
      &scope=<scopes, met spaties ertussen>
      &state=<willekeurige waarde>
+     &code_challenge=<code-challenge>
+     &code_challenge_method=S256
    ```
+
+   Maak per poging een willekeurige `code_verifier` en stuur de Base64URL-gecodeerde SHA-256 daarvan mee als `code_challenge` (PKCE). Een app zonder client secret moet dat doen; voor een app met een eigen server is het aan te raden.
 
 2. De gebruiker ziet **Applicatie autoriseren**, kiest bij **Toegestane organisaties** de organisaties en klikt op **Toestaan**.
 3. TransportKlok stuurt de gebruiker terug naar uw redirect-URL met `code` en `state`. Controleer dat `state` gelijk is aan wat u meestuurde.
@@ -40,10 +44,10 @@ U krijgt een client-id en, voor een app met een eigen server, een client secret.
    Host: app.transportklok.nl
    Content-Type: application/x-www-form-urlencoded
 
-   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>
+   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>&code_verifier=<code-verifier>
    ```
 
-5. Het antwoord bevat `access_token`, `refresh_token`, `token_type` en `expires_in` (in seconden).
+5. Het antwoord bevat `access_token`, `refresh_token`, `token_type` en `expires_in` (in seconden). Een app zonder client secret laat `client_secret` weg.
 
 ## Een nieuw token ophalen
 
@@ -57,6 +61,36 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=refresh_token&client_id=<client-id>&client_secret=<client-secret>&refresh_token=<refresh-token>
 ```
 
+Het antwoord bevat ook een nieuw refresh token. Bewaar dat; het oude werkt daarna niet meer.
+
+## Scopes
+
+Een scope heeft de vorm `<onderdeel>:<actie>`. Een `*` geeft alle acties van dat onderdeel, behalve bij `mcp`. Welke scopes uw app kan krijgen, hangt af van of de app voor beheerders of voor medewerkers is.
+
+| Onderdeel | Voor beheerders | Voor medewerkers |
+|-----------|-----------------|------------------|
+| users | `users:read`, `users:me` | `users:me` |
+| organizations | `organizations:read`, `organizations:update` | `organizations:read` |
+| workers | `workers:read` | `workers:me` |
+| engagements | `engagements:read` | geen |
+| exports | `exports:read`, `exports:create`, `exports:download` | `exports:read`, `exports:create`, `exports:download` |
+| mcp | `mcp:use`, `mcp:read`, `mcp:write`, `mcp:destructive` | `mcp:use`, `mcp:read`, `mcp:write`, `mcp:destructive` |
+
+## Welke routes een scope bewaakt
+
+De REST API v1 heeft routes voor organisaties, medewerkers, contractperioden en exports. Alleen die scopes bewaken een route:
+
+| Scope | Route |
+|-------|-------|
+| `organizations:read` | `GET /rest/v1/organizations` en `GET /rest/v1/organizations/{organisatie-id}` |
+| `workers:read` | `GET /rest/v1/organizations/{organisatie-id}/workers` en `.../workers/{medewerker-id}` |
+| `engagements:read` | `GET /rest/v1/organizations/{organisatie-id}/workers/{medewerker-id}/engagements` |
+| `exports:read` | `GET /rest/v1/organizations/{organisatie-id}/exports` en `.../exports/{export-id}` |
+| `exports:create` | `POST /rest/v1/organizations/{organisatie-id}/exports` |
+| `exports:download` | `GET /rest/v1/organizations/{organisatie-id}/exports/{export-id}/download` |
+
+De overige scopes in de tabel bewaken nog geen route in de REST API.
+
 ## Wat de gebruiker ziet
 
-Bij het toestaan ziet de gebruiker welke app toegang vraagt, met welk account en met welke rechten. De toegang intrekken doet de gebruiker bij **Instellingen** → **Apps** in TransportKlok.
+Wat de gebruiker bij het toestaan ziet en hoe die de toegang weer intrekt, staat bij [Een app toegang geven](/nl/sign-in/app-access).

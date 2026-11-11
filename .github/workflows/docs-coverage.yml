@@ -9,7 +9,7 @@ on:
 
 jobs:
   coverage:
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_TK_2 || 'tk-2' }}
     env:
       READ_TOKEN: ${{ secrets.WORKSPACE_READ_TOKEN }}
     steps:

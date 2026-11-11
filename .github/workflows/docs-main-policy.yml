@@ -13,7 +13,7 @@ jobs:
   main-takes-only-a-line:
     name: Main takes only a release line
     if: github.event.pull_request.base.ref == 'main'
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_TK_2 || 'tk-2' }}
     steps:
       - name: Refuse a pull request into main from anything but a release line
         env:

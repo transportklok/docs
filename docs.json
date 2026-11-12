@@ -165,6 +165,14 @@
                     ]
                   },
                   {
+                    "group": "Saldi",
+                    "pages": [
+                      "nl/management/human-resources/balances/overview",
+                      "nl/management/human-resources/balances/vacation",
+                      "nl/management/human-resources/balances/atv"
+                    ]
+                  },
+                  {
                     "group": "Salarisrondes",
                     "pages": [
                       "nl/management/human-resources/payroll-runs/overview",
@@ -345,6 +353,7 @@
                   "nl/workforce/app/home",
                   "nl/workforce/app/register-work",
                   "nl/workforce/app/register-leave",
+                  "nl/workforce/app/leave-balance",
                   "nl/workforce/app/overview",
                   "nl/workforce/app/timer",
                   "nl/workforce/app/map",

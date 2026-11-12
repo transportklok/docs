@@ -1,0 +1,994 @@
+{
+  "nl/api/authentication.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Apps/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/api/introduction.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Apps/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/api/oauth.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Apps/Overview",
+      "mytimeflow:OAuth/Authorize",
+      "mytimeflow:OAuth/DeviceAuthorize",
+      "mytimeflow:OAuth/DeviceUserCode"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-11"
+  },
+  "nl/api/rate-limits.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Apps/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/general/exports.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Overview",
+      "mytimeflow:Workforce/HourManagement/TimeRegistration/Overview",
+      "mytimeflow:Management/HumanResources/PayrollRuns/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/index.mdx": {
+    "features": []
+  },
+  "nl/management/customer-management/customers/create.mdx": {
+    "features": [
+      "mytimeflow:Management/FrontOffice/Customers/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/customer-management/customers/edit.mdx": {
+    "features": [
+      "mytimeflow:Management/FrontOffice/Customers/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/customer-management/customers/overview.mdx": {
+    "features": [
+      "mytimeflow:Management/FrontOffice/Customers/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/customer-management/integrations/qargo.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/first-setup.mdx": {
+    "features": [
+      "mytimeflow:Register/RegisterOrganization",
+      "mytimeflow:Settings/Organization/Configuration/Modules/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/fleet-management/integrations/co3.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/integrations/fleetgo.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/integrations/geotab.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/integrations/linqo.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/integrations/samsara.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/fleet-management/integrations/verizon-connect.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/integrations/webfleet.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/locations/create.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Locations/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/locations/overview.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Locations/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/map.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Map"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/fleet-management/tachograph/card-client.mdx": {
+    "features": [
+      "tachograph-card-client:app/AuthScreen",
+      "tachograph-card-client:app/HomeScreen",
+      "tachograph-card-client:errors/Maintenance",
+      "tachograph-card-client:errors/NotFound",
+      "tachograph-card-client:errors/Offline",
+      "tachograph-card-client:errors/Outdated"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/fleet-management/tachograph/company-cards.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Tachographs/CompanyCards/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/tachograph/drivers.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Tachographs/Drivers/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/tachograph/vehicles.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Tachographs/Vehicles/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/telematics/beacons/connect.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Telematics/Beacons/Connect"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/telematics/beacons/create.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Telematics/Beacons/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/telematics/beacons/overview.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Telematics/Beacons/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/telematics/overview.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Telematics/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/telematics/trackers/create.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Telematics/Devices/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/telematics/trackers/overview.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Telematics/Devices/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/trailers/create.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Trailers/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/trailers/edit.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Trailers/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/trailers/overview.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Trailers/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/vehicles/create.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Vehicles/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/vehicles/edit.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Vehicles/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/fleet-management/vehicles/overview.mdx": {
+    "features": [
+      "platform:Management/FleetManagement/Vehicles/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/hour-management/automatic-time-registrations.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Configuration/Modules/Configuration"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/hour-management/faq.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Overview",
+      "mytimeflow:Management/HourManagement/TimeRegistration/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/hour-management/time-registrations/create.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/hour-management/time-registrations/details.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-06"
+  },
+  "nl/management/hour-management/time-registrations/edit.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-06-24"
+  },
+  "nl/management/hour-management/time-registrations/overview.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-06"
+  },
+  "nl/management/hour-management/time-registrations/payroll-mutation-export.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-06"
+  },
+  "nl/management/hour-management/time-registrations/rejected.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Overview",
+      "mytimeflow:Management/HourManagement/TimeRegistration/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/hour-management/time-registrations/time-for-time.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/hour-management/time-registrations/timeline.mdx": {
+    "features": [
+      "mytimeflow:Management/HourManagement/TimeRegistration/Timeline"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-06"
+  },
+  "nl/management/human-resources/contracts/overview.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Contracts/Overview",
+      "mytimeflow:Management/HumanResources/Contracts/FreelanceOverview",
+      "mytimeflow:Management/HumanResources/Contracts/CharterOverview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-components/create.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollMutations/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-07"
+  },
+  "nl/management/human-resources/payroll-components/edit.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollMutations/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-components/overview.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollMutations/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-07"
+  },
+  "nl/management/human-resources/payroll-integrations/afas.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-integrations/exact-online.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-integrations/loket.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-integrations/nmbrs.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-runs/corrections.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollRuns/Show",
+      "mytimeflow:Management/HumanResources/PayrollRuns/Worker"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-runs/create.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollRuns/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-07"
+  },
+  "nl/management/human-resources/payroll-runs/exports.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollRuns/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-runs/faq.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollRuns/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/human-resources/payroll-runs/overview.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollRuns/Overview",
+      "mytimeflow:Management/HumanResources/PayrollRuns/Import"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-07"
+  },
+  "nl/management/human-resources/payroll-runs/process.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/PayrollRuns/Show",
+      "mytimeflow:Management/HumanResources/PayrollRuns/Worker"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/payroll-setup/cao-beroepsgoederenvervoer.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Configuration/Modules/Configuration",
+      "mytimeflow:Management/HumanResources/PayrollRuns/Worker"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/human-resources/payroll-setup/contract-types.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Edit",
+      "mytimeflow:Management/HumanResources/Contracts/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/management/human-resources/workers/create.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/workers/details.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/workers/edit.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/workers/invitations.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Invitations/Overview",
+      "mytimeflow:Management/HumanResources/Workers/InvitationLinks/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/workers/overview.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/management/human-resources/workers/teams.mdx": {
+    "features": [
+      "mytimeflow:Management/HumanResources/Workers/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/administrators.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Administrators/Invitations/Create",
+      "mytimeflow:Settings/Organization/Administrators/Invitations/Overview",
+      "mytimeflow:Settings/Organization/Administrators/Users/Edit",
+      "mytimeflow:Settings/Organization/Administrators/Users/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/configuration/base.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Configuration/Base/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/configuration/modules.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Configuration/Modules/Overview",
+      "mytimeflow:Settings/Organization/Configuration/Modules/Configuration"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/general/address.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/General/Address"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/general/profile.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/General/Profile"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/integrations/accounts.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Accounts/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Accounts/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/integrations/capabilities.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Capabilities/Overview",
+      "mytimeflow:Settings/Organization/Integrations/CapabilityHandlers/Runs/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/integrations/faq.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/CapabilityHandlers/Runs/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/settings/organization/integrations/instances.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Integrations/Instances/Overview",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Create",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Configuration",
+      "mytimeflow:Settings/Organization/Integrations/Instances/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/notifications.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Notifications/Recipients/Overview",
+      "mytimeflow:Settings/Organization/Notifications/Recipients/Create",
+      "mytimeflow:Settings/Organization/Notifications/Recipients/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/plan-and-billing/invoices.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/PlanAndBilling/Invoices/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/plan-and-billing/payment-method.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/PlanAndBilling/PaymentMethod/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/subscription.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Subscription/Plan/Overview",
+      "mytimeflow:Settings/Organization/Subscription/Items/Overview",
+      "mytimeflow:Settings/Organization/Subscription/Payment/Aftercare"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/organization/teams.mdx": {
+    "features": [
+      "mytimeflow:Settings/Organization/Teams/Active/Overview",
+      "mytimeflow:Settings/Organization/Teams/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/activities.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/Activities/Productive/Advanced/Edit",
+      "mytimeflow:Settings/Team/Activities/Productive/Advanced/Overview",
+      "mytimeflow:Settings/Team/Activities/Productive/Advanced/Variant/Create",
+      "mytimeflow:Settings/Team/Activities/Productive/Advanced/Variant/Edit",
+      "mytimeflow:Settings/Team/Activities/Productive/Custom/Create",
+      "mytimeflow:Settings/Team/Activities/Productive/Custom/Edit",
+      "mytimeflow:Settings/Team/Activities/Productive/Custom/Overview",
+      "mytimeflow:Settings/Team/Activities/Productive/Custom/TrashCan/Overview",
+      "mytimeflow:Settings/Team/Activities/Productive/TrashCan/Overview",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Advanced/Edit",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Advanced/Overview",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Advanced/Variant/Create",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Advanced/Variant/Edit",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Custom/Create",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Custom/Edit",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Custom/Overview",
+      "mytimeflow:Settings/Team/Activities/Unproductive/Custom/TrashCan/Overview",
+      "mytimeflow:Settings/Team/Activities/Unproductive/TrashCan/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/attributes.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/Attributes/Activity/Overview",
+      "mytimeflow:Settings/Team/Attributes/Productive/Overview",
+      "mytimeflow:Settings/Team/Attributes/Version/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/configuration/base.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/Configuration/Base/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/configuration/break-schema.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/Configuration/Features/Configuration"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/configuration/features.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/Configuration/Features/Overview",
+      "mytimeflow:Settings/Team/Configuration/Features/Configuration"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/configuration/parcel-delivery.mdx": {
+    "features": [
+      "mytimeflow:Features/ParcelDelivery/Routes/Overview",
+      "mytimeflow:Features/ParcelDelivery/Routes/Create",
+      "mytimeflow:Features/ParcelDelivery/Routes/Edit",
+      "mytimeflow:Settings/Team/Configuration/Features/Configuration"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/general/address.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/General/Address/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/general/profile.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/General/Profile/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/team/work-patterns.mdx": {
+    "features": [
+      "mytimeflow:Settings/Team/TimeRegistrationTemplates/Overview",
+      "mytimeflow:Settings/Team/TimeRegistrationTemplates/Create",
+      "mytimeflow:Settings/Team/TimeRegistrationTemplates/Edit",
+      "mytimeflow:Settings/Team/TimeRegistrationTemplates/TrashCan"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/account/email.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Account/Email/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/account/password.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Account/Password/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/appearance.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Appearance/Language/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/apps.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/Apps/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/authentication-and-security/devices.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/AuthenticationSecurity/Devices/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/authentication-and-security/sessions.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/AuthenticationSecurity/Sessions/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/authentication-and-security/two-factor-authentication.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/AuthenticationSecurity/TwoFactorAuthentication/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/memberships.mdx": {
+    "features": [
+      "mytimeflow:User/Memberships"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/settings/user/profile.mdx": {
+    "features": [
+      "mytimeflow:Settings/User/General/Profile/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/accept-invitation.mdx": {
+    "features": [
+      "mytimeflow:Register/OpenWorkerInvitation"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/app-access.mdx": {
+    "features": [
+      "mytimeflow:OAuth/Authorize",
+      "mytimeflow:OAuth/DeviceAuthorize",
+      "mytimeflow:OAuth/DeviceUserCode"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/confirm-email.mdx": {
+    "features": [
+      "mytimeflow:Auth/EmailVerificationConfirmed"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/forgot-password.mdx": {
+    "features": [
+      "mytimeflow:Auth/ForgotPassword",
+      "mytimeflow:Auth/ResetPassword"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/log-in.mdx": {
+    "features": [
+      "mytimeflow:Auth/Login"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/register.mdx": {
+    "features": [
+      "mytimeflow:Register/RegisterOrganization",
+      "mytimeflow:Register/RegisterUser"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/sign-in/two-factor.mdx": {
+    "features": [
+      "mytimeflow:Auth/TwoFactorChallenge"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/faq.mdx": {
+    "features": [
+      "mobile:errors/ServerUnreachable",
+      "mobile:errors/Offline"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/workforce/app/home.mdx": {
+    "features": [
+      "mobile:workforce/dashboard/Dashboard"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/login.mdx": {
+    "features": [
+      "mobile:auth/Login",
+      "mobile:auth/TwoFactorChallenge",
+      "mobile:auth/ForgotPassword",
+      "mobile:auth/EmailVerification",
+      "mobile:onboarding/BiometricOptIn",
+      "mytimeflow:Auth/DeviceAuthenticationConfirmed"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/malfunctions.mdx": {
+    "features": [
+      "mobile:errors/Offline",
+      "mobile:errors/Maintenance",
+      "mobile:errors/Outdated",
+      "mobile:errors/ServerUnreachable"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/map.mdx": {
+    "features": [
+      "mobile:workforce/fleet-management/Map"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/organizations.mdx": {
+    "features": [
+      "mobile:user/memberships/Memberships"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/overview.mdx": {
+    "features": [
+      "mobile:workforce/work/time-registration/Overview",
+      "mobile:workforce/work/time-registration/Show",
+      "mobile:workforce/work/time-registration/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/push-notifications.mdx": {
+    "features": [
+      "mobile:onboarding/PushPermissionPrompt",
+      "mobile:user/notifications/Notifications"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/register-leave.mdx": {
+    "features": [
+      "mobile:workforce/work/time-registration/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/register-work.mdx": {
+    "features": [
+      "mobile:workforce/work/time-registration/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/settings.mdx": {
+    "features": [
+      "mobile:settings/Overview",
+      "mobile:settings/account/email/Overview",
+      "mobile:settings/account/password/Overview",
+      "mobile:settings/appearance/language/Overview",
+      "mobile:settings/authentication-security/devices/Overview",
+      "mobile:settings/authentication-security/sessions/Overview",
+      "mobile:settings/authentication-security/two-factor-authentication/Overview",
+      "mobile:settings/general/profile/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/app/timer.mdx": {
+    "features": [
+      "mobile:workforce/dashboard/Dashboard",
+      "mobile:workforce/work/time-registration/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-08"
+  },
+  "nl/workforce/hour-management/time-registrations/create.mdx": {
+    "features": [
+      "mytimeflow:Workforce/HourManagement/TimeRegistration/Create"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/workforce/hour-management/time-registrations/details.mdx": {
+    "features": [
+      "mytimeflow:Workforce/HourManagement/TimeRegistration/Show"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/workforce/hour-management/time-registrations/edit.mdx": {
+    "features": [
+      "mytimeflow:Workforce/HourManagement/TimeRegistration/Edit"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/workforce/hour-management/time-registrations/overview.mdx": {
+    "features": [
+      "mytimeflow:Workforce/HourManagement/TimeRegistration/Overview"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  },
+  "nl/workforce/hour-management/time-registrations/timeline.mdx": {
+    "features": [
+      "mytimeflow:Workforce/HourManagement/TimeRegistration/Timeline"
+    ],
+    "verified_tag": "0.5.0",
+    "screenshot_date": "2026-11-09"
+  }
+}

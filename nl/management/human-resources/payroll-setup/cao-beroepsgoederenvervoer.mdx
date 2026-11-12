@@ -1,0 +1,48 @@
+---
+title: "Cao Beroepsgoederenvervoer"
+description: "Welke cao-regels TransportKlok toepast op de uren, wat u zelf instelt en waar u de uitkomst controleert."
+---
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Waar deze pagina voor is
+
+TransportKlok rekent de uren van uw medewerkers om volgens de cao Beroepsgoederenvervoer: overuren, toeslagen voor zaterdag, zondag en nacht, en verblijfskosten. Hier leest u wat TransportKlok zelf toepast, wat u instelt en waar u controleert wat er is berekend.
+
+## Wie dit mag gebruiken
+
+- Een beheerder van de organisatie met de module **Salarismutaties**.
+
+## Zo gebruikt u deze pagina
+
+1. Stel de salarisperiode in bij **Instellingen** → **Organisatie Instellingen** → **Configuratie en modules** → **Modules** → **Salarismutaties**. Zie [Modules](/nl/settings/organization/configuration/modules).
+2. Leg per medewerker het contract vast. Zie [Contracttypen](/nl/management/human-resources/payroll-setup/contract-types).
+3. Voeg vaste of eenmalige bedragen toe die de cao niet regelt. Zie [Aanvullingen en inhoudingen](/nl/management/human-resources/payroll-components/overview).
+4. Maak een salarisronde en controleer per medewerker de **Urenafrekening**. Zie [Salarisronde aanmaken](/nl/management/human-resources/payroll-runs/create).
+
+## Velden
+
+Wat TransportKlok volgens de cao Beroepsgoederenvervoer berekent. De percentages en bedragen hieronder komen uit de cao.
+
+| Onderdeel | Wat TransportKlok berekent |
+|-----------|----------------------------|
+| Overuren | Uren boven de contracturen in een week zijn overuren: bij een voltijdcontract boven 40 uur. Een dag met doorbetaalde afwezigheid telt voor 8 uur mee. Overuren krijgen het uurloon plus 30%. |
+| Zaterdag | Gewerkte uren op zaterdag krijgen 50% toeslag. |
+| Zondag en feestdagen | Gewerkte uren op zondag krijgen 100% toeslag. Op een feestdag geldt 100% toeslag, ook als die op een zaterdag valt. |
+| Nacht | Uren tussen 21.00 en 05.00 uur krijgen 19% toeslag bij een voorrit of een eendagsrit. |
+| Verblijfskosten | Bij een eendaagse rit van vier uur of langer is de vergoeding € 0,83 per uur, met hogere bedragen in de avond. |
+| ATV | Medewerkers registreren ATV als improductieve uren met de werkzaamheid **ATV**. Hoeveel ATV-dagen een medewerker heeft, houdt TransportKlok niet bij. |
+| Loonschalen | TransportKlok rekent in uren. Het uurloon en de loonschaal staan in uw salarispakket. |
+
+<Hint kind="yellow">De percentages en bedragen volgen de versie van de cao die geldt voor de datum van de uren.</Hint>
+
+## Wat er daarna gebeurt
+
+- Op de urenafrekening van een medewerker in een salarisronde ziet u de **Contracturen**, **Meeruren**, **Overuren**, **Tekorturen** en **Aanvuluren**, en per dag de uren per toeslag. Zie [Salarisrondes](/nl/management/human-resources/payroll-runs/overview).
+- De salarisexport geeft deze uren en toeslagen door aan uw salarispakket. Zie [Exports](/nl/management/human-resources/payroll-runs/exports).
+
+## Beperkingen
+
+- U kunt de percentages en bedragen van de cao niet zelf aanpassen. Een afwijkende afspraak voegt u toe als aanvulling of inhouding.
+- Regels die per werkgever verschillen, zoals een tijd-voor-tijdregeling of een ploegendiensttoeslag, stelt u niet in TransportKlok in. Zo'n regeling spreekt u af in de contracten met uw medewerkers.
+- TransportKlok ondersteunt deze ene cao.

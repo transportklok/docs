@@ -41,6 +41,12 @@ Een externe koppeling gebruikt altijd OAuth. Apparaat- en sessietokens worden ni
 
 Alleen `GET /rest/me` accepteert naast een OAuth-toegangstoken met `users:me` ook een sessietoken.
 
+## Welke tokens de API kent
+
+Een koppeling gebruikt altijd een OAuth-toegangstoken. De eigen apps van TransportKlok (de mobiele app en de tachograafkaartlezer) gebruiken eigen apparaat- en sessietokens. Die worden niet aan koppelingen uitgegeven.
+
+Stuur het token alleen in de `Authorization` header. Een token in de querystring wordt niet gelezen.
+
 ## Wat een token mag
 
 - Een token hoort bij de gebruiker die uw app toegang gaf. De API laat alleen zien wat die gebruiker zelf mag zien.

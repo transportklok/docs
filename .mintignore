@@ -11,6 +11,7 @@ scripts/
 .release-line-only
 mobile-gps-tracker-concept.md
 images/captures/*.json
+coverage/
 
 # Repository configuration
 .gitignore

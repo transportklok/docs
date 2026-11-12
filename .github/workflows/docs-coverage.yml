@@ -2,6 +2,9 @@ name: docs-coverage
 
 on:
   pull_request:
+  push:
+    branches:
+      - 'release/**'
   workflow_dispatch:
 
 jobs:

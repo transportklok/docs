@@ -1,0 +1,53 @@
+---
+title: "Nmbrs"
+description: "Connect Nmbrs, what is sent and fetched, and what you see when something goes wrong."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/nmbrs.mdx sha256:7a8a42a026df04516a531f2e502d6ba211349696a8050f78b22b445203d90354 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+With the Nmbrs integration, you send processed payroll runs to Nmbrs and fetch workers, contracts and leave from Nmbrs.
+
+## Screenshot
+
+![Connect Nmbrs](/images/nl/captures/instellingen-integraties-nmbrs-koppelen.png)
+
+## Who can use this
+
+- An administrator or manager of the organization, with a Nmbrs account that has access to the employer.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+1. Create an account for **Nmbrs** and log in to Nmbrs. See [Accounts](/en/settings/organization/integrations/accounts).
+2. Open **Integrations**, click **Add integration** and click **Connect** next to **Nmbrs**.
+3. Choose the **Account**.
+4. Choose the **Employer** from the Nmbrs list.
+5. Give the integration a **Name** and click **Connect**.
+6. Fill in the settings and click **Save settings**.
+7. On **Sync behavior**, turn on the switch next to **Send payroll runs** and save.
+
+## Fields
+
+| Field | What you fill in |
+|------|--------------|
+| **Employer** (required) | The company in Nmbrs. You cannot choose an employer that is already linked. |
+| **Create workers automatically** | If this is off, TransportKlok only links workers with the same personnel number and the same last name. |
+| **Pay code mappings** | Which Nmbrs pay code belongs to which kind of hours and allowance. <Hint kind="yellow">This depends on how your Nmbrs company is set up. Agree on the codes with whoever does your payroll administration.</Hint> |
+| **Nmbrs workers for payroll import** | The Nmbrs workers that take part, separated by commas or lines. If you leave this empty, all linked workers take part. |
+| **Nmbrs leave group mappings** | Which leave group in Nmbrs belongs to which kind of leave. |
+
+## What happens next
+
+- When a payroll run is **Sent**, TransportKlok enters the hours and pay components of that period per worker in Nmbrs, and adds the payslip overview as a PDF. Corrections that are carried along go with it.
+- Data that TransportKlok previously entered in Nmbrs for that period is updated or removed, so that Nmbrs has the latest processed version.
+- Every night, TransportKlok fetches workers, contracts and leave from Nmbrs.
+- Under **Sync behavior** → **Runs**, you see for each submission whether it is **Succeeded** or **Failed**.
+
+## Limitations
+
+- The Nmbrs company must work with monthly periods. <Hint kind="yellow">This depends on how your Nmbrs company is set up.</Hint>
+- Workers who are not linked to the chosen employer in Nmbrs are skipped by the submission.
+- A submission fails, among other things, if access to Nmbrs has expired, if no employer is chosen, if a pay component has no Nmbrs code, or if that period in Nmbrs already contains data from another run or integration.

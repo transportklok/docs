@@ -1,0 +1,49 @@
+---
+title: "Conturi"
+description: "Conturile cu care se autentifică TransportKlok la pachetul dumneavoastră de salarizare sau la sistemul de telematică."
+---
+{/* translated-from: nl/settings/organization/integrations/accounts.mdx sha256:4a2b5c1c0091d7c59db51f3f4859a164dfd37949500bc40814feea469902f2d2 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+În fila **Conturi** stabiliți cum se autentifică TransportKlok la pachetul dumneavoastră de salarizare sau la sistemul de telematică. O integrare de la [Integrări](/ro/settings/organization/integrations/instances) folosește un astfel de cont.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+
+## Cum folosiți această pagină
+
+1. Deschideți **Setări** → **Setările organizației** → **Integrări** și alegeți fila **Conturi**.
+2. Faceți clic pe **Creați contul**.
+3. Alegeți la **Integrare** sistemul dumneavoastră și completați un **Nume**.
+4. Completați datele de autentificare pe care le cere sistemul și faceți clic pe **Creați contul**.
+5. La un pachet de salarizare mergeți la pagina de autentificare a acelui pachet. Autentificați-vă acolo și dați acordul.
+
+## Câmpuri
+
+| Câmp | Ce completați |
+|------|--------------|
+| **Integrare** | Pachetul de salarizare sau sistemul de telematică. |
+| **Nume** | Un nume după care recunoașteți contul. |
+| Date de autentificare | Ce cere sistemul. |
+
+Datele de autentificare pentru fiecare sistem de telematică:
+
+| Sistem | Autentificare cu |
+|---------|--------------|
+| Webfleet, FleetGo, Verizon Connect | **Nume de utilizator** și **Parolă** |
+| Samsara, Geotab, Linqo | **Token** |
+| CO3 | **ID client** și **Secret client** |
+
+Un pachet de salarizare nu cere aici date de autentificare: vă autentificați pe pagina de autentificare a pachetului.
+
+## Ce se întâmplă după aceea
+
+- Contul are starea **Conectat**. Îl alegeți apoi la o integrare.
+
+## Limitări
+
+- **Deconectați contul** șterge și toate integrările care folosesc acel cont. <Hint kind="red">După deconectare, TransportKlok nu mai preia și nu mai trimite nimic prin acele integrări.</Hint>

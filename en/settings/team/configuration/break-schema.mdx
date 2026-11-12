@@ -1,0 +1,47 @@
+---
+title: "Break scale"
+description: "Have a registration's break calculated from the time worked."
+---
+{/* translated-from: nl/settings/team/configuration/break-schema.mdx sha256:8a33b4e84c8ccf2096dfc64b0add758055a7e633197175df485288cf6b3d6186 */}
+
+## What this page is for
+
+With the **Break scale** feature, TransportKlok calculates the break of a time registration from the time worked. You decide per scale how much break applies.
+
+## Who can use this
+
+- An administrator or manager of the team.
+
+## How to use this page
+
+1. Open **Settings**, choose the team, choose **Configuration and features** and open the **Features** tab.
+2. Activate the **Break scale** feature. See [Features](/en/settings/team/configuration/features).
+3. Next to **Break scale**, click **Settings**.
+4. Per scale, fill in the number of break minutes and choose the switches.
+5. Click **Save**.
+
+## Fields
+
+| Field | What you fill in | Default |
+|------|--------------|-----------|
+| **Break at 4.5 hours of work** | Break minutes for more than 4.5 hours of work. | 30 |
+| **Break at 7.5 hours of work** | Break minutes for more than 7.5 hours of work. | 60 |
+| **Break at 10.5 hours of work** | Break minutes for more than 10.5 hours of work. | 90 |
+| **Break at 13.5 hours of work** | Break minutes for more than 13.5 hours of work. | 120 |
+| **Break at 16.5 hours of work** | Break minutes for more than 16.5 hours of work. | 150 |
+| **Enforce break scale (cannot be overridden)** | On: nobody can change the calculated break. | on |
+| **Allow working without a break (explanation required)** | On: workers can indicate that they took no break, with an explanation. | off |
+| **Allow administrators to adjust break time** | On: administrators and managers can change the calculated break, workers cannot. | off |
+
+## What happens next
+
+- For a registration, TransportKlok fills in the **Break (minutes)** field itself as soon as the start and end times are known. The highest scale that the time worked exceeds applies. At exactly 4.5 hours of work, no break applies yet.
+- If `Pauzestaffel afdwingen` is on, **Break (minutes)** cannot be changed. TransportKlok recalculates the break when saving.
+- If `Sta werken zonder pauze toe` is on, the worker sees the **No break taken** field. With an explanation, the break becomes 0 minutes.
+- The scale also applies to registrations that TransportKlok creates with [automatic hour registration](/en/management/hour-management/automatic-time-registrations).
+
+## Limitations
+
+- Without `Pauzestaffel afdwingen`, workers can change the calculated break themselves. TransportKlok leaves a break that does not match a scale as it is.
+- The break must be at least one minute shorter than the whole registration. Otherwise you see "The break must be at least one minute shorter than the entire registration."
+- Anyone who chooses **No break taken** without an explanation sees "An explanation is required when no break was taken."

@@ -1,0 +1,47 @@
+---
+title: "Skala przerw"
+description: "Obliczanie przerwy w rejestracji na podstawie przepracowanego czasu."
+---
+{/* translated-from: nl/settings/team/configuration/break-schema.mdx sha256:8a33b4e84c8ccf2096dfc64b0add758055a7e633197175df485288cf6b3d6186 */}
+
+## Do czego służy ta strona
+
+Dzięki funkcji **Skala przerw** TransportKlok oblicza przerwę w rejestracji czasu pracy na podstawie przepracowanego czasu. Dla każdego progu określa się, ile przerwy obowiązuje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer zespołu.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **Ustawienia**, wybrać zespół, wybrać **Konfiguracja i funkcje** i otworzyć kartę **Funkcje**.
+2. Aktywować funkcję **Skala przerw**. Zob. [Funkcje](/pl/settings/team/configuration/features).
+3. Przy **Skala przerw** kliknąć **Ustawienia**.
+4. Dla każdego progu wpisać liczbę minut przerwy i wybrać przełączniki.
+5. Kliknąć **Zapisz**.
+
+## Pola
+
+| Pole | Co należy wpisać | Domyślnie |
+|------|--------------|-----------|
+| **Przerwa przy 4,5 godz. pracy** | Minuty przerwy przy pracy dłuższej niż 4,5 godziny. | 30 |
+| **Przerwa przy 7,5 godz. pracy** | Minuty przerwy przy pracy dłuższej niż 7,5 godziny. | 60 |
+| **Przerwa przy 10,5 godz. pracy** | Minuty przerwy przy pracy dłuższej niż 10,5 godziny. | 90 |
+| **Przerwa przy 13,5 godz. pracy** | Minuty przerwy przy pracy dłuższej niż 13,5 godziny. | 120 |
+| **Przerwa przy 16,5 godz. pracy** | Minuty przerwy przy pracy dłuższej niż 16,5 godziny. | 150 |
+| **Wymuś skalę przerw (bez możliwości zmiany)** | Włączone: nikt nie może zmienić obliczonej przerwy. | włączone |
+| **Zezwalaj na pracę bez przerwy (wymagane uzasadnienie)** | Włączone: pracownicy mogą wskazać, że nie zrobili przerwy, z uzasadnieniem. | wyłączone |
+| **Zezwól administratorom na zmianę czasu przerwy** | Włączone: administratorzy i menedżerowie mogą zmienić obliczoną przerwę, pracownicy nie. | wyłączone |
+
+## Co dzieje się potem
+
+- Przy rejestracji TransportKlok sam wypełnia pole **Przerwa (minuty)**, gdy tylko znane są godziny rozpoczęcia i zakończenia. Obowiązuje najwyższy próg, który przepracowany czas przekracza. Przy dokładnie 4,5 godziny pracy przerwa jeszcze nie obowiązuje.
+- Jeśli `Pauzestaffel afdwingen` jest włączone, **Przerwa (minuty)** nie można zmienić. TransportKlok przelicza przerwę ponownie przy zapisie.
+- Jeśli `Sta werken zonder pauze toe` jest włączone, pracownik widzi pole **Bez przerwy**. Z uzasadnieniem przerwa wynosi 0 minut.
+- Skala obowiązuje także dla rejestracji tworzonych przez TransportKlok w ramach [automatycznej rejestracji godzin](/pl/management/hour-management/automatic-time-registrations).
+
+## Ograniczenia
+
+- Bez `Pauzestaffel afdwingen` pracownicy mogą sami zmienić obliczoną przerwę. Przerwę, która nie pasuje do żadnego progu, TransportKlok zostawia bez zmian.
+- Przerwa musi być co najmniej o minutę krótsza niż cała rejestracja. W przeciwnym razie widać komunikat „Przerwa musi być co najmniej o jedną minutę krótsza niż cała rejestracja."
+- Kto wybierze **Bez przerwy** bez uzasadnienia, widzi komunikat „Uzasadnienie jest wymagane, gdy nie zrobiono przerwy."

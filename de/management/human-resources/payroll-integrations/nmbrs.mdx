@@ -1,0 +1,53 @@
+---
+title: "Nmbrs"
+description: "Nmbrs verbinden, was gesendet und abgerufen wird, und was Sie sehen, wenn etwas schiefgeht."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/nmbrs.mdx sha256:7a8a42a026df04516a531f2e502d6ba211349696a8050f78b22b445203d90354 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Mit der Nmbrs-Integration senden Sie verarbeitete Lohnabrechnungsläufe an Nmbrs und rufen Mitarbeitende, Verträge und Urlaub aus Nmbrs ab.
+
+## Screenshot
+
+![Nmbrs verbinden](/images/nl/captures/instellingen-integraties-nmbrs-koppelen.png)
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation, mit einem Nmbrs-Konto, das Zugriff auf den Arbeitgeber hat.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie ein Konto für **Nmbrs** an und melden Sie sich bei Nmbrs an. Siehe [Konten](/de/settings/organization/integrations/accounts).
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Nmbrs** auf **Verbinden**.
+3. Wählen Sie das **Konto**.
+4. Wählen Sie den **Arbeitgeber** aus der Liste von Nmbrs.
+5. Vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+6. Tragen Sie die Einstellungen ein und klicken Sie auf **Einstellungen speichern**.
+7. Schalten Sie unter **Synchronisationsverhalten** den Schalter bei **Lohnabrechnungsläufe senden** ein und speichern Sie.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Arbeitgeber** (Pflicht) | Das Unternehmen in Nmbrs. Einen Arbeitgeber, der bereits verknüpft ist, können Sie nicht noch einmal wählen. |
+| **Mitarbeiter automatisch anlegen** | Ist dies ausgeschaltet, verknüpft TransportKlok nur Mitarbeitende mit derselben Personalnummer und demselben Nachnamen. |
+| **Zuordnungen der Lohnarten-Codes** | Welcher Nmbrs-Lohncode zu welcher Stundenart und Vergütung gehört. <Hint kind="yellow">Das hängt von der Einrichtung Ihres Nmbrs-Unternehmens ab. Stimmen Sie die Codes mit demjenigen ab, der Ihre Lohnbuchhaltung führt.</Hint> |
+| **Nmbrs-Mitarbeiter für den Lohnimport** | Die Nmbrs-Mitarbeitenden, die teilnehmen, getrennt durch Kommas oder Zeilen. Lassen Sie dies leer, nehmen alle verknüpften Mitarbeitenden teil. |
+| **Nmbrs-Zuordnungen der Urlaubsgruppen** | Welche Urlaubsgruppe in Nmbrs zu welcher Urlaubsart gehört. |
+
+## Was danach passiert
+
+- Beim **Senden** eines Lohnabrechnungslaufs legt TransportKlok pro Mitarbeitenden die Stunden und Lohnarten dieses Zeitraums in Nmbrs an und fügt die Lohnübersicht als PDF hinzu. Mitgenommene Korrekturen gehen mit.
+- Daten, die TransportKlok zuvor für diesen Zeitraum in Nmbrs angelegt hat, werden aktualisiert oder entfernt, sodass Nmbrs die zuletzt verarbeitete Version hat.
+- Jede Nacht ruft TransportKlok Mitarbeitende, Verträge und Urlaub aus Nmbrs ab.
+- Unter **Synchronisationsverhalten** → **Ausführungen** sehen Sie pro Versand, ob er **Erfolgreich** oder **Fehlgeschlagen** ist.
+
+## Einschränkungen
+
+- Das Nmbrs-Unternehmen muss mit Monatszeiträumen arbeiten. <Hint kind="yellow">Das hängt von der Einrichtung Ihres Nmbrs-Unternehmens ab.</Hint>
+- Mitarbeitende, die nicht mit dem gewählten Arbeitgeber in Nmbrs verknüpft sind, überspringt der Versand.
+- Ein Versand schlägt unter anderem fehl, wenn der Zugriff auf Nmbrs abgelaufen ist, wenn kein Arbeitgeber gewählt ist, wenn eine Lohnart keinen Nmbrs-Code hat oder wenn dieser Zeitraum in Nmbrs bereits Daten eines anderen Laufs oder einer anderen Integration enthält.

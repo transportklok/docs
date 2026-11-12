@@ -1,0 +1,58 @@
+---
+title: "Qargo"
+description: "Qargo verbinden und Ihre Kunden aus Qargo als Auftraggeber übernehmen."
+---
+{/* translated-from: nl/management/customer-management/integrations/qargo.mdx sha256:4387ab77afd7c9a116a23b0e1a7511989cda383eb413d48add04eef7a52eb409 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Mit der Qargo-Integration übernimmt TransportKlok Ihre Kunden aus Qargo als Auftraggeber, mit ihrer Rechnungsadresse als Standort.
+
+## Screenshot
+
+![Ein Konto für Qargo anlegen](/images/nl/captures/instellingen-integraties-qargo-account.png)
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Die Organisation benötigt das Modul **Kundenverwaltung**.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Einstellungen** → **Organisationseinstellungen** → **Integrationen** und wählen Sie den Tab **Konten**.
+2. Klicken Sie auf **Konto erstellen** und wählen Sie unter **Integration** die Option **Qargo**.
+3. Tragen Sie bei **Name** einen Namen, die **Client-ID** und das **Client-Secret** Ihres Qargo-API-Benutzers ein und klicken Sie auf **Konto erstellen**.
+4. Öffnen Sie den Tab **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Qargo** auf **Verbinden**.
+5. Wählen Sie das **Konto**, geben Sie der Integration bei **Name** einen Namen und klicken Sie auf **Verbinden**.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Name** (Pflicht) | Der Name des Kontos in der Übersicht. |
+| **Client-ID** (Pflicht) | Die Client-ID Ihres Qargo-API-Benutzers. |
+| **Client-Secret** (Pflicht) | Das Geheimnis, das zu dieser Client-ID gehört. |
+
+<Hint kind="yellow">Der API-Benutzer in Qargo benötigt die Rolle `API_MASTER_DATA` oder `API_ACCOUNTING`, um Unternehmen lesen zu dürfen. Ohne diese Rolle lehnt TransportKlok das Konto ab.</Hint>
+
+## Was danach passiert
+
+| Funktion | Läuft automatisch |
+|---------|---------------|
+| **Kunden synchronisieren** | jeden Tag um 03:00 Uhr |
+
+- Mit **Synchronisieren** auf dem Tab **Synchronisationsverhalten** rufen Sie die Kunden sofort ab. Siehe [Synchronisationsverhalten](/de/settings/organization/integrations/capabilities).
+- Jeder Kunde in Qargo wird in TransportKlok zu einem Auftraggeber, mit dem Namen als **Name**, dem Kundencode als **Referenz** und der Notiz als **Notizen**. Siehe [Auftraggeber](/de/management/customer-management/customers/overview).
+- Die Rechnungsadresse des Kunden wird zu einem Standort vom Typ **Kunde** bei diesem Auftraggeber.
+- Beim ersten Mal ruft die Integration alle Kunden ab. Danach nur noch die Kunden, die in Qargo geändert wurden.
+
+## Einschränkungen
+
+- Die Integration ruft nur Daten aus Qargo ab. Sie sendet nichts zurück.
+- Unternehmen in Qargo, die kein Kunde oder archiviert sind, übernimmt die Integration nicht.
+- Ändern Sie in TransportKlok Name, Referenz oder Notizen eines übernommenen Auftraggebers, bleibt Ihre Änderung bestehen. <Hint kind="grey">Ein Feld, das Sie nicht geändert haben, folgt bei der nächsten Synchronisation Qargo.</Hint>
+- Hat die Rechnungsadresse in Qargo keine Koordinaten, wird der Auftraggeber trotzdem übernommen, aber ohne Standort.
+- Ein Auftraggeber oder Standort, den Sie in TransportKlok löschen, kommt nicht zurück. <Hint kind="red">Die Integration legt einen gelöschten Auftraggeber nicht erneut an.</Hint>
+- Die Integration befindet sich in der Beta. Sie sehen Qargo nur, wenn Ihre Organisation am Beta-Programm teilnimmt.

@@ -1,0 +1,63 @@
+---
+title: "OAuth"
+description: "Fetch an access token with OAuth 2.0."
+---
+{/* translated-from: nl/api/oauth.mdx sha256:58584c13525b95f4ff283de6f52e7029addf210b3d67ebe8dffbae2496197b49 */}
+
+## How it works
+
+TransportKlok uses OAuth 2.0 with the authorization code flow. Your app sends the user to TransportKlok. There the user logs in, chooses the organizations and gives permission. Your app then exchanges a code for an access token and a refresh token.
+
+## Requesting a client
+
+You request an OAuth client from TransportKlok via [info@transportklok.nl](mailto:info@transportklok.nl). Provide:
+
+- the name, a description, a logo and the website of your app;
+- the redirect URLs TransportKlok sends the user to after they grant access;
+- the scopes your app needs;
+- whether your app is for administrators or for workers.
+
+You receive a client id and, for an app with its own server, a client secret.
+
+## The steps
+
+1. Send the user to the authorization address:
+
+   ```text
+   https://app.transportklok.nl/oauth/authorize
+     ?client_id=<client-id>
+     &redirect_uri=<redirect-url>
+     &response_type=code
+     &scope=<scopes, met spaties ertussen>
+     &state=<willekeurige waarde>
+   ```
+
+2. The user sees **Authorize application**, chooses the organizations under **Granted organizations** and clicks **Authorize**.
+3. TransportKlok sends the user back to your redirect URL with `code` and `state`. Check that `state` equals what you sent.
+4. Exchange the code for a token:
+
+   ```http
+   POST /oauth/token HTTP/1.1
+   Host: app.transportklok.nl
+   Content-Type: application/x-www-form-urlencoded
+
+   grant_type=authorization_code&client_id=<client-id>&client_secret=<client-secret>&redirect_uri=<redirect-url>&code=<code>
+   ```
+
+5. The response contains `access_token`, `refresh_token`, `token_type` and `expires_in` (in seconds).
+
+## Fetching a new token
+
+If the access token has expired, use the refresh token to request a new one:
+
+```http
+POST /oauth/token HTTP/1.1
+Host: app.transportklok.nl
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&client_id=<client-id>&client_secret=<client-secret>&refresh_token=<refresh-token>
+```
+
+## What the user sees
+
+When granting access, the user sees which app is requesting access, with which account and with which permissions. The user revokes access under **Settings** → **Apps** in TransportKlok.

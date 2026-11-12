@@ -1,0 +1,47 @@
+---
+title: "Umowy"
+description: "Przegląd wszystkich trwających i zakończonych umów pracowników."
+---
+{/* translated-from: nl/management/human-resources/contracts/overview.mdx sha256:56285641d8cc2e64213c9de70f5584ae22d78f321cf8da8034742315ec0e704e */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+W sekcji **Umowy** widać umowy wszystkich pracowników razem, według rodzaju zatrudnienia: pracownicy etatowi, samozatrudnieni (ZZP) i podwykonawcy (charter).
+
+## Zrzut ekranu
+
+![Umowy pracownicze](/images/nl/captures/management-hrm-contracten.png)
+
+## Kto może z tego korzystać
+
+- Administrator organizacji.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **HR** i wybrać **Umowy**.
+2. W menu pod **Umowy** wybrać listę: **Umowy pracownicze**, **Umowy ZZP** lub **Umowy z podwykonawcami**.
+3. Kliknąć **Archiwum**, aby zobaczyć umowy, które już się zakończyły.
+4. Kliknąć **Edytuj** przy umowie, aby zmienić umowę danego pracownika. Zob. [Edycja pracownika](/pl/management/human-resources/workers/edit).
+
+## Pola
+
+| Kolumna | Znaczenie |
+|-------|-----------|
+| **Nazwa** | Pracownik, z numerem pracownika i adresem e-mail. Kliknięcie nazwy otwiera pracownika. |
+| **Początek** | Data rozpoczęcia umowy. |
+| **Koniec** | Data zakończenia umowy albo `Doorlopend`. |
+| **Godziny** | Tylko przy umowach pracowniczych: godziny umowne. |
+| **Roczny limit godzin** | Tylko przy umowach pracowniczych: maksymalna liczba godzin albo `Geen limiet`. |
+| `Uurgarantie` | Tylko przy umowach pracowniczych: przez ile tygodni wynagrodzenie jest gwarantowane, wraz z liczbą godzin. |
+
+## Co dzieje się potem
+
+- Po **Edytuj** następuje przejście do karty **Umowy** pracownika. Tam tworzy się umowę, zmienia ją lub ustawia datę zakończenia.
+
+## Ograniczenia
+
+- Na tej stronie nie tworzy się ani nie kończy umowy. Robi się to przy samym pracowniku. Zob. [Tworzenie pracownika](/pl/management/human-resources/workers/create).
+- Bez **Archiwum** widać tylko umowy, które jeszcze trwają albo kończą się dzisiaj lub później.
+- Widoczni są tylko pracownicy z aktywną licencją. <Hint kind="grey">Kolumny **Godziny**, **Roczny limit godzin** i `Uurgarantie` są widoczne, jeśli organizacja korzysta z modułu rozliczania płac.</Hint>

@@ -1,0 +1,46 @@
+---
+title: "Webfleet"
+description: "Webfleet verbinden und was aus Webfleet abgerufen wird."
+---
+{/* translated-from: nl/management/fleet-management/integrations/webfleet.mdx sha256:fc8a6bcc07fa7708d673d7fbb06c30f2b8e71041f15f77cfea157b3f864cef19 */}
+
+## Wofür diese Seite da ist
+
+Mit der Webfleet-Integration ruft TransportKlok Fahrzeuge und Positionen aus Webfleet ab.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Die Organisation benötigt das Modul **Fuhrparkverwaltung**, und Telematik muss aktiviert sein. Siehe [Integrationen](/de/settings/organization/integrations/instances).
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie unter **Konten** ein Konto für **Webfleet** mit **Benutzername** und **Passwort** Ihres Webfleet-Kontos an.
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Webfleet** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+4. Tragen Sie die Einstellungen ein und klicken Sie auf **Einstellungen speichern**.
+
+## Felder
+
+Auf der Einstellungsseite tragen Sie ein:
+
+| Einstellung | Was Sie eintragen |
+|------------|--------------|
+| **Webfleet-Kontoname** | Der Kontoname des Webfleet-Kontos, das Sie verbinden. |
+| **Webfleet-Fahrernummer mit Personalnummer abgleichen** | Schalten Sie dies ein, wenn die Fahrernummern in Webfleet den Personalnummern in TransportKlok entsprechen. |
+
+## Was danach passiert
+
+| Funktion | Läuft automatisch |
+|---------|---------------|
+| **Fahrzeuge synchronisieren** | alle 15 Minuten |
+| **Fahrer synchronisieren** | alle 15 Minuten |
+| **Fahrzeugzuweisungen synchronisieren** | alle 15 Minuten |
+| **Telemetrie empfangen** | jede Minute |
+
+- Fahrzeuge werden über das Webfleet-Objekt oder über das Kennzeichen verknüpft. Passt ein Kennzeichen zu mehr als einem Fahrzeug, wird das Fahrzeug nicht verknüpft.
+- Positionen erscheinen auf der [Karte](/de/management/fleet-management/map).
+
+## Einschränkungen
+
+- Die Integration ruft nur Daten aus Webfleet ab. Sie sendet nichts zurück.

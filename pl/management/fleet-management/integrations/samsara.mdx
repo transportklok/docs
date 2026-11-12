@@ -1,0 +1,49 @@
+---
+title: "Samsara"
+description: "Połączenie z Samsara i dane pobierane z Samsara."
+---
+{/* translated-from: nl/management/fleet-management/integrations/samsara.mdx sha256:97af95c34759fd295bb2bb698d13176c429c951a2f8e001ee5e8c70d6e8bd63f */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z Samsara TransportKlok pobiera z Samsara pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **Samsara** z **Token** (tokenem API) z Samsara.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Samsara** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Wypełnić ustawienia i kliknąć **Zapisz ustawienia**.
+
+## Pola
+
+Na stronie ustawień należy wpisać:
+
+| Ustawienie | Co należy wpisać |
+|------------|--------------|
+| **Atrybut numeru ewidencyjnego** | Atrybut kierowcy w Samsara, w którym znajduje się numer pracownika. |
+| **Typ dokumentu rozpoczęcia** | Typ dokumentu w Samsara, który rozpoczyna rejestrację czasu pracy. |
+| **Typ dokumentu zakończenia** | Typ dokumentu w Samsara, który kończy rejestrację czasu pracy. |
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co noc |
+| **Synchronizacja kierowców** | co noc |
+| **Synchronizacja przypisań pojazdów** | co kwadrans |
+| **Odbiór telemetrii** | co kwadrans |
+
+- Pojazdy są łączone według numeru nadwozia (VIN).
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+- Dopóki ustawienia nie są wypełnione, integracja ma status **Wymagana konfiguracja**.
+- Gdy kierowca w Samsara wypełni dokument rozpoczęcia lub zakończenia, TransportKlok rozpoczyna lub kończy rejestrację czasu pracy dla tego pracownika.
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z Samsara. Niczego tam nie odsyła.

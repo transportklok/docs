@@ -1,0 +1,46 @@
+---
+title: "Autentificare în doi pași"
+description: "Activarea autentificării în doi pași și gestionarea codurilor de recuperare."
+---
+{/* translated-from: nl/settings/user/authentication-and-security/two-factor-authentication.mdx sha256:ccb27f71b5b08c80e9f6aad1ab3f90d680c5ab7c260da760e48ef48c21779625 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Aici activați autentificarea în doi pași. TransportKlok cere atunci, la autentificare, și un cod dintr-o aplicație de pe telefonul dumneavoastră.
+
+## Captură de ecran
+
+![Autentificare în doi pași](/images/nl/captures/account-tweefactorauthenticatie.png)
+
+## Cine o poate folosi
+
+- Orice utilizator, pentru propriul cont.
+
+## Cum folosiți această pagină
+
+1. Faceți clic în dreapta sus pe inițialele dumneavoastră și alegeți **Setări** → **Autentificare și securitate**.
+2. Deschideți fila **Autentificare în doi pași** și faceți clic pe **Activați**.
+3. Scanați codul QR cu o aplicație de autentificare de pe telefonul dumneavoastră, precum Google Authenticator. Sau copiați **Cheie de configurare** în aplicație.
+4. Completați **Cod de autentificare** din 6 cifre din aplicație și faceți clic pe **Confirmați configurarea**.
+5. Păstrați codurile de recuperare într-un loc sigur. <Hint kind="red">Cu un cod de recuperare intrați în contul dumneavoastră dacă vă pierdeți telefonul. Fără cod de recuperare, aceasta nu este posibilă.</Hint>
+
+## Câmpuri
+
+| Ce vedeți | Semnificație |
+|------------|-----------|
+| Stare | Dacă autentificarea în doi pași este activată. |
+| **Afișați codurile de recuperare** | Afișează codurile dumneavoastră de recuperare. |
+| **Regenerați codurile de recuperare** | Creează coduri de recuperare noi. |
+| **Afișați codul QR** | Afișează din nou codul QR. |
+| **Dezactivați** | Dezactivează autentificarea în doi pași. |
+
+## Ce se întâmplă după aceea
+
+- La autentificare, TransportKlok cere și un cod din aplicație. Consultați [Autentificarea cu autentificare în doi pași](/ro/sign-in/two-factor).
+- După activare, sunteți deconectat de pe celelalte dispozitive și browsere. Apoi vă autentificați acolo din nou cu codul.
+
+## Limitări
+
+- Pentru codurile de recuperare, codul QR și dezactivare, TransportKlok cere mai întâi parola dumneavoastră.

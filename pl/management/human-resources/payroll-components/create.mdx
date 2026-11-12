@@ -1,0 +1,53 @@
+---
+title: "Tworzenie składnika wynagrodzenia"
+description: "Dodanie kwoty, którą dolicza się do wynagrodzenia pracownika lub od niego odlicza."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/create.mdx sha256:5e418ad2b4c0319cbea47b15effdfcbbc27fac75b847c52556595b23e6faa3de */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj dla jednego pracownika i jednego okresu płacowego dodaje się kwotę do wynagrodzenia lub odlicza kwotę od wynagrodzenia.
+
+## Zrzut ekranu
+
+![Tworzenie składnika wynagrodzenia](/images/nl/captures/management-aanvullingen-inhoudingen-aanmaken.png)
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **HR** → **Administracja płac** → **Dodatki i potrącenia**.
+2. Kliknąć **Nowy składnik wynagrodzenia**.
+3. Wybrać **Pracownik**.
+4. Wybrać **Okres płacowy**.
+5. W polu **Typ** wybrać, czy jest to **Dodatek**, czy **Potrącenie**.
+6. Wybrać **Składnik wynagrodzenia**.
+7. Wpisać **Wartość**.
+8. Kliknąć **Zapisz składnik wynagrodzenia**.
+
+## Pola
+
+Wszystkie pola są wymagane.
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Pracownik** | Pracownik, który otrzymuje lub oddaje kwotę. |
+| **Okres płacowy** | Okres, w którym kwota jest liczona, na przykład `Periode 2026-11`. Wybiera się spośród bieżącego okresu i okresów, dla których istnieje już naliczenie płac. |
+| **Typ** | **Dodatek** dolicza kwotę, **Potrącenie** ją odlicza. Domyślnie wybrany jest **Dodatek**. |
+| **Składnik wynagrodzenia** | Rodzaj kwoty, na przykład **Ryczałt za kilometry** lub **Zaliczka** przy dodatku i **Mandaty** przy potrąceniu. <Hint kind="yellow">To, jakie składniki wynagrodzenia są widoczne, zależy od typu i ustawień organizacji.</Hint> |
+| **Wartość** | Kwota w euro, z dwoma miejscami po przecinku. <Hint kind="grey">Kwota ujemna zmniejsza sumę.</Hint> |
+
+## Co dzieje się potem
+
+- Następuje powrót do przeglądu, w którym widać nowy składnik wynagrodzenia.
+- Naliczenie płac za ten okres uwzględnia kwotę. Co dzieje się z naliczeniem, opisano w [Dodatki i potrącenia](/pl/management/human-resources/payroll-components/overview).
+
+## Ograniczenia
+
+- Składnik wynagrodzenia obowiązuje dla jednego pracownika i jednego okresu. Dla stałej kwoty w każdym okresie tworzy się osobny składnik wynagrodzenia dla każdego okresu.
+- Jeśli pole wymagane zostanie puste, składnik wynagrodzenia nie zostanie zapisany, a przy tym polu pojawi się komunikat.

@@ -1,0 +1,54 @@
+---
+title: "Export variabile de salarizare"
+description: "Orele unei perioade pe angajat, ca fișier pentru administrarea salariilor."
+---
+{/* translated-from: nl/management/hour-management/time-registrations/payroll-mutation-export.mdx sha256:0e7871aaee3c4f176b1316b6979cc3e4c20fd5367f761d5950513390e22ea380 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Cu exportul variabilelor de salarizare descărcați orele unei perioade pe angajat, ca fișier pentru administrarea salariilor.
+
+## Captură de ecran
+
+![Prezentarea generală a înregistrărilor timpului de lucru cu butonul Exportați](/images/nl/captures/management-tijdregistratie-overzicht.png)
+
+## Cine o poate folosi
+
+- Un administrator care poate deschide prezentarea generală a înregistrărilor timpului de lucru din **Gestionarea orelor**.
+- Organizația are nevoie de modulul **Variabile de salarizare**. Fără acest modul, **Export variabile de salarizare** nu apare în listă.
+
+## Cum folosiți această pagină
+
+1. Deschideți **Gestionarea orelor** și alegeți **Înregistrarea timpului de lucru**.
+2. Alegeți perioada din partea de sus a prezentării generale. <Hint kind="grey">Exportul folosește aceeași selecție ca prezentarea generală, deci și filtrele pe care le-ați ales.</Hint>
+3. Faceți clic pe **Exportați**.
+4. Alegeți **Export variabile de salarizare**.
+5. Așteptați până când fereastra afișează **Finalizat**. Fișierul este apoi descărcat.
+6. Faceți clic pe **Închide**.
+
+## Câmpuri
+
+Exportul nu pune întrebări. Fișierul are un rând pe angajat, cu, printre altele:
+
+| Coloană | Conținut |
+|-------|--------|
+| **număr de personal** | Numărul de personal al angajatului. |
+| **nume de familie**, **prefix**, **prenume** | Numele angajatului. |
+| `te_betalen_uren` | Orele care se plătesc. |
+| `contracturen` | Orele conform contractului. |
+| `meeruren`, `overuren` | Orele peste orele contractuale. |
+| `tekorturen`, `aanvuluren` | Orele sub orele contractuale și orele care se completează pentru acestea. |
+
+Urmează apoi coloane pe tip de ore și pe indemnizație, precum ore la un procent mai mare, sporuri și indemnizație de cazare și masă. <Hint kind="yellow">Ce coloane există și cum se împart orele depinde de contractul colectiv (CAO) și de setarea contractului fiecărui angajat. Tipul de fișier (Excel sau CSV) și aspectul (un rând pe angajat sau pe element salarial) rezultă tot din setările organizației dumneavoastră.</Hint>
+
+## Ce se întâmplă după aceea
+
+- Descărcați un fișier cu un nume precum `Salarismutaties export van de periode 2026-11-02 - 2026-11-08.xlsx`.
+- Cu **Minimizați** lucrați mai departe în timp ce exportul se creează.
+
+## Limitări
+
+- Exportul calculează cu înregistrările timpului de lucru așa cum sunt în acel moment. Pentru ce a plătit exact o rulare de salarizare procesată folosiți **Export rulare de salarizare**. Consultați [Exporturile unei rulări de salarizare](/ro/management/human-resources/payroll-runs/exports).
+- O perioadă mare poate dura puțin. <Hint kind="grey">Fereastra afișează **Se așteaptă exportul** și apoi **Exportare în curs** cu un procent.</Hint>

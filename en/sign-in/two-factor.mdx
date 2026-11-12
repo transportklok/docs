@@ -1,0 +1,39 @@
+---
+title: "Logging in with two-factor authentication"
+description: "Fill in the code from your authenticator app or a recovery code when logging in."
+---
+{/* translated-from: nl/sign-in/two-factor.mdx sha256:7215fd3ab5d58174c4cfe84dcc426b9a43a8c9bf797aee946fa3ce8033ae33a6 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+If two-factor authentication is on for your account, TransportKlok also asks for a code after your password. Here you read how that works.
+
+## Who can use this
+
+- Everyone who has turned on two-factor authentication. See [Two-factor authentication](/en/settings/user/authentication-and-security/two-factor-authentication).
+
+## How to use this page
+
+1. Log in with your email address and password.
+2. On the **Two-factor authentication** screen, open the authenticator app on your phone.
+3. Fill in the **Code** from the app and click **Log in**.
+4. If you do not have your phone at hand, click **Use a recovery code** and fill in one of your recovery codes.
+
+## Fields
+
+| Field | What you fill in |
+|------|--------------|
+| **Code** | The 6-digit code from your authenticator app. |
+| **Recovery code** | One of the recovery codes you saved when turning it on. |
+
+## What happens next
+
+- With a correct code, you go to TransportKlok.
+- With **Use an authentication code**, you go back from the recovery code to the code from the app.
+
+## Limitations
+
+- Every recovery code works once. <Hint kind="red">If you have lost your phone and your recovery codes, you can no longer get into your account. Create new recovery codes in time under [Two-factor authentication](/en/settings/user/authentication-and-security/two-factor-authentication).</Hint>
+- After a few wrong attempts, you have to wait a moment before you try again.

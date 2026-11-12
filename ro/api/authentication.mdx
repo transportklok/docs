@@ -1,0 +1,37 @@
+---
+title: "Autentificarea API"
+description: "Trimiterea unei cereri către API cu un token de acces."
+---
+{/* translated-from: nl/api/authentication.mdx sha256:f62f7ff6e730b597dbf3fc9718b9988ff12485a544234e3dcf2e9b9248f5d5e5 */}
+
+## Tokenul de acces
+
+Fiecare cerere către API trimite un token de acces OAuth în antetul `Authorization`:
+
+```http
+GET /rest/v1/organizations HTTP/1.1
+Host: api.transportklok.nl
+Authorization: Bearer <toegangstoken>
+Accept: application/json
+```
+
+Cum obțineți un token este descris la [OAuth](/ro/api/oauth).
+
+## Ce are voie să facă un token
+
+- Un token aparține utilizatorului care a oferit aplicației dumneavoastră acces. API-ul arată doar ce are voie să vadă acel utilizator.
+- Un token este valabil doar pentru organizațiile pe care utilizatorul le-a ales la acordarea accesului.
+- Un token este valabil doar pentru permisiunile (scopes) pe care aplicația dumneavoastră le-a solicitat și pe care utilizatorul le-a permis. Un scope are forma `<onderdeel>:<actie>`.
+- Adresa de e-mail a utilizatorului trebuie să fie confirmată.
+
+## Când nu funcționează
+
+| Stare | Semnificație |
+|--------|-----------|
+| `401` | Nu a fost trimis un token valid sau tokenul a expirat. Solicitați un token nou cu ajutorul tokenului de reîmprospătare. |
+| `403` | Tokenului îi lipsește scope-ul pentru această cerere. |
+| `429` | Trimiteți prea multe cereri. Consultați [Limite de cereri](/ro/api/rate-limits). |
+
+## Revocarea accesului
+
+Un utilizator revocă accesul aplicației dumneavoastră la **Setări** → **Aplicații** în TransportKlok. După aceea, tokenul nu mai funcționează.

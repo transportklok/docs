@@ -39,7 +39,7 @@ for page in pages:
 files = []
 for folder, dirs, names in os.walk(root):
     rel = os.path.relpath(folder, root)
-    dirs[:] = [d for d in dirs if not d.startswith(".") and d not in ("scripts", "snippets", "node_modules")]
+    dirs[:] = [d for d in dirs if not d.startswith(".") and d not in ("scripts", "snippets", "node_modules", "fixtures", "tests")]
     for name in names:
         if name.endswith(".mdx"):
             files.append(os.path.normpath(os.path.join(rel, name[:-4])))

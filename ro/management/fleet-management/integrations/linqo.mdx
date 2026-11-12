@@ -1,0 +1,45 @@
+---
+title: "Linqo"
+description: "Conectarea Linqo și ce se preia din Linqo."
+---
+{/* translated-from: nl/management/fleet-management/integrations/linqo.mdx sha256:f0cb03281ca4eb5d3e7f9b8aad22013b1682922124938245d6b0dcd92ab0c66b */}
+
+## Pentru ce este această pagină
+
+Cu integrarea Linqo, TransportKlok preia vehicule și poziții din Linqo.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea flotei**, iar telematica trebuie să fie activată. Consultați [Integrări](/ro/settings/organization/integrations/instances).
+
+## Cum folosiți această pagină
+
+1. La **Conturi**, creați un cont pentru **Linqo** cu un **Token** de la Linqo.
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **Linqo** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. Completați setările și faceți clic pe **Salvați setările**.
+
+## Câmpuri
+
+Pe pagina de setări completați:
+
+| Setare | Ce completați |
+|------------|--------------|
+| **Asociați codul de tahograf Linqo cu șoferii** | Activați dacă codurile de tahograf din Linqo sunt identice cu codurile de tahograf ale angajaților dumneavoastră. |
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare vehicule** | din 15 în 15 minute |
+| **Sincronizare șoferi** | din 15 în 15 minute |
+| **Sincronizare atribuiri de vehicule** | din 15 în 15 minute |
+| **Primire telemetrie** | din 15 în 15 minute |
+
+- Vehiculele sunt asociate după seria de șasiu (VIN). Șoferii sunt asociați după codul de tahograf.
+- Pozițiile apar pe [Hartă](/ro/management/fleet-management/map).
+
+## Limitări
+
+- Integrarea doar preia date din Linqo. Nu trimite nimic înapoi.

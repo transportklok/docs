@@ -1,0 +1,26 @@
+---
+title: "Limity żądań"
+description: "Ile żądań aplikacja może wysłać do API."
+---
+{/* translated-from: nl/api/rate-limits.mdx sha256:0a41ba553ec4c8ec14431b1a3d468cd1f8ddd50c578359f721c5c883648666a0 */}
+
+## Limity
+
+API liczy żądania dla każdego tokenu dostępu. Token może jednocześnie wykonać nie więcej niż:
+
+| Okres | Żądania |
+|---------|-----------|
+| 1 minuta | 180 |
+| 5 minut | 600 |
+| 1 godzina | 3 600 |
+
+## Gdy limit zostanie osiągnięty
+
+- API odpowiada statusem `429 Too Many Requests`.
+- Nagłówek `Retry-After` podaje, po ilu sekundach można spróbować ponownie.
+- Nagłówki `X-RateLimit-Limit` i `X-RateLimit-Remaining` pokazują, ile żądań jest dozwolonych w danym okresie i ile jeszcze zostało.
+
+## Jak nie przekraczać limitów
+
+- Po statusie `429` należy poczekać co najmniej tyle, ile wskazuje `Retry-After`.
+- Pobrane już dane warto zachować zamiast za każdym razem pobierać wszystko od nowa.

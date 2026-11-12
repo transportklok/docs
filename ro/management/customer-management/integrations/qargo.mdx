@@ -1,0 +1,58 @@
+---
+title: "Qargo"
+description: "Conectarea Qargo și preluarea clienților dumneavoastră din Qargo ca clienți."
+---
+{/* translated-from: nl/management/customer-management/integrations/qargo.mdx sha256:4387ab77afd7c9a116a23b0e1a7511989cda383eb413d48add04eef7a52eb409 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Cu integrarea Qargo, TransportKlok preia clienții dumneavoastră din Qargo ca clienți, cu adresa lor de facturare drept locație.
+
+## Captură de ecran
+
+![Crearea unui cont pentru Qargo](/images/nl/captures/instellingen-integraties-qargo-account.png)
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea clienților**.
+
+## Cum folosiți această pagină
+
+1. Deschideți **Setări** → **Setările organizației** → **Integrări** și alegeți fila **Conturi**.
+2. Faceți clic pe **Creați contul** și alegeți la **Integrare** opțiunea **Qargo**.
+3. Completați un **Nume**, **ID client** și **Secret client** ale utilizatorului dumneavoastră API din Qargo și faceți clic pe **Creați contul**.
+4. Deschideți fila **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **Qargo** pe **Conectare**.
+5. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+
+## Câmpuri
+
+| Câmp | Ce completați |
+|------|--------------|
+| **Nume** (obligatoriu) | Numele contului în prezentarea generală. |
+| **ID client** (obligatoriu) | ID-ul de client al utilizatorului dumneavoastră API din Qargo. |
+| **Secret client** (obligatoriu) | Secretul care aparține acestui ID de client. |
+
+<Hint kind="yellow">Utilizatorul API din Qargo are nevoie de rolul `API_MASTER_DATA` sau `API_ACCOUNTING` pentru a avea voie să citească firmele. Fără acest rol, TransportKlok respinge contul.</Hint>
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare clienți** | în fiecare zi la 03:00 |
+
+- Cu **Sincronizare** din fila **Comportamentul sincronizării** preluați imediat clienții. Consultați [Comportamentul sincronizării](/ro/settings/organization/integrations/capabilities).
+- Fiecare client din Qargo devine un client în TransportKlok, cu numele ca **Nume**, codul clientului ca **Referință** și nota ca **Note**. Consultați [Clienți](/ro/management/customer-management/customers/overview).
+- Adresa de facturare a clientului devine o locație de tipul **Client** la acest client.
+- Prima dată, integrarea preia toți clienții. După aceea, doar clienții care au fost modificați în Qargo.
+
+## Limitări
+
+- Integrarea doar preia date din Qargo. Nu trimite nimic înapoi.
+- Firmele din Qargo care nu sunt clienți sau sunt arhivate nu sunt preluate de integrare.
+- Dacă modificați în TransportKlok numele, referința sau notele unui client preluat, modificarea dumneavoastră rămâne. <Hint kind="grey">Un câmp pe care nu l-ați modificat urmează Qargo la următoarea sincronizare.</Hint>
+- Dacă adresa de facturare din Qargo nu are coordonate, clientul este totuși preluat, dar fără locație.
+- Un client sau o locație pe care le ștergeți în TransportKlok nu revin. <Hint kind="red">Integrarea nu creează din nou un client șters.</Hint>
+- Integrarea este în versiune beta. Vedeți Qargo doar dacă organizația dumneavoastră participă la programul beta.

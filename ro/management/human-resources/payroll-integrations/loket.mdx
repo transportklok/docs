@@ -1,0 +1,37 @@
+---
+title: "Loket.nl"
+description: "Conectarea Loket.nl și ce se trimite către Loket.nl."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/loket.mdx sha256:ab567f41e96acb8c3f5becc051406cdacb8da1cdeba0912d4ca1ee377b01ce1c */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Cu integrarea Loket.nl trimiteți angajați, contracte și rulări de salarizare procesate către Loket.nl.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației, cu un cont Loket.nl care are acces la angajator.
+- Organizația are nevoie de modulul **Variabile de salarizare**.
+
+## Cum folosiți această pagină
+
+1. Creați un cont pentru **Loket.nl** și autentificați-vă la Loket.nl. Consultați [Conturi](/ro/settings/organization/integrations/accounts).
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **Loket.nl** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. La **Comportamentul sincronizării**, activați comutatoarele pentru ce doriți să trimiteți, precum **Trimitere rulări de salarizare**, și salvați.
+
+## Câmpuri
+
+În afară de **Cont** și **Nume**, integrarea nu solicită setări. Angajatorul rezultă din contul cu care vă autentificați.
+
+## Ce se întâmplă după aceea
+
+- Dacă creați sau modificați un angajat sau un contract, TransportKlok trimite aceste date către Loket.nl.
+- La **Trimitere** a unei rulări de salarizare, TransportKlok trimite către Loket.nl, pentru fiecare angajat, orele și elementele salariale ale acelei perioade. Datele existente pentru acea perioadă sunt suprascrise.
+
+## Limitări
+
+- Se trimit doar elementele salariale cu un cod Loket.nl. <Hint kind="yellow">Ce coduri sunt setate depinde de configurarea integrării pentru organizația dumneavoastră. După prima trimitere, verificați în Loket.nl dacă orele și elementele salariale sunt acolo.</Hint>
+- Integrarea nu preia nimic din Loket.nl.

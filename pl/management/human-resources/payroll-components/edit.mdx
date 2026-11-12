@@ -1,0 +1,46 @@
+---
+title: "Edycja składnika wynagrodzenia"
+description: "Zmiana lub usunięcie dodatku lub potrącenia."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/edit.mdx sha256:d15619b70eec11ef0a8c0a5ede5a7be64a6873aceea328fc58644fce4df425c9 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj zmienia się składnik wynagrodzenia albo go usuwa.
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+Zmiana składnika wynagrodzenia:
+
+1. Otworzyć **HR** → **Administracja płac** → **Dodatki i potrącenia**.
+2. Kliknąć **Edytuj** w wierszu składnika wynagrodzenia.
+3. Zmienić pola.
+4. Kliknąć **Zapisz zmiany**.
+
+Usunięcie składnika wynagrodzenia:
+
+1. Kliknąć **Usuń** w wierszu składnika wynagrodzenia.
+2. W oknie **Usuń składnik wynagrodzenia** sprawdzić składnik wynagrodzenia i pracownika.
+3. Kliknąć **Usuń**.
+
+## Pola
+
+Formularz **Edytuj składnik wynagrodzenia** ma te same pola co formularz tworzenia, już wypełnione bieżącymi wartościami: **Pracownik**, **Okres płacowy**, **Typ**, **Składnik wynagrodzenia** i **Wartość**. Zob. [Tworzenie składnika wynagrodzenia](/pl/management/human-resources/payroll-components/create).
+
+## Co dzieje się potem
+
+- Po **Zapisz zmiany** zmieniony składnik wynagrodzenia jest widoczny w przeglądzie.
+- Po **Usuń** składnik wynagrodzenia od razu znika z przeglądu. <Hint kind="red">Usuniętego składnika wynagrodzenia nie można przywrócić.</Hint>
+- Naliczenie płac za dany okres uwzględnia zmianę. Jeśli naliczenie jest wersją roboczą lub jest zablokowane, zostaje przeliczone ponownie.
+- Jeśli naliczenie zostało już przetworzone, jest ponownie sprawdzane pod kątem korekt. Jeśli pozostaje różnica w stosunku do tego, co już przetworzono, otrzymuje status **Skorygowane**. Jeśli różnica znika, wraca do statusu **Przetworzono**. Zob. [Korekty naliczenia płac](/pl/management/human-resources/payroll-runs/corrections).
+
+## Ograniczenia
+
+- Także przy przetworzonym naliczeniu płac można jeszcze zmienić lub usunąć składnik wynagrodzenia. Zmiana trafia wtedy jako korekta do kolejnego przetwarzania.

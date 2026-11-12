@@ -1,0 +1,46 @@
+---
+title: "Exports of a payroll run"
+description: "The exports that you download per payroll run."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/exports.mdx sha256:7c34913eee6c340598d36b4c141dfdd0b047fe8fad28bf598f0a28cda4baf531 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+Here you see which files you download per payroll run and when each file is ready.
+
+## Who can use this
+
+- An administrator with full rights in the organization.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+1. Open **HR** → **Payroll administration** → **Payroll runs**.
+2. In the run's row, click **Download**.
+3. Choose the export.
+4. Wait until the window shows **Completed**. The file is then downloaded.
+5. Click **Close**.
+
+## Fields
+
+The export asks no questions. **Download** only shows the exports that are ready for the run:
+
+| Export | When | File |
+|--------|---------|---------|
+| **Payroll run export** | For a processed run. | An Excel file with what the run processed, such as `Salarisronde van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Payroll correction export** | For a corrected run. | An Excel file with only the difference from what has already been processed, such as `Salariscorrectie van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Pay overview (Beta, PDF)** | As soon as the run's pay overviews are ready. | A zip file with a PDF per worker, such as `Loonoverzicht (Beta) 2026-08.zip`. <Hint kind="grey">The pay overview in PDF is still a beta version.</Hint> |
+
+## What happens next
+
+- The file is downloaded as soon as the export is ready. With **Minimize** you keep working while the export is being created.
+- When a run is processed, administrators who have the notification **Copy of exports when a payroll run is processed** turned on receive a copy by email.
+
+## Limitations
+
+- If a run's correction has been carried into a newer run, the **Payroll correction export** is no longer with the older run.
+- While a task of the run is running, you cannot download the export yet. Try again as soon as the run is finished.
+- What is in an export follows from the run's calculation. <Hint kind="yellow">This depends on the CAO or the contract setting: which pay components a worker gets follows from the CAO and from the worker's contract.</Hint>
+- Do you want the hours of any period, separate from a payroll run? Then use the [Payroll input export](/en/management/hour-management/time-registrations/payroll-mutation-export).

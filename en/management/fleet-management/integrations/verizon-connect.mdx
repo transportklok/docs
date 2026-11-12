@@ -1,0 +1,40 @@
+---
+title: "Verizon Connect"
+description: "Connect Verizon Connect and what is fetched from Verizon Connect."
+---
+{/* translated-from: nl/management/fleet-management/integrations/verizon-connect.mdx sha256:5b3286653e85ce7fd5a955115e4ff623b340bf85b92ceb793ee1346c4f304421 */}
+
+## What this page is for
+
+With the Verizon Connect integration, TransportKlok fetches vehicles and positions from Verizon Connect.
+
+## Who can use this
+
+- An administrator or manager of the organization.
+- The organization needs the **Fleet management** module, and telematics must be on. See [Integrations](/en/settings/organization/integrations/instances).
+
+## How to use this page
+
+1. Under **Accounts**, create an account for **Verizon Connect** with the **Username** and **Password** of your Verizon Connect account.
+2. Open **Integrations**, click **Add integration** and click **Connect** next to **Verizon Connect**.
+3. Choose the **Account**, give the integration a **Name** and click **Connect**.
+
+## Fields
+
+After connecting, the integration asks for no settings.
+
+## What happens next
+
+| Function | Runs automatically |
+|---------|---------------|
+| **Synchronize vehicles** | every night |
+| **Synchronize drivers** | every quarter of an hour |
+| **Receive telemetry** | every quarter of an hour |
+
+- Vehicles are linked on license plate.
+- Positions appear on the [Map](/en/management/fleet-management/map).
+- Verizon Connect does not fetch vehicle assignments.
+
+## Limitations
+
+- The integration only fetches data from Verizon Connect. It does not send anything back.

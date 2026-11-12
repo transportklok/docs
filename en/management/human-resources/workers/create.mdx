@@ -1,0 +1,67 @@
+---
+title: "Create worker"
+description: "Add an employee, freelancer (ZZP) or charter to your organization."
+---
+{/* translated-from: nl/management/human-resources/workers/create.mdx sha256:8d78ca5888212ea402f49b6fb16792721a6700ec7648e46cc3d536af1b3b6521 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+Here you add a worker: the person, the contract and the teams the worker belongs to.
+
+## Screenshot
+
+![Create worker](/images/nl/captures/management-personeel-aanmaken.png)
+
+## Who can use this
+
+- An administrator or manager of the organization.
+
+## How to use this page
+
+1. Open **HR** → **Workers** and click **New worker**.
+2. On the **Details** tab, choose whether the worker gets an account: `Met gebruikersaccount` or `Zonder gebruikersaccount`.
+3. Fill in the person's details.
+4. Open the **Contracts** tab, click `+` and fill in the contract.
+5. Open the **Teams** tab and tick the teams.
+6. Click **New worker**.
+
+## Fields
+
+**Details** tab:
+
+| Field | What you fill in |
+|------|--------------|
+| `Met gebruikersaccount` / `Zonder gebruikersaccount` (required) | With an account, the worker can log in and record data themselves. Without an account, you only record data about the worker. |
+| **Email** | Only with an account, and then required. The worker receives the invitation at this address. |
+| **Name** (required) | Initials, first name, optionally a prefix and last name. The prefix is not required. |
+| **Employee number** | A unique number within your organization. |
+| **Date of birth** | The date of birth. |
+| Gender | **Male**, **Female** or **Other**. |
+| **Tachograph driver code** | The code of the driver's driver card. <Hint kind="grey">You see this field, **Home address** and **Locations** if telematics is on for your organization.</Hint> |
+| **Home address** | The home address. |
+| **Locations** | Per kind of location, such as `Standplaatsen` and `Kantoren`, which locations apply to this worker. |
+
+**Contracts** tab, per contract:
+
+| Field | What you fill in |
+|------|--------------|
+| **Employment** (required) | **Employee**, **Self-employed (ZZP)** or **Charter**. |
+| **Start** (required) | The date on which the contract begins. |
+| **End** | The date on which the contract ends. Empty means ongoing. |
+| **Contract type** | For an employee: **On-call worker**, **Part-time worker** or **Full-time worker**. |
+| **Contract hours type** | **Fixed hours** or **Min-max hours**. |
+| **Contract hours** | The number of hours per week. <Hint kind="yellow">A full-time worker always has 40 hours, an on-call worker 0. What the hours mean for the pay calculation depends on the CAO or the contract setting.</Hint> |
+
+**Teams** tab: tick the teams. With **Select all** you choose all teams. You choose from the teams you manage, and at least one.
+
+## What happens next
+
+- You return to the overview with the new worker.
+- With an account, the worker receives an email with **Accept Invitation**. As long as it has not been accepted, the invitation is listed under [Invitations](/en/management/human-resources/workers/invitations).
+
+## Limitations
+
+- A worker needs at least one contract. Contracts may not overlap.
+- You cannot use an email address that already has an open invitation or already belongs to your organization.

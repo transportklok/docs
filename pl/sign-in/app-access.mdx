@@ -1,0 +1,40 @@
+---
+title: "Udzielanie aplikacji dostępu"
+description: "Wyrażanie zgody, gdy zewnętrzna aplikacja prosi o dostęp do konta."
+---
+{/* translated-from: nl/sign-in/app-access.mdx sha256:e30bbe6515c5b2fff648edd72a94fc2fb062e5a21e1f3c70ec20b4ea7c3cebea */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Niektóre zewnętrzne aplikacje proszą o dostęp do konta TransportKlok. Tutaj opisano, co widać i jak wyrazić zgodę.
+
+## Kto może z tego korzystać
+
+- Każdy, kto ma konto TransportKlok.
+
+## Jak korzystać z tej strony
+
+1. W zewnętrznej aplikacji rozpocząć łączenie z TransportKlok. Pojawi się ekran **Autoryzuj aplikację**.
+2. Sprawdzić **Aplikacja**, na jakie konto jest się **Zalogowano jako** oraz **Żądane uprawnienia**.
+3. W polu **Dozwolone organizacje** wybrać, do których organizacji aplikacja otrzymuje dostęp.
+4. Kliknąć **Zezwól**, albo **Anuluj**, jeśli dostęp nie ma być udzielony.
+
+## Pola
+
+| Co widać | Znaczenie |
+|------------|-----------|
+| **Aplikacja** | Aplikacja proszącą o dostęp, wraz z opisem. |
+| **Zalogowano jako** | Konto, którym udziela się dostępu. |
+| **Żądane uprawnienia** | Co aplikacja chce móc robić. |
+| **Dozwolone organizacje** | Organizacje, do których aplikacja otrzymuje dostęp. |
+
+## Co dzieje się potem
+
+- Po **Zezwól** następuje powrót do aplikacji, która ma teraz dostęp.
+- Aplikacja znajduje się w **Ustawienia** → **Aplikacje**. Tam cofa się dostęp. Zob. [Aplikacje](/pl/settings/user/apps).
+
+## Ograniczenia
+
+- <Hint kind="red">Dostępu należy udzielać tylko aplikacjom, którym się ufa. Aplikacja może robić to, co jest wymienione w **Żądane uprawnienia**.</Hint>

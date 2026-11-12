@@ -1,0 +1,45 @@
+---
+title: "Linqo"
+description: "Linqo verbinden und was aus Linqo abgerufen wird."
+---
+{/* translated-from: nl/management/fleet-management/integrations/linqo.mdx sha256:f0cb03281ca4eb5d3e7f9b8aad22013b1682922124938245d6b0dcd92ab0c66b */}
+
+## Wofür diese Seite da ist
+
+Mit der Linqo-Integration ruft TransportKlok Fahrzeuge und Positionen aus Linqo ab.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Die Organisation benötigt das Modul **Fuhrparkverwaltung**, und Telematik muss aktiviert sein. Siehe [Integrationen](/de/settings/organization/integrations/instances).
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie unter **Konten** ein Konto für **Linqo** mit einem **Token** von Linqo an.
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **Linqo** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+4. Tragen Sie die Einstellungen ein und klicken Sie auf **Einstellungen speichern**.
+
+## Felder
+
+Auf der Einstellungsseite tragen Sie ein:
+
+| Einstellung | Was Sie eintragen |
+|------------|--------------|
+| **Linqo-Fahrerkartencode mit Fahrern abgleichen** | Schalten Sie dies ein, wenn die Fahrerkartencodes in Linqo den Fahrerkartencodes Ihrer Mitarbeitenden entsprechen. |
+
+## Was danach passiert
+
+| Funktion | Läuft automatisch |
+|---------|---------------|
+| **Fahrzeuge synchronisieren** | alle 15 Minuten |
+| **Fahrer synchronisieren** | alle 15 Minuten |
+| **Fahrzeugzuweisungen synchronisieren** | alle 15 Minuten |
+| **Telemetrie empfangen** | alle 15 Minuten |
+
+- Fahrzeuge werden über die Fahrgestellnummer (VIN) verknüpft. Fahrer werden über den Fahrerkartencode verknüpft.
+- Positionen erscheinen auf der [Karte](/de/management/fleet-management/map).
+
+## Einschränkungen
+
+- Die Integration ruft nur Daten aus Linqo ab. Sie sendet nichts zurück.

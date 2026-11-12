@@ -1,0 +1,55 @@
+---
+title: "Integrationen"
+description: "Integrationen mit Ihrem Lohnpaket oder Telematiksystem hinzufügen, einstellen und trennen."
+---
+{/* translated-from: nl/settings/organization/integrations/instances.mdx sha256:8b8cba69127ca2c3727a68df43b6dcfb9cc4b01ce6206241f733fd04b1309be8 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Auf dem Tab **Integrationen** verbinden Sie TransportKlok mit Ihrem Lohnpaket oder Ihrem Telematiksystem. Eine Integration verwendet ein Konto, das Sie zuvor unter [Konten](/de/settings/organization/integrations/accounts) anlegen.
+
+## Screenshot
+
+![Integrationen](/images/nl/captures/instellingen-integraties-overzicht.png)
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation.
+- Eine Lohn-Integration erfordert das Modul **Lohnbewegungsdaten**. Eine GPS-Integration erfordert das Modul **Fuhrparkverwaltung**, mit aktivierter Telematik. <Hint kind="yellow">Ist Telematik für Ihre Organisation nicht aktiviert, sehen Sie beim Verbinden: „Telematik ist für diese Organisation nicht aktiviert. Aktivieren Sie zuerst die Telematik, bevor Sie eine Integration anlegen."</Hint>
+- Die Integrationen befinden sich in der Beta. <Hint kind="grey">Sie sehen sie nur, wenn Ihre Organisation am Beta-Programm teilnimmt.</Hint>
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Einstellungen** → **Organisationseinstellungen** → **Integrationen**.
+2. Klicken Sie auf dem Tab **Integrationen** auf **Integration hinzufügen**.
+3. Klicken Sie bei Ihrem System auf **Verbinden**.
+4. Wählen Sie das **Konto**, tragen Sie die übrigen Felder ein, etwa den **Arbeitgeber** bei Nmbrs, und vergeben Sie bei **Name** einen Namen für die Integration.
+5. Klicken Sie auf **Verbinden**.
+6. Tragen Sie auf der Einstellungsseite ein, was Ihr System benötigt, und klicken Sie auf **Einstellungen speichern**.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Konto** | Das Konto, mit dem sich die Integration bei Ihrem System anmeldet. |
+| **Name** | Der Name in der Übersicht, zum Beispiel der Name Ihrer GmbH. |
+
+Was jedes System verlangt und tut, steht auf der Seite dieses Systems:
+
+| Art | Systeme |
+|-------|----------|
+| Lohnpaket | [Nmbrs](/de/management/human-resources/payroll-integrations/nmbrs), [Loket.nl](/de/management/human-resources/payroll-integrations/loket), [AFAS Profit](/de/management/human-resources/payroll-integrations/afas), [Exact Online](/de/management/human-resources/payroll-integrations/exact-online) |
+| Telematik | [Webfleet](/de/management/fleet-management/integrations/webfleet), [Samsara](/de/management/fleet-management/integrations/samsara), [Geotab](/de/management/fleet-management/integrations/geotab), [FleetGo](/de/management/fleet-management/integrations/fleetgo), [Linqo](/de/management/fleet-management/integrations/linqo), [CO3](/de/management/fleet-management/integrations/co3), [Verizon Connect](/de/management/fleet-management/integrations/verizon-connect) |
+| TMS | [Qargo](/de/management/customer-management/integrations/qargo) |
+
+## Was danach passiert
+
+- Die Integration steht in der Übersicht auf **Verbunden**.
+- Welche Daten die Integration abruft oder sendet, schalten Sie unter [Synchronisationsverhalten](/de/settings/organization/integrations/capabilities) ein.
+- Fehlen Berechtigungen oder Einstellungen, sehen Sie eine Meldung mit **Erneut autorisieren** oder **Einstellungen öffnen**.
+
+## Einschränkungen
+
+- Eine Integration trennen Sie mit **Trennen**. Haken Sie **Auch das zugrunde liegende OAuth-Konto trennen.** an, um auch das Konto zu löschen. <Hint kind="red">Eine getrennte Integration ruft nichts mehr ab und sendet nichts mehr. Um erneut zu verbinden, legen Sie die Integration neu an.</Hint>

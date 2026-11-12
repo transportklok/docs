@@ -1,0 +1,50 @@
+---
+title: "Dodatki i potrącenia"
+description: "Kwoty, które dolicza się do wynagrodzenia lub od niego odlicza dla pracownika i okresu płacowego."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/overview.mdx sha256:df5f92848b99f94f979811bd40269c1fca2471937be026975560b1967afc0b31 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj zarządza się kwotami, które niezależnie od godzin dolicza się do wynagrodzenia lub od niego odlicza, takimi jak ryczałt za kilometry, zaliczka lub mandat. Taka kwota nazywa się składnikiem wynagrodzenia.
+
+## Zrzut ekranu
+
+![Dodatki i potrącenia](/images/nl/captures/management-aanvullingen-inhoudingen-overzicht.png)
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **HR** i wybrać **Administracja płac**.
+2. Kliknąć **Dodatki i potrącenia**.
+3. W każdym wierszu przejrzeć pracownika, okres i kwotę.
+4. Kliknąć **Nowy składnik wynagrodzenia**, aby dodać kwotę. Zob. [Tworzenie składnika wynagrodzenia](/pl/management/human-resources/payroll-components/create).
+5. Kliknąć **Edytuj** lub **Usuń** w wierszu składnika wynagrodzenia. Zob. [Edycja składnika wynagrodzenia](/pl/management/human-resources/payroll-components/edit).
+
+## Pola
+
+| Kolumna | Znaczenie |
+|-------|-----------|
+| **Pracownik** | Pracownik, który otrzymuje lub oddaje kwotę. |
+| **Okres** | Okres płacowy, na przykład 2026-10. |
+| **Przetworzono** | Status naliczenia płac, które wypłaciło kwotę. Kreska oznacza, że to jeszcze nie nastąpiło. |
+| **Typ** | **Dodatek** lub **Potrącenie**. |
+| **Składnik wynagrodzenia** | Rodzaj kwoty, taki jak **Ryczałt za kilometry** lub **Mandaty**. |
+| **Wartość** | Kwota. |
+| **Zaktualizowano** | Kiedy składnik wynagrodzenia był ostatnio zapisany. |
+
+## Co dzieje się potem
+
+- Składnik wynagrodzenia jest liczony w naliczeniu płac za swój okres. Jeśli to naliczenie jest wersją roboczą lub jest zablokowane, zostaje od razu przeliczone ponownie. <Hint kind="grey">Nie trzeba w tym celu samodzielnie ponownie uruchamiać naliczenia.</Hint>
+- Jeśli to naliczenie zostało już przetworzone, otrzymuje status **Skorygowane**. Kwota jest wtedy uwzględniana w korekcie. Zob. [Korekty naliczenia płac](/pl/management/human-resources/payroll-runs/corrections).
+
+## Ograniczenia
+
+- Przegląd nie ma filtrów ani pola wyszukiwania.
+- **Usuń** prosi o potwierdzenie, a następnie od razu usuwa składnik wynagrodzenia. <Hint kind="red">Usuniętego składnika wynagrodzenia nie można przywrócić. Jeśli należy do przetworzonego naliczenia, naliczenie jest ponownie sprawdzane pod kątem korekt.</Hint>

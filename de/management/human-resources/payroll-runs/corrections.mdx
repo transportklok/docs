@@ -1,0 +1,56 @@
+---
+title: "Korrekturen an einem Lohnabrechnungslauf"
+description: "Korrekturen an einem verarbeiteten Lohnabrechnungslauf finden und in einen neueren Lauf übernehmen."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/corrections.mdx sha256:56f0c4b827cbacc5e417c11b0fe9ccb41781d592f78168243c0063f7505a882a */}
+
+## Wofür diese Seite da ist
+
+Hier lesen Sie, wie Sie prüfen, ob ein verarbeiteter Lohnabrechnungslauf noch stimmt, und wie ein neuerer Lauf die Korrekturen älterer Läufe übernimmt.
+
+## Wer das nutzen darf
+
+- Ein Administrator mit vollständigen Rechten in der Organisation.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+Eine Korrektur finden:
+
+1. Öffnen Sie **Personal** → **Gehaltsabrechnung** → **Lohnabrechnungsläufe**.
+2. Wählen Sie in der Zeile eines verarbeiteten Laufs **Optionen** → **Auf Korrekturen analysieren**.
+3. Warten Sie, bis die Analyse abgeschlossen ist.
+
+Eine Korrektur in einen neueren Lauf übernehmen:
+
+1. Klicken Sie beim neueren, gesperrten Lauf auf **Abschließen**.
+2. Das Fenster **Korrekturen übernehmen** zeigt die älteren Läufe mit einer Korrektur, die noch nicht ausgezahlt wurde.
+3. Haken Sie die Läufe an, deren Korrektur dieser Lauf übernimmt, und klicken Sie auf **Weiter**.
+4. Prüfen Sie im Fenster **Übernahme bestätigen** die gewählten Läufe.
+5. Klicken Sie auf **Übernehmen und verarbeiten**.
+
+Haken Sie nichts an, wird der Lauf wie immer verarbeitet.
+
+## Felder
+
+Das Fenster **Korrekturen übernehmen** zeigt pro älterem Lauf:
+
+| Spalte | Bedeutung |
+|-------|-----------|
+| **Lohnabrechnungslauf** | Die Nummer des älteren Laufs. |
+| **Zeitraum** | Der Abrechnungszeitraum dieses Laufs. |
+| **Korrektur** | Wie viele Mitarbeitende in diesem Lauf korrigiert wurden, zum Beispiel „1 Mitarbeitender korrigiert". |
+
+## Was danach passiert
+
+- Findet die Analyse einen Unterschied zur verarbeiteten Version, erhält der Lauf den Status **Korrigiert**. Ob es einen Unterschied gibt, hängt von den Einträgen und der Berechnung ab. Das hängt vom Tarifvertrag (CAO) oder der Vertragseinstellung ab: Die Berechnung folgt dem Tarifvertrag und dem Vertrag jedes Mitarbeitenden.
+- Einen korrigierten Lauf schließen Sie erneut mit **Abschließen** ab, oder Sie lassen einen neueren Lauf die Korrektur übernehmen.
+- Nach der Übernahme erhält der ältere Lauf wieder den Status **Verarbeitet**, mit `Verrekend in salarisronde` und der Nummer des neueren Laufs. Dieser Text ist ein Link zum neueren Lauf.
+- Beim neueren Lauf steht `Neemt correcties van 1 salarisronde mee`.
+- Öffnen Sie die Details des neueren Laufs und klappen Sie die Zeile eines Mitarbeitenden auf. Unter **Lohnabrechnungsprüfung** sehen Sie das **Eigenes Ergebnis**, die `Correctie salarisronde` des älteren Laufs und die **Summe auf der Lohnabrechnung**.
+
+## Einschränkungen
+
+- Die Übernahme ist endgültig und kann nicht rückgängig gemacht werden.
+- Eine Korrektur erstellen Sie nicht von Hand. Das System leitet sie aus der aktuellen Berechnung ab; dafür passen Sie die Einträge oder Einstellungen an und analysieren erneut.
+- Einen verarbeiteten, korrigierten oder verrechneten Lauf können Sie nicht löschen. Sie können ihn weiterhin ansehen.

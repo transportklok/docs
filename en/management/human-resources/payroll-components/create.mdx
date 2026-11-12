@@ -1,0 +1,53 @@
+---
+title: "Create pay component"
+description: "Add an amount that you add to or deduct from a worker's pay."
+---
+{/* translated-from: nl/management/human-resources/payroll-components/create.mdx sha256:5e418ad2b4c0319cbea47b15effdfcbbc27fac75b847c52556595b23e6faa3de */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## What this page is for
+
+Here you add an amount to the pay, or deduct an amount from it, for one worker and one payroll period.
+
+## Screenshot
+
+![Create pay component](/images/nl/captures/management-aanvullingen-inhoudingen-aanmaken.png)
+
+## Who can use this
+
+- An administrator with full rights in the organization.
+- The organization needs the **Payroll inputs** module.
+
+## How to use this page
+
+1. Open **HR** → **Payroll administration** → **Additions & Deductions**.
+2. Click **New pay component**.
+3. Choose the **Worker**.
+4. Choose the **Payroll period**.
+5. Under **Type**, choose whether it is an **Addition** or a **Deduction**.
+6. Choose the **Pay component**.
+7. Fill in the **Value**.
+8. Click **Save pay component**.
+
+## Fields
+
+All fields are required.
+
+| Field | What you fill in |
+|------|--------------|
+| **Worker** | The worker who receives or gives up the amount. |
+| **Payroll period** | The period in which the amount counts, for example `Periode 2026-11`. You choose from the current period and the periods for which a payroll run already exists. |
+| **Type** | **Addition** adds the amount, **Deduction** deducts it. **Addition** is preselected. |
+| **Pay component** | The kind of amount, for example **Mileage allowance** or **Advance** for an addition and **Fines** for a deduction. <Hint kind="yellow">Which pay components you see depends on the type and on your organization's settings.</Hint> |
+| **Value** | The amount in euros, with two decimals. <Hint kind="grey">A negative amount lowers the total.</Hint> |
+
+## What happens next
+
+- You return to the overview, where the new pay component is listed.
+- The payroll run of that period includes the amount. See [Additions and deductions](/en/management/human-resources/payroll-components/overview) for what happens to the run.
+
+## Limitations
+
+- A pay component applies to one worker and one period. For a fixed amount every period, you create a pay component per period.
+- If you leave a required field empty, the pay component is not saved and you see a message at that field.

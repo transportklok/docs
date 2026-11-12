@@ -1,0 +1,46 @@
+---
+title: "Exporte eines Lohnabrechnungslaufs"
+description: "Die Exporte, die Sie pro Lohnabrechnungslauf herunterladen."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/exports.mdx sha256:7c34913eee6c340598d36b4c141dfdd0b047fe8fad28bf598f0a28cda4baf531 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Hier sehen Sie, welche Dateien Sie pro Lohnabrechnungslauf herunterladen und wann jede Datei bereitsteht.
+
+## Wer das nutzen darf
+
+- Ein Administrator mit vollständigen Rechten in der Organisation.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Personal** → **Gehaltsabrechnung** → **Lohnabrechnungsläufe**.
+2. Klicken Sie in der Zeile des Laufs auf **Herunterladen**.
+3. Wählen Sie den Export.
+4. Warten Sie, bis das Fenster **Abgeschlossen** anzeigt. Die Datei wird dann heruntergeladen.
+5. Klicken Sie auf **Schließen**.
+
+## Felder
+
+Der Export stellt keine Fragen. **Herunterladen** zeigt nur die Exporte, die für den Lauf bereitstehen:
+
+| Export | Wann | Datei |
+|--------|---------|---------|
+| **Export des Lohnabrechnungslaufs** | Bei einem verarbeiteten Lauf. | Eine Excel-Datei mit dem, was der Lauf verarbeitet hat, etwa `Salarisronde van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Export der Lohnkorrektur** | Bei einem korrigierten Lauf. | Eine Excel-Datei nur mit dem Unterschied zu dem, was bereits verarbeitet wurde, etwa `Salariscorrectie van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Lohnübersicht (Beta, PDF)** | Sobald die Lohnübersichten des Laufs fertig sind. | Eine ZIP-Datei mit einer PDF pro Mitarbeitenden, etwa `Loonoverzicht (Beta) 2026-08.zip`. <Hint kind="grey">Die Lohnübersicht als PDF ist noch eine Beta-Version.</Hint> |
+
+## Was danach passiert
+
+- Die Datei wird heruntergeladen, sobald der Export fertig ist. Mit **Minimieren** arbeiten Sie weiter, während der Export erstellt wird.
+- Bei der Verarbeitung eines Laufs erhalten Administratoren, die die Benachrichtigung **Exportkopie bei Verarbeitung des Lohnabrechnungslaufs** eingeschaltet haben, eine Kopie per E-Mail.
+
+## Einschränkungen
+
+- Wurde die Korrektur eines Laufs in einen neueren Lauf übernommen, steht der **Export der Lohnkorrektur** beim älteren Lauf nicht mehr zur Verfügung.
+- Solange eine Aufgabe des Laufs läuft, können Sie den Export noch nicht herunterladen. Versuchen Sie es erneut, sobald der Lauf fertig ist.
+- Was in einem Export steht, ergibt sich aus der Berechnung des Laufs. <Hint kind="yellow">Das hängt vom Tarifvertrag (CAO) oder der Vertragseinstellung ab: Welche Lohnarten ein Mitarbeitender erhält, ergibt sich aus dem Tarifvertrag und aus dem Vertrag des Mitarbeitenden.</Hint>
+- Möchten Sie die Stunden eines beliebigen Zeitraums, unabhängig von einem Lohnabrechnungslauf? Dann verwenden Sie den [Export der Lohnbewegungsdaten](/de/management/hour-management/time-registrations/payroll-mutation-export).

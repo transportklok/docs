@@ -1,0 +1,49 @@
+---
+title: "Samsara"
+description: "Conectarea Samsara și ce se preia din Samsara."
+---
+{/* translated-from: nl/management/fleet-management/integrations/samsara.mdx sha256:97af95c34759fd295bb2bb698d13176c429c951a2f8e001ee5e8c70d6e8bd63f */}
+
+## Pentru ce este această pagină
+
+Cu integrarea Samsara, TransportKlok preia vehicule și poziții din Samsara.
+
+## Cine o poate folosi
+
+- Un administrator sau un manager al organizației.
+- Organizația are nevoie de modulul **Gestionarea flotei**, iar telematica trebuie să fie activată. Consultați [Integrări](/ro/settings/organization/integrations/instances).
+
+## Cum folosiți această pagină
+
+1. La **Conturi**, creați un cont pentru **Samsara** cu un **Token** (token API) de la Samsara.
+2. Deschideți **Integrări**, faceți clic pe **Adăugați o integrare** și faceți clic la **Samsara** pe **Conectare**.
+3. Alegeți **Cont**, dați integrării un **Nume** și faceți clic pe **Conectare**.
+4. Completați setările și faceți clic pe **Salvați setările**.
+
+## Câmpuri
+
+Pe pagina de setări completați:
+
+| Setare | Ce completați |
+|------------|--------------|
+| **Atributul numărului de marcă** | Atributul de șofer din Samsara în care se află numărul de marcă. |
+| **Tipul documentului de început** | Tipul de document din Samsara care pornește o înregistrare a timpului de lucru. |
+| **Tipul documentului de oprire** | Tipul de document din Samsara care oprește o înregistrare a timpului de lucru. |
+
+## Ce se întâmplă după aceea
+
+| Funcție | Rulează automat |
+|---------|---------------|
+| **Sincronizare vehicule** | în fiecare noapte |
+| **Sincronizare șoferi** | în fiecare noapte |
+| **Sincronizare atribuiri de vehicule** | din 15 în 15 minute |
+| **Primire telemetrie** | din 15 în 15 minute |
+
+- Vehiculele sunt asociate după seria de șasiu (VIN).
+- Pozițiile apar pe [Hartă](/ro/management/fleet-management/map).
+- Până când setările sunt completate, integrarea are starea **Configurare necesară**.
+- Dacă un șofer din Samsara completează documentul de început sau documentul de oprire, TransportKlok pornește sau oprește o înregistrare a timpului de lucru pentru acel angajat.
+
+## Limitări
+
+- Integrarea doar preia date din Samsara. Nu trimite nimic înapoi.

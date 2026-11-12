@@ -1,0 +1,26 @@
+---
+title: "API introduction"
+description: "Connect your own software to TransportKlok through the REST API."
+---
+{/* translated-from: nl/api/introduction.mdx sha256:6343b3308ac1daa78b737ca05d102ebf3fe2504cdc1383094215a3187b076976 */}
+
+## What the API is
+
+With the TransportKlok API, your own software reads data from TransportKlok, such as the organizations, workers and exports you have access to. The API is a REST API that returns JSON.
+
+## Base address
+
+Every request goes to:
+
+```text
+https://api.transportklok.nl/rest/v1
+```
+
+A record always belongs to an organization. That is why a path after the organizations starts with the organization's id, such as `/rest/v1/organizations/{organisatie-id}/workers`.
+
+## How to get started
+
+1. Request an OAuth client from TransportKlok via [info@transportklok.nl](mailto:info@transportklok.nl). See [OAuth](/en/api/oauth).
+2. Have a user give your app access and fetch an access token. See [OAuth](/en/api/oauth).
+3. Send the token with every request. See [Authentication](/en/api/authentication).
+4. Keep to the limits on the number of requests. See [Rate limits](/en/api/rate-limits).

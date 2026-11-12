@@ -1,0 +1,45 @@
+---
+title: "Czynności"
+description: "Czynności i godziny nieproduktywne, na które zespół rejestruje czas."
+---
+{/* translated-from: nl/settings/team/activities.mdx sha256:5d5aaa00c45346716280ae7733cdbf4a33e8d93bdda42d88b54df6dd48e2a16b */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj określa się dla każdego zespołu, na jakie czynności i godziny nieproduktywne rejestrują czas pracownicy. Włącza się lub wyłącza czynności z układu zbiorowego (CAO) i tworzy własne czynności.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer zespołu.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **Ustawienia** i wybrać zespół, na przykład `Transport`.
+2. Wybrać **Czynności** dla godzin produktywnych albo **Nieproduktywne** dla godzin takich jak urlop, ATV i choroba.
+3. W sekcji **Standardowe czynności** przełącznikiem włącza się lub wyłącza czynność z CAO. Za pomocą **Edytuj** zmienia się **Kod**, **Cechy** i **Warianty**.
+4. W sekcji **Pozostałe czynności** kliknąć **Nowa czynność**, aby utworzyć własną czynność.
+5. Wypełnić pola i kliknąć **Utwórz**.
+
+## Pola
+
+Przy własnej czynności:
+
+| Pole | Co należy wpisać |
+|------|--------------|
+| **Nazwa** | Nazwa, którą pracownicy widzą podczas rejestracji. |
+| **Kod** | Kod, na przykład dla eksportu płac. |
+| **Nieobecność, o którą można wnioskować.** | Czy pracownicy mogą wnioskować o tę czynność jako nieobecność. |
+| **Typ godzin** | Rodzaj godzin. Wybiera się go tylko przy tworzeniu. |
+
+Przy wariancie czynności wpisuje się **Nazwa** i **Kod**.
+
+## Co dzieje się potem
+
+- Czynność, która jest włączona, mogą wybierać pracownicy zespołu podczas rejestracji.
+- Usunięta własna czynność znajduje się w koszu. Za pomocą **Przywróć z kosza** przywraca się ją.
+
+## Ograniczenia
+
+- Standardowe czynności pochodzą z CAO. Można je włączać i wyłączać, ale nie usuwać. <Hint kind="yellow">To, jakie standardowe czynności istnieją, zależy od CAO.</Hint>

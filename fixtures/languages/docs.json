@@ -1,0 +1,41 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Transportklok",
+  "colors": {
+    "primary": "#1860D8"
+  },
+  "navigation": {
+    "languages": [
+      {
+        "language": "nl",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Beheerders",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": ["nl/getting-started", "nl/management/time-registrations"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Administrators",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": ["en/getting-started", "en/management/time-registrations"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

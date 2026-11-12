@@ -1,0 +1,37 @@
+---
+title: "Uwierzytelnianie API"
+description: "Wysyłanie żądania do API z tokenem dostępu."
+---
+{/* translated-from: nl/api/authentication.mdx sha256:f62f7ff6e730b597dbf3fc9718b9988ff12485a544234e3dcf2e9b9248f5d5e5 */}
+
+## Token dostępu
+
+Każde żądanie do API przesyła token dostępu OAuth w nagłówku `Authorization`:
+
+```http
+GET /rest/v1/organizations HTTP/1.1
+Host: api.transportklok.nl
+Authorization: Bearer <toegangstoken>
+Accept: application/json
+```
+
+Sposób uzyskania tokenu opisano w sekcji [OAuth](/pl/api/oauth).
+
+## Do czego uprawnia token
+
+- Token należy do użytkownika, który udzielił dostępu aplikacji. API pokazuje wyłącznie to, co ten użytkownik sam może zobaczyć.
+- Token obowiązuje tylko dla organizacji, które użytkownik wybrał podczas udzielania zgody.
+- Token obowiązuje tylko dla uprawnień (zakresów, ang. scopes), o które aplikacja poprosiła i na które użytkownik zezwolił. Zakres ma postać `<onderdeel>:<actie>`.
+- Adres e-mail użytkownika musi być potwierdzony.
+
+## Gdy coś nie działa
+
+| Status | Znaczenie |
+|--------|-----------|
+| `401` | Nie przesłano ważnego tokenu albo token wygasł. Za pomocą tokenu odświeżania należy poprosić o nowy token. |
+| `403` | Token nie ma zakresu potrzebnego do tego żądania. |
+| `429` | Wysyłanych jest zbyt wiele żądań. Zob. [Limity żądań](/pl/api/rate-limits). |
+
+## Cofanie dostępu
+
+Użytkownik cofa dostęp aplikacji w TransportKlok w sekcji **Ustawienia** → **Aplikacje**. Po tym token przestaje działać.

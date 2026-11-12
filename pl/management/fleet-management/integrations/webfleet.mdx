@@ -1,0 +1,46 @@
+---
+title: "Webfleet"
+description: "Połączenie z Webfleet i dane pobierane z Webfleet."
+---
+{/* translated-from: nl/management/fleet-management/integrations/webfleet.mdx sha256:fc8a6bcc07fa7708d673d7fbb06c30f2b8e71041f15f77cfea157b3f864cef19 */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z Webfleet TransportKlok pobiera z Webfleet pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **Webfleet** z **Nazwa użytkownika** i **Hasło** do konta Webfleet.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **Webfleet** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Wypełnić ustawienia i kliknąć **Zapisz ustawienia**.
+
+## Pola
+
+Na stronie ustawień należy wpisać:
+
+| Ustawienie | Co należy wpisać |
+|------------|--------------|
+| **Nazwa konta Webfleet** | Nazwa konta Webfleet, które jest łączone. |
+| **Powiąż numer kierowcy z Webfleet z numerem ewidencyjnym** | Włączyć, jeśli numery kierowców w Webfleet są takie same jak numery pracowników w TransportKlok. |
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co kwadrans |
+| **Synchronizacja kierowców** | co kwadrans |
+| **Synchronizacja przypisań pojazdów** | co kwadrans |
+| **Odbiór telemetrii** | co minutę |
+
+- Pojazdy są łączone według obiektu Webfleet albo numeru rejestracyjnego. Jeśli numer rejestracyjny pasuje do więcej niż jednego pojazdu, pojazd nie zostaje połączony.
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z Webfleet. Niczego tam nie odsyła.

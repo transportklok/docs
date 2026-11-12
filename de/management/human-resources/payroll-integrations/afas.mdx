@@ -1,0 +1,42 @@
+---
+title: "AFAS Profit"
+description: "AFAS Profit verbinden und was an AFAS Profit gesendet wird."
+---
+{/* translated-from: nl/management/human-resources/payroll-integrations/afas.mdx sha256:fe9691630dbde489526778659ad0ec3d948e40fbd3bf0a85efff7ffbb4529ed0 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Wofür diese Seite da ist
+
+Mit der AFAS-Profit-Integration senden Sie Mitarbeitende, Verträge und verarbeitete Lohnabrechnungsläufe an AFAS Profit.
+
+## Wer das nutzen darf
+
+- Ein Administrator oder Manager der Organisation, mit einem AFAS-Profit-Konto, das Zugriff auf die Umgebung hat.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Legen Sie ein Konto für **AFAS Profit** an und melden Sie sich bei AFAS an. Siehe [Konten](/de/settings/organization/integrations/accounts).
+2. Öffnen Sie **Integrationen**, klicken Sie auf **Integration hinzufügen** und klicken Sie bei **AFAS Profit** auf **Verbinden**.
+3. Wählen Sie das **Konto**, vergeben Sie bei **Name** einen Namen für die Integration und klicken Sie auf **Verbinden**.
+4. Tragen Sie die Connectors ein und klicken Sie auf **Einstellungen speichern**.
+5. Schalten Sie unter **Synchronisationsverhalten** die Schalter für das ein, was Sie senden möchten, etwa **Lohnabrechnungsläufe senden**, und speichern Sie.
+
+## Felder
+
+| Feld | Was Sie eintragen |
+|------|--------------|
+| **Employees-Connector** | Der Name des AFAS-GetConnectors für Mitarbeiterdaten, zum Beispiel `Employees`. |
+| **Engagement-Data-Connector** | Der Name des AFAS-GetConnectors für Beschäftigungsdaten. |
+
+## Was danach passiert
+
+- Nach **Einstellungen speichern** sendet TransportKlok die Mitarbeitenden an AFAS Profit.
+- Legen Sie einen Mitarbeitenden oder Vertrag an oder ändern Sie ihn, sendet TransportKlok diese Daten an AFAS Profit.
+- Beim **Senden** eines Lohnabrechnungslaufs legt TransportKlok pro Mitarbeitenden eine Bewegung pro Lohnart in AFAS Profit an, für das Jahr und den Zeitraum des Laufs.
+
+## Einschränkungen
+
+- Nur Lohnarten mit einem AFAS-Code werden gesendet. <Hint kind="yellow">Welche Codes eingestellt sind, hängt von der Einrichtung der Integration für Ihre Organisation ab. Prüfen Sie nach dem ersten Versand in AFAS Profit, ob die Bewegungen dort stehen.</Hint>
+- Die Integration ruft nichts aus AFAS Profit ab.

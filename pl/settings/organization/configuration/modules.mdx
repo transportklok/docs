@@ -1,0 +1,56 @@
+---
+title: "Moduły"
+description: "Włączanie, wyłączanie i ustawianie modułów organizacji."
+---
+{/* translated-from: nl/settings/organization/configuration/modules.mdx sha256:af7a2d1880b349c542157d08ed9ebdc8470d02ab150f2462a43779e735b39329 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Do czego służy ta strona
+
+Tutaj włącza się lub wyłącza moduły organizacji i ustawia, jak działa każdy moduł.
+
+## Zrzut ekranu
+
+![Moduły](/images/nl/captures/instellingen-organisatie-modules.png)
+
+## Kto może z tego korzystać
+
+- Administrator organizacji.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **Ustawienia** → **Ustawienia organizacji** → **Konfiguracja i moduły** i wybrać kartę **Moduły**.
+2. Kliknąć **Dodaj moduł** i przy module wybrać **Aktywuj**, albo przy aktywnym module kliknąć **Dezaktywuj**.
+3. W oknie wybrać, czy zmiana obowiązuje od razu, czy od następnego okresu subskrypcji.
+4. Przy module kliknąć **Ustawienia**, aby zmienić ustawienia tego modułu, i kliknąć **Zapisz**.
+
+## Pola
+
+Moduły:
+
+| Moduł | Co robi |
+|--------|--------------|
+| **Zarządzanie godzinami** | Zarządzanie czynnościami, dniami pracy i rodzajami urlopu oraz rejestrowanie i zatwierdzanie godzin i nieobecności. |
+| **Zarządzanie klientami** | Zarządzanie zleceniodawcami i powiązanie ich z godzinami. |
+| **Zarządzanie flotą** | Zarządzanie pojazdami, naczepami i lokalizacjami, z lokalizatorami lub integracją GPS. |
+| **Zmienne składniki płac** | Wykonywanie naliczeń płac i eksportowanie zmiennych składników płac. Współpracuje z modułem **Zarządzanie godzinami**. |
+
+W kolumnie **Koszt** widać dla każdego modułu, czy jest **Darmowe**, czy ile kosztuje na pracownika. <Hint kind="yellow">To, jakie moduły można włączyć, zależy od subskrypcji.</Hint>
+
+Ustawienia poszczególnych modułów, w sekcji **Ustawienia**:
+
+| Moduł | Ustawienia |
+|--------|--------------|
+| **Zarządzanie godzinami** | Czy pracownicy sami tworzą rejestracje czasu pracy, czy zatwierdzanie jest pomijane, ręczne i robocze rejestracje czasu pracy oraz wielkość kroku czasu. |
+| **Zarządzanie klientami** | Czy podczas rejestrowania można utworzyć zleceniodawcę. |
+| **Zmienne składniki płac** | Okres rozliczania płac, dzień początkowy, format eksportu płac i okres zmiennych składników wynagrodzenia. <Hint kind="yellow">Zależy to od układu zbiorowego (CAO) lub ustawienia umowy: te ustawienia należy uzgodnić z administracją płac.</Hint> |
+
+## Co dzieje się potem
+
+- Aktywowany moduł pojawia się w menu. W okresie testowym moduł jest używany bezpłatnie.
+- Jeśli moduł zostanie wyłączony od następnego okresu, do tego czasu widać komunikat „Ten moduł nie będzie dostępny od …". Za pomocą **Zatrzymaj dezaktywację** lub **Zatrzymaj aktywację** cofa się zaplanowaną zmianę.
+
+## Ograniczenia
+
+- Moduł, który wymaga innego modułu, jest wymieniony razem z tym modułem w kolumnie **Wymaga**.

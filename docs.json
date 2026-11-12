@@ -32,8 +32,348 @@
   "navigation": {
     "languages": [
       {
-        "language": "nl",
+        "language": "en",
         "default": true,
+        "tabs": [
+          {
+            "tab": "Home",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "en/index"
+                ]
+              },
+              {
+                "group": "Signing in",
+                "pages": [
+                  "en/sign-in/register",
+                  "en/sign-in/accept-invitation",
+                  "en/sign-in/log-in",
+                  "en/sign-in/two-factor",
+                  "en/sign-in/forgot-password",
+                  "en/sign-in/confirm-email",
+                  "en/sign-in/app-access"
+                ]
+              },
+              {
+                "group": "Working with TransportKlok",
+                "pages": [
+                  "en/general/exports"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Administrators",
+            "groups": [
+              {
+                "group": "Fleet management",
+                "pages": [
+                  "en/management/fleet-management/map",
+                  {
+                    "group": "Vehicles",
+                    "pages": [
+                      "en/management/fleet-management/vehicles/overview",
+                      "en/management/fleet-management/vehicles/create",
+                      "en/management/fleet-management/vehicles/edit"
+                    ]
+                  },
+                  {
+                    "group": "Trailers",
+                    "pages": [
+                      "en/management/fleet-management/trailers/overview",
+                      "en/management/fleet-management/trailers/create",
+                      "en/management/fleet-management/trailers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Locations",
+                    "pages": [
+                      "en/management/fleet-management/locations/overview",
+                      "en/management/fleet-management/locations/create"
+                    ]
+                  },
+                  {
+                    "group": "Telematics",
+                    "pages": [
+                      "en/management/fleet-management/telematics/overview",
+                      {
+                        "group": "Trackers",
+                        "pages": [
+                          "en/management/fleet-management/telematics/trackers/overview",
+                          "en/management/fleet-management/telematics/trackers/create"
+                        ]
+                      },
+                      {
+                        "group": "Beacons",
+                        "pages": [
+                          "en/management/fleet-management/telematics/beacons/overview",
+                          "en/management/fleet-management/telematics/beacons/create",
+                          "en/management/fleet-management/telematics/beacons/connect"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tachograph",
+                    "pages": [
+                      "en/management/fleet-management/tachograph/vehicles",
+                      "en/management/fleet-management/tachograph/drivers",
+                      "en/management/fleet-management/tachograph/company-cards"
+                    ]
+                  },
+                  {
+                    "group": "GPS integrations",
+                    "pages": [
+                      "en/management/fleet-management/integrations/webfleet",
+                      "en/management/fleet-management/integrations/samsara",
+                      "en/management/fleet-management/integrations/geotab",
+                      "en/management/fleet-management/integrations/fleetgo",
+                      "en/management/fleet-management/integrations/linqo",
+                      "en/management/fleet-management/integrations/co3",
+                      "en/management/fleet-management/integrations/verizon-connect"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "HR management",
+                "pages": [
+                  {
+                    "group": "Personnel",
+                    "pages": [
+                      "en/management/human-resources/workers/overview",
+                      "en/management/human-resources/workers/create",
+                      "en/management/human-resources/workers/edit",
+                      "en/management/human-resources/workers/details",
+                      "en/management/human-resources/workers/invitations",
+                      "en/management/human-resources/workers/teams"
+                    ]
+                  },
+                  {
+                    "group": "Contracts",
+                    "pages": [
+                      "en/management/human-resources/contracts/overview"
+                    ]
+                  },
+                  {
+                    "group": "Payroll runs",
+                    "pages": [
+                      "en/management/human-resources/payroll-runs/overview",
+                      "en/management/human-resources/payroll-runs/create",
+                      "en/management/human-resources/payroll-runs/process",
+                      "en/management/human-resources/payroll-runs/corrections",
+                      "en/management/human-resources/payroll-runs/exports"
+                    ]
+                  },
+                  {
+                    "group": "Additions and deductions",
+                    "pages": [
+                      "en/management/human-resources/payroll-components/overview",
+                      "en/management/human-resources/payroll-components/create",
+                      "en/management/human-resources/payroll-components/edit"
+                    ]
+                  },
+                  {
+                    "group": "Payroll integrations",
+                    "pages": [
+                      "en/management/human-resources/payroll-integrations/nmbrs",
+                      "en/management/human-resources/payroll-integrations/loket",
+                      "en/management/human-resources/payroll-integrations/afas",
+                      "en/management/human-resources/payroll-integrations/exact-online"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Hour management",
+                "pages": [
+                  {
+                    "group": "Time registration",
+                    "pages": [
+                      "en/management/hour-management/time-registrations/overview",
+                      "en/management/hour-management/time-registrations/create",
+                      "en/management/hour-management/time-registrations/details",
+                      "en/management/hour-management/time-registrations/timeline",
+                      "en/management/hour-management/time-registrations/edit",
+                      "en/management/hour-management/time-registrations/payroll-mutation-export",
+                      "en/management/hour-management/time-registrations/rejected"
+                    ]
+                  },
+                  "en/management/hour-management/automatic-time-registrations"
+                ]
+              },
+              {
+                "group": "Client management",
+                "pages": [
+                  {
+                    "group": "Clients",
+                    "pages": [
+                      "en/management/customer-management/customers/overview",
+                      "en/management/customer-management/customers/create",
+                      "en/management/customer-management/customers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Integrations",
+                    "pages": [
+                      "en/management/customer-management/integrations/qargo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Settings",
+                "pages": [
+                  {
+                    "group": "Organization",
+                    "pages": [
+                      {
+                        "group": "General",
+                        "pages": [
+                          "en/settings/organization/general/profile",
+                          "en/settings/organization/general/address"
+                        ]
+                      },
+                      "en/settings/organization/administrators",
+                      "en/settings/organization/teams",
+                      {
+                        "group": "Configuration and modules",
+                        "pages": [
+                          "en/settings/organization/configuration/base",
+                          "en/settings/organization/configuration/modules"
+                        ]
+                      },
+                      {
+                        "group": "Integrations",
+                        "pages": [
+                          "en/settings/organization/integrations/instances",
+                          "en/settings/organization/integrations/accounts",
+                          "en/settings/organization/integrations/capabilities"
+                        ]
+                      },
+                      "en/settings/organization/notifications",
+                      "en/settings/organization/subscription",
+                      {
+                        "group": "Mandate and invoicing",
+                        "pages": [
+                          "en/settings/organization/plan-and-billing/payment-method",
+                          "en/settings/organization/plan-and-billing/invoices"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Team",
+                    "pages": [
+                      {
+                        "group": "Team general",
+                        "pages": [
+                          "en/settings/team/general/profile",
+                          "en/settings/team/general/address"
+                        ]
+                      },
+                      {
+                        "group": "Configuration and features",
+                        "pages": [
+                          "en/settings/team/configuration/base",
+                          "en/settings/team/configuration/features",
+                          "en/settings/team/configuration/break-schema",
+                          "en/settings/team/configuration/parcel-delivery"
+                        ]
+                      },
+                      "en/settings/team/attributes",
+                      "en/settings/team/work-patterns",
+                      "en/settings/team/activities"
+                    ]
+                  },
+                  {
+                    "group": "Your account",
+                    "pages": [
+                      "en/settings/user/profile",
+                      {
+                        "group": "Account",
+                        "pages": [
+                          "en/settings/user/account/email",
+                          "en/settings/user/account/password"
+                        ]
+                      },
+                      {
+                        "group": "Authentication and security",
+                        "pages": [
+                          "en/settings/user/authentication-and-security/sessions",
+                          "en/settings/user/authentication-and-security/devices",
+                          "en/settings/user/authentication-and-security/two-factor-authentication"
+                        ]
+                      },
+                      "en/settings/user/appearance",
+                      "en/settings/user/apps",
+                      "en/settings/user/memberships"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Workers",
+            "groups": [
+              {
+                "group": "The app",
+                "pages": [
+                  "en/workforce/app/login",
+                  "en/workforce/app/push-notifications",
+                  "en/workforce/app/home",
+                  "en/workforce/app/register-work",
+                  "en/workforce/app/register-leave",
+                  "en/workforce/app/overview",
+                  "en/workforce/app/timer",
+                  "en/workforce/app/map",
+                  "en/workforce/app/organizations",
+                  "en/workforce/app/settings",
+                  "en/workforce/app/malfunctions"
+                ]
+              },
+              {
+                "group": "Work",
+                "pages": [
+                  {
+                    "group": "Time registration",
+                    "pages": [
+                      "en/workforce/hour-management/time-registrations/overview",
+                      "en/workforce/hour-management/time-registrations/create",
+                      "en/workforce/hour-management/time-registrations/details",
+                      "en/workforce/hour-management/time-registrations/timeline",
+                      "en/workforce/hour-management/time-registrations/edit"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "en/api/introduction",
+                  "en/api/authentication",
+                  "en/api/oauth",
+                  "en/api/rate-limits"
+                ]
+              },
+              {
+                "group": "Reference",
+                "openapi": "api/openapi.json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "nl",
         "tabs": [
           {
             "tab": "Home",
@@ -385,6 +725,1026 @@
               },
               {
                 "group": "Naslag",
+                "openapi": "api/openapi.json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "de",
+        "tabs": [
+          {
+            "tab": "Home",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "de/index"
+                ]
+              },
+              {
+                "group": "Anmelden",
+                "pages": [
+                  "de/sign-in/register",
+                  "de/sign-in/accept-invitation",
+                  "de/sign-in/log-in",
+                  "de/sign-in/two-factor",
+                  "de/sign-in/forgot-password",
+                  "de/sign-in/confirm-email",
+                  "de/sign-in/app-access"
+                ]
+              },
+              {
+                "group": "Arbeiten mit TransportKlok",
+                "pages": [
+                  "de/general/exports"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Administratoren",
+            "groups": [
+              {
+                "group": "Fuhrparkverwaltung",
+                "pages": [
+                  "de/management/fleet-management/map",
+                  {
+                    "group": "Fahrzeuge",
+                    "pages": [
+                      "de/management/fleet-management/vehicles/overview",
+                      "de/management/fleet-management/vehicles/create",
+                      "de/management/fleet-management/vehicles/edit"
+                    ]
+                  },
+                  {
+                    "group": "Anhänger",
+                    "pages": [
+                      "de/management/fleet-management/trailers/overview",
+                      "de/management/fleet-management/trailers/create",
+                      "de/management/fleet-management/trailers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Standorte",
+                    "pages": [
+                      "de/management/fleet-management/locations/overview",
+                      "de/management/fleet-management/locations/create"
+                    ]
+                  },
+                  {
+                    "group": "Telematik",
+                    "pages": [
+                      "de/management/fleet-management/telematics/overview",
+                      {
+                        "group": "Tracker",
+                        "pages": [
+                          "de/management/fleet-management/telematics/trackers/overview",
+                          "de/management/fleet-management/telematics/trackers/create"
+                        ]
+                      },
+                      {
+                        "group": "Beacons",
+                        "pages": [
+                          "de/management/fleet-management/telematics/beacons/overview",
+                          "de/management/fleet-management/telematics/beacons/create",
+                          "de/management/fleet-management/telematics/beacons/connect"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Fahrtenschreiber",
+                    "pages": [
+                      "de/management/fleet-management/tachograph/vehicles",
+                      "de/management/fleet-management/tachograph/drivers",
+                      "de/management/fleet-management/tachograph/company-cards"
+                    ]
+                  },
+                  {
+                    "group": "GPS-Integrationen",
+                    "pages": [
+                      "de/management/fleet-management/integrations/webfleet",
+                      "de/management/fleet-management/integrations/samsara",
+                      "de/management/fleet-management/integrations/geotab",
+                      "de/management/fleet-management/integrations/fleetgo",
+                      "de/management/fleet-management/integrations/linqo",
+                      "de/management/fleet-management/integrations/co3",
+                      "de/management/fleet-management/integrations/verizon-connect"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Personalverwaltung",
+                "pages": [
+                  {
+                    "group": "Personal",
+                    "pages": [
+                      "de/management/human-resources/workers/overview",
+                      "de/management/human-resources/workers/create",
+                      "de/management/human-resources/workers/edit",
+                      "de/management/human-resources/workers/details",
+                      "de/management/human-resources/workers/invitations",
+                      "de/management/human-resources/workers/teams"
+                    ]
+                  },
+                  {
+                    "group": "Verträge",
+                    "pages": [
+                      "de/management/human-resources/contracts/overview"
+                    ]
+                  },
+                  {
+                    "group": "Lohnabrechnungsläufe",
+                    "pages": [
+                      "de/management/human-resources/payroll-runs/overview",
+                      "de/management/human-resources/payroll-runs/create",
+                      "de/management/human-resources/payroll-runs/process",
+                      "de/management/human-resources/payroll-runs/corrections",
+                      "de/management/human-resources/payroll-runs/exports"
+                    ]
+                  },
+                  {
+                    "group": "Bezüge und Abzüge",
+                    "pages": [
+                      "de/management/human-resources/payroll-components/overview",
+                      "de/management/human-resources/payroll-components/create",
+                      "de/management/human-resources/payroll-components/edit"
+                    ]
+                  },
+                  {
+                    "group": "Lohn-Integrationen",
+                    "pages": [
+                      "de/management/human-resources/payroll-integrations/nmbrs",
+                      "de/management/human-resources/payroll-integrations/loket",
+                      "de/management/human-resources/payroll-integrations/afas",
+                      "de/management/human-resources/payroll-integrations/exact-online"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Stundenverwaltung",
+                "pages": [
+                  {
+                    "group": "Zeiterfassung",
+                    "pages": [
+                      "de/management/hour-management/time-registrations/overview",
+                      "de/management/hour-management/time-registrations/create",
+                      "de/management/hour-management/time-registrations/details",
+                      "de/management/hour-management/time-registrations/timeline",
+                      "de/management/hour-management/time-registrations/edit",
+                      "de/management/hour-management/time-registrations/payroll-mutation-export",
+                      "de/management/hour-management/time-registrations/rejected"
+                    ]
+                  },
+                  "de/management/hour-management/automatic-time-registrations"
+                ]
+              },
+              {
+                "group": "Kundenverwaltung",
+                "pages": [
+                  {
+                    "group": "Auftraggeber",
+                    "pages": [
+                      "de/management/customer-management/customers/overview",
+                      "de/management/customer-management/customers/create",
+                      "de/management/customer-management/customers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Integrationen",
+                    "pages": [
+                      "de/management/customer-management/integrations/qargo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Einstellungen",
+                "pages": [
+                  {
+                    "group": "Organisation",
+                    "pages": [
+                      {
+                        "group": "Allgemein",
+                        "pages": [
+                          "de/settings/organization/general/profile",
+                          "de/settings/organization/general/address"
+                        ]
+                      },
+                      "de/settings/organization/administrators",
+                      "de/settings/organization/teams",
+                      {
+                        "group": "Konfiguration und Module",
+                        "pages": [
+                          "de/settings/organization/configuration/base",
+                          "de/settings/organization/configuration/modules"
+                        ]
+                      },
+                      {
+                        "group": "Integrationen",
+                        "pages": [
+                          "de/settings/organization/integrations/instances",
+                          "de/settings/organization/integrations/accounts",
+                          "de/settings/organization/integrations/capabilities"
+                        ]
+                      },
+                      "de/settings/organization/notifications",
+                      "de/settings/organization/subscription",
+                      {
+                        "group": "Einzugsermächtigung und Rechnungsstellung",
+                        "pages": [
+                          "de/settings/organization/plan-and-billing/payment-method",
+                          "de/settings/organization/plan-and-billing/invoices"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Team",
+                    "pages": [
+                      {
+                        "group": "Team allgemein",
+                        "pages": [
+                          "de/settings/team/general/profile",
+                          "de/settings/team/general/address"
+                        ]
+                      },
+                      {
+                        "group": "Konfiguration und Funktionen",
+                        "pages": [
+                          "de/settings/team/configuration/base",
+                          "de/settings/team/configuration/features",
+                          "de/settings/team/configuration/break-schema",
+                          "de/settings/team/configuration/parcel-delivery"
+                        ]
+                      },
+                      "de/settings/team/attributes",
+                      "de/settings/team/work-patterns",
+                      "de/settings/team/activities"
+                    ]
+                  },
+                  {
+                    "group": "Ihr Konto",
+                    "pages": [
+                      "de/settings/user/profile",
+                      {
+                        "group": "Konto",
+                        "pages": [
+                          "de/settings/user/account/email",
+                          "de/settings/user/account/password"
+                        ]
+                      },
+                      {
+                        "group": "Authentifizierung und Sicherheit",
+                        "pages": [
+                          "de/settings/user/authentication-and-security/sessions",
+                          "de/settings/user/authentication-and-security/devices",
+                          "de/settings/user/authentication-and-security/two-factor-authentication"
+                        ]
+                      },
+                      "de/settings/user/appearance",
+                      "de/settings/user/apps",
+                      "de/settings/user/memberships"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Mitarbeitende",
+            "groups": [
+              {
+                "group": "Die App",
+                "pages": [
+                  "de/workforce/app/login",
+                  "de/workforce/app/push-notifications",
+                  "de/workforce/app/home",
+                  "de/workforce/app/register-work",
+                  "de/workforce/app/register-leave",
+                  "de/workforce/app/overview",
+                  "de/workforce/app/timer",
+                  "de/workforce/app/map",
+                  "de/workforce/app/organizations",
+                  "de/workforce/app/settings",
+                  "de/workforce/app/malfunctions"
+                ]
+              },
+              {
+                "group": "Arbeit",
+                "pages": [
+                  {
+                    "group": "Zeiterfassung",
+                    "pages": [
+                      "de/workforce/hour-management/time-registrations/overview",
+                      "de/workforce/hour-management/time-registrations/create",
+                      "de/workforce/hour-management/time-registrations/details",
+                      "de/workforce/hour-management/time-registrations/timeline",
+                      "de/workforce/hour-management/time-registrations/edit"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Erste Schritte",
+                "pages": [
+                  "de/api/introduction",
+                  "de/api/authentication",
+                  "de/api/oauth",
+                  "de/api/rate-limits"
+                ]
+              },
+              {
+                "group": "Referenz",
+                "openapi": "api/openapi.json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pl",
+        "tabs": [
+          {
+            "tab": "Strona główna",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "pl/index"
+                ]
+              },
+              {
+                "group": "Logowanie",
+                "pages": [
+                  "pl/sign-in/register",
+                  "pl/sign-in/accept-invitation",
+                  "pl/sign-in/log-in",
+                  "pl/sign-in/two-factor",
+                  "pl/sign-in/forgot-password",
+                  "pl/sign-in/confirm-email",
+                  "pl/sign-in/app-access"
+                ]
+              },
+              {
+                "group": "Praca z TransportKlok",
+                "pages": [
+                  "pl/general/exports"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Administratorzy",
+            "groups": [
+              {
+                "group": "Zarządzanie flotą",
+                "pages": [
+                  "pl/management/fleet-management/map",
+                  {
+                    "group": "Pojazdy",
+                    "pages": [
+                      "pl/management/fleet-management/vehicles/overview",
+                      "pl/management/fleet-management/vehicles/create",
+                      "pl/management/fleet-management/vehicles/edit"
+                    ]
+                  },
+                  {
+                    "group": "Naczepy",
+                    "pages": [
+                      "pl/management/fleet-management/trailers/overview",
+                      "pl/management/fleet-management/trailers/create",
+                      "pl/management/fleet-management/trailers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Lokalizacje",
+                    "pages": [
+                      "pl/management/fleet-management/locations/overview",
+                      "pl/management/fleet-management/locations/create"
+                    ]
+                  },
+                  {
+                    "group": "Telematyka",
+                    "pages": [
+                      "pl/management/fleet-management/telematics/overview",
+                      {
+                        "group": "Trackery",
+                        "pages": [
+                          "pl/management/fleet-management/telematics/trackers/overview",
+                          "pl/management/fleet-management/telematics/trackers/create"
+                        ]
+                      },
+                      {
+                        "group": "Beacony",
+                        "pages": [
+                          "pl/management/fleet-management/telematics/beacons/overview",
+                          "pl/management/fleet-management/telematics/beacons/create",
+                          "pl/management/fleet-management/telematics/beacons/connect"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tachograf",
+                    "pages": [
+                      "pl/management/fleet-management/tachograph/vehicles",
+                      "pl/management/fleet-management/tachograph/drivers",
+                      "pl/management/fleet-management/tachograph/company-cards"
+                    ]
+                  },
+                  {
+                    "group": "Integracje GPS",
+                    "pages": [
+                      "pl/management/fleet-management/integrations/webfleet",
+                      "pl/management/fleet-management/integrations/samsara",
+                      "pl/management/fleet-management/integrations/geotab",
+                      "pl/management/fleet-management/integrations/fleetgo",
+                      "pl/management/fleet-management/integrations/linqo",
+                      "pl/management/fleet-management/integrations/co3",
+                      "pl/management/fleet-management/integrations/verizon-connect"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Zarządzanie kadrami",
+                "pages": [
+                  {
+                    "group": "Personel",
+                    "pages": [
+                      "pl/management/human-resources/workers/overview",
+                      "pl/management/human-resources/workers/create",
+                      "pl/management/human-resources/workers/edit",
+                      "pl/management/human-resources/workers/details",
+                      "pl/management/human-resources/workers/invitations",
+                      "pl/management/human-resources/workers/teams"
+                    ]
+                  },
+                  {
+                    "group": "Umowy",
+                    "pages": [
+                      "pl/management/human-resources/contracts/overview"
+                    ]
+                  },
+                  {
+                    "group": "Rozliczenia płac",
+                    "pages": [
+                      "pl/management/human-resources/payroll-runs/overview",
+                      "pl/management/human-resources/payroll-runs/create",
+                      "pl/management/human-resources/payroll-runs/process",
+                      "pl/management/human-resources/payroll-runs/corrections",
+                      "pl/management/human-resources/payroll-runs/exports"
+                    ]
+                  },
+                  {
+                    "group": "Dodatki i potrącenia",
+                    "pages": [
+                      "pl/management/human-resources/payroll-components/overview",
+                      "pl/management/human-resources/payroll-components/create",
+                      "pl/management/human-resources/payroll-components/edit"
+                    ]
+                  },
+                  {
+                    "group": "Integracje płacowe",
+                    "pages": [
+                      "pl/management/human-resources/payroll-integrations/nmbrs",
+                      "pl/management/human-resources/payroll-integrations/loket",
+                      "pl/management/human-resources/payroll-integrations/afas",
+                      "pl/management/human-resources/payroll-integrations/exact-online"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Zarządzanie godzinami",
+                "pages": [
+                  {
+                    "group": "Rejestracja czasu",
+                    "pages": [
+                      "pl/management/hour-management/time-registrations/overview",
+                      "pl/management/hour-management/time-registrations/create",
+                      "pl/management/hour-management/time-registrations/details",
+                      "pl/management/hour-management/time-registrations/timeline",
+                      "pl/management/hour-management/time-registrations/edit",
+                      "pl/management/hour-management/time-registrations/payroll-mutation-export",
+                      "pl/management/hour-management/time-registrations/rejected"
+                    ]
+                  },
+                  "pl/management/hour-management/automatic-time-registrations"
+                ]
+              },
+              {
+                "group": "Zarządzanie klientami",
+                "pages": [
+                  {
+                    "group": "Zleceniodawcy",
+                    "pages": [
+                      "pl/management/customer-management/customers/overview",
+                      "pl/management/customer-management/customers/create",
+                      "pl/management/customer-management/customers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Integracje",
+                    "pages": [
+                      "pl/management/customer-management/integrations/qargo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Ustawienia",
+                "pages": [
+                  {
+                    "group": "Organizacja",
+                    "pages": [
+                      {
+                        "group": "Ogólne",
+                        "pages": [
+                          "pl/settings/organization/general/profile",
+                          "pl/settings/organization/general/address"
+                        ]
+                      },
+                      "pl/settings/organization/administrators",
+                      "pl/settings/organization/teams",
+                      {
+                        "group": "Konfiguracja i moduły",
+                        "pages": [
+                          "pl/settings/organization/configuration/base",
+                          "pl/settings/organization/configuration/modules"
+                        ]
+                      },
+                      {
+                        "group": "Integracje",
+                        "pages": [
+                          "pl/settings/organization/integrations/instances",
+                          "pl/settings/organization/integrations/accounts",
+                          "pl/settings/organization/integrations/capabilities"
+                        ]
+                      },
+                      "pl/settings/organization/notifications",
+                      "pl/settings/organization/subscription",
+                      {
+                        "group": "Upoważnienie i fakturowanie",
+                        "pages": [
+                          "pl/settings/organization/plan-and-billing/payment-method",
+                          "pl/settings/organization/plan-and-billing/invoices"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Zespół",
+                    "pages": [
+                      {
+                        "group": "Zespół – ogólne",
+                        "pages": [
+                          "pl/settings/team/general/profile",
+                          "pl/settings/team/general/address"
+                        ]
+                      },
+                      {
+                        "group": "Konfiguracja i funkcje",
+                        "pages": [
+                          "pl/settings/team/configuration/base",
+                          "pl/settings/team/configuration/features",
+                          "pl/settings/team/configuration/break-schema",
+                          "pl/settings/team/configuration/parcel-delivery"
+                        ]
+                      },
+                      "pl/settings/team/attributes",
+                      "pl/settings/team/work-patterns",
+                      "pl/settings/team/activities"
+                    ]
+                  },
+                  {
+                    "group": "Konto użytkownika",
+                    "pages": [
+                      "pl/settings/user/profile",
+                      {
+                        "group": "Konto",
+                        "pages": [
+                          "pl/settings/user/account/email",
+                          "pl/settings/user/account/password"
+                        ]
+                      },
+                      {
+                        "group": "Uwierzytelnianie i bezpieczeństwo",
+                        "pages": [
+                          "pl/settings/user/authentication-and-security/sessions",
+                          "pl/settings/user/authentication-and-security/devices",
+                          "pl/settings/user/authentication-and-security/two-factor-authentication"
+                        ]
+                      },
+                      "pl/settings/user/appearance",
+                      "pl/settings/user/apps",
+                      "pl/settings/user/memberships"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Pracownicy",
+            "groups": [
+              {
+                "group": "Aplikacja",
+                "pages": [
+                  "pl/workforce/app/login",
+                  "pl/workforce/app/push-notifications",
+                  "pl/workforce/app/home",
+                  "pl/workforce/app/register-work",
+                  "pl/workforce/app/register-leave",
+                  "pl/workforce/app/overview",
+                  "pl/workforce/app/timer",
+                  "pl/workforce/app/map",
+                  "pl/workforce/app/organizations",
+                  "pl/workforce/app/settings",
+                  "pl/workforce/app/malfunctions"
+                ]
+              },
+              {
+                "group": "Praca",
+                "pages": [
+                  {
+                    "group": "Rejestracja czasu",
+                    "pages": [
+                      "pl/workforce/hour-management/time-registrations/overview",
+                      "pl/workforce/hour-management/time-registrations/create",
+                      "pl/workforce/hour-management/time-registrations/details",
+                      "pl/workforce/hour-management/time-registrations/timeline",
+                      "pl/workforce/hour-management/time-registrations/edit"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Pierwsze kroki",
+                "pages": [
+                  "pl/api/introduction",
+                  "pl/api/authentication",
+                  "pl/api/oauth",
+                  "pl/api/rate-limits"
+                ]
+              },
+              {
+                "group": "Dokumentacja",
+                "openapi": "api/openapi.json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ro",
+        "tabs": [
+          {
+            "tab": "Acasă",
+            "groups": [
+              {
+                "group": "Început",
+                "pages": [
+                  "ro/index"
+                ]
+              },
+              {
+                "group": "Autentificare",
+                "pages": [
+                  "ro/sign-in/register",
+                  "ro/sign-in/accept-invitation",
+                  "ro/sign-in/log-in",
+                  "ro/sign-in/two-factor",
+                  "ro/sign-in/forgot-password",
+                  "ro/sign-in/confirm-email",
+                  "ro/sign-in/app-access"
+                ]
+              },
+              {
+                "group": "Lucrul cu TransportKlok",
+                "pages": [
+                  "ro/general/exports"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Administratori",
+            "groups": [
+              {
+                "group": "Gestionarea flotei",
+                "pages": [
+                  "ro/management/fleet-management/map",
+                  {
+                    "group": "Vehicule",
+                    "pages": [
+                      "ro/management/fleet-management/vehicles/overview",
+                      "ro/management/fleet-management/vehicles/create",
+                      "ro/management/fleet-management/vehicles/edit"
+                    ]
+                  },
+                  {
+                    "group": "Remorci",
+                    "pages": [
+                      "ro/management/fleet-management/trailers/overview",
+                      "ro/management/fleet-management/trailers/create",
+                      "ro/management/fleet-management/trailers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Locații",
+                    "pages": [
+                      "ro/management/fleet-management/locations/overview",
+                      "ro/management/fleet-management/locations/create"
+                    ]
+                  },
+                  {
+                    "group": "Telematică",
+                    "pages": [
+                      "ro/management/fleet-management/telematics/overview",
+                      {
+                        "group": "Trackere",
+                        "pages": [
+                          "ro/management/fleet-management/telematics/trackers/overview",
+                          "ro/management/fleet-management/telematics/trackers/create"
+                        ]
+                      },
+                      {
+                        "group": "Beaconuri",
+                        "pages": [
+                          "ro/management/fleet-management/telematics/beacons/overview",
+                          "ro/management/fleet-management/telematics/beacons/create",
+                          "ro/management/fleet-management/telematics/beacons/connect"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tahograf",
+                    "pages": [
+                      "ro/management/fleet-management/tachograph/vehicles",
+                      "ro/management/fleet-management/tachograph/drivers",
+                      "ro/management/fleet-management/tachograph/company-cards"
+                    ]
+                  },
+                  {
+                    "group": "Integrări GPS",
+                    "pages": [
+                      "ro/management/fleet-management/integrations/webfleet",
+                      "ro/management/fleet-management/integrations/samsara",
+                      "ro/management/fleet-management/integrations/geotab",
+                      "ro/management/fleet-management/integrations/fleetgo",
+                      "ro/management/fleet-management/integrations/linqo",
+                      "ro/management/fleet-management/integrations/co3",
+                      "ro/management/fleet-management/integrations/verizon-connect"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Gestionarea resurselor umane",
+                "pages": [
+                  {
+                    "group": "Personal",
+                    "pages": [
+                      "ro/management/human-resources/workers/overview",
+                      "ro/management/human-resources/workers/create",
+                      "ro/management/human-resources/workers/edit",
+                      "ro/management/human-resources/workers/details",
+                      "ro/management/human-resources/workers/invitations",
+                      "ro/management/human-resources/workers/teams"
+                    ]
+                  },
+                  {
+                    "group": "Contracte",
+                    "pages": [
+                      "ro/management/human-resources/contracts/overview"
+                    ]
+                  },
+                  {
+                    "group": "Rulări de salarizare",
+                    "pages": [
+                      "ro/management/human-resources/payroll-runs/overview",
+                      "ro/management/human-resources/payroll-runs/create",
+                      "ro/management/human-resources/payroll-runs/process",
+                      "ro/management/human-resources/payroll-runs/corrections",
+                      "ro/management/human-resources/payroll-runs/exports"
+                    ]
+                  },
+                  {
+                    "group": "Adaosuri și rețineri",
+                    "pages": [
+                      "ro/management/human-resources/payroll-components/overview",
+                      "ro/management/human-resources/payroll-components/create",
+                      "ro/management/human-resources/payroll-components/edit"
+                    ]
+                  },
+                  {
+                    "group": "Integrări de salarizare",
+                    "pages": [
+                      "ro/management/human-resources/payroll-integrations/nmbrs",
+                      "ro/management/human-resources/payroll-integrations/loket",
+                      "ro/management/human-resources/payroll-integrations/afas",
+                      "ro/management/human-resources/payroll-integrations/exact-online"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Gestionarea orelor",
+                "pages": [
+                  {
+                    "group": "Înregistrarea timpului",
+                    "pages": [
+                      "ro/management/hour-management/time-registrations/overview",
+                      "ro/management/hour-management/time-registrations/create",
+                      "ro/management/hour-management/time-registrations/details",
+                      "ro/management/hour-management/time-registrations/timeline",
+                      "ro/management/hour-management/time-registrations/edit",
+                      "ro/management/hour-management/time-registrations/payroll-mutation-export",
+                      "ro/management/hour-management/time-registrations/rejected"
+                    ]
+                  },
+                  "ro/management/hour-management/automatic-time-registrations"
+                ]
+              },
+              {
+                "group": "Gestionarea clienților",
+                "pages": [
+                  {
+                    "group": "Clienți",
+                    "pages": [
+                      "ro/management/customer-management/customers/overview",
+                      "ro/management/customer-management/customers/create",
+                      "ro/management/customer-management/customers/edit"
+                    ]
+                  },
+                  {
+                    "group": "Integrări",
+                    "pages": [
+                      "ro/management/customer-management/integrations/qargo"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Setări",
+                "pages": [
+                  {
+                    "group": "Organizația",
+                    "pages": [
+                      {
+                        "group": "General",
+                        "pages": [
+                          "ro/settings/organization/general/profile",
+                          "ro/settings/organization/general/address"
+                        ]
+                      },
+                      "ro/settings/organization/administrators",
+                      "ro/settings/organization/teams",
+                      {
+                        "group": "Configurare și module",
+                        "pages": [
+                          "ro/settings/organization/configuration/base",
+                          "ro/settings/organization/configuration/modules"
+                        ]
+                      },
+                      {
+                        "group": "Integrări",
+                        "pages": [
+                          "ro/settings/organization/integrations/instances",
+                          "ro/settings/organization/integrations/accounts",
+                          "ro/settings/organization/integrations/capabilities"
+                        ]
+                      },
+                      "ro/settings/organization/notifications",
+                      "ro/settings/organization/subscription",
+                      {
+                        "group": "Mandat și facturare",
+                        "pages": [
+                          "ro/settings/organization/plan-and-billing/payment-method",
+                          "ro/settings/organization/plan-and-billing/invoices"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Echipă",
+                    "pages": [
+                      {
+                        "group": "Echipă – general",
+                        "pages": [
+                          "ro/settings/team/general/profile",
+                          "ro/settings/team/general/address"
+                        ]
+                      },
+                      {
+                        "group": "Configurare și funcții",
+                        "pages": [
+                          "ro/settings/team/configuration/base",
+                          "ro/settings/team/configuration/features",
+                          "ro/settings/team/configuration/break-schema",
+                          "ro/settings/team/configuration/parcel-delivery"
+                        ]
+                      },
+                      "ro/settings/team/attributes",
+                      "ro/settings/team/work-patterns",
+                      "ro/settings/team/activities"
+                    ]
+                  },
+                  {
+                    "group": "Contul dumneavoastră",
+                    "pages": [
+                      "ro/settings/user/profile",
+                      {
+                        "group": "Cont",
+                        "pages": [
+                          "ro/settings/user/account/email",
+                          "ro/settings/user/account/password"
+                        ]
+                      },
+                      {
+                        "group": "Autentificare și securitate",
+                        "pages": [
+                          "ro/settings/user/authentication-and-security/sessions",
+                          "ro/settings/user/authentication-and-security/devices",
+                          "ro/settings/user/authentication-and-security/two-factor-authentication"
+                        ]
+                      },
+                      "ro/settings/user/appearance",
+                      "ro/settings/user/apps",
+                      "ro/settings/user/memberships"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Angajați",
+            "groups": [
+              {
+                "group": "Aplicația",
+                "pages": [
+                  "ro/workforce/app/login",
+                  "ro/workforce/app/push-notifications",
+                  "ro/workforce/app/home",
+                  "ro/workforce/app/register-work",
+                  "ro/workforce/app/register-leave",
+                  "ro/workforce/app/overview",
+                  "ro/workforce/app/timer",
+                  "ro/workforce/app/map",
+                  "ro/workforce/app/organizations",
+                  "ro/workforce/app/settings",
+                  "ro/workforce/app/malfunctions"
+                ]
+              },
+              {
+                "group": "Muncă",
+                "pages": [
+                  {
+                    "group": "Înregistrarea timpului",
+                    "pages": [
+                      "ro/workforce/hour-management/time-registrations/overview",
+                      "ro/workforce/hour-management/time-registrations/create",
+                      "ro/workforce/hour-management/time-registrations/details",
+                      "ro/workforce/hour-management/time-registrations/timeline",
+                      "ro/workforce/hour-management/time-registrations/edit"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Primii pași",
+                "pages": [
+                  "ro/api/introduction",
+                  "ro/api/authentication",
+                  "ro/api/oauth",
+                  "ro/api/rate-limits"
+                ]
+              },
+              {
+                "group": "Referință",
                 "openapi": "api/openapi.json"
               }
             ]

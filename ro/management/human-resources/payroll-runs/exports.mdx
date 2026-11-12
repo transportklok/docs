@@ -1,0 +1,46 @@
+---
+title: "Exporturile unei rulări de salarizare"
+description: "Exporturile pe care le descărcați pentru fiecare rulare de salarizare."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/exports.mdx sha256:7c34913eee6c340598d36b4c141dfdd0b047fe8fad28bf598f0a28cda4baf531 */}
+
+import { Hint } from '/snippets/hint.jsx';
+
+## Pentru ce este această pagină
+
+Aici vedeți ce fișiere descărcați pentru fiecare rulare de salarizare și când este gata fiecare fișier.
+
+## Cine o poate folosi
+
+- Un administrator cu drepturi depline în organizație.
+- Organizația are nevoie de modulul **Variabile de salarizare**.
+
+## Cum folosiți această pagină
+
+1. Deschideți **Resurse umane** → **Administrare salarii** → **Rulări de salarizare**.
+2. Faceți clic pe rândul rulării pe **Descărcați**.
+3. Alegeți exportul.
+4. Așteptați până când fereastra afișează **Finalizat**. Fișierul este apoi descărcat.
+5. Faceți clic pe **Închide**.
+
+## Câmpuri
+
+Exportul nu pune întrebări. **Descărcați** afișează doar exporturile care sunt gata pentru rulare:
+
+| Export | Când | Fișier |
+|--------|---------|---------|
+| **Export rulare de salarizare** | La o rulare procesată. | Un fișier Excel cu ce a procesat rularea, precum `Salarisronde van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Export corecții de salarizare** | La o rulare corectată. | Un fișier Excel doar cu diferența față de ce a fost deja procesat, precum `Salariscorrectie van de periode 2026-08-01 - 2026-08-31.xlsx`. |
+| **Extras salarial (Beta, pdf)** | De îndată ce extrasele salariale ale rulării sunt gata. | Un fișier zip cu un pdf pe angajat, precum `Loonoverzicht (Beta) 2026-08.zip`. <Hint kind="grey">Extrasul salarial în pdf este încă o versiune beta.</Hint> |
+
+## Ce se întâmplă după aceea
+
+- Fișierul este descărcat de îndată ce exportul este gata. Cu **Minimizați** lucrați mai departe în timp ce exportul se creează.
+- La procesarea unei rulări, administratorii care au activată notificarea **Copie a exporturilor la procesarea rulării de salarizare** primesc o copie prin e-mail.
+
+## Limitări
+
+- Dacă corecția unei rulări a fost preluată într-o rulare mai nouă, **Export corecții de salarizare** nu mai apare la rularea mai veche.
+- Cât timp o sarcină a rulării este în desfășurare, nu puteți încă descărca exportul. Încercați din nou de îndată ce rularea este gata.
+- Ce se află într-un export rezultă din calculul rulării. <Hint kind="yellow">Aceasta depinde de contractul colectiv (CAO) sau de setarea contractului: ce elemente salariale primește un angajat rezultă din CAO și din contractul angajatului.</Hint>
+- Doriți orele unei perioade oarecare, independent de o rulare de salarizare? Folosiți atunci [Export variabile de salarizare](/ro/management/hour-management/time-registrations/payroll-mutation-export).

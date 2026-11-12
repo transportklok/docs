@@ -91,12 +91,12 @@ Keep the version you checked a page against in the PR body, never on the page.
 
 ## Screenshot runbook
 
-Screenshots in `images/captures/` are generated, never hand-made. The manifest `images/captures/manifest.json` lists every shot: `file`, `url`, `role` (`admin` or `worker`), an optional `selector` (element to shoot; default the whole viewport) and an optional `mask` list of `{selector, replace}` for names on that page. The manifest's `masks` replace every email address and amount on every page with fixed demo values, and the clock is fixed, so a rerun on an unchanged app gives identical files.
+Screenshots in `images/<lang>/captures/` (nl, en, de, pl, ro) are generated, never hand-made, and each language's pages use only their own. The manifest `images/captures/manifest.json` lists every shot once for all languages: `file`, `url`, `role` (`admin` or `worker`), an optional `selector` (element to shoot; default the whole viewport) and an optional `mask` list of `{selector, replace}` for names on that page. The manifest's `masks` replace every email address and amount on every page with fixed demo values, and the clock is fixed, so a rerun on an unchanged app gives identical files.
 
 1. Start the demo workspace with the demo seed: `make ws docs-demo up`. The capture refuses `transportklok.nl` hosts.
-2. Run `scripts/docs-captures/capture.sh --app-url=http://localhost:<port>` from the workspace root. The admin role signs in with the seeded dev account; give the worker role (and any other login) with `--credentials-file=<file>` as `{"worker":{"email","password"}}`. Use `--only=slug,slug` to refresh a few shots.
-3. Read the summary: `added`, `changed`, `unchanged` and `failed` per file. A full run with no failures also rewrites `images/captures/index.json`.
-4. Review the diff of `images/captures/` and commit only the shots whose page you changed. Look for any real name or amount that the masks missed and add a `mask` entry for it.
+2. Run `scripts/docs-captures/capture.sh --app-url=http://localhost:<port>` from the workspace root. It shoots every language in turn, switching the signed-in user's app language through its language settings, and sets it back to Dutch at the end; `--lang=en,de` shoots only those. The admin role signs in with the seeded dev account; give the worker role (and any other login) with `--credentials-file=<file>` as `{"worker":{"email","password"}}`. Use `--only=slug,slug` to refresh a few shots.
+3. Read the summary: `added`, `changed`, `unchanged` and `failed` per file. A full run with no failures also rewrites each language's `images/<lang>/captures/index.json`.
+4. Review the diff of `images/<lang>/captures/` and commit only the shots whose page you changed. Look for any real name or amount that the masks missed and add a `mask` entry for it.
 5. To add a page, add one manifest entry and rerun with `--only=<slug>`.
 
 Check the masking with `cd scripts/smoke && node ../docs-captures/test-mask.js`.

@@ -1,0 +1,42 @@
+---
+title: "Przetwarzanie naliczenia płac"
+description: "Sprawdzenie, zablokowanie i zakończenie naliczenia płac."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/process.mdx sha256:d5881489156ea00be4fcb4bf4578fd82300814e7787e43f831e8538dbc62588c */}
+
+## Do czego służy ta strona
+
+Tutaj opisano, jak doprowadzić naliczenie płac od wersji roboczej do przetworzonego: sprawdzić, zablokować i zakończyć.
+
+## Kto może z tego korzystać
+
+- Administrator z pełnymi uprawnieniami w organizacji.
+- Organizacja potrzebuje modułu **Zmienne składniki płac**.
+
+## Jak korzystać z tej strony
+
+1. Otworzyć **HR** → **Administracja płac** → **Naliczenia płac**.
+2. Sprawdzić wersję roboczą. Szczegóły otwiera ikona przed numerem, można też użyć **Pobierz**.
+3. Jeśli od tego czasu zmieniono rejestracje, wybrać **Opcje** → **Uruchom ponownie** i poczekać, aż status znów będzie **Wersja robocza**.
+4. Kliknąć **Zablokuj** i potwierdzić w oknie **Zablokuj naliczenie płac**.
+5. Poczekać, aż status będzie **Zablokowane**.
+6. Kliknąć **Zakończ**.
+7. Jeśli pojawi się okno **Przenieś korekty**, wybrać, które starsze korekty przenosi naliczenie. Zob. [Korekty](/pl/management/human-resources/payroll-runs/corrections).
+
+## Pola
+
+Zakończenie nie ma pól do wypełnienia. Bez starszych korekt naliczenie jest przetwarzane od razu, bez dodatkowego okna.
+
+## Co dzieje się potem
+
+- Naliczenie otrzymuje status **Przetworzone**.
+- Pod **Pobierz** jest teraz **Eksport naliczenia płac**. Zob. [Eksporty naliczenia płac](/pl/management/human-resources/payroll-runs/exports).
+- Kto ma w powiadomieniach włączone **Kopia eksportów po przetworzeniu naliczenia płac**, otrzymuje e-mail z kopią eksportu.
+
+## Ograniczenia
+
+- Przetwarzania nie cofa się przyciskiem.
+- Przetworzonego naliczenia nie można już usunąć.
+- Aby jeszcze zmienić zablokowane naliczenie, należy wybrać **Opcje** → **Odblokuj**.
+- Jeśli organizacja pobiera zmienne składniki wynagrodzenia z poprzedniego okresu, a ten poprzedni okres nie ma naliczenia, okno **Poprzedni okres bez naliczenia płac** prosi o potwierdzenie, że ten okres nie ma nic do wypłaty. Strona szczegółów naliczenia pokazuje **Okres źródłowy zmiennych składników wynagrodzenia**.
+- To, co dają obliczenia, zależy od rejestracji i ustawień. Zależy to od układu zbiorowego (CAO) lub ustawienia umowy: jakie składniki wynagrodzenia otrzymuje pracownik, wynika z CAO i z umowy pracownika.

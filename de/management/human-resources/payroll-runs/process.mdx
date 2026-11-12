@@ -1,0 +1,42 @@
+---
+title: "Lohnabrechnungslauf verarbeiten"
+description: "Einen Lohnabrechnungslauf prüfen, sperren und abschließen."
+---
+{/* translated-from: nl/management/human-resources/payroll-runs/process.mdx sha256:d5881489156ea00be4fcb4bf4578fd82300814e7787e43f831e8538dbc62588c */}
+
+## Wofür diese Seite da ist
+
+Hier lesen Sie, wie Sie einen Lohnabrechnungslauf vom Entwurf zum verarbeiteten Lauf bringen: prüfen, sperren und abschließen.
+
+## Wer das nutzen darf
+
+- Ein Administrator mit vollständigen Rechten in der Organisation.
+- Die Organisation benötigt das Modul **Lohnbewegungsdaten**.
+
+## So nutzen Sie diese Seite
+
+1. Öffnen Sie **Personal** → **Gehaltsabrechnung** → **Lohnabrechnungsläufe**.
+2. Prüfen Sie den Entwurf. Öffnen Sie die Details mit dem Symbol vor der Nummer oder verwenden Sie **Herunterladen**.
+3. Wurden seitdem Einträge geändert, wählen Sie **Optionen** → **Erneut ausführen** und warten Sie, bis der Status wieder **Entwurf** ist.
+4. Klicken Sie auf **Sperren** und bestätigen Sie im Fenster **Lohnabrechnungslauf sperren**.
+5. Warten Sie, bis der Status **Gesperrt** ist.
+6. Klicken Sie auf **Abschließen**.
+7. Erscheint das Fenster **Korrekturen übernehmen**, wählen Sie, welche älteren Korrekturen der Lauf übernimmt. Siehe [Korrekturen](/de/management/human-resources/payroll-runs/corrections).
+
+## Felder
+
+Das Abschließen hat keine Eingabefelder. Ohne ältere Korrekturen wird der Lauf direkt verarbeitet, ohne zusätzliches Fenster.
+
+## Was danach passiert
+
+- Der Lauf erhält den Status **Verarbeitet**.
+- Unter **Herunterladen** steht jetzt der **Export des Lohnabrechnungslaufs**. Siehe [Exporte eines Lohnabrechnungslaufs](/de/management/human-resources/payroll-runs/exports).
+- Wer in den Benachrichtigungen **Exportkopie bei Verarbeitung des Lohnabrechnungslaufs** eingeschaltet hat, erhält eine E-Mail mit einer Kopie des Exports.
+
+## Einschränkungen
+
+- Die Verarbeitung machen Sie nicht mit einer Schaltfläche rückgängig.
+- Einen verarbeiteten Lauf können Sie nicht mehr löschen.
+- Möchten Sie einen gesperrten Lauf noch anpassen, wählen Sie **Optionen** → **Entsperren**.
+- Bezieht Ihre Organisation die variablen Lohnarten aus dem vorherigen Zeitraum und hat dieser vorherige Zeitraum keinen Lauf, bittet Sie das Fenster **Vorheriger Zeitraum ohne Lohnabrechnungslauf** zu bestätigen, dass dieser Zeitraum nichts auszuzahlen hat. Die Detailseite eines Laufs zeigt den **Quellzeitraum der variablen Lohnarten**.
+- Was die Berechnung ergibt, hängt von den Einträgen und den Einstellungen ab. Das hängt vom Tarifvertrag (CAO) oder der Vertragseinstellung ab: Welche Lohnarten ein Mitarbeitender erhält, ergibt sich aus dem Tarifvertrag und aus dem Vertrag des Mitarbeitenden.

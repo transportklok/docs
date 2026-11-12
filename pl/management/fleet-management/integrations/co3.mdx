@@ -1,0 +1,44 @@
+---
+title: "CO3"
+description: "Połączenie z CO3 i dane pobierane z CO3."
+---
+{/* translated-from: nl/management/fleet-management/integrations/co3.mdx sha256:96a46389d098b5ee05d23e0d2b1f506cba7006a639c80ec785491ccc7bce8844 */}
+
+## Do czego służy ta strona
+
+Dzięki integracji z CO3 TransportKlok pobiera z CO3 pojazdy i pozycje.
+
+## Kto może z tego korzystać
+
+- Administrator lub menedżer organizacji.
+- Organizacja potrzebuje modułu **Zarządzanie flotą**, a telematyka musi być włączona. Zob. [Integracje](/pl/settings/organization/integrations/instances).
+
+## Jak korzystać z tej strony
+
+1. W sekcji **Konta** utworzyć konto dla **CO3** z **Identyfikator klienta** i **Sekret klienta** z CO3.
+2. Otworzyć **Integracje**, kliknąć **Dodaj integrację** i przy **CO3** kliknąć **Połącz**.
+3. Wybrać **Konto**, w polu **Nazwa** nadać integracji nazwę i kliknąć **Połącz**.
+4. Wypełnić ustawienia i kliknąć **Zapisz ustawienia**.
+
+## Pola
+
+Na stronie ustawień należy wpisać:
+
+| Ustawienie | Co należy wpisać |
+|------------|--------------|
+| **Identyfikator sharing-company CO3** | Kod firmy w CO3, która udostępnia pojazdy temu kontu. Synchronizacja rusza dopiero po jego wpisaniu. |
+
+## Co dzieje się potem
+
+| Funkcja | Działa automatycznie |
+|---------|---------------|
+| **Synchronizacja pojazdów** | co kwadrans |
+| **Odbiór telemetrii** | co kwadrans |
+
+- Pojazdy są łączone z istniejącymi pojazdami według numeru nadwozia (VIN) i numeru rejestracyjnego. CO3 samo nie tworzy nowych pojazdów.
+- Pozycje pojawiają się na [Mapa](/pl/management/fleet-management/map).
+- CO3 nie pobiera kierowców ani przypisań pojazdów. Pobierane są także wcześniejsze pozycje GPS.
+
+## Ograniczenia
+
+- Integracja tylko pobiera dane z CO3. Niczego tam nie odsyła.

@@ -1,0 +1,44 @@
+---
+title: "CO3"
+description: "Connect CO3 and what is fetched from CO3."
+---
+{/* translated-from: nl/management/fleet-management/integrations/co3.mdx sha256:96a46389d098b5ee05d23e0d2b1f506cba7006a639c80ec785491ccc7bce8844 */}
+
+## What this page is for
+
+With the CO3 integration, TransportKlok fetches vehicles and positions from CO3.
+
+## Who can use this
+
+- An administrator or manager of the organization.
+- The organization needs the **Fleet management** module, and telematics must be on. See [Integrations](/en/settings/organization/integrations/instances).
+
+## How to use this page
+
+1. Under **Accounts**, create an account for **CO3** with a **Client ID** and **Client secret** from CO3.
+2. Open **Integrations**, click **Add integration** and click **Connect** next to **CO3**.
+3. Choose the **Account**, give the integration a **Name** and click **Connect**.
+4. Fill in the settings and click **Save settings**.
+
+## Fields
+
+On the settings page you fill in:
+
+| Setting | What you fill in |
+|------------|--------------|
+| **CO3 sharing-company ID** | The code of the CO3 company that shares the vehicles with your account. The synchronization only starts once this is filled in. |
+
+## What happens next
+
+| Function | Runs automatically |
+|---------|---------------|
+| **Synchronize vehicles** | every quarter of an hour |
+| **Receive telemetry** | every quarter of an hour |
+
+- Vehicles are linked to your existing vehicles by chassis number (VIN) and license plate. CO3 does not create new vehicles itself.
+- Positions appear on the [Map](/en/management/fleet-management/map).
+- CO3 does not fetch drivers or vehicle assignments. Earlier GPS positions are fetched as well.
+
+## Limitations
+
+- The integration only fetches data from CO3. It does not send anything back.

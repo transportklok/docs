@@ -1,0 +1,74 @@
+---
+title: "Welke positie een trailer krijgt"
+description: "Hoe de kaart en de lijst de positie van een trailer kiezen."
+---
+
+## Waar deze pagina voor is
+
+Een trailer kan zijn positie uit meerdere bronnen krijgen. Op deze pagina leest u welke bron de kaart, de lijst en de popup gebruiken, en wat de pictogrammen naast de naam betekenen.
+
+## De drie bronnen
+
+- **Eigen tracker**: de laatste positie van een tracker die aan de trailer is gekoppeld.
+- **Via de trekker**: de laatste positie van de trekker waar de trailer nu aan gekoppeld is.
+- **Laatst gezien**: de positie van de trekker die de beacon van de trailer het laatst heeft gezien.
+
+## Een trailer die aan een trekker hangt
+
+- De kaart toont de nieuwste van de eigen positie en de positie van de trekker.
+- Liggen die twee binnen 2 minuten van elkaar, dan wint de eigen tracker.
+- Is de eigen positie meer dan 2 minuten ouder dan die van de trekker, dan toont de kaart de trekker.
+- De trailer staat op de kaart onder de trekker, met het kenteken van de trekker tussen de chauffeur en de trailer.
+
+## Een trailer die niet aan een trekker hangt
+
+- De kaart toont nooit de live positie van een trekker.
+- De kaart toont de nieuwste van de eigen positie en de plek waar een trekker de beacon het laatst zag. Bij gelijke tijd wint de eigen tracker.
+- Heeft de trailer geen van beide, dan staat hij in de lijst zonder plek op de kaart.
+- Een niet-gekoppelde trailer met een eigen tracker die nu meldt, staat live op de kaart. De lijst toont het adres van die eigen positie.
+- Een trailer waarvan de positie niet live is, bijvoorbeeld omdat de tracker één keer per dag meldt of omdat de beacon niet in de buurt is, staat vervaagd op de kaart.
+
+## Eigen tracker en beacon samen
+
+- De beacon zegt wie de trailer trekt en geeft de plek waar hij het laatst is gezien.
+- De beacon overschrijft nooit een nieuwere eigen positie.
+- Een eigen positie ontkoppelt de trailer nooit.
+
+## Wat bij de positie staat
+
+Bij elke positie ziet u het tijdstip en de bron:
+
+- **Eigen tracker**
+- **Via** het kenteken van de trekker
+- **Laatst gezien door** het kenteken van de trekker
+
+Een trailer telt als rijdend wanneer de gekozen bron beweegt: de trekker rijdt, of de eigen tracker meldt een snelheid boven 0. Een niet-gekoppelde trailer die zelf rijdt, staat als rijdend in de lijst met de melding dat hij niet aan een voertuig uit uw wagenpark gekoppeld is.
+
+## Twijfel over de koppeling
+
+Zijn de eigen positie en die van de trekker binnen 2 minuten van elkaar, maar meer dan 1 kilometer uit elkaar, dan toont de kaart de eigen positie en krijgt de trailer de melding **Koppeling twijfelachtig**. Er wordt niets automatisch ontkoppeld; u beoordeelt zelf of de koppeling klopt.
+
+## Het pictogram naast de naam
+
+Naast de naam in de lijst en de popup staat één pictogram. Het eerste dat van toepassing is, geldt:
+
+| Pictogram betekent | Wanneer |
+| --- | --- |
+| Koppeling twijfelachtig | De eigen positie is vers en ver van de trekker waaraan de trailer gekoppeld is. |
+| Niet gekoppeld | De trailer hangt niet aan een trekker. |
+| Eigen tracker, live | De tracker meldt nu actief. |
+| Eigen tracker, periodiek | De tracker meldt af en toe, bijvoorbeeld één keer per dag. |
+| Beacon, aanwezig | De beacon is aanwezig op de gekoppelde trekker. |
+| Beacon, niet aanwezig | De beacon is niet in de buurt. |
+
+Een trailer zonder een van deze situaties houdt alleen de statusstip.
+
+## De route van een trailer
+
+De route volgt dezelfde volgorde. Per periode zijn dat de berichten van de eigen tracker waar die er zijn, en anders de berichten van de trekker over de periode dat de trailer eraan gekoppeld was.
+
+## Gerelateerde pagina's
+
+- Tracker aan een trailer koppelen
+- FTC164 op een trailer
+- Kaart

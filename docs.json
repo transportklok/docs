@@ -84,7 +84,8 @@
                     "pages": [
                       "nl/management/fleet-management/trailers/overview",
                       "nl/management/fleet-management/trailers/create",
-                      "nl/management/fleet-management/trailers/edit"
+                      "nl/management/fleet-management/trailers/edit",
+                      "nl/management/fleet-management/trailers/position"
                     ]
                   },
                   {
@@ -102,7 +103,9 @@
                         "group": "Trackers",
                         "pages": [
                           "nl/management/fleet-management/telematics/trackers/overview",
-                          "nl/management/fleet-management/telematics/trackers/create"
+                          "nl/management/fleet-management/telematics/trackers/create",
+                          "nl/management/fleet-management/telematics/trackers/connect-trailer",
+                          "nl/management/fleet-management/telematics/trackers/ftc164-on-trailer"
                         ]
                       },
                       {
